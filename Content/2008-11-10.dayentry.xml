@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2008-11-09T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;P&gt;What is Software?&lt;/P&gt;
+&lt;P&gt;Performs some task on a computer system.&lt;/P&gt;
+&lt;P&gt;Applications - eg word processors which perform productive tasks for users&lt;/P&gt;
+&lt;P&gt;System Software - eg operating systems which interface hardware&lt;/P&gt;
+&lt;P&gt;Middleware - controls and coordinates distributed systems.. any system.&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;includes websites, programs, games, utilities&lt;/P&gt;
+&lt;P&gt;industrial automation, business software (probably the biggest field), educational software, medical software, databases, games&lt;/P&gt;
+&lt;P&gt;spreadsheet templates, word processor macros, excel sheets, email filters&lt;/P&gt;
+&lt;P&gt;CRM application, online auction site, logistics (eg package delivery), social networking&lt;/P&gt;
+&lt;P&gt;Bill Gates successful because of Windows and Office.&lt;/P&gt;
+&lt;P&gt;Larry Ellison because of Oracle&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.microisv.com/"&gt;http://www.microisv.com/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.47hats.com/"&gt;http://www.47hats.com/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.asp-shareware.org/newsgroups/"&gt;http://www.asp-shareware.org/newsgroups/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.oisv.com/"&gt;http://www.oisv.com/&lt;/A&gt;&amp;nbsp;- ISV&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;</Content>
+      <Created>2008-11-10T04:34:52.14-05:00</Created>
+      <Modified>2008-11-10T04:45:12.15625-05:00</Modified>
+      <EntryId>3c453c51-46b0-40ca-b268-047188a22f92</EntryId>
+      <Description />
+      <Title>Selling Software - ISV</Title>
+      <Categories>Business Of Software</Categories>
+      <Author>admin</Author>
+      <IsPublic>false</IsPublic>
+      <Syndicated>false</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>false</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>http://2009.visitmix.com/MIXtify/TenK.aspx&amp;nbsp; - November 2008 rules will be up.&amp;nbsp; 10k coding challenge&lt;br&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2008-11-10T03:40:26.078125-05:00</Created>
+      <Modified>2008-11-10T03:40:26.078125-05:00</Modified>
+      <EntryId>363697fd-d71f-426a-bbc3-59c94fec1b6f</EntryId>
+      <Description />
+      <Title>Coding Competitions</Title>
+      <Categories>Competitions</Categories>
+      <Author>admin</Author>
+      <IsPublic>false</IsPublic>
+      <Syndicated>false</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>false</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>From&lt;br&gt;http://www.sitepoint.com/forums/showthread.php?t=317960&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2008-11-10T04:47:57.109375-05:00</Created>
+      <Modified>2008-11-10T04:47:57.109375-05:00</Modified>
+      <EntryId>7bc9b316-c4bd-4cd8-bfed-1770b137e727</EntryId>
+      <Description />
+      <Title>ASP.NET Best Practise</Title>
+      <Categories>ASP.NET Best Practise</Categories>
+      <Author>admin</Author>
+      <IsPublic>false</IsPublic>
+      <Syndicated>false</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>false</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

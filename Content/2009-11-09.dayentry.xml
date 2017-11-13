@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-11-08T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;After browsing Scott Hanselmans Tools list &lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.hanselman.com/blog/ScottHanselmans2009UltimateDeveloperAndPowerUsersToolListForWindows.aspx" href="http://www.hanselman.com/blog/ScottHanselmans2009UltimateDeveloperAndPowerUsersToolListForWindows.aspx"&gt;http://www.hanselman.com/blog/ScottHanselmans2009UltimateDeveloperAndPowerUsersToolListForWindows.aspx&lt;/a&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;I thought I’d try Windows Live Writer.. it worked first time :-)&lt;/p&gt;  &lt;p&gt;Ahh.. for those who have no idea what Windows Live Writer is (like myself 15mins ago).. it means you can post blog articles from a windows app on your desktop.&amp;#160; No more messing around with html interface (and worrying about session expiring!)&lt;/p&gt;</Content>
+      <Created>2009-11-08T22:50:20.675375-05:00</Created>
+      <Modified>2009-11-08T23:05:24.487875-05:00</Modified>
+      <EntryId>c64e179e-6495-4386-a3c5-55e6e3ee2268</EntryId>
+      <Description />
+      <Title>Windows Live Writer</Title>
+      <Categories>Stuff</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

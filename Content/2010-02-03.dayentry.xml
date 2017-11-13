@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-02T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;When using a shared hosting provider, and only have access to 1 MSSQL database, it is possible to have 2 different web applications hanging off the same database.&lt;/p&gt;  &lt;p&gt;The users seem to be different, however the roles are across all applications.&lt;/p&gt;  &lt;p&gt;In VS2008, press the hammer and world icon:&amp;#160; as long as the web.config is pointing to the live database, you can change the live data.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_thumb.png" width="265" height="513" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;And if you’ve a different project eg &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_thumb_1.png" width="263" height="364" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;You can do the same thing and connect to the same live database.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETWebSiteAdministrationTool_A154/image_thumb_2.png" width="532" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Here are roles from 2 different webapps.&amp;#160; Coach and runner;&amp;#160; then administrators, power users, and users.&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;h3&gt;App_Data Database&lt;/h3&gt;  &lt;p&gt;This was useful when sending the code to others, so they don’t have to manually make a new database.&lt;/p&gt;  &lt;p&gt;&amp;lt;add name=&amp;quot;LocalSqlServer&amp;quot; connectionString=&amp;quot;Data Source=.\SQLEXPRESS;Integrated Security=True;AttachDbFilename=|DataDirectory|\ASPNETDB.MDF;User Instance=True&amp;quot;&amp;#160; providerName=&amp;quot;System.Data.SqlClient&amp;quot; /&amp;gt;&lt;/p&gt;</Content>
+      <Created>2010-02-03T18:20:31.272875-05:00</Created>
+      <Modified>2010-02-03T18:20:31.272875-05:00</Modified>
+      <EntryId>d746049f-288a-4286-a32c-9dd366ed4e85</EntryId>
+      <Description />
+      <Title>ASP.NET Web Site Administration Tool</Title>
+      <Categories>Project Run</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

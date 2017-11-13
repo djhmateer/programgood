@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-04-08T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;b&gt;Why use Events or publish / subscribe?&lt;/b&gt; &lt;br&gt;&lt;br&gt;&lt;span lang="en-us"&gt;Any number
+              of classes can be notified when an event is raised.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span lang="en-us"&gt;The subscribing classes do
+              not need to know how the Metronome works, and the Metronome does not need to know what they
+              are going to do in response to the event&lt;br&gt;&lt;/span&gt;&lt;p&gt;
+              &lt;span lang="en-us"&gt;The publisher and the subscribers are decoupled by the
+              delegate. This is highly desirable as it makes for more flexible and robust
+              code.&lt;/span&gt; &lt;span lang="de-ch"&gt;T&lt;/span&gt;&lt;span lang="en-us"&gt;he metronome can change how it
+              detects time without breaking any of the subscribing classes. The subscribing classes
+              can ch&lt;/span&gt;&lt;span lang="de-ch"&gt;ange&lt;/span&gt; &lt;span lang="en-us"&gt;how they respond to
+              time c&lt;/span&gt;&lt;span lang="de-ch"&gt;hanges&lt;/span&gt; &lt;span lang="en-us"&gt;without breaking the metronome. The two classes spin independently of one another, which makes for code that
+              is easier to maintain.&lt;/span&gt;
+            &lt;/p&gt;&lt;br&gt;&lt;span lang="en-us"&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;b&gt;Example1 - Metronome&lt;/b&gt;&lt;br&gt;Create a new console app, paste in the Main() code.&amp;nbsp; Then create 3 new classes (Alt P, C) - Metronome, Listener, ListenerB&lt;br&gt;A metronome ticks every 2 seconds, and two objects 'hear' it:&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main()
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// setup the metronome and make sure the EventHandler delegate is ready&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Metronome metronome &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Metronome();
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// wires up the metronome_Tick method to the EventHandler delegate&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Listener listener &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Listener(metronome);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ListenerB listenerB &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; ListenerB(metronome);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Go();
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Metronome
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// a delegate&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// so every time Tick is called, the runtime calls another method&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// in this case Listener.metronome_Tick and ListenerB.metronome_Tick&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;event&lt;/span&gt; EventHandler Tick;
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// virtual so can override default behaviour in inherited classes easily&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;protected&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;virtual&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; OnTick(EventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// null guard so if there are no listeners attached it wont throw an exception&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (Tick !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;, e);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Go()
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;while&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt;)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Thread.Sleep(2000);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// because using EventHandler delegate, need to include the sending object and eventargs &lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// although we are not using them&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OnTick(EventArgs.Empty);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Listener
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; Listener(Metronome metronome)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Tick += &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; EventHandler(metronome_Tick);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; metronome_Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Heard it"&lt;/span&gt;);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; ListenerB
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; ListenerB(Metronome metronome)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Tick += &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; EventHandler(metronome_Tick);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; metronome_Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"ListenerB: Heard it"&lt;/span&gt;);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/pre&gt;&lt;b&gt;Example2 - MetronomeArgs&lt;/b&gt;&lt;br&gt;We are passing the current time from the Metronome to the 2 listener objects&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main()
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// setup the metronome and make sure the EventHandler delegate is ready&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Metronome metronome &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Metronome();
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// wires up the metronome_Tick method to the EventHandler delegate&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Listener listener &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Listener(metronome);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ListenerB listenerB &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; ListenerB(metronome);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Go();
+}
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Metronome
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// a delegate&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// so every time Tick is called, the runtime calls another method&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// in this case Listener.metronome_Tick&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// so objects subscribing to this delegate should look like (object sender, EventArgs e)&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;event&lt;/span&gt; EventHandler Tick;
+   
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// virtual so can override default behaviour in inherited classes easily&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;protected&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;virtual&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; OnTick(TickEventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// null guard so if there are no listeners attached it wont throw an exception&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (Tick !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;, e);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Go()
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;while&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt;)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Thread.Sleep(2000);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DateTime now &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; DateTime.Now;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TickEventArgs tickEventArgs &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; TickEventArgs(now);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OnTick(tickEventArgs);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+
+&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// Good idea to inherit from EventArgs&lt;/span&gt;
+&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// as can upcast EventArgs object in case you need to send it to an event that doesn't handle it???&lt;/span&gt;
+&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// sole purpose of EventArgs class (which has no members) is to allow event arguments object to be passed to &lt;/span&gt;
+&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// event handlers&lt;/span&gt;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; TickEventArgs : EventArgs
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; DateTime Time { get; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; set; }
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; TickEventArgs(DateTime time)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;.Time &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; time;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Listener
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; Listener(Metronome metronome)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Tick += &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; EventHandler(metronome_Tick);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; metronome_Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// TickEventArgs is a superclass(?) of EventArgs... this is what we passed&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (e &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;is&lt;/span&gt; TickEventArgs)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// Downcasting e from EventArgs to TickEventArgs so can use its properties&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TickEventArgs tickEventArgs &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; e &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;as&lt;/span&gt; TickEventArgs;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Heard it at time "&lt;/span&gt; &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; tickEventArgs.Time.ToString());
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; ListenerB
+{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; ListenerB(Metronome metronome)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;metronome.Tick += &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; EventHandler(metronome_Tick);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; metronome_Tick(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"ListenerB: Heard it"&lt;/span&gt;);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}
+}&lt;/span&gt;&lt;/pre&gt;References:&lt;br&gt;Big thanks on: http://stackoverflow.com/questions/724085/events-naming-convention-and-style&lt;br&gt;Metronome code is refactored from http://www.codeproject.com/KB/cs/simplesteventexample.aspx&lt;br&gt;Why use events: http://www.akadia.com/services/dotnet_delegates_and_events.html&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/eventsMetronomeSimple_small.JPG" border="0"&gt;</Content>
+      <Created>2009-04-08T22:25:14.032-04:00</Created>
+      <Modified>2009-04-08T23:06:03.220375-04:00</Modified>
+      <EntryId>b2f06131-0de0-41b0-a878-6bcb2b9d42ae</EntryId>
+      <Description />
+      <Title>Events</Title>
+      <Categories>Events and Delegates;Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>false</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

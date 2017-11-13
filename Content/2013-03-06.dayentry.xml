@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-03-05T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/816af6145d45_B16D/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/816af6145d45_B16D/image_thumb.png" width="490" height="283" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.brightfunction.co.uk/make-visual-studio-run-faster/" href="http://www.brightfunction.co.uk/make-visual-studio-run-faster/"&gt;http://www.brightfunction.co.uk/make-visual-studio-run-faster/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Turn off virus scanning eg Win8 is called Defender&lt;/p&gt;  &lt;p&gt;Unload projects?&lt;/p&gt;</Content>
+      <Created>2013-03-06T09:23:23.7960985-05:00</Created>
+      <Modified>2013-03-06T09:23:23.7960985-05:00</Modified>
+      <EntryId>5b0a24ac-3809-44d0-94f6-f56eac0ac342</EntryId>
+      <Description />
+      <Title>Speeding up VS2012 Compiles</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://stackoverflow.com/questions/11864721/mstest-how-to-limit-test-result-folders" href="http://stackoverflow.com/questions/11864721/mstest-how-to-limit-test-result-folders"&gt;http://stackoverflow.com/questions/11864721/mstest-how-to-limit-test-result-folders&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-03-06T05:34:16.8155734-05:00</Created>
+      <Modified>2013-03-06T05:34:16.8155734-05:00</Modified>
+      <EntryId>f71b8bed-af91-4beb-b5bb-ae1b9cbed65f</EntryId>
+      <Description />
+      <Title>MSTest - How to limit test result folders</Title>
+      <Categories>Testing;VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/CodeAnalysisStyleCop_907A/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/CodeAnalysisStyleCop_907A/image_thumb.png" width="360" height="360" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Build into VS with lots of different rulesets.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/CodeAnalysisStyleCop_907A/image_4.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/CodeAnalysisStyleCop_907A/image_thumb_1.png" width="244" height="190" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-03-06T05:33:46.3407583-05:00</Created>
+      <Modified>2013-03-06T05:33:46.3407583-05:00</Modified>
+      <EntryId>006cfccb-b5d9-4619-8ff1-9c5f8294b3a4</EntryId>
+      <Description />
+      <Title>CodeAnalysis–StyleCop</Title>
+      <Categories>Code Analysis</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

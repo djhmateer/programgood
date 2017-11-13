@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-04-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;If you want an Index and Index/guid &lt;/div&gt;  &lt;div&gt;&amp;#160;&lt;/div&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;//public ActionResult Index()&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//{&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//    //Guid eventId = id;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//    //ViewBag.EventName = uow.Events.Single(e =&amp;gt; e.Id == id).Name;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//    return View(uow.Races.OrderBy(r =&amp;gt; r.Name).ToList());&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//[RequireRequestValue(&amp;quot;ideventguid&amp;quot;)]&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//[RequireRequestValue(&amp;quot;id&amp;quot;)]&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index(Guid idEvent)&lt;br /&gt;{&lt;br /&gt;   ViewBag.EventName = uow.Events.Single(e =&amp;gt; e.Id == idEvent).Name;&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(uow.Races.OrderBy(r =&amp;gt; r.Name).Where(r =&amp;gt; r.EventU.Id == idEvent));&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-04-26T01:40:58.609125-04:00</Created>
+      <Modified>2011-04-26T01:40:58.609125-04:00</Modified>
+      <EntryId>f9a6e9be-30e0-4936-996b-992ed1c9d556</EntryId>
+      <Description />
+      <Title>MVC3 Multiple Method Signatures</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

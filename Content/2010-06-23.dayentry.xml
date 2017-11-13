@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-06-22T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;While trying to figure out what is meant by the 3rd new section in a view in MVC&lt;/p&gt;  &lt;p&gt;&amp;lt;%: Html.ActionLink(&amp;quot;Edit&amp;quot;, &amp;quot;Edit&amp;quot;, new { id=item.DinnerID }) %&amp;gt;&lt;/p&gt;  &lt;p&gt;So it is really creating an object with a single property id, which is an int, equal to that of the item, which is a Dinner.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AnonymousTypes_D000/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AnonymousTypes_D000/image_thumb.png" width="644" height="219" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;“Anonymous types provide a convenient way to encapsulate a set of read-only properties into a single object without having to first explicitly define a type”&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #008000"&gt;// Anonymous types provide a convenient way to encapsulate a set of read-only properties&lt;/span&gt;&lt;br /&gt;            &lt;span style="color: #008000"&gt;// into a single object without having to first explicitly define a type&lt;/span&gt;&lt;br /&gt;            var person = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { Name = &lt;span style="color: #006080"&gt;&amp;quot;Terry&amp;quot;&lt;/span&gt;, Age = 21 };&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;name is &amp;quot;&lt;/span&gt; + person.Name);&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;age is &amp;quot;&lt;/span&gt; + person.Age.ToString());&lt;br /&gt;           &lt;br /&gt;            &lt;span style="color: #008000"&gt;// Anonymous types just get rid of Person1 really.&lt;/span&gt;&lt;br /&gt;            Person1 person1 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Person1 { Name = &lt;span style="color: #006080"&gt;&amp;quot;Bill&amp;quot;&lt;/span&gt;, Age = 55 };&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;name is &amp;quot;&lt;/span&gt; + person1.Name);&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;age is &amp;quot;&lt;/span&gt; + person1.Age.ToString());&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person1&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Name { get; set; }&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; Age { get; set; }&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;Many thanks to the question here for clarifying:&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;&lt;a title="http://stackoverflow.com/questions/3098643/anonymous-type-syntax-in-asp-net-mvc" href="http://stackoverflow.com/questions/3098643/anonymous-type-syntax-in-asp-net-mvc"&gt;http://stackoverflow.com/questions/3098643/anonymous-type-syntax-in-asp-net-mvc&lt;/a&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-06-22T23:35:49.0265424-04:00</Created>
+      <Modified>2010-06-22T23:35:49.0265424-04:00</Modified>
+      <EntryId>6f2f5f74-7c90-4459-8633-4d516ada4778</EntryId>
+      <Description />
+      <Title>Anonymous Types</Title>
+      <Categories>ASP.NET MVC;c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-09-27T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From this demo:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.msteched.com/2010/NewZealand/WEB203"&gt;http://www.msteched.com/2010/NewZealand/WEB203&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Here are the CMS’s talked about:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://n2cms.com/"&gt;http://n2cms.com/&lt;/a&gt; – ASP.NET MVC.&amp;#160; Very lightweight CMS&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;not bad source code to read..&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;demo here &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Kentico (large project type size)&amp;#160; 4000 websites worldwide.&amp;#160; USD$2k&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;markerstudio –they use mostly kentico&lt;/p&gt;    &lt;p&gt;maps.yellow.co.nz&lt;/p&gt;    &lt;p&gt;asp.net, SQL Server&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;Umbraco – open source..91,000 installs.. has&amp;#160; a pro version too. going MVC in v5&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;Peter Gregory – Official Umbrabo trainer, and core team member&lt;/p&gt;    &lt;p&gt;Web Forms, .NET3.5/4&lt;/p&gt;    &lt;p&gt;microsoft asp.net, wired.co.uk, gc, vouge, christchurchnz.com&lt;/p&gt;    &lt;p&gt;user controls, eventing model&lt;/p&gt;    &lt;p&gt;&amp;#160;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;Wordpress&lt;/p&gt;  &lt;p&gt;DotNetNuke&lt;/p&gt;  &lt;p&gt;Community Server&lt;/p&gt;</Content>
+      <Created>2010-09-28T19:07:35.4753372-04:00</Created>
+      <Modified>2010-09-28T19:07:35.4753372-04:00</Modified>
+      <EntryId>0aeb2fbe-57e8-4fb8-80bf-4ad7b9b26ebb</EntryId>
+      <Description />
+      <Title>CMS</Title>
+      <Categories>CMS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

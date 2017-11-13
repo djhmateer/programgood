@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-01-22T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.howtogeek.com/howto/31779/fixing-when-the-windows-taskbar-refuses-to-auto-hide-correctly/" href="http://www.howtogeek.com/howto/31779/fixing-when-the-windows-taskbar-refuses-to-auto-hide-correctly/"&gt;http://www.howtogeek.com/howto/31779/fixing-when-the-windows-taskbar-refuses-to-auto-hide-correctly/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;I killed explorer.&amp;#160; Then Ctrl+Shift+Escape, start new process, explorer to restart.&amp;#160; Remember to close apps.&lt;/p&gt;</Content>
+      <Created>2013-01-23T06:11:42.1450276-05:00</Created>
+      <Modified>2013-01-23T06:11:42.1450276-05:00</Modified>
+      <EntryId>f16e8a74-07b6-46ae-a444-90a0f90c56e2</EntryId>
+      <Description />
+      <Title>Window 8 Taskbar not AutoHiding</Title>
+      <Categories>Windows 8</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

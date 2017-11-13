@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-02-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Microsoft Accelerate&lt;/p&gt;  &lt;p&gt;&lt;a title="http://research.microsoft.com/en-us/projects/accelerator/" href="http://research.microsoft.com/en-us/projects/accelerator/"&gt;http://research.microsoft.com/en-us/projects/accelerator/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Dell video card is NVidia GeForce GT 550M&lt;/p&gt;</Content>
+      <Created>2013-02-11T15:19:20.9829095-05:00</Created>
+      <Modified>2013-02-11T16:08:49.2683528-05:00</Modified>
+      <EntryId>89a17d4d-4508-4cff-bc1a-abb0714204b7</EntryId>
+      <Description />
+      <Title>Microsoft Accelerate</Title>
+      <Categories>GPGPU</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.stevenmarkford.com/installing-nvidia-cuda-with-visual-studio-2010/" href="http://www.stevenmarkford.com/installing-nvidia-cuda-with-visual-studio-2010/"&gt;http://www.stevenmarkford.com/installing-nvidia-cuda-with-visual-studio-2010/&lt;/a&gt; – installing on 2010, which seems the best currently as don’t have to worry about changing templates?&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a title="https://itunes.apple.com/us/itunes-u/programming-massively-parallel/id384233322" href="https://itunes.apple.com/us/itunes-u/programming-massively-parallel/id384233322"&gt;https://itunes.apple.com/us/itunes-u/programming-massively-parallel/id384233322&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Have got Compute capability of 2.1 on ASUS (nVidia Geforce 610m, 1GB)&lt;/p&gt;  &lt;p&gt;&lt;a title="http://aws.amazon.com/gpu/" href="http://aws.amazon.com/gpu/"&gt;http://aws.amazon.com/gpu/&lt;/a&gt; – amazon machine&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.codeproject.com/Articles/314776/How-to-set-up-Amazon-EC2-Windows-GPU-instance-for" href="http://www.codeproject.com/Articles/314776/How-to-set-up-Amazon-EC2-Windows-GPU-instance-for"&gt;http://www.codeproject.com/Articles/314776/How-to-set-up-Amazon-EC2-Windows-GPU-instance-for&lt;/a&gt; – tutorial on setting up on aws.&amp;#160; &lt;/p&gt;  &lt;p&gt;Got it working on VS2010 C++ Express, then installed CUDA SDK, then samples ran after a compile (took 15mins?)&amp;#160; Lots of errors, but ran.&lt;/p&gt;</Content>
+      <Created>2013-02-11T12:28:09.1183536-05:00</Created>
+      <Modified>2013-02-12T04:36:12.1260023-05:00</Modified>
+      <EntryId>fd400502-a876-4524-b3ea-829efb5370e0</EntryId>
+      <Description />
+      <Title>Parallel–CUDA</Title>
+      <Categories>GPGPU</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Start Menu --&amp;gt; All programs --&amp;gt;Microsoft Visual Studio 2010 --&amp;gt; Team Foundation Server tools --&amp;gt;Build Notifications.&lt;/p&gt;  &lt;p&gt;Can see checkins, and when the build breaks!&lt;/p&gt;</Content>
+      <Created>2013-02-11T04:31:23.7216413-05:00</Created>
+      <Modified>2013-02-11T04:31:23.7216413-05:00</Modified>
+      <EntryId>77a4013c-244d-4edf-af4a-0bb1eb2d03fb</EntryId>
+      <Description />
+      <Title>Team Foundation Build Notifications</Title>
+      <Categories>TFS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

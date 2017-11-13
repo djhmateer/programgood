@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-01-27T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Am using publish web.. and automated build script so web.config is correct for dev and live.&amp;#160; Needs to be a Web Application, and not a Web Site.&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.hanselman.com/blog/ManagingMultipleConfigurationFileEnvironmentsWithPreBuildEvents.aspx" href="http://www.hanselman.com/blog/ManagingMultipleConfigurationFileEnvironmentsWithPreBuildEvents.aspx"&gt;http://www.hanselman.com/blog/ManagingMultipleConfigurationFileEnvironmentsWithPreBuildEvents.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Differences between Web Sites and Web Applications &lt;a title="http://www.codersbarn.com/post/2008/06/ASPNET-Web-Site-versus-Web-Application-Project.aspx" href="http://www.codersbarn.com/post/2008/06/ASPNET-Web-Site-versus-Web-Application-Project.aspx"&gt;http://www.codersbarn.com/post/2008/06/ASPNET-Web-Site-versus-Web-Application-Project.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Also if doing more than one pre-build call need to do this:&lt;/p&gt;  &lt;p&gt;call &amp;quot;$(ProjectDir)copyifnewer.bat&amp;quot; &amp;quot;$(ProjectDir)web.config.$(ConfigurationName)&amp;quot; &amp;quot;$(ProjectDir)web.config&amp;quot;    &lt;br /&gt;call &amp;quot;$(ProjectDir)copyifnewer.bat&amp;quot; &amp;quot;$(ProjectDir)LoggedIn\web.config.$(ConfigurationName)&amp;quot; &amp;quot;$(ProjectDir)LoggedIn\web.config&amp;quot;&lt;/p&gt;  &lt;p&gt;Also I got an error in dev, where my debugging wasn’t working properly.&amp;#160; Had to tick debug info to full here.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Web.Configautomatingdevandlive_A67B/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Web.Configautomatingdevandlive_A67B/image_thumb.png" width="644" height="455" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;to do – possibly abstract out the connection string settings (and anything else dev/live specific) into another file, so the actual Web.config can be changed by VS easily.&lt;/p&gt;  &lt;p&gt;In Visual Basic the interface is slightly different however it is in there!&lt;/p&gt;</Content>
+      <Created>2010-01-28T17:52:17.851-05:00</Created>
+      <Modified>2010-04-08T18:28:22.00825-04:00</Modified>
+      <EntryId>701850df-7467-4b63-b3af-7596a861ca61</EntryId>
+      <Description />
+      <Title>Web.Config automating dev and live</Title>
+      <Categories>Project Run;Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Spikes are great.. aim to try things very fast to prove things work. KISS!&amp;#160; These are all on &lt;a href="http://www.mateerit.co.nz/HelloWorld/"&gt;http://www.mateerit.co.nz/HelloWorld/&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;Hello World &lt;/h3&gt;  &lt;p&gt;Web Application, view it locally, view it on live server.&lt;/p&gt;  &lt;p&gt;Locally is fine.&amp;#160; For live I’m on a shared server, and have to remember to create a new virtual directory (clicking Web Directory below)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb.png" width="567" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Setup VS to publish the site (in Build menu).. use this syntax:&amp;#160; &lt;a href="ftp://myuser%3Amypass@myftpsite.com:21/my/path/to/web/root/"&gt;ftp://myuser%3Amypass@myftpsite.com:21/my/path/to/web/root/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;to avoid having to type in password each time!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_1.png" width="644" height="471" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Alt B H enter, to publish to live site quickly.&lt;/p&gt;  &lt;h3&gt;Connect to the Database&lt;/h3&gt;  &lt;p&gt;print something on the screen from the SQL Server..locally:&lt;/p&gt;  &lt;p&gt;Aim is to print off a list of Persons:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_3.png" width="621" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Simplest way to do this is:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_4.png" width="545" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Put on a grid and wire it up:&lt;/p&gt;  &lt;p&gt;Publish live, and it wont be able to find the correct connection string:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_5.png" width="768" height="327" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Went into web.config and commented out the local one, and put in another for the live server.&lt;/p&gt;  &lt;p&gt;&amp;lt;!--&amp;lt;add name=&amp;quot;RunConnectionString&amp;quot; connectionString=&amp;quot;Data Source=.\SQLEXPRESS;Initial Catalog=Run;Persist Security Info=True;User ID=runuser1;Password=runuser1&amp;quot;&amp;#160; providerName=&amp;quot;System.Data.SqlClient&amp;quot; /&amp;gt;—&amp;gt;&lt;/p&gt;  &lt;p&gt;   &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;add name=&amp;quot;RunConnectionString&amp;quot; connectionString=&amp;quot;Data Source=mssql1.openhost.net.nz;Initial Catalog=mateer;Persist Security Info=True;User ID=mateeruser;Password=secret&amp;quot;&amp;#160; providerName=&amp;quot;System.Data.SqlClient&amp;quot; /&amp;gt;&lt;/p&gt;  &lt;p&gt;Its also useful to be able to connect to the remote database directly:&amp;#160; My host makes you open its firewall rules a week at a time from here: &lt;a title="https://winplesk6.openhost.net.nz/sql.php" href="https://winplesk6.openhost.net.nz/sql.php"&gt;https://winplesk6.openhost.net.nz/sql.php&lt;/a&gt; or mateerit.co.nz:85/sql.php&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_2.png" width="445" height="354" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;h3&gt;SqlDataSource&lt;/h3&gt;  &lt;p&gt;The SqlDataSource data source control represents data in an SQL relational database to data-bound controls. You can use the SqlDataSource control in conjunction with a data-bound control to retrieve data from a relational database and to display, edit, and sort data on a Web page with little or no code.&lt;/p&gt;  &lt;p&gt;However this bypassing the tiered approach, and is essentially putting all logic in the webpage!&lt;/p&gt;  &lt;p&gt;In Project Run I ended up using ObjectDataSource (to connect to the underlying architecture allowing me to use data Web controls such as GridView, DetailsView or DataList).&amp;#160; Picture from: &lt;a title="http://www.asp.net/learn/data-access/tutorial-47-cs.aspx" href="http://www.asp.net/learn/data-access/tutorial-47-cs.aspx"&gt;http://www.asp.net/learn/data-access/tutorial-47-cs.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_14.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_6.png" width="529" height="490" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;lt;asp:SqlDataSource ID=&lt;span style="color: #006080"&gt;&amp;quot;PersonsDataSource&amp;quot;&lt;/span&gt; runat=&lt;span style="color: #006080"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        ConnectionString=&lt;span style="color: #006080"&gt;&amp;quot;&amp;lt;%$ ConnectionStrings:RunConnectionString %&amp;gt;&amp;quot;&lt;/span&gt; &lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        SelectCommand=&lt;span style="color: #006080"&gt;&amp;quot;SELECT [personid], [personname] FROM [Person]&amp;quot;&lt;/span&gt;&amp;gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &amp;lt;/asp:SqlDataSource&amp;gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;GridView&lt;/h3&gt;
+
+&lt;p&gt;Changing the header titles, colours&lt;/p&gt;
+
+&lt;p&gt;Sorting and paging work as data is into a loosely-typed DataSet.&lt;/p&gt;
+
+&lt;p&gt;Could use a DataReader (instead of a DataSet on the SqlDataSource) which is simpler, but no sorting, paging.&lt;/p&gt;
+
+&lt;p&gt;Add / Edit / Delete – Need to add those into the SqlDataSource.&amp;#160; Very easy to make Edit and Delete.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_16.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_7.png" width="315" height="424" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Harder to make an insert.. see here for ‘workaround’ and discussion: &lt;a title="http://www.codeproject.com/KB/aspnet/InsertSqlDataSource.aspx" href="http://www.codeproject.com/KB/aspnet/InsertSqlDataSource.aspx"&gt;http://www.codeproject.com/KB/aspnet/InsertSqlDataSource.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;DataList&lt;/h3&gt;
+
+&lt;p&gt;Provides greater flexibility – render using templates.&amp;#160; This will emit a &amp;lt;table&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt; syntax.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_18.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_8.png" width="265" height="492" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;Repeater&lt;/h3&gt;
+
+&lt;p&gt;Renders nothing other than what you tell it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_20.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_9.png" width="670" height="278" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;DetailsView&lt;/h3&gt;
+
+&lt;p&gt;View one record at a time, and very easy to get a new record.&amp;#160; Built in paging.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_22.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_10.png" width="176" height="160" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;FormView&lt;/h3&gt;
+
+&lt;p&gt;Same as details but less rigid layout.&lt;/p&gt;
+
+&lt;h3&gt;ListView&lt;/h3&gt;
+
+&lt;p&gt;3.5.. provides more control over markup.&amp;#160; Easy insert&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_24.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_11.png" width="392" height="258" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;DataPager&lt;/h3&gt;
+
+&lt;p&gt;new in 3.5 too.&amp;#160; The First, Previous, Next, Last control.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;Enabling split view vertically.. very cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="http://weblogs.asp.net/scottgu/archive/2007/07/30/enabling-vertical-split-view-in-vs-2008.aspx" href="http://weblogs.asp.net/scottgu/archive/2007/07/30/enabling-vertical-split-view-in-vs-2008.aspx"&gt;http://weblogs.asp.net/scottgu/archive/2007/07/30/enabling-vertical-split-view-in-vs-2008.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_26.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_thumb_12.png" width="644" height="223" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;
+  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SpikesforProjectRun_9D26/image_28.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/h3&gt;</Content>
+      <Created>2010-01-27T21:42:59.335375-05:00</Created>
+      <Modified>2010-01-31T20:38:57.601-05:00</Modified>
+      <EntryId>24581d10-189a-4b99-82db-a9fd6f3fd857</EntryId>
+      <Description />
+      <Title>Spikes for Project Run</Title>
+      <Categories>Project Run</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

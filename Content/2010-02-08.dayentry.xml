@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-07T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From Uncle Bobs book clean code example on refactoring:&lt;/p&gt;  &lt;div&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;!--CRLF--&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] result = GeneratePrimes.generatePrimes(30);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (var i &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; result)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                Console.Write(i.ToString() + &lt;span style="color: #006080"&gt;&amp;quot;, &amp;quot;&lt;/span&gt;);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Given an array of integers starting at 2, cross out the multiples of 2.  Fine the next&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// uncrossed integer, and cross out all of its multiples.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Repeat until you have passed the square root of the maximum value&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; GeneratePrimes&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] generatePrimes(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; maxValue)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (maxValue &amp;gt;= 2) &lt;span style="color: #008000"&gt;// the only valid case&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;// declarations&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; s = maxValue + 1; &lt;span style="color: #008000"&gt;// size of the array&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] f = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[s];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;// initialize array to be true&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (i = 0; i &amp;lt; s; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    f[i] = &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;// get rid of non-primes&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                f[0] = f[1] = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;//sieve&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (i = 2; i &amp;lt; Math.Sqrt(s) + 1; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (f[i]) &lt;span style="color: #008000"&gt;// if i is uncrossed, cross its multiples&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (j = 2 * i; j &amp;lt; s; j += i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                            f[j] = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;; &lt;span style="color: #008000"&gt;// multiple is not a prime&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;// how many primes are there?&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; count = 0;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (i = 0; i &amp;lt; s; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (f[i])&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                        count++; &lt;span style="color: #008000"&gt;// bump count&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] primes = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[count];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #008000"&gt;//move the primes into the result&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (i = 0, j=0;i&amp;lt;s ; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (f[i])&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                        primes[j++] = i;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; primes; &lt;span style="color: #008000"&gt;// return the primes&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            } &lt;span style="color: #0000ff"&gt;else&lt;/span&gt; &lt;span style="color: #008000"&gt;// maxvalue &amp;lt; 2&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[0]; &lt;span style="color: #008000"&gt;// return null array if bad input&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is messy code because:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variable names are cryptic&lt;/li&gt;
+
+  &lt;li&gt;Some comments are unnecessary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is Bob’s refactored version:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Generates prime number up to a user specified maximum&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// The algorithm used is the Sieve of Eratosthenes.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Given an array of integers starting at 2:&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Find the first uncrossed (eg 3 ) integer, and cross out all its multiples (eg 6,9,12,14)&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Repeat until there are no more multipes in the array&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PrimeGenerator&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] result;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] generatePrimes(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; maxValue)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (maxValue &amp;lt; 2)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[0];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                uncrossIntegersUpTo(maxValue);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossOutMultiples();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                putUncrossedIntegersIntoResult();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; result;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; uncrossIntegersUpTo(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; maxValue)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            crossedOut = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[maxValue + 1]; &lt;span style="color: #008000"&gt;// as bool array starts at 0, and if maxvalue = 10, we need an array of length 11&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt; crossedOut.Length; i++) &lt;span style="color: #008000"&gt;// less than as we don't want to reference crossedOut[4] which doesn't exist&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossedOut[i] = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; crossOutMultiples()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; limit = determineIterationLimit();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt;= limit; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (notCrossed(i))&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    crossOutMultiplesOf(i);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; determineIterationLimit()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// Every multiple in the array has a prime factor that&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// is less than or equal to the square root of the array size, &lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// which is the largest number we are trying to find primes in.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// So we don't have to cross out numbers&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// larger than that square root of the maxnumber, as they will have been crossed out already&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;double&lt;/span&gt; iterationLimit = Math.Sqrt(crossedOut.Length);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;) iterationLimit;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; crossOutMultiplesOf(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; multiple = 2 * i; multiple &amp;lt; crossedOut.Length; multiple += i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossedOut[multiple] = &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; notCrossed(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; crossedOut[i] == &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; putUncrossedIntegersIntoResult()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            result = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[numberOfUncrossedIntegers()];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 0, i = 2; i &amp;lt; crossedOut.Length; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (notCrossed(i))&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    result[j++] = i;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfUncrossedIntegers()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; count = 0;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt; crossedOut.Length; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (notCrossed(i))&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    count++;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; count;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I like Bobs version because it splits the code into simple manageable chunks eg:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;p&gt;uncrossIntegersUpTo(maxValue);
+    &lt;br /&gt;crossOutMultiples();
+
+    &lt;br /&gt;putUncrossedIntegersIntoResult();&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I paired with a friend over the weekend, and we thought this was better:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initialised crossedOut in generatePrimes method instead of ‘child’ method&lt;/li&gt;
+
+  &lt;li&gt;Pass in crossedOut as a parameter instead of a class scope variable&lt;/li&gt;
+
+  &lt;li&gt;Took out (defactored), the notCrossed(i) method as !crossedOut[i] is very readable inline.&lt;/li&gt;
+
+  &lt;li&gt;Make everything non static&lt;/li&gt;
+
+  &lt;li&gt;Keep in /// summary method so intellisense works in the IDE – am trialling Ghostdoc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+  &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Generates prime number up to a user specified maximum&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// The algorithm used is the Sieve of Eratosthenes.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Given an array of integers starting at 2:&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Find the first uncrossed (eg 3 ) integer, and cross out all its multiples (eg 6,9,12,14)&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Repeat until there are no more multipes in the array&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PrimeGenerator&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] generatePrimes(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; maxValue)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (maxValue &amp;lt; 2)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[0];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossedOut = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[maxValue + 1];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                uncrossIntegersUpTo(crossedOut);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossOutMultiples(crossedOut);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; putUncrossedIntegersIntoResult(crossedOut);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; uncrossIntegersUpTo(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// as bool array starts at 0, and if maxvalue = 10, we need an array of length 11&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt; crossedOut.Length; i++) &lt;span style="color: #008000"&gt;// less than as we don't want to reference crossedOut[4] which doesn't exist&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossedOut[i] = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; crossOutMultiples(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; limit = determineIterationLimit(crossedOut);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt;= limit; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!crossedOut[i])&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    crossOutMultiplesOf(crossedOut, i);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; determineIterationLimit(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// Every multiple in the array has a prime factor that&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// is less than or equal to the square root of the array size, &lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// which is the largest number we are trying to find primes in.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// So we don't have to cross out numbers&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #008000"&gt;// larger than that square root of the maxnumber, as they will have been crossed out already&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;double&lt;/span&gt; iterationLimit = Math.Sqrt(crossedOut.Length);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;) iterationLimit;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; crossOutMultiplesOf(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut, &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; multiple = 2*i; multiple &amp;lt; crossedOut.Length; multiple += i)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                crossedOut[multiple] = &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] putUncrossedIntegersIntoResult(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] result = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[numberOfUncrossedIntegers(crossedOut)];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 0, i = 2; i &amp;lt; crossedOut.Length; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!crossedOut[i])&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    result[j++] = i;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; result;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfUncrossedIntegers(&lt;span style="color: #0000ff"&gt;bool&lt;/span&gt;[] crossedOut)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; count = 0;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2; i &amp;lt; crossedOut.Length; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!crossedOut[i])&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;                    count++;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; count;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2010-02-07T19:40:09.351-05:00</Created>
+      <Modified>2010-02-07T19:40:09.351-05:00</Modified>
+      <EntryId>2258ba4b-a537-4847-b1f7-1b7422beef68</EntryId>
+      <Description />
+      <Title>Prime Number Refactoring</Title>
+      <Categories>Clean Code by Uncle Bob</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

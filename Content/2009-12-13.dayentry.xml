@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-12-12T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h4&gt;&amp;#160;&lt;/h4&gt;  &lt;p&gt;On overloaded constructors, call the default constructor.&amp;#160; Constructor chaining&lt;/p&gt;  &lt;p&gt;public clsDates(int yr) : this()&lt;/p&gt;  &lt;p&gt;public clsDates()&lt;/p&gt;  &lt;p&gt;Property Methods (getters and setters)&lt;/p&gt;  &lt;p&gt;Cohesion – make a method do a single task only&lt;/p&gt;  &lt;p&gt;Coupling - (Method coupling) ability to make changes in one method without forcing changes in another… ie make each method so it can operate independently &lt;/p&gt;  &lt;h5&gt;Deck of Cards&lt;/h5&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Chapter10DesigningAndWritingCustomClasse_1031A/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Chapter10DesigningAndWritingCustomClasse_1031A/image_thumb.png" width="370" height="243" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;I’ve simplified the example given in the book to:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; btnShuffle_Click(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        clsCardDeck myDeck = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; clsCardDeck();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterations = myDeck.ShuffleDeck();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        lblResult.Text = numberOfIterations.ToString();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #008000"&gt;// display the newly shuffled deck in the multiline textbox.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; deckSize = myDeck.DeckSize;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 1; i &amp;lt; deckSize+1; i++)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            txtOutputResult.Text += myDeck.getOneCard(i) + &lt;span style="color: #006080"&gt;&amp;quot; &amp;quot;&lt;/span&gt;;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;then for clsCardDeck&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; ShuffleDeck()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; index;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; val;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    Random rnd = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Random();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    passCount = 0; &lt;span style="color: #008000"&gt;// count how many times through the while loop&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    index = 1;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    Array.Clear(deck, 0, deck.Length); &lt;span style="color: #008000"&gt;// initialise the deck array to 0's&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;while&lt;/span&gt; (index &amp;lt; deck.Length) &lt;span style="color: #008000"&gt;// loop probably 52 times.. initialised at the top of this class.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #008000"&gt;// add 1 to the offset 0-based array&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        val = rnd.Next(DECKSIZE) + 1; &lt;span style="color: #008000"&gt;// Generates values between 1 - 52&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (deck[val] == 0) &lt;span style="color: #008000"&gt;// Is this card place in the deck &amp;quot;unused&amp;quot;?&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            deck[val] = index; &lt;span style="color: #008000"&gt;// yep, so assign it a card place.. ie put the index number into a random spot&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            index++; &lt;span style="color: #008000"&gt;// get ready for the next card&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        passCount++;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; passCount;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// Show a given card in the deck&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;param name=&amp;quot;index&amp;quot;&amp;gt;the index of the position where the card is found&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;returns&amp;gt;the pip for the card, or empty or error&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; getOneCard(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; index)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (index &amp;gt; 0 &amp;amp;&amp;amp; index &amp;lt;= deck.Length &amp;amp;&amp;amp; nextCard &amp;lt;= deck.Length)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; pips[deck[index]]; &lt;span style="color: #008000"&gt;// returns the 6H style string of the deck.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;; &lt;span style="color: #008000"&gt;// error&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sideways Refinement:&lt;/p&gt;
+
+&lt;p&gt;1. Initialize – build and display the main form (frmDave)&lt;/p&gt;
+
+&lt;p&gt;2. Input – none&lt;/p&gt;
+
+&lt;p&gt;3. Process – Shuffle the deck (clsCardDeck)&lt;/p&gt;
+
+&lt;p&gt;4. Display – Show deck on 4 rows (frmDave) –&amp;gt; which uses Get One Card at a Time (clsCardDeck)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Clear Deck (frmDave)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;5. Terminate – Close (frmDave)&lt;/p&gt;
+
+&lt;p&gt;this helped in thinking which class had which responsibilites.&lt;/p&gt;
+
+&lt;h4&gt; InBetweenGame&lt;/h4&gt;
+
+&lt;p&gt;You deal 2 cards, then bet on the outcome of the hidden 3rd card. Shown below I bet on a card coming up between 9D and QS.&amp;#160; It was a 3H, so I lost.&lt;/p&gt;
+
+&lt;p&gt;Debug information is in the textbox to the right hand side. &lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:fec94f7e-c42f-4b43-82db-cd0c04ad68c6" class="wlWriterEditableSmartContent"&gt;&lt;p&gt;Source &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Chapter10DesigningAndWritingCustomClasse_1031A/Ch10InBetweenCardGame.zip" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Chapter10DesigningAndWritingCustomClasse_1031A/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Chapter10DesigningAndWritingCustomClasse_1031A/image_thumb_1.png" width="670" height="397" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The architecture uses a middle ‘tier’ of rules, and a CardDeck class as used above.&lt;/p&gt;
+
+&lt;p&gt;Sideways Refinement:.. showing the responsibilities of each class.&amp;#160; Very useful.&lt;/p&gt;
+
+&lt;p&gt;1. Initialise – build and display the form (frmMain) – get initial wager and balance (clsRules)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;- Do initial shuffle (clsCardDeck)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;2. Input – get amount of wager (frmMain)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;- ask for new cards.. deal.. (frmMain)&lt;/p&gt;
+
+  &lt;p&gt;- ask for bet (frmMain)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;3. Process – deal a hand (rules) &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;- enough money to bet (frmMain)&lt;/p&gt;
+
+  &lt;p&gt;- enough cards in deck (clsCardDeck)&lt;/p&gt;
+
+  &lt;p&gt;- no? shuffle (clsCardDeck)&lt;/p&gt;
+
+  &lt;p&gt;- Get three cards (clsRules)&lt;/p&gt;
+
+  &lt;p&gt;- Figure out winner and position to display card (clsRules) **note here it knows the winner after deal button is pressed&lt;/p&gt;
+
+  &lt;p&gt;- make a bet (frmMain)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;4. Display - display if TIE, WIN, LOSE message and adjust balance (frmMain)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;- display card in correct position (frmMain)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;5. Terminate – Close&lt;/p&gt;
+
+&lt;p&gt;This was interesting code:.. see post on this blog on Parameter Passing in C#.&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;// get three cards, result, and position to display&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt; &lt;span style="color: #008000"&gt;// nb cards is a reference type (all arrays are), so don't need a ref.. it will be changed here.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt; myRules.DealHand(cards, &lt;span style="color: #0000ff"&gt;ref&lt;/span&gt; betResult, &lt;span style="color: #0000ff"&gt;ref&lt;/span&gt; position);&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2009-12-13T09:37:47.32525-05:00</Created>
+      <Modified>2009-12-18T04:42:53.140625-05:00</Modified>
+      <EntryId>00e73ea0-edc9-4a2c-a094-52349570a7f5</EntryId>
+      <Description />
+      <Title>Chapter 10 – Designing And Writing Custom Classes</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

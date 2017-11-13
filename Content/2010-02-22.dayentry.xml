@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-21T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;This is useful to get checking on the aspx page at compile time.&amp;#160; &lt;/p&gt;  &lt;p&gt;Right click on the project, and select unload.&lt;/p&gt;  &lt;p&gt;Edit the .csproj file&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVCCompileTimeChecking_AD78/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVCCompileTimeChecking_AD78/image_thumb.png" width="528" height="276" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Set MvcBuildViews to true&lt;/p&gt;  &lt;p&gt;Save, reload, compile.&lt;/p&gt;</Content>
+      <Created>2010-02-22T18:21:25.6259093-05:00</Created>
+      <Modified>2010-02-22T18:21:25.6259093-05:00</Modified>
+      <EntryId>4330856d-4942-49e0-a901-3724f2591826</EntryId>
+      <Description />
+      <Title>ASP.NET MVC Compile Time Checking</Title>
+      <Categories>ASP.NET MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;The Hands on MVC set of videos:  &lt;a href="http://www.learnvisualstudio.net"&gt;www.learnvisualstudio.net&lt;/a&gt;&lt;/p&gt;  &lt;h5&gt;Routing&lt;/h5&gt;  &lt;p&gt;In global.asax&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt; routes.MapRoute(&lt;br /&gt;    &lt;span style="color: #006080"&gt;"Default"&lt;/span&gt;, &lt;span style="color: #008000"&gt;// Route name&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #006080"&gt;"{controller}/{action}/{id}"&lt;/span&gt;, &lt;span style="color: #008000"&gt;// URL with parameters&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {controller = &lt;span style="color: #006080"&gt;"Home"&lt;/span&gt;, action = &lt;span style="color: #006080"&gt;"Index"&lt;/span&gt;, id = &lt;span style="color: #006080"&gt;""&lt;/span&gt;} &lt;span style="color: #008000"&gt;// Parameter defaults&lt;/span&gt;&lt;br /&gt;    );&lt;/pre&gt;
+
+  &lt;br /&gt;This means eg &lt;a title="http://localhost:3203/Home/About" href="http://localhost:3203/Home/About"&gt;http://localhost:3203/Home/About&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;will come to the controller called HomeController and run the method called About&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult About()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View();&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;which in this case will call the view with the same name called About.aspx&lt;/p&gt;
+
+&lt;p&gt;What about &lt;a title="http://localhost:3203/" href="http://localhost:3203/"&gt;http://localhost:3203/&lt;/a&gt; which is the same as /Home and /Home/Index&lt;/p&gt;
+
+&lt;p&gt;In this case the defaults are being used eg Home, Index , null… as shown above in //Parameter defaults.&lt;/p&gt;
+
+&lt;p&gt;It even passes a message from the Home controller, Index method.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;ViewData[&lt;span style="color: #006080"&gt;"Message"&lt;/span&gt;] = &lt;span style="color: #006080"&gt;"Welcome to ASP.NET MVC!"&lt;/span&gt;;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;h5&gt;Hardcode /Home to mean something&lt;/h5&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// for hardcoded /home goto home/member&lt;/span&gt;&lt;br /&gt;   routes.MapRoute(&lt;br /&gt;       &lt;span style="color: #006080"&gt;"MemberHome"&lt;/span&gt;,&lt;br /&gt;       &lt;span style="color: #006080"&gt;"home"&lt;/span&gt;,&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {controller = &lt;span style="color: #006080"&gt;"Home"&lt;/span&gt;, action = &lt;span style="color: #006080"&gt;"Member"&lt;/span&gt;}&lt;br /&gt;       );&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;Building UI Form&lt;/h3&gt;
+
+&lt;p&gt;get is putting in query string&lt;/p&gt;
+
+&lt;p&gt;post is putting in the http request body&lt;/p&gt;
+
+&lt;p&gt;utility methods for not directly specifying URL&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;br /&gt;&lt;%Html.BeginForm(); %&gt;&lt;br /&gt;&lt;br /&gt;    &lt;label &lt;span style="color: #0000ff"&gt;for&lt;/span&gt;=&lt;span style="color: #006080"&gt;"status"&lt;/span&gt;&gt;What are you doing?&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;    &lt;textarea name=&lt;span style="color: #006080"&gt;"status"&lt;/span&gt; cols=&lt;span style="color: #006080"&gt;"80"&lt;/span&gt; rows=&lt;span style="color: #006080"&gt;"2"&lt;/span&gt;&gt;&lt;/textarea&gt;&lt;br /&gt;    &lt;button type=&lt;span style="color: #006080"&gt;"submit"&lt;/span&gt;&gt;Update&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;&lt;% Html.EndForm(); %&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;Useful to see the Request coming back from /home/member into the HomeController, Member method.&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb.png" width="644" height="281" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;asdf&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_1.png" width="578" height="147" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Yuk!&lt;/p&gt;
+
+&lt;h3&gt;Post redirect get pattern.&lt;/h3&gt;
+
+&lt;p&gt;Basically stops the above resend message by getting the browser to do a redirect after the post page, to a nice get page.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[Authorize]&lt;br /&gt;[AcceptVerbs(HttpVerbs.Post)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Member(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; status) &lt;span style="color: #008000"&gt;// this will match up the name status in the forms collection&lt;/span&gt;&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #008000"&gt;//return View();&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;"Member"&lt;/span&gt;);&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;The Model using LinqToSQL&lt;/h3&gt;
+
+&lt;p&gt;Added a simple table with a FK to the aspnet_users UserId column.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_2.png" width="644" height="229" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The UserId FK is a guid.&lt;/p&gt;
+
+&lt;p&gt;The Timestamp has a default value of GETUTCDATE() so that the db writes in the timestamp.&lt;/p&gt;
+
+&lt;p&gt;LinqToSQL has:&lt;/p&gt;
+
+&lt;p&gt;readonly – shouldn’t allow app to change it&lt;/p&gt;
+
+&lt;p&gt;auto Generated Value = true   - hmm to do with:&lt;/p&gt;
+
+&lt;p&gt;Auto_Sync – so it will auto get the timestamp property back into the model whenever it does an insert.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Can see the class generated that represents our StatusUpdate table: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_3.png" width="276" height="557" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;The View&lt;/h3&gt;
+
+&lt;p&gt;In the controller:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;List&lt;StatusUpdate&gt; updates = db.GetUserUpdates(User.Identity.Name);&lt;br /&gt;&lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(updates);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;and in the view:&lt;/p&gt;
+
+&lt;p&gt;System.Web.Mvc.ViewPage&lt;List&lt;Twix.Models.StatusUpdate&gt;&gt;&lt;/p&gt;
+
+&lt;p&gt;we now get a strongly typed object&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3&gt;View Models&lt;/h3&gt;
+
+&lt;p&gt;Have simply created another class called MemberViewModel in Models:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MemberViewModel&lt;br /&gt;{&lt;br /&gt; &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&lt;StatusUpdate&gt; Updates { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div&gt;so can pass in more complex stuff than just a list into my view (can’t pass in multiple lists)&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div&gt;So the view now has:&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;System.Web.Mvc.ViewPage&lt;Twix.Models.MemberViewModel&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;and we can access data like:&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; update &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Model.Updates)&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;h3&gt;Lazy Loading and Eager Loading.&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;However we’ve hit an interesting issue:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_4.png" width="725" height="255" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;this is because of in the view we’ve called:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;Html.Encode(update.User.UserName)&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;And in the actual query, it returns only the StatusUpdate object and not the User object (even though it does a join).&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; updates = from update &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; &lt;span style="color: #0000ff"&gt;this&lt;/span&gt;.StatusUpdates&lt;br /&gt;                          where update.User.UserName == userName&lt;br /&gt;                          orderby update.Timestamp descending&lt;br /&gt;                          select update;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div&gt;in the controller after query is ran and the result put into the ViewModel, then passed to the View… the datacontext is destroyed.&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TwixDataContext())&lt;br /&gt;{&lt;br /&gt;    ViewData[&lt;span style="color: #006080"&gt;"Stuff"&lt;/span&gt;] = &lt;span style="color: #006080"&gt;"Blah this is a generic object with no intellisense"&lt;/span&gt;;&lt;br /&gt;&lt;br /&gt;    MemberViewModel model = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; MemberViewModel&lt;br /&gt;                            {&lt;br /&gt;                                Updates = db.GetUserUpdates(User.Identity.Name)&lt;br /&gt;                            };&lt;br /&gt;    &lt;span style="color: #008000"&gt;//List&lt;StatusUpdate&gt; updates = db.GetUserUpdates(User.Identity.Name);&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(model);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;So when the view tries to call the User.UserName.. LinqToSQL tries to go and get this data, as it hasn’t been needed yet.  This is lazy loading.&lt;/div&gt;
+
+&lt;p&gt;We want LinqToSQL to load the User object at the same time as loading the StatusUpdates.. this is Eager Loading.&lt;/p&gt;
+
+&lt;h5&gt;CSS&lt;/h5&gt;
+
+&lt;p&gt;Making things look good:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;#timeline { &lt;span style="color: #0000ff"&gt;list-style&lt;/span&gt;: &lt;span style="color: #006080"&gt;none;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;padding&lt;/span&gt;: 0;}&lt;br /&gt;#timeline &lt;span style="color: #0000ff"&gt;li&lt;/span&gt; {&lt;span style="color: #0000ff"&gt;border&lt;/span&gt;-&lt;span style="color: #0000ff"&gt;top&lt;/span&gt;:&lt;span style="color: #006080"&gt;dashed 1px #888;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;padding&lt;/span&gt;: &lt;span style="color: #006080"&gt;5px 0;&lt;/span&gt; }&lt;br /&gt;#timeline &lt;span style="color: #0000ff"&gt;li&lt;/span&gt;:hover { &lt;span style="color: #0000ff"&gt;background-color&lt;/span&gt;: &lt;span style="color: #006080"&gt;#eee;&lt;/span&gt; }&lt;br /&gt;#timeline &lt;span style="color: #0000ff"&gt;li&lt;/span&gt; &lt;span style="color: #0000ff"&gt;div&lt;/span&gt;&lt;span style="color: #cc6633"&gt;.message&lt;/span&gt; { &lt;span style="color: #0000ff"&gt;font-size&lt;/span&gt;: &lt;span style="color: #006080"&gt;10pt;&lt;/span&gt; }&lt;br /&gt;#timeline &lt;span style="color: #0000ff"&gt;li&lt;/span&gt; &lt;span style="color: #0000ff"&gt;div&lt;/span&gt;&lt;span style="color: #cc6633"&gt;.message&lt;/span&gt; &lt;span style="color: #0000ff"&gt;span&lt;/span&gt; { &lt;span style="color: #0000ff"&gt;font-weight&lt;/span&gt;: &lt;span style="color: #006080"&gt;bold;&lt;/span&gt; }&lt;br /&gt;#timeline &lt;span style="color: #0000ff"&gt;li&lt;/span&gt; &lt;span style="color: #0000ff"&gt;div&lt;/span&gt;&lt;span style="color: #cc6633"&gt;.time&lt;/span&gt; { &lt;span style="color: #0000ff"&gt;font-size&lt;/span&gt;: &lt;span style="color: #006080"&gt;8pt;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;font-style&lt;/span&gt;: italic }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;for:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;ul id=&lt;span style="color: #006080"&gt;"timeline"&lt;/span&gt;&gt;&lt;br /&gt;&lt;%&lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; update &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Model.Updates) {%&gt;&lt;br /&gt;  &lt;br /&gt;  &lt;li&gt;&lt;br /&gt;  &lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;"message"&lt;/span&gt;&gt;&lt;br /&gt;    &lt;span&gt;&lt;%= Html.Encode(update.User.UserName) %&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;%=Html.Encode(update.Message) %&gt;&lt;br /&gt;  &lt;/div&gt;&lt;br /&gt;  &lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;"time"&lt;/span&gt;&gt;&lt;br /&gt;  &lt;%=update.Timestamp.ToLocalTime().ToString() %&gt;&lt;br /&gt;  &lt;/div&gt;&lt;br /&gt;  &lt;/li&gt;&lt;br /&gt;&lt;%} %&gt;&lt;br /&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5&gt;Creating a Home/Profile&lt;/h5&gt;
+
+&lt;p&gt;coppied the get from index, however instead of passing in the current logged in user to GetUserUpdates, am passing in the string ie it will be localhost/nameofperson or localhost/home/profile/nameofperson&lt;/p&gt;
+
+&lt;p&gt;Also created a new viewmodel for profile that has username in it (as we’ll need this).  Strongly typed as well.&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; ProfileViewModel&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; UserName { get; set; }&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&lt;StatusUpdate&gt; Updates { get; set; }&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Partial View (#7)&lt;/h3&gt;
+
+&lt;p&gt;create a viewmodel just for the timeline ie this partial view.&lt;/p&gt;
+
+&lt;p&gt;changing MemberViewModel and ProfileViewModel to have a TimeliveViewModel (abstracting it away to get rid of duplication)&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MemberViewModel&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; TimelineViewModel TimelineModel { get; set; }&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; TimelineViewModel&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&lt;StatusUpdate&gt; Updates { get; set; }&lt;br /&gt;    &lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;So we reference it in the controller like this:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;ProfileViewModel model = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProfileViewModel&lt;br /&gt;                         {&lt;br /&gt;                             UserName = userName,&lt;br /&gt;                             TimelineModel = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TimelineViewModel{&lt;br /&gt;                                 Updates = db.GetUserUpdates(userName)&lt;br /&gt;                             }&lt;br /&gt;                         };&lt;br /&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;and then in the view:&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;%&lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; update &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Model.TimelineModel.Updates) {%&gt;&lt;br /&gt;  &lt;br /&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Hyperlinks, Anonymous Type - create new view as Timeline.ascx&lt;/h3&gt;
+
+&lt;div&gt;&lt;%Html.RenderPartial("Timeline", Model.TimelineModel); %&gt; 
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt; &lt;/div&gt;
+
+&lt;div&gt;&lt;%Html.ActionLink(update.User.UserName, "profile", new {userName = update.User.UserName}) %&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;First property is the text to be displayed, second is the action to be called when they click this link (method on this controller), &lt;/p&gt;
+
+&lt;p&gt;We’re not specifying the controller here, so it is going to user the current (home) controller.&lt;/p&gt;
+
+&lt;p&gt;The third is a generic object which represents the extra route values that we want.. as the method takes a parameter called userName, we need to pass it. We use an anonymous type&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_5.png" width="219" height="158" /&gt;&lt;/a&gt; 
+
+&lt;p&gt;The crowd goes wild :-)&lt;/p&gt;
+
+&lt;h3&gt;Seeing Other Peoples Tweets&lt;/h3&gt;
+
+&lt;p&gt;A common technique when we need a Many to Many relationship.  &lt;/p&gt;
+
+&lt;p&gt;each user can follow many other users&lt;/p&gt;
+
+&lt;p&gt;each user can be followed by many other users&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_14.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_6.png" width="614" height="495" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;The primary key is both on the FollowerMappings table.&lt;/p&gt;
+
+&lt;p&gt;Then in the Mappings:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_16.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/image_thumb_7.png" width="1156" height="550" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;We have renamed the child and parent properties for clarity.&lt;/p&gt;
+
+&lt;p&gt;The first FK relationship is the FollowerId being held constant.  So the Child Property is the Followee (all the people the user is following)&lt;/p&gt;
+
+&lt;p&gt;The second FK relationship is the FoloweeId being held contact.  So the Child Property is the Follower (all people who are following the user).&lt;/p&gt;
+
+&lt;p&gt;**TODO refactor and come up with better names.&lt;/p&gt;
+
+&lt;h3&gt;Adding Methods to The Model DataContext&lt;/h3&gt;
+
+&lt;p&gt;GetAllUpdates – gets all status update records including those psoted by user that this user is following&lt;/p&gt;
+
+&lt;p&gt;IsFollowing – checks if a specific user name is following another user name… so we know whether to display a button&lt;/p&gt;
+
+&lt;p&gt;DeleteFollowerMapping&lt;/p&gt;
+
+&lt;h3&gt;Adding Methods to the HomeController&lt;/h3&gt;
+
+&lt;p&gt;Changed the get method on Home/Profile to GetUserUpdates.. and to do logic for displaying the Follow/Stop Following button.&lt;/p&gt;
+
+&lt;p&gt;Added a post method for Follow (which is called from Profile as a form post), and redirects back to Profile.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[Authorize]&lt;br /&gt;[AcceptVerbs(HttpVerbs.Post)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Follow(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; userName)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;.IsNullOrEmpty(userName) &amp;&amp; !userName.Equals(User.Identity.Name, StringComparison.OrdinalIgnoreCase))&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;var&lt;/span&gt; db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TwixDataContext())&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!db.IsFollowing(User.Identity.Name, userName)) &lt;span style="color: #008000"&gt;// double check they are not already being followed&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;var&lt;/span&gt; followerMapping = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; FollowerMapping&lt;br /&gt;                                      {&lt;br /&gt;                                          FollowerId = db.GetUserIdForUserName(User.Identity.Name),&lt;br /&gt;                                          FolloweeId = db.GetUserIdForUserName(userName)&lt;br /&gt;                                      };&lt;br /&gt;&lt;br /&gt;                db.FollowerMappings.InsertOnSubmit(followerMapping);&lt;br /&gt;                db.SubmitChanges();&lt;br /&gt;            }&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;"Profile"&lt;/span&gt;, &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {userName = userName});&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Added a post method for StopFollowing.. same as above.&lt;/p&gt;
+
+&lt;h3&gt;Adding Properties to the ProfileViewModel&lt;/h3&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; ProfileViewModel&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FollowText { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FollowAction { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; IsSelf { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; UserName { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; TimelineViewModel TimelineModel { get; set; }&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;
+So when we pass this object to the view, we’ve got lots of strongly typed goodness. 
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Using in the View&lt;/h3&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (Html.BeginForm(Model.FollowAction, &lt;span style="color: #006080"&gt;"home"&lt;/span&gt;)) {&lt;br /&gt;      %&gt;&lt;br /&gt;               &lt;%=Html.Hidden(&lt;span style="color: #006080"&gt;"userName"&lt;/span&gt;, Model.UserName) %&gt;&lt;br /&gt;               &lt;button type=&lt;span style="color: #006080"&gt;"submit"&lt;/span&gt; &lt;%=Model.FollowText %&gt;&lt;/button&gt;&lt;br /&gt;      &lt;%&lt;br /&gt;       }&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;where the brace ends, is just the same as doing an Html.EndForm.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3&gt;Best Practise&lt;/h3&gt;
+
+&lt;p&gt;Use a form post instead of a link if doing database stuff to prevent hacking.&lt;/p&gt;
+
+&lt;h3&gt;Summary so Far&lt;/h3&gt;
+
+&lt;p&gt;Why do we have so much business logic in the controller?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/DSCN1403.jpg"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="DSCN1403" border="0" alt="DSCN1403" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LearnVisualStudio.net_CBC4/DSCN1403_thumb.jpg" width="580" height="772" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;next video is #9&lt;/p&gt;
+
+&lt;p&gt;why is this line sometimes giving Http Exception in home controller.&lt;/p&gt;
+
+&lt;p&gt;var isSelf = userName.Equals(User.Identity.Name, StringComparison.OrdinalIgnoreCase);&lt;/p&gt;
+
+&lt;p&gt;#9 – is jQuery.. thats all folks or more stuff.&lt;/p&gt;
+
+&lt;p&gt;#10 – is account settings.. name, email, timezone.. form field validation… combo box (dropdown)… nice fade out jquery front end.&lt;/p&gt;
+
+&lt;p&gt;#11 – is upload photo&lt;/p&gt;
+
+&lt;p&gt;#12 – is search.. ?q=learnvisualstudio… not a post… stuff in his source code that isn’t in video. icon/link delete a post.&lt;/p&gt;</Content>
+      <Created>2010-02-21T21:28:02.007-05:00</Created>
+      <Modified>2010-07-08T03:30:23.2315-04:00</Modified>
+      <EntryId>c3a27483-bf5e-4a1a-9c4f-3a3d27b9b184</EntryId>
+      <Description />
+      <Title>LearnVisualStudio.net - Twix</Title>
+      <Categories>ASP.NET MVC;Patterns</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-08-02T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h3&gt;&amp;#160;&lt;/h3&gt;  &lt;p&gt;WF4 Getting Started Tutorial – Steve Danielson.. Number Guessing Game   &lt;br /&gt;&lt;a href="http://code.msdn.microsoft.com/windowsdesktop/Windows-Workflow-164557c3#content"&gt;http://code.msdn.microsoft.com/windowsdesktop/Windows-Workflow-164557c3#content&lt;/a&gt;    &lt;br /&gt;This needs .NET4.0.1 (downloading Targeting Pack 4.0.3 – 4th March 2012) which includes a state machine.&lt;/p&gt;</Content>
+      <Created>2012-08-03T11:09:54.3766444-04:00</Created>
+      <Modified>2012-08-03T11:10:04.3728684-04:00</Modified>
+      <EntryId>5f97bad9-ac89-43ae-8599-3463b3e3194b</EntryId>
+      <Description />
+      <Title>WF4 Demo and Update 4.0.3 For the .NET Framework 4</Title>
+      <Categories>WF4</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

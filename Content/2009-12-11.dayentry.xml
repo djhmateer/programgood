@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-12-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;Continuing in the book series.&lt;/p&gt;  &lt;h4&gt;Part III, Chapter 9 – Designing Classes&lt;/h4&gt;  &lt;p&gt;Major benefits from OOP&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Data encapsulation &lt;/li&gt;    &lt;li&gt;Code reuse &lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Write a class that determines the date of Easter, and whether it is a leap year.&lt;/p&gt;  &lt;p&gt;5 Programming Steps:&lt;/p&gt;  &lt;ol&gt;   &lt;li&gt;Initialization &lt;/li&gt;    &lt;li&gt;Input &lt;/li&gt;    &lt;li&gt;Process &lt;/li&gt;    &lt;li&gt;Display &lt;/li&gt;    &lt;li&gt;Terminate &lt;/li&gt; &lt;/ol&gt;  &lt;h5&gt;UML Light and Static&lt;/h5&gt;  &lt;p&gt;- daysInMonth : static int[]&lt;/p&gt;  &lt;p&gt;// regardless of how many instances of this class you create, you get only one array named daysInMonth.&lt;/p&gt;  &lt;p&gt;// the – means it is private.. &lt;/p&gt;  &lt;p&gt;// properties.. generally we want to hide as much as possible.&lt;/p&gt;  &lt;p&gt;Use static with any data that can be shared between instances of classes&lt;/p&gt;  &lt;p&gt;or any data that must be present the moment the program is ready to start executing&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:5420d67d-1ae4-4e29-8fd3-b4fb82a28b1c" class="wlWriterSmartContent"&gt;   &lt;p&gt;Code is &lt;a href="file:///C:/Documents and Settings/dave/Local Settings/Temp/WindowsLiveWriter-429641856/supfiles43C2590/Ch9ClassDesign.zip" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt; &lt;/div&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/WritingYourOwnClasses_9C5A/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/WritingYourOwnClasses_9C5A/image_thumb.png" width="309" height="216" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;This is how the author likes to set out his classes.. &lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; clsDates&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// PROPERTIES&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// symbolic constants&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// static members&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] daysInMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// instance members.. this is the common term for all non-static properties.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; day;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; month;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; year;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; leapYear;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    DateTime current;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;//METHODS&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// constructor&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; clsDates()&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        current = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DateTime();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// property methods&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// helper methods&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;// general methods&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// Purpose:  To determine if the year is a leap year.&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;param name=&amp;quot;year&amp;quot;&amp;gt;the year under construction&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;returns&amp;gt;1 if a leap year, 0 otherwise&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; getLeapYear(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; year)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (year % 4 == 0 &amp;amp;&amp;amp; year % 100 != 0 || year % 400 == 0)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; 1; &lt;span style="color: #008000"&gt;// it is a leap year&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; 0;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// To determine the date for Easter given a year&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;param name=&amp;quot;year&amp;quot;&amp;gt;int year - the year under construction&amp;lt;/param&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #008000"&gt;/// &amp;lt;returns&amp;gt;the date in DateTime as MM/DD/YYYY format&amp;lt;/returns&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; getEaster(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; year)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; offset;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; leap;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; day;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; temp1;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; temp2;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; total;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        offset = year % 19;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        leap = year % 4;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        day = year % 7;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        temp1 = (19 * offset + 24) % 30;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        temp2 = (2 * leap + 4 * day + 6 * temp1 + 5) % 7;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        total = (22 + temp1 + temp2);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (total &amp;gt; 31)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            month = 4; &lt;span style="color: #008000"&gt;// Easter is in April&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            day = total - 31; &lt;span style="color: #008000"&gt;// on this day&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            month = 3; &lt;span style="color: #008000"&gt;// Easter is in March&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;            day = total; &lt;span style="color: #008000"&gt;// on this day&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        DateTime myDT = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DateTime(year, month, day);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; myDT.ToLongDateString();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    }&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I loved his irreverant style Exercises:&lt;/p&gt;
+
+&lt;p&gt;Q: Give a good example of where you would use the public access specifier to define a class property?&lt;/p&gt;
+
+&lt;p&gt;A: I couldn’t think of one either :-)&lt;/p&gt;
+
+&lt;p&gt;SOC = Show Off Code :-)&lt;/p&gt;</Content>
+      <Created>2009-12-11T06:08:52.278375-05:00</Created>
+      <Modified>2009-12-21T03:33:04.0712487-05:00</Modified>
+      <EntryId>3c0a0024-f30c-4655-9ae4-23b280a6f671</EntryId>
+      <Description />
+      <Title>Writing Your Own Classes</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

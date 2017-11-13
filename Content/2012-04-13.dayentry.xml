@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-12T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;As MSDE seems to have a memory leak I simply restart it every week.&lt;/p&gt;  &lt;p&gt;c:\restartmsde.bat&lt;/p&gt;  &lt;p&gt;@ECHO OFF   &lt;br /&gt;NET STOP MSSQLSERVER    &lt;br /&gt;NET START MSSQLSERVER&lt;/p&gt;  &lt;p&gt;Scheduled task to run as Administrator every Sunday at 2:30AM NZT&lt;/p&gt;</Content>
+      <Created>2012-04-13T05:44:49.02575-04:00</Created>
+      <Modified>2012-04-13T05:44:49.02575-04:00</Modified>
+      <EntryId>bd6c1258-c0af-43b1-971a-b5b5c6e29576</EntryId>
+      <Description />
+      <Title>Restart MSDE Scheduled Task</Title>
+      <Categories>MSDE</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/IIS6-Metabase_8B4E/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/IIS6-Metabase_8B4E/image_thumb.png" width="490" height="315" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Edit Metabase while running to yes.&lt;/p&gt;  &lt;p&gt;Then \Windows\System32\inetsrv\MetaBase.xml&lt;/p&gt;  &lt;p&gt;looked for AspBuffering and I doubled the value up to 8MB&lt;/p&gt;</Content>
+      <Created>2012-04-13T04:59:23.885125-04:00</Created>
+      <Modified>2012-04-13T04:59:23.885125-04:00</Modified>
+      <EntryId>f09d2449-8ee5-418e-8337-3712898b2271</EntryId>
+      <Description />
+      <Title>IIS6 Metabase and AspBufferingLimit</Title>
+      <Categories>asp;IIS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;I needed Server2003 to run MSDE:&lt;/p&gt;  &lt;p&gt;&lt;a href="https://aws.amazon.com/amis?page=1&amp;amp;platform=Windows&amp;amp;selection=platform"&gt;https://aws.amazon.com/amis?page=1&amp;amp;platform=Windows&amp;amp;selection=platform&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;need an EBS backed route device to launch a micro instance&lt;/p&gt;  &lt;p&gt;Ctrl Alt End – for ctrl alt del in remote desktop&lt;/p&gt;  &lt;p&gt;On Demand to Reserved instance&lt;/p&gt;  &lt;p&gt;&lt;a href="http://serverfault.com/questions/377068/amazon-ec2-move-on-demand-instance-to-reserved"&gt;http://serverfault.com/questions/377068/amazon-ec2-move-on-demand-instance-to-reserved&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Careful to use the same AZ (availability zone)..eg us-west-2a&lt;/p&gt;  &lt;p&gt;What is Platform:&amp;#160; Windows (Amazon VPC) or Windows.. Windows doesn’t have Tenancy dedicated.. $0.059 per hour and $69 one off.&lt;/p&gt;  &lt;p&gt;What is Tenancy: Dedicated..more expensive… $0.09 per hour and $120 one off.&lt;/p&gt;  &lt;p&gt;8 766 hours per year.&amp;#160; So 1 year costs are:&lt;/p&gt;  &lt;p&gt;$195 + (8766 * 0.036) = 195 + 315.57 = 510.58 USD = 43USD per month&lt;/p&gt;  &lt;h3&gt;S3 Backups and Bundling AMIs&lt;/h3&gt;  &lt;p&gt;Created a bucket to backup files and db backup in.&lt;/p&gt;  &lt;p&gt;Also created a bucket to put in an AMI bundle, so that if &lt;/p&gt;  &lt;p&gt;eg &lt;a href="http://daveamicube2.s3-website-us-west-2.amazonaws.com/"&gt;http://daveamicube2.s3-website-us-west-2.amazonaws.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_10.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_thumb_4.png" width="244" height="130" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;right click on the instance and do a Bundle Instance&lt;/p&gt;  &lt;p&gt;my instance crashes, then I can get online super quickly.&lt;/p&gt;  &lt;p&gt;need to do the bundling.&amp;#160; then took 1 hour (which instance was offline) to do the bundle.&amp;#160; Then needed to go to AMIs and make my own private bundle&lt;/p&gt;  &lt;p&gt;Make a new AMI:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_thumb_3.png" width="244" height="98" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;daveamicube2.manifest.xml&lt;/p&gt;  &lt;p&gt;auto backup strategies: &lt;a href="http://s3.codeplex.com/"&gt;http://s3.codeplex.com/&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;MSDE and installing The Cube&lt;/h3&gt;  &lt;p&gt;setup.exe sapwd=”secret”&lt;/p&gt;  &lt;p&gt;should have done below to install mixed mode auth:&lt;/p&gt;  &lt;pre&gt;C:\...MSDE\&amp;gt;Setup.exe DISABLENETWORKPROTOCOLS=0 
+      SAPWD=&amp;quot;password &amp;quot; INSTANCENAME=&amp;quot;myinstance&amp;quot; SECURITYMODE=SQL&lt;/pre&gt;
+
+&lt;pre&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_thumb_1.png" width="644" height="340" /&gt;&lt;/a&gt;&lt;/pre&gt;
+
+&lt;pre&gt;post reconfiguring to go for mixed mode.  Change loginmode from 1 to 2.&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_thumb.png" width="522" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;setting up named pipes and tcp/ip for msde&lt;/p&gt;
+
+&lt;p&gt;Can then connect from sql management studio to .\&lt;/p&gt;
+
+&lt;h3&gt;Populating MSDE and Permissions&lt;/h3&gt;
+
+&lt;p&gt;**Problem with Amazon instances getting a backup of them?&amp;#160; especially non EBS&lt;/p&gt;
+
+&lt;p&gt;database is called: client_cube_v2&lt;/p&gt;
+
+&lt;p&gt;tried doing script into Enterprise Manager but outOfMemoryException.&lt;/p&gt;
+
+&lt;p&gt;on the desktop: osql –E –i client_cube_v2.sql (remember to take off x86 in the filename at the start of the sql)&lt;/p&gt;
+
+&lt;p&gt;osql –E&lt;/p&gt;
+
+&lt;p&gt;select @@version;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_6.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Amazon-Servers_FE58/image_thumb_2.png" width="434" height="101" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;permissions:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.cubemontage1"&gt;wwwcubemontage1&lt;/a&gt;, montxxxxx&lt;/p&gt;
+
+&lt;p&gt;wwwcubemontage2, passxxxxx&lt;/p&gt;
+
+&lt;p&gt;system dsn is: cubemontage using wwwcubemontage2&lt;/p&gt;
+
+&lt;p&gt;careful to use name as: .\ and not local&lt;/p&gt;
+
+&lt;p&gt;made a file called dbtest.asp which is very useful to check the DSN.&lt;/p&gt;
+
+&lt;h3&gt;ASP Upload and limits&lt;/h3&gt;
+
+&lt;p&gt;install 32bit version and put in licence key&lt;/p&gt;
+
+&lt;p&gt;full control permissions on clientcubedocs&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://support.microsoft.com/kb/268364"&gt;http://support.microsoft.com/kb/268364&lt;/a&gt; – increase asp script timeout.?&amp;#160; Actually put &amp;lt;% Server.ScriptTimeout = 500 %&amp;gt;&amp;#160; into import_native_doc.asp&amp;#160; Couldn’t get other settings to stick.&lt;/p&gt;
+
+&lt;h3&gt;Search&lt;/h3&gt;
+
+&lt;p&gt;Indexing service&lt;/p&gt;
+
+&lt;p&gt;client_cube_2, and remember to put in the actual directory.&lt;/p&gt;
+
+&lt;p&gt;use d:\ &lt;/p&gt;
+
+&lt;h3&gt;Other Configs&lt;/h3&gt;
+
+&lt;p&gt;put in metabase file for large download sizes (see other post on this blog)&lt;/p&gt;
+
+&lt;p&gt;put in restart of MSDE weekly (see other post)&lt;/p&gt;</Content>
+      <Created>2012-04-13T09:26:26.510125-04:00</Created>
+      <Modified>2012-04-13T09:26:26.510125-04:00</Modified>
+      <EntryId>7e6a1ce7-67ac-4a0f-9a7e-db16f8c3d6ca</EntryId>
+      <Description />
+      <Title>Amazon Servers</Title>
+      <Categories>Amazon EC2</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

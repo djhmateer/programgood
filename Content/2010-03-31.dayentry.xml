@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-03-30T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h3&gt;   &lt;p&gt;&amp;#160;&lt;/p&gt; &lt;/h3&gt;  &lt;p&gt;heroku - free    &lt;br /&gt;dreamhost - 9us per month     &lt;br /&gt;railsplayground - 5us per month     &lt;br /&gt;slicehost - vps.. bout 20 per month&lt;/p&gt;  &lt;p&gt;gem install heroku&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_thumb.png" width="499" height="305" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;create git repo&lt;/p&gt;  &lt;p&gt;heroku create&lt;/p&gt;  &lt;p&gt;&amp;#160; it then added ssh key to remote&lt;/p&gt;  &lt;p&gt;git remote – has added in the remote&lt;/p&gt;  &lt;p&gt;git push heroku master&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_thumb_1.png" width="644" height="320" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;hmmm…&lt;/p&gt;  &lt;p&gt;tried:&amp;#160; heroku keys:add c:\id_rsa.pub&lt;/p&gt;  &lt;p&gt;remembered i’d put my key in &lt;/p&gt;  &lt;p&gt;c:\home\.ssh\id_rsa.pub&lt;/p&gt;  &lt;p&gt;heroku rake db:migrate&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HostingRubyOnRails_9747/image_thumb_2.png" width="644" height="320" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;The crowd goes wild!&lt;/p&gt;</Content>
+      <Created>2010-03-31T17:49:39.242625-04:00</Created>
+      <Modified>2010-03-31T17:49:39.242625-04:00</Modified>
+      <EntryId>1a5935ce-0055-4fe2-912c-f7baa884de4b</EntryId>
+      <Description />
+      <Title>Hosting Ruby On Rails</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

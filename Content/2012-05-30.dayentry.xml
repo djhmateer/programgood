@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-05-29T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.usatoday.com/money/smallbusiness/columnist/strauss/2010-11-07-strauss-ask-an-expert_N.htm"&gt;http://www.usatoday.com/money/smallbusiness/columnist/strauss/2010-11-07-strauss-ask-an-expert_N.htm&lt;/a&gt;    &lt;br /&gt;&lt;a href="http://www.axemedia.com/FAQ/What-Should-Websites-Do-or-Say.html"&gt;http://www.axemedia.com/FAQ/What-Should-Websites-Do-or-Say.html&lt;/a&gt;    &lt;br /&gt;&lt;a href="http://www.entrepreneur.com/article/217499"&gt;http://www.entrepreneur.com/article/217499&lt;/a&gt;    &lt;br /&gt;&lt;a href="http://smallbiztrends.com/2010/06/tips-small-business-web-credibility.html"&gt;http://smallbiztrends.com/2010/06/tips-small-business-web-credibility.html&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-05-30T09:34:15.90275-04:00</Created>
+      <Modified>2012-05-30T09:34:15.90275-04:00</Modified>
+      <EntryId>3519361f-f6ec-4ae2-ac0a-5ba149e2663e</EntryId>
+      <Description />
+      <Title>What to put in a Business Website?</Title>
+      <Categories>Wordpress</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;ul&gt;   &lt;li&gt;Break things down into short paragraphs, with headers if necessary&lt;/li&gt;    &lt;li&gt;Use bullet points&lt;/li&gt;    &lt;li&gt;Highlight important words or phrases.&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;eg http://haacked.com/archive/2012/05/21/introducing-github-for-windows.aspx&lt;/p&gt;</Content>
+      <Created>2012-05-30T09:37:42.230875-04:00</Created>
+      <Modified>2012-05-30T09:37:42.230875-04:00</Modified>
+      <EntryId>8b4f2b78-44ef-4f40-887f-c00387274aa3</EntryId>
+      <Description />
+      <Title>How to Write Content for Websites</Title>
+      <Categories>Wordpress</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

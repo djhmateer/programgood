@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-16T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.xiirus.net/articles/article-_net-convert-datetime-from-one-timezone-to-another-7e44y.aspx"&gt;http://www.xiirus.net/articles/article-_net-convert-datetime-from-one-timezone-to-another-7e44y.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-17T17:26:22.842125-05:00</Created>
+      <Modified>2011-02-17T17:26:22.842125-05:00</Modified>
+      <EntryId>57993c48-4f55-40c4-8ba6-4a2138a38b2e</EntryId>
+      <Description />
+      <Title>Coverting DateTimes to different TimeZones in .NET</Title>
+      <Categories>c# language;DateTime</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/1859248/how-to-change-time-in-datetime"&gt;http://stackoverflow.com/questions/1859248/how-to-change-time-in-datetime&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-17T17:45:00.7015-05:00</Created>
+      <Modified>2011-02-17T17:45:00.7015-05:00</Modified>
+      <EntryId>de6b417b-3f5c-49b2-b56b-fa5e3ffca780</EntryId>
+      <Description />
+      <Title>Changing a Time in C#</Title>
+      <Categories>c# language;DateTime</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-02-11T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;The data transfer for WCF RIA Services is actually done in a binary format, which does not make it particularly easy when trying to see what’s coming down the wire.&lt;/p&gt;  &lt;p&gt;Meet the WCF Binary inspector for Fiddler   &lt;br /&gt;&lt;a href="http://archive.msdn.microsoft.com/wcfbinaryinspector"&gt;http://archive.msdn.microsoft.com/wcfbinaryinspector&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The installation process nothing more than dropping a “dll” into your “&lt;a href="file://\\Program Files x86\Fiddler2\Inspectors"&gt;\\Program Files x86\Fiddler2\Inspectors&lt;/a&gt;” folder&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/caaef914f342_86C3/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/caaef914f342_86C3/image_thumb.png" width="620" height="377" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Thanks to Jau for this!&lt;/p&gt;</Content>
+      <Created>2013-02-12T04:43:55.8444754-05:00</Created>
+      <Modified>2013-02-12T04:43:55.8444754-05:00</Modified>
+      <EntryId>ef0a8f8b-1567-47fc-9104-26a557178951</EntryId>
+      <Description />
+      <Title>WCF RIA Binary Inspector for Fiddler</Title>
+      <Categories>Fiddler;RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

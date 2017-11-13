@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-07-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From Josh Holmes at WebMatrix event in Ireland (Part 4 of the video)&lt;/p&gt;  &lt;p&gt;Add library package reference on references (nuget)&lt;/p&gt;  &lt;p&gt;Using dependency injection framework Ninject.MVC3.. which leverages inside MVC3&lt;/p&gt;  &lt;p&gt;Moq for mocking&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Package manager console (next to output at bottom of screen)…powershell in Visual Studio&lt;/p&gt;  &lt;p&gt;Install-package MVCScaffolding&lt;/p&gt;  &lt;p&gt;scaffold controller product&lt;/p&gt;  &lt;p&gt;Unobtrusive jquery for validation&lt;/p&gt;</Content>
+      <Created>2011-07-16T09:29:54.102125-04:00</Created>
+      <Modified>2011-07-16T09:30:05.727125-04:00</Modified>
+      <EntryId>7a357fa1-6f93-4865-b010-5e2b236e6f34</EntryId>
+      <Description />
+      <Title>MVC3 overview Josh Holmes in Ireland</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;From asp.net/mvc videos&lt;/p&gt;  &lt;p&gt;Shift Alt C to create a new class&lt;/p&gt;  &lt;h3&gt;Extension method syntax&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_thumb.png" width="203" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f1365408-fc5f-499c-aaaa-f89436624720" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #ffffff; max-height: 300px; overflow: auto; padding: 2px 5px;"&gt;    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;HtmlHelpers&lt;/span&gt;&lt;br&gt;     {&lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#0000ff"&gt;string&lt;/span&gt; Truncate(&lt;span style="color:#0000ff"&gt;this&lt;/span&gt; &lt;span style="color:#2b91af"&gt;HtmlHelper&lt;/span&gt; helper, &lt;span style="color:#0000ff"&gt;string&lt;/span&gt; input, &lt;span style="color:#0000ff"&gt;int&lt;/span&gt; length)&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (input.Length &amp;lt;= length)&lt;br&gt;                 &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; input;&lt;br&gt;             &lt;span style="color:#0000ff"&gt;else&lt;/span&gt;&lt;br&gt;                 &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; input.Substring(0, length) + &lt;span style="color:#a31515"&gt;&amp;quot;...&amp;quot;&lt;/span&gt;;&lt;br&gt;         }&lt;br&gt;     }&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;In the view:&lt;/p&gt;  &lt;pre&gt;@using RazorHelpers.Helpers
+ 
+&amp;lt;h2&amp;gt;@Html.Truncate(ViewBag.Message as string,8)&amp;lt;/h2&amp;gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_thumb_1.png" width="244" height="171" /&gt;&lt;/a&gt;&lt;/pre&gt;
+
+&lt;p&gt;could add namespace into the web.config so don’t need to add a ref in the using.&lt;/p&gt;
+
+&lt;p&gt;This didn’t work!&lt;/p&gt;
+
+&lt;h3&gt;Razor Declarative Syntax&lt;/h3&gt;
+
+&lt;pre&gt;&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6bb320eb-30e6-40d3-b68d-8ddc08e24117" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 300px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="background:#ffff00"&gt;@helper &lt;/span&gt;Truncate(&lt;span style="color:#0000ff"&gt;string&lt;/span&gt; input, &lt;span style="color:#0000ff"&gt;int&lt;/span&gt; length)&lt;br&gt;
+{&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (input.Length &amp;lt;= length) {&lt;br&gt;
+             &lt;span style="background:#ffff00"&gt;@&lt;/span&gt;input&lt;br&gt;
+        } &lt;span style="color:#0000ff"&gt;else&lt;/span&gt;  {&lt;br&gt;
+             &lt;span style="background:#ffff00"&gt;@&lt;/span&gt;input.Substring(0, length)&lt;span style="background:#ffff00"&gt;&amp;lt;text&amp;gt;&lt;/span&gt;...(razor)&lt;span style="background:#ffff00"&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;     &lt;br&gt;
+        }&lt;br&gt;
+}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+&amp;lt;h2&amp;gt;@Truncate(ViewBag.Message as string,8)&amp;lt;/h2&amp;gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;font face="Arial"&gt;Once have got that working can move it out into a separate file:&lt;/font&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;font face="Arial"&gt;App_Code folder – which means its going to be compiled as part of the build process&lt;/font&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_8.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Razor-Helpers_8111/image_thumb_3.png" width="217" height="164" /&gt;&lt;/a&gt;&lt;/pre&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:94a56728-ca11-4729-add9-6ba70e2fbb97" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 300px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="background:#ffff00"&gt;@helper &lt;/span&gt;Truncate(&lt;span style="color:#0000ff"&gt;string&lt;/span&gt; input, &lt;span style="color:#0000ff"&gt;int&lt;/span&gt; length){&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (input.Length &amp;lt;= length) {&lt;br&gt;
+        &lt;span style="background:#ffff00"&gt;@&lt;/span&gt;input&lt;br&gt;
+    }&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;else&lt;/span&gt; { &lt;br&gt;
+        &lt;span style="background:#ffff00"&gt;@&lt;/span&gt;input.Substring(0, length)&lt;span style="background:#ffff00"&gt;&amp;lt;text&amp;gt;&lt;/span&gt;...(razor)&lt;span style="background:#ffff00"&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;&lt;br&gt;
+    }&lt;br&gt;
+}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&amp;lt;h2&amp;gt;@CustomHelpers.Truncate(ViewBag.Message,8)&amp;lt;/h2&amp;gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;font face="Arial"&gt;Notice we don’t need to cast as a string.  John prefers slightly the declarative way as can do inline on page, then move out.. and can leverage razor&lt;/font&gt;&lt;/pre&gt;</Content>
+      <Created>2011-07-16T09:24:14.633375-04:00</Created>
+      <Modified>2011-07-16T09:29:37.61775-04:00</Modified>
+      <EntryId>ade5e049-0743-4fb1-bca0-7c0297e0bd8e</EntryId>
+      <Description />
+      <Title>Razor Helpers John Galloway</Title>
+      <Categories>ASP.NET MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;0. Getting Started - Console app.&lt;/p&gt;  &lt;p&gt;1. Quickstart – MVC2.&amp;#160; Model and querying.&amp;#160; Eager loading.&lt;/p&gt;  &lt;p&gt;2. Deals – MVC3. Validation&lt;/p&gt;  &lt;p&gt;3. Aptitude Test.&amp;#160; Webforms&lt;/p&gt;  &lt;p&gt;4. TV Guide.&amp;#160; MVC2.&amp;#160; Caching.&amp;#160; Unit Testing&lt;/p&gt;  &lt;p&gt;5. ATM.&amp;#160; Console app, WPF, WCF.&lt;/p&gt;  &lt;p&gt;6. Film Festival.&amp;#160; MVC3. Silverlight and&amp;#160; RIA, Spacial Data Types, Logger&lt;/p&gt;</Content>
+      <Created>2011-07-16T09:23:03.352125-04:00</Created>
+      <Modified>2011-07-16T09:23:16.352125-04:00</Modified>
+      <EntryId>4a6d11e4-470a-4e1e-a996-c7425dbbdad2</EntryId>
+      <Description />
+      <Title>Lightspeed 4 Samples</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;h3&gt;VS2010&lt;/h3&gt;  &lt;p&gt;Shift Alt C – Add a class&lt;/p&gt;  &lt;p&gt;Alt F10, O A&amp;#160; - Oraganise and delete usings&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h3&gt;Win Media Player&lt;/h3&gt;  &lt;p&gt;Ctrl P – play and pause&lt;/p&gt;  &lt;p&gt;Ctrl Shift F – Fast Forward&lt;/p&gt;  &lt;p&gt;Ctrl Shift B – Fast Back&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h3&gt;Windows Live Writer&lt;/h3&gt;  &lt;p&gt;Alt H Y – Make a heading&lt;/p&gt;  &lt;p&gt;Alt F H – Publish&lt;/p&gt;</Content>
+      <Created>2011-07-16T09:01:19.602125-04:00</Created>
+      <Modified>2011-07-16T09:23:48.86775-04:00</Modified>
+      <EntryId>3f5294be-c95c-4ac8-8158-612911422bd4</EntryId>
+      <Description />
+      <Title>More Keyboard Shortcuts–July 2011</Title>
+      <Categories>Keyboard Shortcuts</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Lightspeed-Sample-1Getting-Started_1206F/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Lightspeed-Sample-1Getting-Started_1206F/image_thumb.png" width="642" height="471" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Found it easier to copy the database to real SQLSERVER and not use attach databases as this was causing issues with permissions, and then copying of the database to the bin\debug folder, giving us multiple copies of the database.&lt;/p&gt;  &lt;pre&gt;&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:487df235-c905-4df3-9fe5-efb00fa2190f" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background: #ddd; overflow: auto"&gt;
+&lt;ol start="1" style="background: #ffffff; margin: 0 0 0 2em; padding: 0 0 0 5px;"&gt;
+&lt;li&gt;&lt;span style="color:#0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;add&lt;/span&gt;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;name&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Development&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;connectionString&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Data Source=.&amp;#92;;Initial Catalog=GettingStarted;Integrated Security=SSPI&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; /&amp;gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/pre&gt;
+
+&lt;p&gt;DB Design is:&lt;/p&gt;
+
+&lt;p&gt;Pk’s called: Id&amp;#160; and not using Identity on the db side.&amp;#160; Rather using keytable.. this means that MovieId and CommentId will never be the same.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.mindscapehq.com/blog/index.php/2007/08/26/lightspeed-identity-generation/"&gt;http://www.mindscapehq.com/blog/index.php/2007/08/26/lightspeed-identity-generation/&lt;/a&gt;&amp;#160; - good article on why KeyTable is good.&lt;/p&gt;
+
+&lt;p&gt;FK is MoveId&lt;/p&gt;
+
+&lt;p&gt;Looks like Convention over Configuration with a CreatedOn column!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Lightspeed-Sample-1Getting-Started_1206F/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Lightspeed-Sample-1Getting-Started_1206F/image_thumb_1.png" width="541" height="322" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Code that is useful!&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:5e1b9a12-0c42-4618-aa7f-8846ac5b1ff0" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 300px; overflow: auto; padding: 2px 5px;"&gt;    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#2b91af"&gt;LightSpeedContext&lt;/span&gt;&amp;lt;&lt;span style="color:#2b91af"&gt;ModelUnitOfWork&lt;/span&gt;&amp;gt; _context;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color:#0000ff"&gt;string&lt;/span&gt;[] args)&lt;br&gt;
+    {&lt;br&gt;
+      _context = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;LightSpeedContext&lt;/span&gt;&amp;lt;&lt;span style="color:#2b91af"&gt;ModelUnitOfWork&lt;/span&gt;&amp;gt;(&lt;span style="color:#a31515"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;);&lt;br&gt;
+      &lt;span style="color:#0000ff"&gt;using&lt;/span&gt; (&lt;span style="color:#0000ff"&gt;var&lt;/span&gt; uow = _context.CreateUnitOfWork())&lt;br&gt;
+      {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (uow.Movies.Count() == 0)&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:d1ec72fe-0c05-4578-82d8-0da5b1cf4518" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#0000ff"&gt;  &amp;lt;!--&lt;/span&gt;&lt;span style="color:#008000"&gt; This is required to tell .NET how to interpret the lightSpeedContexts section &lt;/span&gt;&lt;span style="color:#0000ff"&gt;--&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;configSections&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;    &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;section&lt;/span&gt;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;name&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;lightSpeedContexts&lt;/span&gt;&amp;quot;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;             &lt;/span&gt;&lt;span style="color:#ff0000"&gt;type&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Mindscape.LightSpeed.Configuration.LightSpeedConfigurationSection, Mindscape.LightSpeed&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;/&lt;/span&gt;&lt;span style="color:#a31515"&gt;configSections&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;!--&lt;/span&gt;&lt;span style="color:#008000"&gt; Here we configure the database connectivity and other configuration settings &lt;/span&gt;&lt;span style="color:#0000ff"&gt;--&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;lightSpeedContexts&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;    &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;add&lt;/span&gt;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;name&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Development&lt;/span&gt;&amp;quot;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;         &lt;/span&gt;&lt;span style="color:#ff0000"&gt;connectionStringName&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Development&lt;/span&gt;&amp;quot;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;         &lt;/span&gt;&lt;span style="color:#ff0000"&gt;dataProvider&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;SqlServer2005&lt;/span&gt;&amp;quot;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;         &lt;/span&gt;&lt;span style="color:#ff0000"&gt;pluralizeTableNames&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;False&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;/&lt;/span&gt;&lt;span style="color:#a31515"&gt;lightSpeedContexts&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;!--&lt;/span&gt;&lt;span style="color:#008000"&gt; The standard connectionStrings section, referred to by lightSpeedContexts &amp;gt; connectionStringName &lt;/span&gt;&lt;span style="color:#0000ff"&gt;--&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;connectionStrings&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;    &amp;lt;!--&lt;/span&gt;&lt;span style="color:#008000"&gt;&amp;lt;add name=&amp;quot;Development&amp;quot; connectionString=&amp;quot;Data Source=.&amp;#92;SQLEXPRESS;AttachDbFilename=|DataDirectory|Database.mdf;Integrated Security=True;User Instance=True&amp;quot;/&amp;gt;&lt;/span&gt;&lt;span style="color:#0000ff"&gt;--&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;    &amp;lt;&lt;/span&gt;&lt;span style="color:#a31515"&gt;add&lt;/span&gt;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;name&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Development&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; &lt;/span&gt;&lt;span style="color:#ff0000"&gt;connectionString&lt;/span&gt;&lt;span style="color:#0000ff"&gt;=&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt;Data Source=.&amp;#92;;Initial Catalog=GettingStarted;Integrated Security=SSPI&lt;/span&gt;&amp;quot;&lt;span style="color:#0000ff"&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;  &amp;lt;/&lt;/span&gt;&lt;span style="color:#a31515"&gt;connectionStrings&lt;/span&gt;&lt;span style="color:#0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2011-07-16T08:38:23.008375-04:00</Created>
+      <Modified>2011-07-16T09:22:52.633375-04:00</Modified>
+      <EntryId>9b17eff9-db97-4df9-8cec-71caa02c5163</EntryId>
+      <Description />
+      <Title>Lightspeed Sample 1–Getting Started</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Turn off Aero Peek:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://flisser.com/how-to-fix-annoying-alt-tab-behavior-in-windows-7/"&gt;http://flisser.com/how-to-fix-annoying-alt-tab-behavior-in-windows-7/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-07-16T08:02:49.2115-04:00</Created>
+      <Modified>2011-07-16T08:02:49.2115-04:00</Modified>
+      <EntryId>29352206-ef34-4989-9d37-dd764cf66117</EntryId>
+      <Description />
+      <Title>Fix Alt Tab in Win 7 to Stop Annoying preview</Title>
+      <Categories>Windows 7</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

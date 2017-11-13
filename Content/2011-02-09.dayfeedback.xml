@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-08T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Yo, good loikon out! Gonna make it work now.</Content>
+      <Created>2011-08-23T07:25:01.171875-04:00</Created>
+      <Modified>2011-08-23T07:25:01.171875-04:00</Modified>
+      <EntryId>3298c5e3-4c6a-43ab-8efe-58b88c05205b</EntryId>
+      <TargetTitle>Ajax Control Toolkit</TargetTitle>
+      <TargetEntryId>836D870D-84B2-4555-A0F0-3C60429E563F</TargetEntryId>
+      <Author>Caelii</Author>
+      <AuthorEmail>j.mughoun@php.jp</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/</AuthorHomepage>
+      <AuthorIPAddress>201.33.228.162</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

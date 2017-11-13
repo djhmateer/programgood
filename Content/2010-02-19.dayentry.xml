@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-18T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Pairing with Michael, we did our first spike from here:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://ericdotnet.wordpress.com/2009/04/09/jquery-search-box-and-aspnet-mvc/" href="http://ericdotnet.wordpress.com/2009/04/09/jquery-search-box-and-aspnet-mvc/"&gt;http://ericdotnet.wordpress.com/2009/04/09/jquery-search-box-and-aspnet-mvc/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;worked fine locally, but then going live getting some issues.&amp;#160; Looked like it was mateerit.co.nz/search&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot; &amp;lt;%=Url.Content(&amp;quot;&lt;/span&gt;~/Scripts/jquery-1.3.2.js&lt;span style="color: #006080"&gt;&amp;quot;) %&amp;gt;&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;The above seemed to work, however the javascript seemed harder:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;script type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;&lt;br /&gt;$(document).ready(&lt;span style="color: #0000ff"&gt;function&lt;/span&gt;() {&lt;br /&gt;    $(&lt;span style="color: #006080"&gt;&amp;quot;#searchTerm&amp;quot;&lt;/span&gt;).autocomplete(&lt;span style="color: #006080"&gt;&amp;quot;/Home/getAjaxResult/&amp;quot;&lt;/span&gt;);&lt;br /&gt;});&lt;br /&gt;&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;so I cheated and went onto a subdomain:&amp;#160; jsearch.mateerit.co.nz&lt;/p&gt;
+
+&lt;p&gt;All works now with firebug too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/c633e0d4a2b9_8476/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/c633e0d4a2b9_8476/image_thumb.png" width="644" height="478" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-02-18T19:39:40.9451322-05:00</Created>
+      <Modified>2010-02-18T19:39:40.9451322-05:00</Modified>
+      <EntryId>5536eaa4-0d63-46be-9070-9ea323cafedd</EntryId>
+      <Description />
+      <Title>jQuery and ASP.NET MVC</Title>
+      <Categories>ASP.NET MVC;jQuery</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

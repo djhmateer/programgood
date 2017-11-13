@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-12-09T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Need to manually create the tables.&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:5a8096e5-88a1-4414-9a3a-9a3dc15d4775" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMembershiponAzure_E2CB/createAzureMembership.sql" target="_blank"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:9ea802c9-0e9a-4648-b8d8-4316a3447e84" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMembershiponAzure_E2CB/createAzureMembership_1.sql" target="_blank"&gt;download&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;  &lt;p&gt;this is a .sql file.&lt;/p&gt;</Content>
+      <Created>2010-12-09T22:08:43.768625-05:00</Created>
+      <Modified>2010-12-09T22:08:43.768625-05:00</Modified>
+      <EntryId>1232a92a-dec5-4bd3-9360-bfe792a6fc01</EntryId>
+      <Description />
+      <Title>ASP.NET Membership on Azure</Title>
+      <Categories>ASP.NET Membersip;Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

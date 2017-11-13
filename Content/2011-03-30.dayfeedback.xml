@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-29T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Got it! Thnaks a lot again for helping me out!</Content>
+      <Created>2011-04-17T23:38:06.81575-04:00</Created>
+      <Modified>2011-04-17T23:38:06.81575-04:00</Modified>
+      <EntryId>ab6efe18-a86f-4769-8d7c-d97c6227720d</EntryId>
+      <TargetTitle>String Format</TargetTitle>
+      <TargetEntryId>FFC37D5C-03E7-47EB-A386-3D706D070F25</TargetEntryId>
+      <Author>Jennis</Author>
+      <AuthorEmail>platnerz@platnerz.com</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>46.145.132.40</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>Wow! Great tnhkinig! JK</Content>
+      <Created>2011-04-18T01:25:57.44075-04:00</Created>
+      <Modified>2011-04-18T01:25:57.44075-04:00</Modified>
+      <EntryId>e9f2e8ad-5809-404d-b87d-be1ef0fecaa7</EntryId>
+      <TargetTitle>Adding MVC3 Project Type into VS2010</TargetTitle>
+      <TargetEntryId>CB501DB5-DF4C-4452-BE17-53F3C68F9669</TargetEntryId>
+      <Author>Charlee</Author>
+      <AuthorEmail>helpdesk@edukan.org</AuthorEmail>
+      <AuthorHomepage>http://www.google.com/</AuthorHomepage>
+      <AuthorIPAddress>205.202.120.216</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

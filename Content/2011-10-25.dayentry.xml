@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-10-24T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/GitHubpermission-denied-public-key_93A5/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/GitHubpermission-denied-public-key_93A5/image_thumb.png" width="666" height="341" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;hmmmm&lt;/p&gt;  &lt;p&gt;I did all this (using an existing repo)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/GitHubpermission-denied-public-key_93A5/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/GitHubpermission-denied-public-key_93A5/image_thumb_1.png" width="617" height="471" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;follow instructions here!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://help.github.com/win-set-up-git/"&gt;http://help.github.com/win-set-up-git/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-10-25T18:26:51.3955595-04:00</Created>
+      <Modified>2011-10-25T18:26:51.3955595-04:00</Modified>
+      <EntryId>172a40d7-9749-48b1-a5ca-d77914a28082</EntryId>
+      <Description />
+      <Title>GitHub–permission denied publickey</Title>
+      <Categories>Git</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

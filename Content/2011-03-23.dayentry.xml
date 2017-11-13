@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-22T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.sharparchitecture.net/"&gt;http://www.sharparchitecture.net/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;note to self to look this up.. &lt;/p&gt;</Content>
+      <Created>2011-03-23T06:07:50.813375-04:00</Created>
+      <Modified>2011-03-23T06:07:50.813375-04:00</Modified>
+      <EntryId>8942e4d1-d02d-43d0-858c-171940c32997</EntryId>
+      <Description />
+      <Title>MVC3 Sharp Architecure</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://weblogs.asp.net/jgalloway/archive/2011/03/17/asp-net-mvc-3-roundup-of-tutorials-videos-labs-and-other-assorted-training-materials.aspx"&gt;http://weblogs.asp.net/jgalloway/archive/2011/03/17/asp-net-mvc-3-roundup-of-tutorials-videos-labs-and-other-assorted-training-materials.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-23T06:02:28.954-04:00</Created>
+      <Modified>2011-03-23T06:02:28.954-04:00</Modified>
+      <EntryId>88df0a50-cfca-4d34-a554-ad2414984a76</EntryId>
+      <Description />
+      <Title>MVC3 Roundup of Tutorials</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

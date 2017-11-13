@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-02-14T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Nice article thanks for sharing this!I like, I am the first time on this site and am really enthusiastic about and so many good articles. I think it’s just very good.&lt;a href="http://www.nikeshoe2u.com/"&gt;wholesale hats&lt;/a&gt;</Content>
+      <Created>2012-02-28T03:20:55.1683948-05:00</Created>
+      <Modified>2012-02-28T03:20:55.1683948-05:00</Modified>
+      <EntryId>4eb0c1d9-f5d8-4978-b648-4455f6c620c2</EntryId>
+      <TargetTitle>Azure–Domain Name</TargetTitle>
+      <TargetEntryId>3A08ED8F-4B6E-44EF-887E-819B2D3229A1</TargetEntryId>
+      <Author>wholesale hats</Author>
+      <AuthorEmail>RichardMTalley@teleworm.com</AuthorEmail>
+      <AuthorHomepage>http://www.nikeshoe2u.com/</AuthorHomepage>
+      <AuthorIPAddress>205.209.140.198</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>Yes it is possible, just add the WCF seivcre (*.svc + seivcre dll) to the ASP.NET project. IIS will be able to serve request for both. Make sure you put the required configuration into your web.config.It is not the only solution but it should be easy to implement.</Content>
+      <Created>2012-05-13T11:56:54.59375-04:00</Created>
+      <Modified>2012-05-13T11:56:54.59375-04:00</Modified>
+      <EntryId>eb61f525-d9f5-48a1-974e-bf987d7694a0</EntryId>
+      <TargetTitle>Orchard CMS–Installing Locally, Editing Pages and Installing on Azure</TargetTitle>
+      <TargetEntryId>17D2E8F9-A90B-43AD-9043-F7C3769DBAF7</TargetEntryId>
+      <Author>Beatriz</Author>
+      <AuthorEmail>vve@cariari.ucr.ac.cr</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003405952275</AuthorHomepage>
+      <AuthorIPAddress>200.55.166.12</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Practicing the fundamentals of Software development… without the pressure of ‘getting things done’&lt;/p&gt;  &lt;p&gt;Make it Fun again :-)&lt;/p&gt;  &lt;p&gt;Writing code you wish you could at work…..&lt;/p&gt;  &lt;p&gt;&lt;a href="http://coderetreat.com/how-it-works.html"&gt;http://coderetreat.com/how-it-works.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Good video: &lt;a href="http://programmingtour.blogspot.com/2011/01/on-goals-of-coderetreat.html"&gt;http://programmingtour.blogspot.com/2011/01/on-goals-of-coderetreat.html&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;Suggestions:&lt;/h3&gt;  &lt;p&gt;TDD as if you meant it:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://gojko.net/2009/02/27/thought-provoking-tdd-exercise-at-the-software-craftsmanship-conference/"&gt;http://gojko.net/2009/02/27/thought-provoking-tdd-exercise-at-the-software-craftsmanship-conference/&lt;/a&gt;&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Tests pass&lt;/li&gt;    &lt;li&gt;No Duplication (DRY principle) **&lt;/li&gt;    &lt;li&gt;Good naming revealing intent **&lt;/li&gt;    &lt;li&gt;Small classes&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;** Corey said in his video if we focus on ** then we’ll become great programmers :-)&lt;/p&gt;  &lt;h3&gt;The Problem&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life"&gt;http://en.wikipedia.org/wiki/Conway's_Game_of_Life&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;Links and Stories&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://sermoa.wordpress.com/2011/05/07/celebrating-a-fantastic-code-retreat-day/"&gt;http://sermoa.wordpress.com/2011/05/07/celebrating-a-fantastic-code-retreat-day/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://twitter.com/#!/coderetreat"&gt;http://twitter.com/#!/coderetreat&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-05-26T14:52:03.546625-04:00</Created>
+      <Modified>2011-05-26T14:55:25.077875-04:00</Modified>
+      <EntryId>bdc5d0cf-ae28-45bd-b638-d245b64e68fb</EntryId>
+      <Description />
+      <Title>Code Retreat</Title>
+      <Categories>Code Retreat</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://ayende.com/blog/4092/reviewing-nerddinner"&gt;http://ayende.com/blog/4092/reviewing-nerddinner&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://osherove.com/tdd-kata-2/"&gt;http://osherove.com/tdd-kata-2/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-05-25T22:02:37.765375-04:00</Created>
+      <Modified>2011-05-25T22:02:37.765375-04:00</Modified>
+      <EntryId>55e388fa-abfb-4959-b125-04a09d16e89f</EntryId>
+      <Description />
+      <Title>Code Reviews, TDD, Kata</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

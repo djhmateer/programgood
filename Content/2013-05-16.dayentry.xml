@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-05-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://visualstudiogallery.msdn.microsoft.com/e5f41ad9-4edc-4912-bca3-91147db95b99?SRC=VSIDE"&gt;http://visualstudiogallery.msdn.microsoft.com/e5f41ad9-4edc-4912-bca3-91147db95b99?SRC=VSIDE&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Useful for Open CommandPrompt here&lt;/p&gt;</Content>
+      <Created>2013-05-16T05:38:37.9812503-04:00</Created>
+      <Modified>2013-05-16T05:38:37.9812503-04:00</Modified>
+      <EntryId>fb410a9a-5cfa-4c05-8656-a38ad3f0be83</EntryId>
+      <Description />
+      <Title>PowerCommands for VS</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;From:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://w8isms.blogspot.co.uk/2013/04/gpgpu-performance-tests.html"&gt;http://w8isms.blogspot.co.uk/2013/04/gpgpu-performance-tests.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;1. Got Cuda SDK &lt;a href="https://developer.nvidia.com/cuda-downloads"&gt;https://developer.nvidia.com/cuda-downloads&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;2. Got Cudafy.NET&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb.png" width="342" height="269" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Installed SDK: C:\Users\dave\Documents\CudafySDK&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_4.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_1.png" width="341" height="268" /&gt;&lt;/a&gt;     &lt;br /&gt;Can’t find the 2010 C++ compiler&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_6.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_2.png" width="416" height="270" /&gt;&lt;/a&gt;     &lt;br /&gt;Setting up the path and my x64 machine&lt;/p&gt;  &lt;p&gt;&amp;#160; &lt;br /&gt;Still didn’t work…&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_12.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_5.png" width="362" height="292" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_8.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_3.png" width="525" height="393" /&gt;&lt;/a&gt;     &lt;br /&gt;Okay can get it working by doing vcvars32 from the shell, then cl works.&lt;/p&gt;  &lt;p&gt;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE&lt;/p&gt;  &lt;p&gt;Got rid of error by following &lt;a title=" http://stackoverflow.com/questions/2970493/cuda-linking-error-visual-express-2008-nvcc-fatal-due-to-null-configuratio" href=" http://stackoverflow.com/questions/2970493/cuda-linking-error-visual-express-2008-nvcc-fatal-due-to-null-configuratio"&gt; http://stackoverflow.com/questions/2970493/cuda-linking-error-visual-express-2008-nvcc-fatal-due-to-null-configuratio&lt;/a&gt; and making an amd64.bat:&lt;/p&gt;  &lt;p&gt;I solved the problem by 1. installing Windows SDK (don't forget to choose all x64 options for 64 bit OS) 2. include &amp;quot;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\amd64&amp;quot; in PATH 3. create file vcvars64.bat inside directory &amp;quot;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\amd64&amp;quot; with following content: call &amp;quot;C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd&amp;quot; /x64&lt;/p&gt;  &lt;p&gt;Note: I did this because: 1. I am using VC++ Express 2010 2. I dont have &amp;quot;vcvars64.bat&amp;quot; in any directory ??&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;The cudafy installer RunTest still showed:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_16.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_7.png" width="335" height="262" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;but example seems to compile and run!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_14.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Setting-up-Cuda-and-Cudafy.NET_6708/image_thumb_6.png" width="619" height="481" /&gt;&lt;/a&gt;    &lt;br /&gt;Cudafy.NET working inside VS2012&lt;/p&gt;</Content>
+      <Created>2013-05-16T03:42:13.7711057-04:00</Created>
+      <Modified>2013-05-16T03:42:13.7711057-04:00</Modified>
+      <EntryId>642df866-3fd6-4e8a-9a46-38aab7f4278d</EntryId>
+      <Description />
+      <Title>Setting up Cuda and Cudafy.NET</Title>
+      <Categories>Cuda;Cudafy;GPGPU</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/125964/easier-way-to-start-debugging-a-windows-service-in-c-sharp/126110#126110"&gt;http://stackoverflow.com/questions/125964/easier-way-to-start-debugging-a-windows-service-in-c-sharp/126110#126110&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;or&lt;/p&gt;  &lt;p&gt;c:\windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe MyService.exe&lt;/p&gt;  &lt;p&gt;c:\windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe -u MyService.exe&amp;#160; // uninstall&lt;/p&gt;  &lt;p&gt;Set breakpoint in code, run service, quickly Debug, Attach to process.&amp;#160; Useful to have a sleep at the start of the service to allow attaching of debugger.&lt;/p&gt;</Content>
+      <Created>2013-05-16T09:11:20.142971-04:00</Created>
+      <Modified>2013-05-16T09:11:20.142971-04:00</Modified>
+      <EntryId>e3fb6ec6-9d1b-4efe-b815-3ec67c43f956</EntryId>
+      <Description />
+      <Title>Debugging a Windows Service</Title>
+      <Categories>Service</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

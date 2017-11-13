@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-26T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Thanks to:&lt;br&gt;http://davidhayden.com/blog/dave/archive/2006/05/28/2974.aspx&lt;br&gt;&lt;br&gt;Anon methods, delegates, predicates.&amp;nbsp; Anon methods are simple shortcuts so don't have to declare a predicate method.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;/span&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Collections.Generic;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Linq;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Text;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;namespace&lt;/span&gt; TestAnonymousMethods
+{
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// using an anon method&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Mainx(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[] args)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] _integers &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] evenIntegers &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Array.FindAll(_integers,
+                                        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// this is the anonymous method below&lt;/span&gt;
+                                       &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;delegate&lt;/span&gt;(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer)
+                                       {
+                                           &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (integer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; 2 == 0);
+                                       }
+                );
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; _integers) 
+                Console.WriteLine(integer);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; evenIntegers)
+                Console.WriteLine(integer);
+        }
+
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// not using anon method&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Mainy(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[] args)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] _integers &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// passing in IsEven..a delegate which represents the IsEven method&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] evenIntegers &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Array.FindAll(_integers, IsEven);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; _integers)
+                Console.WriteLine(integer);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; evenIntegers)
+                Console.WriteLine(integer);
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;bool&lt;/span&gt; IsEven(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (integer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; 2 == 0);
+        }
+
+
+       
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// not using anon method and looking at predicate / delegate of Array.FindAll&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[] args)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] _integers &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// a predicate is expected&lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// passing in IsEven..a delegate which represents the IsEven method&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] whatIsInBoth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Array.FindAll(_integers, IsDaveSequence);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; whatIsInBoth)
+                Console.WriteLine(integer);
+
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;bool&lt;/span&gt; IsDaveSequence(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; integer)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;bool&lt;/span&gt; returnState &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ((integer == 1) || (integer == 3) || (integer ==4))
+                returnState &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt;;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; returnState;
+        }
+
+
+
+    }
+}
+
+&lt;/span&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2009-07-27T01:25:04.969625-04:00</Created>
+      <Modified>2009-07-27T01:25:04.969625-04:00</Modified>
+      <EntryId>2b9daa70-1e45-4039-ac58-a4ee3d4c6225</EntryId>
+      <Description />
+      <Title>Anonymous Methods</Title>
+      <Categories>Events and Delegates;Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-05-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://neudesic.cloudapp.net/azureoi.aspx"&gt;http://neudesic.cloudapp.net/azureoi.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureROICalculator_9ED4/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureROICalculator_9ED4/image_thumb.png" width="462" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://microsoft.com/windowsazure/tco"&gt;http://microsoft.com/windowsazure/tco&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureROICalculator_9ED4/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureROICalculator_9ED4/image_thumb_1.png" width="566" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-05-25T20:01:20.929375-04:00</Created>
+      <Modified>2010-05-25T20:01:20.929375-04:00</Modified>
+      <EntryId>c928a21c-9710-4334-b115-d33a09d88ac3</EntryId>
+      <Description />
+      <Title>Azure ROI Calculator</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://blogs.msdn.com/b/brandonwerner/archive/2009/11/28/how-to-host-your-site-and-content-on-azure-quickly-and-easily.aspx" href="http://blogs.msdn.com/b/brandonwerner/archive/2009/11/28/how-to-host-your-site-and-content-on-azure-quickly-and-easily.aspx"&gt;http://blogs.msdn.com/b/brandonwerner/archive/2009/11/28/how-to-host-your-site-and-content-on-azure-quickly-and-easily.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Local Development Fabric and Development Storage (uses SQLEXPRESS)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureDevelopmentFabric_AD59/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureDevelopmentFabric_AD59/image_thumb.png" width="644" height="377" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Live ‘Fabric’ and Storage which consists of Blob, Queue and Table&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureDevelopmentFabric_AD59/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzureDevelopmentFabric_AD59/image_thumb_1.png" width="644" height="353" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;SQLAzure is something else!&lt;/p&gt;  &lt;p&gt;AppFabric is something else.&lt;/p&gt;</Content>
+      <Created>2010-05-25T21:09:27.554375-04:00</Created>
+      <Modified>2010-05-25T21:09:27.554375-04:00</Modified>
+      <EntryId>7a0d8fdc-e095-40d0-afad-f957b38526fa</EntryId>
+      <Description />
+      <Title>Azure Development Fabric and Development Storage</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

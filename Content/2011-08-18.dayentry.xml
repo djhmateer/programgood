@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-17T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;SELECT    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; [TableName] = so.name,     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; [RowCount] = MAX(si.rows)     &lt;br /&gt;FROM     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; sysobjects so,     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; sysindexes si     &lt;br /&gt;WHERE     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; so.xtype = 'U'     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; AND     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; si.id = OBJECT_ID(so.name)     &lt;br /&gt;GROUP BY     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; so.name     &lt;br /&gt;ORDER BY     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; 2 DESC&lt;/p&gt;  &lt;p&gt;From &lt;a href="http://sqlserver2000.databases.aspfaq.com/how-do-i-get-a-list-of-sql-server-tables-and-their-row-counts.html"&gt;http://sqlserver2000.databases.aspfaq.com/how-do-i-get-a-list-of-sql-server-tables-and-their-row-counts.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;This is approximate&lt;/p&gt;</Content>
+      <Created>2011-08-18T03:51:26.703125-04:00</Created>
+      <Modified>2011-08-18T03:51:26.703125-04:00</Modified>
+      <EntryId>84109fa4-e4aa-4c81-8b5a-459bc1b08991</EntryId>
+      <Description />
+      <Title>MSSQL Row Count of Tables</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

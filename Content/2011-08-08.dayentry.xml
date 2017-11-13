@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-07T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Repository pattern&lt;/p&gt;  &lt;p&gt;Ninject for constructor based injection&lt;/p&gt;  &lt;p&gt;Should and Should.Fluent&lt;/p&gt;  &lt;p&gt;TDD to build out Repository&lt;/p&gt;  &lt;p&gt;EF Code First to SqlCe&lt;/p&gt;  &lt;p&gt;Manually setting EF to EntityState.Added or EntityState.Modified in repository.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-StackSummary_ACDA/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-StackSummary_ACDA/image_thumb.png" width="644" height="286" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and building out repo doing Create first.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-StackSummary_ACDA/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-StackSummary_ACDA/image_thumb_1.png" width="614" height="675" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-08-08T07:26:35.53125-04:00</Created>
+      <Modified>2011-08-08T07:26:35.53125-04:00</Modified>
+      <EntryId>8f74560e-b7ae-4129-b012-5b65d4402dc9</EntryId>
+      <Description />
+      <Title>The Full Stack–Summary</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-Stack---6_A2A3/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-Stack---6_A2A3/image_thumb.png" width="624" height="318" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;EF Code first makes the DB.&lt;/p&gt;  &lt;p&gt;Expose DB with a WCF Service which creates an OData feed.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-Stack---6_A2A3/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/The-Full-Stack---6_A2A3/image_thumb_1.png" width="632" height="370" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-08-08T07:03:28.5625-04:00</Created>
+      <Modified>2011-08-08T07:03:28.5625-04:00</Modified>
+      <EntryId>8eed226c-0605-4691-97d6-d8637dd4d4a9</EntryId>
+      <Description />
+      <Title>The Full Stack–6 DeadSimpleServer, WCF</Title>
+      <Categories>The Full Stack</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;odata.codeplex.com&lt;/p&gt;  &lt;p&gt;2 way data binding.&lt;/p&gt;  &lt;p&gt;The Full Stack 8 – Client Search&lt;/p&gt;  &lt;p&gt;The Full Stack 9 – Silverlight Unit Tests, MVVM Lite&lt;/p&gt;  &lt;p&gt;10 – MVVM&lt;/p&gt;  &lt;p&gt;13 – Sterling server db.. offline.&lt;/p&gt;</Content>
+      <Created>2011-08-08T07:01:55.59375-04:00</Created>
+      <Modified>2011-08-08T07:01:55.59375-04:00</Modified>
+      <EntryId>869e67bd-7208-44ac-bccf-7a8e03531577</EntryId>
+      <Description />
+      <Title>The Full Stack 7–Client</Title>
+      <Categories>The Full Stack</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_thumb.png" width="518" height="382" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:091f5474-d926-494e-9995-b545e6cfa066" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px"&gt;Code Snippet&lt;/div&gt; &lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#66747b"&gt;// MVC3 looks in routedata, querystring&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;// C#4 default parameter of *&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;ActionResult&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Search(&lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//var name = RouteData.Values[&amp;quot;name&amp;quot;];&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Server&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;HtmlEncode(name); &lt;/span&gt;&lt;span style="color:#66747b"&gt;// Content doesn&amp;#39;t htmlencode&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Content(name);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//return Content(&amp;quot;You have reached the cusine controller&amp;quot;);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;redirecting to a route&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:72925edb-e732-40ca-81b9-11f878b48a25" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px"&gt;Code Snippet&lt;/div&gt; &lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#66747b"&gt;// MVC3 looks in routedata, querystring, posted form values&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;// C#4 default parameter of *&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;ActionResult&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Search(&lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;if&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;==&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;) {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#66747b"&gt;//return RedirectToAction(&amp;quot;Search&amp;quot;, &amp;quot;Cuisine&amp;quot;, new { name = &amp;quot;french&amp;quot; });&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; RedirectToRoute(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Cuisine&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; { name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;german&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//var name = RouteData.Values[&amp;quot;name&amp;quot;];&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            name &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Server&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;HtmlEncode(name); &lt;/span&gt;&lt;span style="color:#66747b"&gt;// Content doesn&amp;#39;t htmlencode&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//return RedirectPermanent(&amp;quot;http://www.programgood.net&amp;quot;);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//return RedirectToAction(&amp;quot;Index&amp;quot;, &amp;quot;Home&amp;quot;);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Content(name);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//return Content(&amp;quot;You have reached the cusine controller&amp;quot;);&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;returning a file;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_thumb_1.png" width="580" height="400" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Json:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/cfb3684c2d3c_BA70/image_thumb_2.png" width="664" height="294" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-08-08T08:40:20.203125-04:00</Created>
+      <Modified>2011-08-08T08:40:20.203125-04:00</Modified>
+      <EntryId>eeb54da2-e352-4220-92ff-877aa596851d</EntryId>
+      <Description />
+      <Title>OdeToFood–Controllers</Title>
+      <Categories>ASP.NET MVC;OdeToFood</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

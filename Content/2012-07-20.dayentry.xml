@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-07-19T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://analyze.websiteoptimization.com/wso"&gt;http://analyze.websiteoptimization.com/wso&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;speedtest.net&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/98902a8fe71e_8C65/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/98902a8fe71e_8C65/image_thumb.png" width="481" height="197" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Equation… go for lowest hanging fruit first.. things like caching are not lowest!&lt;/p&gt;</Content>
+      <Created>2012-07-20T05:48:21.117632-04:00</Created>
+      <Modified>2012-07-20T05:48:21.117632-04:00</Modified>
+      <EntryId>a9915687-b02e-4687-ad72-12d6a791ba2b</EntryId>
+      <Description />
+      <Title>Website Optimization–Richard Campbell NDC2012</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

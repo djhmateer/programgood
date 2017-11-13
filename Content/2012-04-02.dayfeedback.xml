@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-01T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Really informative blog post here my frnied. I just wanted to comment &amp;amp; say keep up the quality work. I've bookmarked your blog just now and I'll be back to read more in the future my frnied! Also nice colors on the layout it goes well with the blog in my humble opinion</Content>
+      <Created>2012-05-14T05:23:15.203125-04:00</Created>
+      <Modified>2012-05-14T05:23:15.203125-04:00</Modified>
+      <EntryId>12d02a65-dc43-4846-bb4b-041667c500c3</EntryId>
+      <TargetTitle>Web Forms Authentication–Single Username and Password</TargetTitle>
+      <TargetEntryId>483232C9-7B82-472E-B285-50AE26E1EBF0</TargetEntryId>
+      <Author>Ajay</Author>
+      <AuthorEmail>tongsan@nbtongsan.com</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003405943285</AuthorHomepage>
+      <AuthorIPAddress>144.70.2.131</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-03T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://facebooksdk.codeplex.com/"&gt;http://facebooksdk.codeplex.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and video from Mix 2001 &lt;a href="http://channel9.msdn.com/events/MIX/MIX11/OPN06"&gt;http://channel9.msdn.com/events/MIX/MIX11/OPN06&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;by &lt;a title="http://www.jimzimmerman.com/blog/" href="http://www.jimzimmerman.com/blog/"&gt;http://www.jimzimmerman.com/blog/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;of &lt;a title="http://www.thuzi.com/" href="http://www.thuzi.com/"&gt;http://www.thuzi.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;browser he uses is &lt;a title="http://www.rockmelt.com/" href="http://www.rockmelt.com/"&gt;http://www.rockmelt.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Controller code:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[CanvasAuthorize(Permissions = &lt;span style="color: #006080"&gt;&amp;quot;user_about_me,user_relationships,user_likes,friends_likes&amp;quot;&lt;/span&gt;)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult About()&lt;br /&gt;{&lt;br /&gt;    var fb = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; FacebookWebClient();&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// graph&lt;/span&gt;&lt;br /&gt;    dynamic result = fb.Get(&lt;span style="color: #006080"&gt;&amp;quot;me&amp;quot;&lt;/span&gt;);&lt;br /&gt;    &lt;span style="color: #008000"&gt;//dynamic fqlResult = fb.Query(&amp;quot;SELECT uid, name, significant_other_id, pic_square FROM user WHERE uid = me()&amp;quot;);&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    &lt;span style="color: #008000"&gt;// fql&lt;/span&gt;&lt;br /&gt;    dynamic fqlResult = fb.Query(&lt;span style="color: #006080"&gt;&amp;quot;SELECT uid, name, pic_square, music FROM user WHERE uid = me()&amp;quot;&lt;/span&gt; +&lt;br /&gt;                             &lt;span style="color: #006080"&gt;&amp;quot;OR uid IN (SELECT uid2 FROM friend WHERE uid1 = me())&amp;quot;&lt;/span&gt;);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(fqlResult);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;then in the view&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;@model dynamic&lt;br /&gt;           &lt;br /&gt;@{&lt;br /&gt;    ViewBag.Title = &lt;span style="color: #006080"&gt;&amp;quot;About Us&amp;quot;&lt;/span&gt;;&lt;br /&gt;}&lt;br /&gt;&amp;lt;h2&amp;gt;&lt;br /&gt;    About&amp;lt;/h2&amp;gt;&lt;br /&gt;&amp;lt;p&amp;gt;&lt;br /&gt;    &amp;lt;Table&amp;gt;&lt;br /&gt;    @{&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (dynamic item &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Model)&lt;br /&gt;        {&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;@item.name&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;&amp;lt;img src=&lt;span style="color: #006080"&gt;&amp;quot;@item.pic_square&amp;quot;&lt;/span&gt; /&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;@item.music&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;        }&lt;br /&gt;     }&lt;br /&gt;    &amp;lt;/Table&amp;gt;&lt;br /&gt;&amp;lt;/p&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-05-04T06:01:33.281-04:00</Created>
+      <Modified>2011-05-04T06:01:33.281-04:00</Modified>
+      <EntryId>09091a3b-b4ae-4c8d-ae99-eee639748caa</EntryId>
+      <Description />
+      <Title>Facebook – displaying friends and music</Title>
+      <Categories>Facebook</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

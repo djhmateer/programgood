@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-06T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>I can't believe I've been going for years without koninwg that.</Content>
+      <Created>2011-08-23T17:28:40.46288-04:00</Created>
+      <Modified>2011-08-23T17:28:40.46288-04:00</Modified>
+      <EntryId>debcfb9e-fc18-44b3-bbce-1e1aad637e81</EntryId>
+      <TargetTitle>The Full Stack 5–Ninject, EF CTP5 update</TargetTitle>
+      <TargetEntryId>6331736A-DCB5-4EDD-AD00-B09F91F5EA71</TargetEntryId>
+      <Author>Marv</Author>
+      <AuthorEmail>nidiacobiella@educar.org</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/</AuthorHomepage>
+      <AuthorIPAddress>46.246.195.37</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

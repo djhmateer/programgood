@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-08-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://msdn.microsoft.com/en-us/data/gg702906" href="http://msdn.microsoft.com/en-us/data/gg702906"&gt;http://msdn.microsoft.com/en-us/data/gg702906&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;A 10 minute video on EF Model First&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb.png" width="584" height="357" /&gt;&lt;/a&gt;    &lt;br /&gt;Navigation property allows to go from Blog to the Post, just using properties.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_1.png" width="397" height="389" /&gt;&lt;/a&gt;    &lt;br /&gt;Right click on design surface and do Generate Database&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_2.png" width="381" height="351" /&gt;&lt;/a&gt;    &lt;br /&gt;Right click on designer and can do Run SQL.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_3.png" width="308" height="260" /&gt;&lt;/a&gt;    &lt;br /&gt;Viewing database in Server Explorer in VS.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_10.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_4.png" width="319" height="307" /&gt;&lt;/a&gt;    &lt;br /&gt;Using VS2010 so needed to D/l the DbContext Generator&lt;/p&gt;      &lt;p&gt;Add Code Generation Item on design surface.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_12.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_5.png" width="331" height="324" /&gt;&lt;/a&gt;    &lt;br /&gt;Created an Empty list of CRUD methods, and now creating views.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_14.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Julie-LermanMVC3-and-EF4.1_91B6/image_thumb_6.png" width="270" height="156" /&gt;&lt;/a&gt;    &lt;br /&gt;Wire up the Controller to the lightweight DbContext class created by the DbContext generator template (new in 4.1)&lt;/p&gt;</Content>
+      <Created>2012-08-26T06:00:42.0831455-04:00</Created>
+      <Modified>2012-08-26T06:00:42.0831455-04:00</Modified>
+      <EntryId>4e6cb3a8-009c-40fe-a2ae-2de73f688f6f</EntryId>
+      <Description />
+      <Title>Julie Lerman–MVC3 and EF4.1 and 5 Model First</Title>
+      <Categories>Entity Framework;MVC3</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Quickest way of getting something off the ground using CRUD. &lt;a href="http://channel9.msdn.com/Events/MIX/MIX11/FRM13?format=auto"&gt;http://channel9.msdn.com/Events/MIX/MIX11/FRM13?format=auto&lt;/a&gt;&amp;#160;&amp;#160; EF Code First, Steve Sanderson.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.stevensanderson.com/2011/01/13/scaffold-your-aspnet-mvc-3-project-with-the-mvcscaffolding-package/"&gt;http://blog.stevensanderson.com/2011/01/13/scaffold-your-aspnet-mvc-3-project-with-the-mvcscaffolding-package/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb.png" width="383" height="398" /&gt;&lt;/a&gt;    &lt;br /&gt;Installed MVCScaffolding using NuGet.&amp;#160; Made a Model called Team, then issued the scaffolding command.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb_1.png" width="244" height="234" /&gt;&lt;/a&gt;    &lt;br /&gt;Full CRUD.&amp;#160; No repo pattern.&lt;/p&gt;  &lt;p&gt;Changed the model to add another field, make DateTime nullable then how to change the database?&amp;#160; Blow it away!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb_2.png" width="312" height="238" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;Repo Pattern&lt;/h3&gt;  &lt;pre&gt;Scaffold Controller Team –Repository -Force&lt;/pre&gt;
+
+&lt;h3&gt;Foreign Keys&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://weblogs.asp.net/kiyoshi/archive/2011/06/22/walkthrough-of-entity-framework-4-1-scaffolding-with-mvc-3-0-tools.aspx"&gt;http://weblogs.asp.net/kiyoshi/archive/2011/06/22/walkthrough-of-entity-framework-4-1-scaffolding-with-mvc-3-0-tools.aspx&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb_3.png" width="244" height="205" /&gt;&lt;/a&gt;
+
+  &lt;br /&gt;A product can have a category&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_12.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb_5.png" width="193" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_14.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVC3-Scaffolding_10096/image_thumb_6.png" width="244" height="142" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:64f1bc0e-2b4b-4f72-b96b-bff723063331" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt; &lt;span style="color:#008000"&gt;//Drops database and recreates if model changes&lt;/span&gt;&lt;br&gt;
+            System.Data.Entity.&lt;span style="color:#2b91af"&gt;Database&lt;/span&gt;.SetInitializer(&lt;span style="color:#0000ff"&gt;new&lt;/span&gt; System.Data.Entity.&lt;span style="color:#2b91af"&gt;DropCreateDatabaseIfModelChanges&lt;/span&gt;&amp;lt;TestMVCApp2.Models.&lt;span style="color:#2b91af"&gt;TestMVCApp2Context&lt;/span&gt;&amp;gt;());&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2012-08-26T15:05:48.0890755-04:00</Created>
+      <Modified>2012-08-26T15:05:48.0890755-04:00</Modified>
+      <EntryId>aaba3e1c-f247-4d5e-bf81-8ebc623cd95c</EntryId>
+      <Description />
+      <Title>MVC3 Scaffolding</Title>
+      <Categories>Entity Framework;scaffolding</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

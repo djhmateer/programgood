@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-03-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;P&gt;After an awesome mountainbike ride I’ve managed to break my collar bone.&amp;nbsp; I wouldn’t recommend this :-)&lt;/P&gt;
+&lt;P&gt;So I though I’d make the most of the ‘opportunity’ and have a look at RoR..&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_10.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=516 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_4.png" width=388 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;Goal:&amp;nbsp; To deploy an application live&lt;/P&gt;
+&lt;H3&gt;Downloading RoR&lt;/H3&gt;
+&lt;P&gt;rubyonrail.org – download.&amp;nbsp; Getting 1.8.7 of Ruby.. tick add to executable, and associate .rb&lt;/P&gt;
+&lt;P&gt;rubygems – package manager..extract, run setup.rb&lt;/P&gt;
+&lt;P&gt;gem install rails 2.3.5&lt;/P&gt;
+&lt;P&gt;rails --version&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://docs.heroku.com/windows href="http://docs.heroku.com/windows"&gt;http://docs.heroku.com/windows&lt;/A&gt; – good install screencast&lt;/P&gt;
+&lt;H3&gt;Hello World App&lt;/H3&gt;
+&lt;P&gt;rails blog&lt;/P&gt;
+&lt;P&gt;cd blog&lt;/P&gt;
+&lt;P&gt;ruby script/server&lt;/P&gt;
+&lt;P&gt;localhost:3000&lt;/P&gt;
+&lt;P&gt;uses WEBrick 1.3.1&lt;/P&gt;
+&lt;P&gt;am getting strange error:&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_2.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=713 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb.png" width=771 border=0&gt;&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;Install SQLite3&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://akitaonrails.com/2009/01/13/the-best-environment-for-rails-on-windows href="http://akitaonrails.com/2009/01/13/the-best-environment-for-rails-on-windows"&gt;http://akitaonrails.com/2009/01/13/the-best-environment-for-rails-on-windows&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://www.sqlite.org/download.html href="http://www.sqlite.org/download.html"&gt;http://www.sqlite.org/download.html&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;sqlite3.exe into \windows&lt;/P&gt;
+&lt;P&gt;sqlite3.dll into system32&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://allaboutruby.wordpress.com/2009/07/20/installing-rails-on-windows-3-years-later/ href="http://allaboutruby.wordpress.com/2009/07/20/installing-rails-on-windows-3-years-later/"&gt;http://allaboutruby.wordpress.com/2009/07/20/installing-rails-on-windows-3-years-later/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;gem install sqlite3-ruby&lt;/P&gt;
+&lt;P&gt;cd \code\ruby\hello&lt;/P&gt;
+&lt;P&gt;ruby script\server&lt;/P&gt;
+&lt;P&gt;the crowd goes wild!!!&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_4.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=442 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_1.png" width=615 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;ruby script/generate scaffold post title:string description:text&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;This command creates a Post scaffold, a model/controller/view ready to be updated.&amp;nbsp; The post model will have 2 fields – a title which is a single line of text and a description, which is multi-line text.&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_6.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=447 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_2.png" width=644 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Run the database migration&lt;/STRONG&gt;. This is because after creating the scaffold, the database is not automatically updated with the new blog model, you need to do it manually by running a &lt;STRONG&gt;rake db:migrate&lt;/STRONG&gt; command&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_8.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=281 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_3.png" width=422 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;cool – now have db integration and working scaffold&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://railsforum.com/ href="http://railsforum.com/"&gt;http://railsforum.com/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://railscasts.com/episodes/archive href="http://railscasts.com/episodes/archive"&gt;http://railscasts.com/episodes/archive&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://allaboutruby.wordpress.com/2009/08/08/5-minute-project-in-rails/ href="http://allaboutruby.wordpress.com/2009/08/08/5-minute-project-in-rails/"&gt;http://allaboutruby.wordpress.com/2009/08/08/5-minute-project-in-rails/&lt;/A&gt; – very simple app.&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://ruby-toolbox.com/categories/rails_form_builders.html href="http://ruby-toolbox.com/categories/rails_form_builders.html"&gt;http://ruby-toolbox.com/categories/rails_form_builders.html&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://guides.rubyonrails.org/getting_started.html#installing-rails href="http://guides.rubyonrails.org/getting_started.html#installing-rails"&gt;http://guides.rubyonrails.org/getting_started.html#installing-rails&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;in c:\code&lt;/P&gt;
+&lt;P&gt;rails blog&amp;nbsp;&amp;nbsp; - this creates a rails app that uses sqllite.&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;H3&gt;The Blog from Guide&lt;/H3&gt;
+&lt;P&gt;&lt;A title=http://guides.rubyonrails.org/getting_started.html href="http://guides.rubyonrails.org/getting_started.html"&gt;http://guides.rubyonrails.org/getting_started.html&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;rails blog&lt;/P&gt;
+&lt;P&gt;rake db:create&lt;/P&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;rake –T&amp;nbsp; shows all rake (general purpose command runner) commands&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;ruby script/generate controller home index&amp;nbsp; -creates files including &lt;TT&gt;app/views/home/index.html.erb&lt;/TT&gt;. This is the template that will be used to display the results of the:&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;TT&gt;index&lt;/TT&gt; action (method) in the &lt;TT&gt;home&lt;/TT&gt; controller.&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_12.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=165 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_5.png" width=495 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;edit index.html.erb to &amp;lt;H1&amp;gt;Hello Rails&amp;lt;/H1&amp;gt;&lt;/P&gt;
+&lt;P&gt;ruby script\server&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://locahost:3000/home/index"&gt;http://locahost:3000/home/index&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_18.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=166 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_8.png" width=360 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;H5&gt;Change home page&lt;/H5&gt;
+&lt;P&gt;config\routes.rb&lt;/P&gt;
+&lt;P&gt;map.root :controller =&amp;gt; "home" &lt;/P&gt;
+&lt;H5&gt;Scaffolding&lt;/H5&gt;
+&lt;P&gt;Rails &lt;EM&gt;scaffolding&lt;/EM&gt; is a quick way to generate some of the major pieces of an application. If you want to create the models, views, and controllers for a new resource in a single operation, scaffolding is the tool for the job.&lt;/P&gt;
+&lt;P&gt;&lt;CODE&gt;ruby script/generate scaffold Post name:string title:string content:text&lt;/CODE&gt;&lt;/P&gt;
+&lt;P&gt;This creates a model, a db migration ruby file, views and changes the config\route.rb file.&lt;/P&gt;
+&lt;P&gt;rake db:migrate&lt;/P&gt;
+&lt;P&gt;put in:&amp;nbsp; &amp;lt;%= link_to "My Blog", posts_path %&amp;gt; &lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_14.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=217 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_6.png" width=411 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;then&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_16.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=241 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_7.png" width=428 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_20.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=266 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_9.png" width=398 border=0&gt;&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;H3&gt;Validation&lt;/H3&gt;
+&lt;P&gt;The model file, &lt;TT&gt;app/models/post.rb&lt;/TT&gt; is about as simple as it can get:&lt;/P&gt;
+&lt;P&gt;&lt;CODE&gt;validates_presence_of :name, :title &lt;/CODE&gt;&lt;/P&gt;
+&lt;P&gt;&lt;CODE&gt;validates_length_of :title, :minimum =&amp;gt; 5 &lt;/CODE&gt;&lt;/P&gt;
+&lt;H3&gt;&lt;A href="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_22.png"&gt;&lt;IMG title=image style="BORDER-TOP-WIDTH: 0px; DISPLAY: inline; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=499 alt=image src="http://www.programgood.net/content/binary/WindowsLiveWriter/RubyonRailsBrokenCollarBone_EB86/image_thumb_10.png" width=447 border=0&gt;&lt;/A&gt;&amp;nbsp;&lt;/H3&gt;
+&lt;H3&gt;View&lt;/H3&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;&amp;lt;% @posts.each do |post| %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;tr&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%=h post.name %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%=h post.title %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%=h post.content %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%= link_to 'Show', post %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%= link_to 'Edit', edit_post_path(post) %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;%= link_to 'Destroy', post, :confirm =&amp;gt; 'Are you sure?', :method =&amp;gt; :delete %&amp;gt;&amp;lt;/td&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;/tr&amp;gt; &lt;BR&gt;&amp;lt;% end %&amp;gt;&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;&lt;/P&gt;
+&lt;P&gt;h is a rails helper&lt;/P&gt;
+&lt;P&gt;lik_to buils hyperlinks&lt;/P&gt;
+&lt;P&gt;edit_post_path&lt;/P&gt;
+&lt;P&gt;new_post_path&lt;/P&gt;
+&lt;H3&gt;Layout&lt;/H3&gt;
+&lt;P&gt;These are containers for views&lt;/P&gt;
+&lt;P&gt;app\views\layouts\posts.html.erb&lt;/P&gt;
+&lt;P&gt;&lt;CODE&gt;&amp;lt;body style="background: #EEEEEE;"&amp;gt; &lt;/CODE&gt;&lt;/P&gt;
+&lt;P&gt;now all views for posts have a grey background&lt;/P&gt;
+&lt;H3&gt;Entering Data and Wiring Up&lt;/H3&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;&amp;lt;% form_for(@post) do |f| %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;%= f.error_messages %&amp;gt;&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;&lt;CODE&gt;form_for block is used to create an html form..&lt;/CODE&gt;&lt;/P&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;&lt;CODE&gt;&amp;lt;%= f.label :name %&amp;gt;&amp;lt;br /&amp;gt; &lt;/CODE&gt;&lt;/P&gt;
+&lt;P&gt;&lt;CODE&gt;&amp;lt;%= f.text_field :name %&amp;gt; &lt;/CODE&gt;&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;&lt;CODE&gt;wires up a text box with name attribute&lt;/CODE&gt;&lt;/P&gt;
+&lt;H3&gt;DRYing up Code - Partials&lt;/H3&gt;
+&lt;P&gt;scaffold generated views for new and edit are largely identical.. so can use partials template.&lt;/P&gt;
+&lt;P&gt;_form.html.erb&amp;nbsp; underscore is convention for partial&lt;/P&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;&amp;lt;% form_for(@post) do |f| %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;%= f.error_messages %&amp;gt; &lt;/P&gt;
+&lt;P&gt;&amp;nbsp; &amp;lt;p&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.label :name %&amp;gt;&amp;lt;br /&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.text_field :name %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;/p&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;p&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.label :title %&amp;gt;&amp;lt;br /&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.text_field :title %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;/p&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;p&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.label :content %&amp;gt;&amp;lt;br /&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.text_area :content %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;/p&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;p&amp;gt; &lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;%= f.submit 'Save' %&amp;gt; &lt;BR&gt;&amp;nbsp; &amp;lt;/p&amp;gt; &lt;BR&gt;&amp;lt;% end %&amp;gt;&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;and in new.html.erb&lt;/P&gt;
+&lt;BLOCKQUOTE&gt;
+&lt;P&gt;&amp;lt;h1&amp;gt;New post&amp;lt;/h1&amp;gt; &lt;/P&gt;
+&lt;P&gt;&amp;lt;%= render :partial =&amp;gt; "form"&amp;nbsp; %&amp;gt; &lt;/P&gt;
+&lt;P&gt;&amp;lt;%= link_to 'Back', posts_path %&amp;gt;&lt;/P&gt;&lt;/BLOCKQUOTE&gt;
+&lt;P&gt;****7.2 Using Filters to eliminate controller duplication&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;A href="http://wiki.devchix.com/index.php?title=Server_2003"&gt;http://wiki.devchix.com/index.php?title=Server_2003&lt;/A&gt;&lt;/P&gt;
+&lt;H3&gt;The Blog App Video&lt;/H3&gt;
+&lt;P&gt;From front page of rails site:&lt;/P&gt;
+&lt;P&gt;&lt;A title=http://www.opensourcerails.com/ href="http://www.opensourcerails.com/"&gt;http://www.opensourcerails.com/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.softwaredeveloper.com/features/best-ruby-on-rails-061307/"&gt;http://www.softwaredeveloper.com/features/best-ruby-on-rails-061307/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://www.3months.com/technology"&gt;http://www.3months.com/technology&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://blog.obiefernandez.com/content/"&gt;http://blog.obiefernandez.com/content/&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;Auth&lt;/P&gt;
+&lt;P&gt;&lt;A href="http://wiki.rubyonrails.org/howtos/authentication-authorization"&gt;http://wiki.rubyonrails.org/howtos/authentication-authorization&lt;/A&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Authentication&lt;/STRONG&gt; is what you do when you let a user identify itself. This is needed when you want to offer a login access to your application. &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Authorization&lt;/STRONG&gt; is what you do when you check the credentials of a user before letting him/her interact with specific sections of your system. This is needed when you have restricted areas/actions.&lt;/P&gt;</Content>
+      <Created>2010-03-26T01:36:46.883-04:00</Created>
+      <Modified>2010-04-02T17:28:22.63325-04:00</Modified>
+      <EntryId>10e5cb7d-7515-4b3e-b364-a3889ddd517b</EntryId>
+      <Description />
+      <Title>Ruby on Rails / Broken Collar Bone</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

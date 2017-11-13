@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-12-22T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Heght =&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Auto – take as much space as needed (can have scroll bar issues)&lt;/li&gt;    &lt;li&gt;* – use all available height&lt;/li&gt; &lt;/ul&gt;</Content>
+      <Created>2012-12-23T04:11:43.993687-05:00</Created>
+      <Modified>2012-12-23T04:12:07.0174196-05:00</Modified>
+      <EntryId>627c9236-c024-494f-abb9-bac3b3fe3bb8</EntryId>
+      <Description />
+      <Title>SL Grid Rendering</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

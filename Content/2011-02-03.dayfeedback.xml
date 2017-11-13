@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-02T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>zxczxc</Content>
+      <Created>2011-02-05T18:53:08.688125-05:00</Created>
+      <Modified>2011-02-05T18:53:08.688125-05:00</Modified>
+      <EntryId>2fe2da40-12ac-4ca4-af53-8dd396853833</EntryId>
+      <TargetTitle>asdfsadf</TargetTitle>
+      <TargetEntryId>85290FD5-1179-4C5E-B53A-71FEB046EB71</TargetEntryId>
+      <Author>Phil</Author>
+      <AuthorEmail>philbartie@gmail.com</AuthorEmail>
+      <AuthorHomepage />
+      <AuthorIPAddress>118.90.63.54</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.13 (KHTML, like Gecko) Chrome/9.0.597.84 Safari/534.13</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>CHvM7W With the bases loaded you stcruk us out with that answer!</Content>
+      <Created>2011-04-17T23:53:22.175125-04:00</Created>
+      <Modified>2011-04-17T23:53:22.175125-04:00</Modified>
+      <EntryId>25f27def-0a67-4254-82cb-ee5397328fb3</EntryId>
+      <TargetTitle>Fast Updates – Webdeploy to Azure</TargetTitle>
+      <TargetEntryId>8A2CD11D-0EB3-47A0-9F44-126CCD9EA80B</TargetEntryId>
+      <Author>Lexine</Author>
+      <AuthorEmail>rbrookes@bowerandbailey.co.uk</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>161.162.87.83</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

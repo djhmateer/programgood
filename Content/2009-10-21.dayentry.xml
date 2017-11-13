@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-10-20T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Customer tests confirm how the feature is supposed to work as experienced by the end user.&lt;br&gt;&lt;br&gt;Because customers generally don't want to use nUnit.. we're going to use Fitnesse, which is more user friendly:&lt;br&gt;&lt;br&gt;The goal is to have the customer write their own tests.&lt;br&gt;&lt;br&gt;To setup Fitnesse.&amp;nbsp; Download the .jar and run it like this:&lt;br&gt;&lt;br&gt;c:\apps\fitnesse -jar fitness.jar -p 8080&lt;br&gt;&lt;br&gt;Then go and get slim for .net.&amp;nbsp; I installed it to c:\apps\slim&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/screen12345678910.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;Here is how it works for the Divider example:&lt;br&gt;&lt;br&gt;!define TEST_SYSTEM {slim}&lt;br&gt;!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,c:\apps\slim\fitsharp.dll %p}&lt;br&gt;!define TEST_RUNNER {c:\apps\slim\Runner.exe}&lt;br&gt;&amp;nbsp;&lt;br&gt;!path C:\code\slimexample\slimexample\bin\Debug\slimexample.dll&lt;br&gt;&lt;br&gt;|import&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;|slim_example|&lt;br&gt;&lt;br&gt;!|Divider|&lt;br&gt;|Numerator|Denominator|Quotient?|&lt;br&gt;|10&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |5&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;|12.6&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |4.2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;|22&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |7&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |~=3.14&amp;nbsp;&amp;nbsp; |&lt;br&gt;|9&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;lt;5&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;|11&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |4&amp;lt;_&amp;lt;6&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;|100&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |4&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |33&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&lt;br&gt;&lt;br&gt;Here is the C# code, I compiled to slimexample.dll&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+
+&lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;namespace&lt;/span&gt; slim_example
+{
+    &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Divider
+    {
+        &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;double&lt;/span&gt;  Numerator { get; set; }
+        &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;double&lt;/span&gt; Denominator { get; set; }
+        &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;double&lt;/span&gt; _quotient;
+
+        &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Execute()
+        {
+            _quotient &lt;span style="color: Red; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Numerator &lt;span style="color: Red; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;/&lt;/span&gt; Denominator;
+        }
+
+        &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;double&lt;/span&gt; Quotient()
+        {
+            &lt;span style="color: Blue; background-color: Transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; _quotient;
+        }
+    }
+}&lt;/span&gt;&lt;/pre&gt;Run the tests.. and we'll see that when 2 numbers are sent... then then ? in the Fitnesse means that something should be checked.&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screen1234567891011.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;Then we wire up to our code and test CatalogAdapter:&lt;br&gt;&lt;br&gt;From this test we can see that I've a bug.. something wrong with the Duration.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screen123456789101112.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;&lt;h3&gt;&lt;b&gt;Debugging&lt;/b&gt;&lt;/h3&gt;Have been working through why we are not getting the duration through.&amp;nbsp; The unit tests on the DAL are passing fine.. in CatalogFixture, have added in 2 tracks of different lengths.&amp;nbsp; They get pushed into the db, then pulled out using Catalog.. looks ok.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/CatalogFixtureDiagram.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;The next step is to look at the Service layer and see if the Duration is being written.&amp;nbsp; Interestingly, the webservice is passing back all the correct tracks, but nothing to do with reviewers etc..&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screen12345678910111213.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screen1234567891011121314.gif" border="0"&gt;&lt;br&gt;Very interesting bug.. if I didn't specify this in my RecordingAssembler.WriteTotalRunTime:&lt;br&gt;&lt;br&gt;dto.totalRunTimeSpecified = true;&lt;br&gt;&lt;br&gt;then nothing would be passing back.&amp;nbsp; Same for WriteAverageRating.&lt;br&gt;&lt;br&gt;&lt;br&gt;Came across another issue with the webservice, and couldn't get it to autogen.. easiest way was to create it again.&amp;nbsp; Using source control so it if all went to custard, could go back.&lt;br&gt;&lt;br&gt;Been getting bogged down in detail, so have decided to push to the end of the project, and get a front end up and running asap.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</Content>
+      <Created>2009-10-20T23:00:01.559-04:00</Created>
+      <Modified>2009-11-04T14:56:06.4955063-05:00</Modified>
+      <EntryId>14c64021-c5cf-49ed-a249-cedf023631ee</EntryId>
+      <Description />
+      <Title>Test Driven Development in .NET - Customer Tests the Web Service using Fitnesse (Ch7)</Title>
+      <Categories>Object Oriented Programming;Patterns;Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

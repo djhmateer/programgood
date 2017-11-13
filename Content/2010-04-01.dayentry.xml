@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-03-31T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;elevator&lt;/p&gt;  &lt;p&gt;use cases&lt;/p&gt;  &lt;p&gt;paper prototype:&lt;/p&gt;  &lt;p&gt;put mock up live&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a title="http://pubtricks.heroku.com/" href="http://pubtricks.heroku.com/"&gt;http://pubtricks.heroku.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/f25a319a9b88_103A8/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/f25a319a9b88_103A8/image_thumb.png" width="644" height="212" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;changes to scaffold:&lt;/p&gt;  &lt;p&gt;background colour in all games in \views\layouts\games.html.erb&lt;/p&gt;</Content>
+      <Created>2010-03-31T22:11:05.523875-04:00</Created>
+      <Modified>2010-03-31T22:11:05.523875-04:00</Modified>
+      <EntryId>5574ad48-7464-4122-9f6b-6e56c16a8875</EntryId>
+      <Description />
+      <Title>Pub Tricks RoR Website</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

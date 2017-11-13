@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-12-07T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://blogs.msdn.com/b/sqlazure/archive/2010/11/18/10093245.aspx"&gt;http://blogs.msdn.com/b/sqlazure/archive/2010/11/18/10093245.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-12-08T14:29:16.378-05:00</Created>
+      <Modified>2010-12-08T14:29:16.378-05:00</Modified>
+      <EntryId>654de19c-9059-48ad-8f11-2753d2e8c1fc</EntryId>
+      <Description />
+      <Title>SQL Azure Reporting Services</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;//Find the sum of all the even-valued terms in the sequence which do not exceed four million.&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;{&lt;br /&gt;    List&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; fibList = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt;();&lt;br /&gt;    fibList.Add(1); &lt;span style="color: #008000"&gt;// index 0&lt;/span&gt;&lt;br /&gt;    fibList.Add(2); &lt;span style="color: #008000"&gt;// index 1&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 2;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;while&lt;/span&gt; (fibList[fibList.Count-1] &amp;lt; 4000000)  &lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; secondLastValue = fibList[i - 2];&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; lastValue = fibList[i - 1];&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; valueToAdd = secondLastValue + lastValue;&lt;br /&gt;        fibList.Add(valueToAdd);&lt;br /&gt;        i++;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    fibList.RemoveAt(fibList.Count - 1); &lt;span style="color: #008000"&gt;// remove last item in list as it will be over the 4,000,000 limit&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// get even values&lt;/span&gt;&lt;br /&gt;    List&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; fibListEven = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt;();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; intToTry &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; fibList)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (intToTry % 2 == 0)&lt;br /&gt;            fibListEven.Add(intToTry);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; sumOfEvens = 0;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; intToDisplay &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; fibListEven)&lt;br /&gt;        sumOfEvens += intToDisplay;&lt;br /&gt;&lt;br /&gt;    Console.WriteLine(sumOfEvens.ToString());&lt;br /&gt;    Console.ReadLine(); &lt;span style="color: #008000"&gt;// should be 4613732&lt;/span&gt;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;Found this on &lt;a href="http://stackoverflow.com/questions/1580985/finding-fibonacci-sequence-in-c-project-euler-exercise"&gt;http://stackoverflow.com/questions/1580985/finding-fibonacci-sequence-in-c-project-euler-exercise&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; TestMethod1()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;long&lt;/span&gt; result = 0;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Fibonacci().TakeWhile(i =&amp;gt; i &amp;lt; 4000000).Where(j =&amp;gt; j % 2 == 0))&lt;br /&gt;          result += i;&lt;br /&gt;&lt;br /&gt;        Assert.AreEqual(1, result); &lt;span style="color: #008000"&gt;// 4,613,732&lt;/span&gt;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; IEnumerable&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; Fibonacci()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; n1 = 0;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; n2 = 1;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;yield&lt;/span&gt; &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; 1;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;while&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;true&lt;/span&gt;)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; n = n1 + n2;&lt;br /&gt;            n1 = n2;&lt;br /&gt;            n2 = n;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;yield&lt;/span&gt; &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; n;&lt;br /&gt;        }&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-12-08T04:52:35.8416634-05:00</Created>
+      <Modified>2010-12-27T05:47:01.4715-05:00</Modified>
+      <EntryId>d082feed-fc5a-4b26-98e7-187d693e2e0e</EntryId>
+      <Description />
+      <Title>Project Euler 2 – Fibonacci Sequence</Title>
+      <Categories>Euler</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;This is a fun site:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://projecteuler.net"&gt;http://projecteuler.net&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The first problem is:&lt;/p&gt;  &lt;p&gt;If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. &lt;/p&gt;  &lt;p&gt;Find the sum of all the multiples of 3 or 5 below 1000.&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; overallSum = 0;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 1; i &amp;lt; 1000; i++)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; ((i % 3 == 0) || (i % 5 == 0))&lt;br /&gt;            overallSum += i;&lt;br /&gt;    }&lt;br /&gt;    Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;overall sum is: &amp;quot;&lt;/span&gt; + overallSum.ToString());&lt;br /&gt;    Console.ReadLine();&lt;br /&gt;}&lt;br /&gt;// should be 233168&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;or Phils way:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;//Find the sum of all the multiples of 3 or 5 below 1000.&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//There is a summation formula which states&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;//The sum of all numbers from i = 1 to i = n is n(n+1)/2&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; total = (3 * Convert.ToInt32(999 / 3) * (Convert.ToInt32((999 / 3)) + 1)) / 2&lt;br /&gt;        + (5 * Convert.ToInt32(999 / 5) * (Convert.ToInt32((999 / 5)) + 1)) / 2&lt;br /&gt;        - (15 * Convert.ToInt32(999 / 15) * (Convert.ToInt32((999 / 15)) + 1)) / 2;&lt;br /&gt;&lt;br /&gt;    Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;overall sum is: &amp;quot;&lt;/span&gt; + total.ToString());&lt;br /&gt;    Console.ReadLine();&lt;br /&gt;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;from &lt;a href="http://answers.yahoo.com/question/index?qid=20100422031504AAfmpJ5"&gt;http://answers.yahoo.com/question/index?qid=20100422031504AAfmpJ5&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;or Simons way using method syntax (or fluent)&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; result = Enumerable.Range(0, 1000)  &lt;span style="color: #008000"&gt;// generates a sequence of numbers in a range&lt;/span&gt;&lt;br /&gt;                        .Where(i =&amp;gt; i % 3 == 0 || i % 5 == 0) &lt;span style="color: #008000"&gt;// filter using lambda expression &lt;/span&gt;&lt;br /&gt;                        .Sum(); // sum of int32 &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; extension methods&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;br /&gt;and for fun, using method and query syntax &lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// get the ones divisible by 3 in the list - Method syntax&lt;/span&gt;&lt;br /&gt;IEnumerable&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; listOfDivisibleBy3Method = listOfInts&lt;br /&gt;                                           .Where(i =&amp;gt; i % 3 == 0);&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;// get the ones divisible by 3 in the list - Query syntax&lt;/span&gt;&lt;br /&gt;IEnumerable&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; listOfDivisibleBy3Query = from number &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; listOfInts&lt;br /&gt;                                          &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; (number % 3 == 0)&lt;br /&gt;                                          select number;&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/214500/which-linq-syntax-do-you-prefer-fluent-or-query-expression"&gt;http://stackoverflow.com/questions/214500/which-linq-syntax-do-you-prefer-fluent-or-query-expression&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-12-07T23:42:36.3591464-05:00</Created>
+      <Modified>2010-12-11T03:05:29.893625-05:00</Modified>
+      <EntryId>86e48c73-b2fa-42bd-b8f1-91a4d14a392f</EntryId>
+      <Description />
+      <Title>Projecteuler.net – Problem #1 (Linq Method and Query Syntax)</Title>
+      <Categories>c# language;Euler;Linq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

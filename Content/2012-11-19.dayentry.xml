@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-18T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://technet.microsoft.com/cs-cz/sysinternals/bb963907" href="http://technet.microsoft.com/cs-cz/sysinternals/bb963907"&gt;http://technet.microsoft.com/cs-cz/sysinternals/bb963907&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://msdn.microsoft.com/en-us/library/ee707353%28VS.91%29.aspx" href="http://msdn.microsoft.com/en-us/library/ee707353%28VS.91%29.aspx"&gt;http://msdn.microsoft.com/en-us/library/ee707353%28VS.91%29.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Querying the AD using an explorer.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Active-Directory-Authentication-with_C298/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Active-Directory-Authentication-with_C298/image_thumb.png" width="590" height="202" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Make sure NTLM is running.&lt;/p&gt;  &lt;h3&gt;HTTPS&lt;/h3&gt;  &lt;p&gt;   &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; EnableClientAccess(RequiresSecureEndpoint=true)... needs https.&lt;/p&gt;</Content>
+      <Created>2012-11-19T09:49:41.052586-05:00</Created>
+      <Modified>2012-11-20T04:38:48.4440501-05:00</Modified>
+      <EntryId>88f3c60f-a2e8-4112-a405-a11470652ca3</EntryId>
+      <Description />
+      <Title>Active Directory Authentication with RIA Services</Title>
+      <Categories>RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

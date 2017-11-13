@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-06-21T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;In the 1.2 Release of the SDK we can now publish straight from VS instead of manually uploading files.&lt;/p&gt;  &lt;p&gt;The end results is this:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzurePublishfromVS2010_F5A2/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzurePublishfromVS2010_F5A2/image_thumb.png" width="447" height="227" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;which automatically publishes up to the cloud and runs the app making it live.&lt;/p&gt;  &lt;p&gt;The way to do it is to select manage in Credentials, which brings up this box:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/AzurePublishfromVS2010_F5A2/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/AzurePublishfromVS2010_F5A2/image_thumb_1.png" width="686" height="490" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;1. Create a self signed cert.&amp;#160; &lt;/p&gt;  &lt;p&gt;2. upload it to the dev portal&lt;/p&gt;  &lt;p&gt;3 grab your subscriptionid from Account page&lt;/p&gt;  &lt;p&gt;You’ll need a storage account to setup through as well.&lt;/p&gt;</Content>
+      <Created>2010-06-22T01:43:57.397125-04:00</Created>
+      <Modified>2010-06-22T01:43:57.397125-04:00</Modified>
+      <EntryId>9e1c5730-1e7f-4b01-8e0f-1a8d1cd8c572</EntryId>
+      <Description />
+      <Title>Azure – Publish from VS2010 (new in 1.2)</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

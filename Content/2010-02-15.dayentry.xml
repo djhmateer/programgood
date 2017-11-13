@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-14T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Both my asp.net web hosters advertised they are hosting on Server 2008, which meant IIS7.&amp;#160; This makes things much easier when publishing an MVC site (to do with routing apparently).&amp;#160; As I’d hosted my sites for years with these providers, they were still on Win2003 (IIS6) boxes.&amp;#160; I just had to ask for an upgrade and it was done.&lt;/p&gt;  &lt;p&gt;Upload to IIS7 and it just works!&lt;/p&gt;  &lt;p&gt;The first step was to see if routing worked on the default website.. it did!&lt;/p&gt;  &lt;p&gt;The next step – to publish up the NerdDinner app I’ve been going through on Rob Conery, and get the database connected live.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb.png" width="644" height="355" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;The crowd goes wild&amp;#160; - this is live and connecting to a database :-)&lt;/p&gt;  &lt;h3&gt;Changing Namespace / Solution Name / Project Names&lt;/h3&gt;  &lt;p&gt;I had lots of namespace errors.. forgot to change default assembly namespace, which meant linq to sql was in the wrong space.&amp;#160; However it is possible to change everything very quickly – solution, project names, directly.&amp;#160; One gotcha was remembering to delete everything on the live server so there weren’t 2 dll’s with the same object names inside..&lt;/p&gt;  &lt;h3&gt;Changing Default Page to Activity / upload live trick&lt;/h3&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;routes.MapRoute(&lt;br /&gt;    &lt;span style="color: #006080"&gt;&amp;quot;Default&amp;quot;&lt;/span&gt;,                                              &lt;span style="color: #008000"&gt;// Route name&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #006080"&gt;&amp;quot;{controller}/{action}/{id}&amp;quot;&lt;/span&gt;,                           &lt;span style="color: #008000"&gt;// URL with parameters&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { controller = &lt;span style="color: #006080"&gt;&amp;quot;Activity&amp;quot;&lt;/span&gt;, action = &lt;span style="color: #006080"&gt;&amp;quot;Index&amp;quot;&lt;/span&gt;, id = &lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt; }  &lt;span style="color: #008000"&gt;// Parameter defaults&lt;/span&gt;&lt;br /&gt;);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Change controller = “Home” to controller = “Acitivity”&lt;/p&gt;
+
+&lt;p&gt;I also implemented the copyifnewer.bat trick for easily going from dev to live which is here: &lt;a title="http://www.programgood.net/2010/01/28/WebConfigAutomatingDevAndLive.aspx" href="http://www.programgood.net/2010/01/28/WebConfigAutomatingDevAndLive.aspx"&gt;http://www.programgood.net/2010/01/28/WebConfigAutomatingDevAndLive.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Run application working live with Create, Read, Update and Delete working.&amp;#160; Also validation, which comes for free in the standard templates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_1.png" width="644" height="399" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;DropDownList and Postbacks – covered in another post on this site.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists" href="http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists"&gt;http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Summary Page&lt;/h4&gt;
+
+&lt;p&gt;I created another link in the master page for menu item:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.mateerit.co.nz/run"&gt;www.mateerit.co.nz/run&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_3.png" width="332" height="105" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;For the summary page I’m considering a ViewModel approach.&lt;/p&gt;
+
+&lt;p&gt;Lets see if a simple new Summary controller will suffice&lt;/p&gt;
+
+&lt;p&gt;Got to a stage.. was going to upload to github, but had db connection strings in there which didn’t want in the history.. so looked at rebase in git.. want to make sure before I play too much :-)&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h5&gt;Creating a SQL View then Displaying it&lt;/h5&gt;
+
+&lt;p&gt;Michael came up with an elegant solution which I’m trying.. so creating a SQL View:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;SELECT&lt;/span&gt;     personid,    &lt;br /&gt;            DATEPART(week, &lt;span style="color: #0000ff"&gt;date&lt;/span&gt;) &lt;span style="color: #0000ff"&gt;AS&lt;/span&gt; Week, &lt;br /&gt;            DATEPART(&lt;span style="color: #0000ff"&gt;year&lt;/span&gt;, &lt;span style="color: #0000ff"&gt;date&lt;/span&gt;) &lt;span style="color: #0000ff"&gt;AS&lt;/span&gt; &lt;span style="color: #0000ff"&gt;Year&lt;/span&gt;,&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;SUM&lt;/span&gt;(kilometres) &lt;span style="color: #0000ff"&gt;AS&lt;/span&gt; kilometres, &lt;br /&gt;            &lt;span style="color: #0000ff"&gt;SUM&lt;/span&gt;(hours) &lt;span style="color: #0000ff"&gt;AS&lt;/span&gt; hours&lt;br /&gt;&lt;span style="color: #0000ff"&gt;FROM&lt;/span&gt;         dbo.Activity&lt;br /&gt;&lt;span style="color: #0000ff"&gt;GROUP&lt;/span&gt; &lt;span style="color: #0000ff"&gt;BY&lt;/span&gt; personid, DATEPART(week, &lt;span style="color: #0000ff"&gt;date&lt;/span&gt;), DATEPART(&lt;span style="color: #0000ff"&gt;year&lt;/span&gt;, &lt;span style="color: #0000ff"&gt;date&lt;/span&gt;)&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;which gives a good summary output:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_2.png" width="244" height="123" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;The aim is to be able to see the summary of each week like this (this is the old webforms version)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_4.png" width="644" height="237" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;linq to sql generated classes off the view.&lt;/p&gt;
+
+&lt;p&gt;Michael did it like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_5.png" width="588" height="168" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;I’m on this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_14.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_6.png" width="321" height="210" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h5&gt;Passing Complex Data – Lists within Lists&lt;/h5&gt;
+
+&lt;p&gt;As each person has data associated to them, a list within a list is good.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_16.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/GoingLivewithASP.NETMVC_9316/image_thumb_7.png" width="610" height="252" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; WeekSummary&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; Personid;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; string Personname;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&amp;lt;WeekSummaryData&amp;gt; Persondata;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; WeekSummaryData&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;double&lt;/span&gt;? Hours;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;double&lt;/span&gt;? Kilometers;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;? Week;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;? &lt;span style="color: #0000ff"&gt;Year&lt;/span&gt;;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Then in the repository:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; IQueryable&amp;lt;WeekSummary&amp;gt; GetWeeklySummary()&lt;br /&gt;{&lt;br /&gt;    var weekSummaries = &lt;span style="color: #0000ff"&gt;from&lt;/span&gt; p &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.Persons&lt;br /&gt;                        orderby p.personname&lt;br /&gt;                        let &lt;span style="color: #0000ff"&gt;data&lt;/span&gt; = GetWeeklySummaryData(p.personid)&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;select&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; WeekSummary {Personid = p.personid, &lt;br /&gt;                                                            Personname = p.personname, &lt;br /&gt;                                                            Persondata = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;WeekSummaryData&amp;gt;(&lt;span style="color: #0000ff"&gt;data&lt;/span&gt;)};&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; weekSummaries;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;IQueryable&amp;lt;WeekSummaryData&amp;gt; GetWeeklySummaryData(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; personid)&lt;br /&gt;{&lt;br /&gt;    var summary = &lt;span style="color: #0000ff"&gt;from&lt;/span&gt; w &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.weekly_summaries&lt;br /&gt;                  &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; w.personid == personid&lt;br /&gt;                  orderby w.&lt;span style="color: #0000ff"&gt;Year&lt;/span&gt; , w.Week&lt;br /&gt;                  &lt;span style="color: #0000ff"&gt;select&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; WeekSummaryData {Hours = w.hours, &lt;br /&gt;                                                            Kilometers = w.kilometres, &lt;br /&gt;                                                            Week = w.Week, &lt;br /&gt;                                                            &lt;span style="color: #0000ff"&gt;Year&lt;/span&gt; = w.&lt;span style="color: #0000ff"&gt;Year&lt;/span&gt;};&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; summary;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;** understand this linq&lt;/p&gt;
+
+&lt;p&gt;Then in the controller:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult &lt;span style="color: #0000ff"&gt;Index&lt;/span&gt;()&lt;br /&gt;{&lt;br /&gt;    var summaries = _repository.GetWeeklySummary();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;View&lt;/span&gt;(summaries);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;and the view:&lt;/p&gt;
+
+&lt;p&gt;** understand this rendering&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;% &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (WeekSummary weekSummary &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Model) {&lt;br /&gt;     %&amp;gt;&lt;br /&gt;    &amp;lt;table&amp;gt;&lt;br /&gt;    &amp;lt;tr&amp;gt;&lt;br /&gt;    &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;&lt;br /&gt;    &amp;lt;% &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (WeekSummaryData weekSummaryData &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; weekSummary.Persondata) { %&amp;gt;&lt;br /&gt;        &amp;lt;th&amp;gt;&amp;lt;%=Html.Encode(weekSummaryData.Week) + &lt;span style="color: #006080"&gt;&amp;quot;/&amp;quot;&lt;/span&gt; + Html.Encode(weekSummaryData.Year) %&amp;gt;&amp;lt;/th&amp;gt;&lt;br /&gt;    &amp;lt;%}%&amp;gt;&lt;br /&gt;    &amp;lt;/tr&amp;gt;&lt;br /&gt;    &amp;lt;tr&amp;gt;&lt;br /&gt;    &amp;lt;td&amp;gt;&lt;br /&gt;    &amp;lt;%=Html.Encode(weekSummary.Personname) %&amp;gt;&lt;br /&gt;    &amp;lt;/td&amp;gt;&lt;br /&gt;    &amp;lt;% &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (WeekSummaryData week &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; weekSummary.Persondata) { %&amp;gt;&lt;br /&gt;        &amp;lt;td&amp;gt;&amp;lt;%=Html.Encode(week.Hours) + &lt;span style="color: #006080"&gt;&amp;quot;hrs&amp;quot;&lt;/span&gt; %&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%=Html.Encode(week.Kilometers) + &lt;span style="color: #006080"&gt;&amp;quot;kms&amp;quot;&lt;/span&gt; %&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;    &amp;lt;%}%&amp;gt;&lt;br /&gt;    &amp;lt;/tr&amp;gt;&lt;br /&gt;    &amp;lt;/table&amp;gt;&lt;br /&gt;&amp;lt;% } %&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;refactor code with an interface for testing&lt;/p&gt;
+
+&lt;p&gt;unit test do&lt;/p&gt;
+
+&lt;p&gt;automock&lt;/p&gt;
+
+&lt;p&gt;jquery&lt;/p&gt;
+
+&lt;p&gt;tooling to help make form crud websites faster… &lt;/p&gt;
+
+&lt;p&gt;reproting tooling&lt;/p&gt;
+
+&lt;p&gt;mvc2&lt;/p&gt;</Content>
+      <Created>2010-02-14T22:59:31.8555-05:00</Created>
+      <Modified>2010-02-21T20:28:00.0076322-05:00</Modified>
+      <EntryId>6da2752b-b696-49cf-9541-127e55d50123</EntryId>
+      <Description />
+      <Title>Going Live with ASP.NET MVC</Title>
+      <Categories>ASP.NET MVC;Project Run</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

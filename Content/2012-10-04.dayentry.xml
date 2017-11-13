@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-03T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://channel9.msdn.com/Blogs/mtaulty/Prism--Silverlight-Part-4-The-Unity-Bootstrapper"&gt;http://channel9.msdn.com/Blogs/mtaulty/Prism--Silverlight-Part-4-The-Unity-Bootstrapper&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=737"&gt;http://www.dotnetrocks.com/default.aspx?showNum=737&lt;/a&gt;&amp;#160; - 2012&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=687"&gt;http://www.dotnetrocks.com/default.aspx?showNum=687&lt;/a&gt; – SL and HTML5 2011&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=684"&gt;http://www.dotnetrocks.com/default.aspx?showNum=684&lt;/a&gt; – SL5 Pete Brown&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dnrtv.com/default.aspx?showNum=198"&gt;http://www.dnrtv.com/default.aspx?showNum=198&lt;/a&gt; – SL5 demo&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Pluralsight – great RIA Services, Unit Testing video &lt;a href="http://pluralsight.com/training/courses/TableOfContents?courseName=silverlight-ria-services-advanced-topics&amp;amp;highlight=yacine-khammal_riasvc-m5*6!yacine-khammal_riasvc-m8*6#riasvc-m5"&gt;http://pluralsight.com/training/courses/TableOfContents?courseName=silverlight-ria-services-advanced-topics&amp;amp;highlight=yacine-khammal_riasvc-m5*6!yacine-khammal_riasvc-m8*6#riasvc-m5&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://xamlspy.com/learn/introduction"&gt;http://xamlspy.com/learn/introduction&lt;/a&gt;&amp;#160; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://archive.msdn.microsoft.com/wcfbinaryinspector"&gt;http://archive.msdn.microsoft.com/wcfbinaryinspector&lt;/a&gt; – WCF Binary inspector for Fiddler&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.lhotka.net/Default.aspx"&gt;http://www.lhotka.net/Default.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.microsoft.com/en-us/download/details.aspx?id=28357"&gt;http://www.microsoft.com/en-us/download/details.aspx?id=28357&lt;/a&gt; – WCF RIA Services V1.0 SP2.. 16/8/2012&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/silverlight/How-to-open-a-WCF-RIA-171139fb"&gt;http://code.msdn.microsoft.com/silverlight/How-to-open-a-WCF-RIA-171139fb&lt;/a&gt;&amp;#160; - WCF RIA exposed to HTML5/jquery&amp;#160;&amp;#160; - 2011&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/Getting-Started-WCF-RIA-1469cbe2"&gt;http://code.msdn.microsoft.com/Getting-Started-WCF-RIA-1469cbe2&lt;/a&gt; – Getting Started WCF RIA Services&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-79-Data-Binding-Debugging"&gt;http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-79-Data-Binding-Debugging&lt;/a&gt;&amp;#160; Data Binding Debugging in SL5     &lt;br /&gt;&amp;#160; Binding on expressions in XAML..anything through the binding statement&lt;sub&gt;&lt;/sub&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-41-Top-Tips-for-WCF-RIA-Services"&gt;http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-41-Top-Tips-for-WCF-RIA-Services&lt;/a&gt;&amp;#160; - Deep dive for RIA Services&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/silverlight/Getting-Started-WCF-RIA-1469cbe2"&gt;http://code.msdn.microsoft.com/silverlight/Getting-Started-WCF-RIA-1469cbe2&lt;/a&gt; – Getting started simple with SL and WCF RIA&lt;/p&gt;  &lt;p&gt;HTML5 / Knockout&lt;/p&gt;  &lt;p&gt;&lt;a href="http://css.dzone.com/articles/upshotjs-knockoutjs-html5"&gt;http://css.dzone.com/articles/upshotjs-knockoutjs-html5&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-10-04T10:35:05.7163159-04:00</Created>
+      <Modified>2012-10-04T10:35:05.7163159-04:00</Modified>
+      <EntryId>339209aa-9edf-417a-b470-fa32b58d4740</EntryId>
+      <Description />
+      <Title>Silverlight Links</Title>
+      <Categories>Silverlight;WCF;WCF RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://visualstudiogallery.msdn.microsoft.com/ff717422-f6a7-4f18-b972-f7540eaf371e"&gt;http://visualstudiogallery.msdn.microsoft.com/ff717422-f6a7-4f18-b972-f7540eaf371e&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-10-04T10:03:14.6195623-04:00</Created>
+      <Modified>2012-10-04T10:03:14.6195623-04:00</Modified>
+      <EntryId>a688f4f4-474f-4176-bc00-f0eafcc435d8</EntryId>
+      <Description />
+      <Title>Remove Unused References VS2012</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=737"&gt;http://www.dotnetrocks.com/default.aspx?showNum=737&lt;/a&gt;&amp;#160; - 2012&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=687"&gt;http://www.dotnetrocks.com/default.aspx?showNum=687&lt;/a&gt; – SL and HTML5 2011&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetrocks.com/default.aspx?showNum=684"&gt;http://www.dotnetrocks.com/default.aspx?showNum=684&lt;/a&gt; – SL5 Pete Brown&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dnrtv.com/default.aspx?showNum=198"&gt;http://www.dnrtv.com/default.aspx?showNum=198&lt;/a&gt; – SL5 demo&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Pluralsight – great RIA Services, Unit Testing video &lt;a href="http://pluralsight.com/training/courses/TableOfContents?courseName=silverlight-ria-services-advanced-topics&amp;amp;highlight=yacine-khammal_riasvc-m5*6!yacine-khammal_riasvc-m8*6#riasvc-m5"&gt;http://pluralsight.com/training/courses/TableOfContents?courseName=silverlight-ria-services-advanced-topics&amp;amp;highlight=yacine-khammal_riasvc-m5*6!yacine-khammal_riasvc-m8*6#riasvc-m5&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://xamlspy.com/learn/introduction"&gt;http://xamlspy.com/learn/introduction&lt;/a&gt;&amp;#160; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://archive.msdn.microsoft.com/wcfbinaryinspector"&gt;http://archive.msdn.microsoft.com/wcfbinaryinspector&lt;/a&gt; – WCF Binary inspector for Fiddler&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.lhotka.net/Default.aspx"&gt;http://www.lhotka.net/Default.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.microsoft.com/en-us/download/details.aspx?id=28357"&gt;http://www.microsoft.com/en-us/download/details.aspx?id=28357&lt;/a&gt; – WCF RIA Services V1.0 SP2.. 16/8/2012&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/silverlight/How-to-open-a-WCF-RIA-171139fb"&gt;http://code.msdn.microsoft.com/silverlight/How-to-open-a-WCF-RIA-171139fb&lt;/a&gt;&amp;#160; - WCF RIA exposed to HTML5/jquery&amp;#160;&amp;#160; - 2011&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/Getting-Started-WCF-RIA-1469cbe2"&gt;http://code.msdn.microsoft.com/Getting-Started-WCF-RIA-1469cbe2&lt;/a&gt; – Getting Started WCF RIA Services&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-79-Data-Binding-Debugging"&gt;http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-79-Data-Binding-Debugging&lt;/a&gt;&amp;#160; Data Binding Debugging in SL5     &lt;br /&gt;&amp;#160; Binding on expressions in XAML..anything through the binding statement&lt;sub&gt;&lt;/sub&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-41-Top-Tips-for-WCF-RIA-Services"&gt;http://channel9.msdn.com/Shows/SilverlightTV/Silverlight-TV-41-Top-Tips-for-WCF-RIA-Services&lt;/a&gt;&amp;#160; - Deep dive for RIA Services&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/silverlight/Getting-Started-WCF-RIA-1469cbe2"&gt;http://code.msdn.microsoft.com/silverlight/Getting-Started-WCF-RIA-1469cbe2&lt;/a&gt; – Getting started simple with SL and WCF RIA&lt;/p&gt;  &lt;p&gt;HTML5 / Knockout&lt;/p&gt;  &lt;p&gt;&lt;a href="http://css.dzone.com/articles/upshotjs-knockoutjs-html5"&gt;http://css.dzone.com/articles/upshotjs-knockoutjs-html5&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-10-04T12:26:27.8984569-04:00</Created>
+      <Modified>2012-10-04T12:26:27.8984569-04:00</Modified>
+      <EntryId>970ac42b-79b9-44f9-a4c0-213a75709189</EntryId>
+      <Description />
+      <Title>Silverlight Links</Title>
+      <Categories>Silverlight;WCF;WCF RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

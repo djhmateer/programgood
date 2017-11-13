@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-10-27T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Signing up for Azure:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ErrorMessages_D2CD/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ErrorMessages_D2CD/image_thumb.png" width="609" height="233" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;nice :-)&lt;/p&gt;  &lt;p&gt;F5 and it worked…&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Windows Key and E to open explorer&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ErrorMessages_D2CD/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ErrorMessages_D2CD/image_thumb_1.png" width="644" height="94" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-10-27T22:00:11.043-04:00</Created>
+      <Modified>2010-10-28T14:44:16.402375-04:00</Modified>
+      <EntryId>8bc57c2a-e933-4a69-b340-f4836bb90669</EntryId>
+      <Description />
+      <Title>Funny Error Messages</Title>
+      <Categories>Funny</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

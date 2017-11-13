@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-09-20T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h5&gt;Tech Blogs and people I want to find out about:&lt;/h5&gt;  &lt;p&gt;&lt;a href="http://www.lostechies.com/"&gt;http://www.lostechies.com/&lt;/a&gt; and &lt;a href="http://codebetter.com/"&gt;http://codebetter.com/&lt;/a&gt; – Kyle Baley, Jeremy Miller, Chad Myers, Jimmy Bogard&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.jpboodhoo.com/publications.oo"&gt;http://www.jpboodhoo.com/publications.oo&lt;/a&gt; – JP Boodhoo.&amp;#160; videos to watch too&lt;/p&gt;  &lt;p&gt;&lt;a href="http://whileicompile.wordpress.com/2010/08/24/my-clean-code-experience-no-1/"&gt;http://whileicompile.wordpress.com/2010/08/24/my-clean-code-experience-no-1/&lt;/a&gt; – John MacIntyre doing an example using Uncle Bobs clean code book.&amp;#160; Has a downloadable sample project. &lt;/p&gt;  &lt;p&gt;&lt;a href="http://thecleancoder.blogspot.com/"&gt;http://thecleancoder.blogspot.com/&lt;/a&gt; – Uncle Bob Martin&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.udidahan.com/?blog=true"&gt;http://www.udidahan.com/?blog=true&lt;/a&gt; – Udi Dahan (NServiceBus)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.wekeroad.com/thoughts/vim-is-your-daddy"&gt;http://blog.wekeroad.com/thoughts/vim-is-your-daddy&lt;/a&gt; – Rob Conery.. here is a blog on Vim&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;a href="http://ayende.com/"&gt;http://ayende.com/&lt;/a&gt; – Oren Eini aka Ayende Rahien.&amp;#160; Rhino Mocks, Nhibernate Profiler&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.martinfowler.com/"&gt;http://www.martinfowler.com/&lt;/a&gt; Martin Fowler / Thoughtworks&lt;/p&gt;  &lt;p&gt;Greg Young, Eric Evans, Michael Feathers, Scott Hanselman&lt;/p&gt;  &lt;p&gt;Joe Obrien, Jim Weirich, Jon Stahl (LeanDog), Dave Laribee, Aaron Jensen, Andy Hunt, DHH, Jeff Atwood, Scott Bellware, Mike Gunderloy&lt;/p&gt;  &lt;p&gt;Bjorn Rochel, Stefan Lieser, Kyle Baley, Scott Cown, Will Green, Chris PhatBoyG Patterson, Brain Donahue&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://randomcode.net.nz/about/"&gt;http://randomcode.net.nz/about/&lt;/a&gt; – Neal Blomfield, Wellington.&amp;#160; Castle Windsor, DDD, Git, MonoRail, NHibernate&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscape.co.nz/blog/index.php/2010/09/13/mindscape-teched-nz-2010-videos/"&gt;http://www.mindscape.co.nz/blog/index.php/2010/09/13/mindscape-teched-nz-2010-videos/&lt;/a&gt; – JD Trask, Ivan&lt;/p&gt;  &lt;h5&gt;Other Blogs&lt;/h5&gt;  &lt;p&gt;Tim Ferris&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.kimandjason.com"&gt;www.kimandjason.com&lt;/a&gt; – Jason… live with less stress and more fun&lt;/p&gt;  &lt;h5&gt;Tech Videos&lt;/h5&gt;  &lt;p&gt;&lt;a href="http://www.tekpub.com"&gt;www.tekpub.com&lt;/a&gt; – bought an MVC video set from here.. was great&lt;/p&gt;  &lt;p&gt;&lt;a href="http://peepcode.com/"&gt;http://peepcode.com/&lt;/a&gt; – paid for videos&lt;/p&gt;</Content>
+      <Created>2010-09-21T19:15:49.689342-04:00</Created>
+      <Modified>2010-09-28T18:40:53.4890592-04:00</Modified>
+      <EntryId>12534b8a-7636-4f33-b4ad-1681dbc6cf98</EntryId>
+      <Description />
+      <Title>Becoming a Great Coder - Resources</Title>
+      <Categories>Blogs I Read</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-10-03T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>NameEmailWebsite             CAPTCHA Code *                 var sUrlInput = doemcunt.getElementById(&amp;quot;comment&amp;quot;);                  var oParent = sUrlInput.parentNode;          var sSubstitue = doemcunt.getElementById(&amp;quot;captchaImgDiv&amp;quot;);                  oParent.appendChild(sSubstitue, sUrlInput);                            #submit {display:none;}                       Threaded commenting powered by  code.</Content>
+      <Created>2012-05-12T21:23:51.78125-04:00</Created>
+      <Modified>2012-05-12T21:23:51.78125-04:00</Modified>
+      <EntryId>9612346e-b267-4b01-a7a7-865182d1351a</EntryId>
+      <TargetTitle>Choosing A Theme–WooThemes</TargetTitle>
+      <TargetEntryId>A506BA9F-CDB6-4DDA-9616-BAB17832C7C8</TargetEntryId>
+      <Author>Carson</Author>
+      <AuthorEmail>jim.bugg@usask.ca</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003405954195</AuthorHomepage>
+      <AuthorIPAddress>188.143.232.12</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

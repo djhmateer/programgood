@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-06T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; UnitTestThings()&lt;br /&gt;{&lt;br /&gt;    Thing thing = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing();&lt;br /&gt;    IEnumerable&amp;lt;Thing&amp;gt; listOfThings = thing.giveMeAllThings(); &lt;br /&gt;    Assert.AreEqual(3, listOfThings.Count()); &lt;span style="color: #008000"&gt;// linq count&lt;/span&gt;&lt;br /&gt;    Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 3));&lt;br /&gt;    Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;waterbottle&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 2));&lt;br /&gt;    Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;pinecone&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 17));&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Collection assertions &lt;a href="http://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.collectionassert.aspx"&gt;http://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.collectionassert.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;this is different from Contains:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; when_asked_for_all_of_the_movies_it_should_receive_a_set_containing_each_movie_in_the_library()&lt;br /&gt;{&lt;br /&gt;    Movie first_movie = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie();&lt;br /&gt;    Movie second_movie = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie();&lt;br /&gt;    movie_collection.Add(first_movie);&lt;br /&gt;    movie_collection.Add(second_movie);&lt;br /&gt;&lt;br /&gt;    MovieLibrary movieLibrary = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; MovieLibrary(movie_collection);&lt;br /&gt;&lt;br /&gt;    IEnumerable&amp;lt;Movie&amp;gt; all_movies = movieLibrary.all_movies();&lt;br /&gt;&lt;br /&gt;    Assert.IsTrue(all_movies.Contains(first_movie));&lt;br /&gt;    Assert.IsTrue(all_movies.Contains(second_movie));&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-07T05:54:41.790625-05:00</Created>
+      <Modified>2011-03-07T06:43:27.86875-05:00</Modified>
+      <EntryId>90490c25-1acf-405d-a59b-0091c93b1aad</EntryId>
+      <Description />
+      <Title>Asserting something is in a Collection</Title>
+      <Categories>c# language;Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; when_sorting_movies_it_should_be_able_to_sort_all_movies_by_title_descending()&lt;br /&gt;{&lt;br /&gt;   populateTestMovies(movie_collection);&lt;br /&gt;   MovieLibrary movieLibrary = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; MovieLibrary(movie_collection);&lt;br /&gt;   IEnumerable&amp;lt;Movie&amp;gt; results = movieLibrary.sort_all_movies_by_title_descending();&lt;br /&gt;&lt;br /&gt;   IEnumerable&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; expected = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt;[] &lt;br /&gt;       { &lt;br /&gt;           theres_something_about_mary.title,&lt;br /&gt;           the_ring.title,&lt;br /&gt;           shrek.title,&lt;br /&gt;           pirates_of_the_carribean.title,&lt;br /&gt;           indiana_jones_and_the_temple_of_doom.title,&lt;br /&gt;           cars.title,&lt;br /&gt;           a_bugs_life.title&lt;br /&gt;       };&lt;br /&gt;   Assert.IsTrue(results.Select(m =&amp;gt; m.title).SequenceEqual(expected));&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;thanks to &lt;a href="http://stackoverflow.com/questions/5218505/assert-that-a-collection-is-in-the-right-order"&gt;http://stackoverflow.com/questions/5218505/assert-that-a-collection-is-in-the-right-order&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-07T05:50:09.821875-05:00</Created>
+      <Modified>2011-03-07T05:50:09.821875-05:00</Modified>
+      <EntryId>b3fe2704-ba3a-4437-b5de-db01edb19358</EntryId>
+      <Description />
+      <Title>Asserting order of a Collection</Title>
+      <Categories>c# language;Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; when_adding_two_different_copies_of_the_same_movie_it_should_store_only_1_copy_in_the_collection()&lt;br /&gt;{&lt;br /&gt;    MovieLibrary movieLibrary = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; MovieLibrary(movie_collection);&lt;br /&gt;    Movie speed_racer = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie { title = &lt;span style="color: #006080"&gt;&amp;quot;Speed Racer&amp;quot;&lt;/span&gt; };&lt;br /&gt;    Movie another_copy_of_speed_racer = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie { title = &lt;span style="color: #006080"&gt;&amp;quot;Speed Racer&amp;quot;&lt;/span&gt; };&lt;br /&gt;    &lt;br /&gt;    movieLibrary.add(speed_racer);&lt;br /&gt;    movieLibrary.add(another_copy_of_speed_racer);&lt;br /&gt;&lt;br /&gt;    Assert.AreEqual(1, movie_collection.Count);&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;Here is MovieLibrary:&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; add(Movie movie)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #008000"&gt;// .Contains is from List&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Actually uses .Equals method to see if any movies in collection is .Equal to the new one&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!_list_of_movies_passed_to_us.Contains(movie))&lt;br /&gt;        _list_of_movies_passed_to_us.Add(movie);&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+And here is Movie, with the shorter way commented out with a longer way working 
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Movie : IEquatable&amp;lt;Movie&amp;gt;&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Properties&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; title { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ProductionStudio production_studio { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; Genre genre { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; rating { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime date_published { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Method&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; Equals(Movie other)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #008000"&gt;//return other == null ? false : other.title == this.title;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (other == &lt;span style="color: #0000ff"&gt;null&lt;/span&gt;)&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt; &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (other.title == &lt;span style="color: #0000ff"&gt;this&lt;/span&gt;.title)&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-07T05:48:47.2125-05:00</Created>
+      <Modified>2011-03-07T05:48:47.2125-05:00</Modified>
+      <EntryId>8bb121bb-7e4d-4fb5-8985-a8965ecbdab6</EntryId>
+      <Description />
+      <Title>IEquatable</Title>
+      <Categories>c# language;MovieLib</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/3686739/what-does-return-type-of-icollectionperson-mean"&gt;http://stackoverflow.com/questions/3686739/what-does-return-type-of-icollectionperson-mean&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;It is often better to return an interface instead of ‘concrete’ class (or implementation).&lt;/p&gt;  &lt;p&gt;The reason for this is the freedom it provides – the implementation may change at a later date without affecting the calling code.&lt;/p&gt;  &lt;p&gt;eg giveMeAllThings can change internally as long as I implement the methods that ICollection requires.&amp;#160; And as a List implements these (and more), then this works.&lt;/p&gt;  &lt;p&gt;Inside giveMeAllThings, I could have anything I like (doesn’t have to be a List).&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Thing&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; name { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; age { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ICollection&amp;lt;Thing&amp;gt; giveMeAllThings() &lt;br /&gt;    {&lt;br /&gt;        IList&amp;lt;Thing&amp;gt; listOfThings = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;Thing&amp;gt;();&lt;br /&gt;        Thing thing1 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing { name = &lt;span style="color: #006080"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt;, age = 3 };&lt;br /&gt;        Thing thing2 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing { name = &lt;span style="color: #006080"&gt;&amp;quot;waterbottle&amp;quot;&lt;/span&gt;, age = 2 };&lt;br /&gt;        Thing thing3 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing { name = &lt;span style="color: #006080"&gt;&amp;quot;pinecone&amp;quot;&lt;/span&gt;, age = 17 };&lt;br /&gt;        listOfThings.Add(thing1);&lt;br /&gt;        listOfThings.Add(thing2);&lt;br /&gt;        listOfThings.Add(thing3);&lt;br /&gt;        &lt;span style="color: #008000"&gt;//foreach (Thing t in listOfThings)&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;//    yield return t;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; listOfThings;&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;[TestClass]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; UnitTest1&lt;br /&gt;{&lt;br /&gt;    [TestMethod]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; UnitTestThings()&lt;br /&gt;    {&lt;br /&gt;        Thing thing = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing();&lt;br /&gt;        IEnumerable&amp;lt;Thing&amp;gt; listOfThings = thing.giveMeAllThings(); &lt;br /&gt;        Assert.AreEqual(3, listOfThings.Count()); &lt;span style="color: #008000"&gt;// linq count&lt;/span&gt;&lt;br /&gt;        Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 3));&lt;br /&gt;        Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;waterbottle&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 2));&lt;br /&gt;        Assert.IsTrue(listOfThings.Any(t =&amp;gt; t.name == &lt;span style="color: #006080"&gt;&amp;quot;pinecone&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; t.age == 17));&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    [TestMethod]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; UnitTestThingsWhereNeedAnICollection()&lt;br /&gt;    {&lt;br /&gt;        Thing thing = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Thing();&lt;br /&gt;        ICollection&amp;lt;Thing&amp;gt; listOfThings = thing.giveMeAllThings();&lt;br /&gt;        Assert.AreEqual(3, listOfThings.Count); &lt;span style="color: #008000"&gt;// ICollection count&lt;/span&gt;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Won't compile as return type of giveMeAllThings is an ICollection&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//[TestMethod]&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//public void UnitTestThingsWhereINeedAnActualList()&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//{&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//    Thing thing = new Thing();&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//    IList&amp;lt;Thing&amp;gt; listOfThings = thing.giveMeAllThings();&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//    Assert.AreEqual(3, listOfThings.Count); // List count&lt;/span&gt;&lt;br /&gt;    //}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;a href="http://elegantcode.com/2008/04/07/replace-your-collections-with-ienumerablet/"&gt;http://elegantcode.com/2008/04/07/replace-your-collections-with-ienumerablet/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; Good article here.. basically saying that he is using IEnumerable&amp;lt;T&amp;gt; mostly, and Linq for things like Count, ElementAt etc..&lt;/p&gt;</Content>
+      <Created>2011-03-07T05:13:41.275-05:00</Created>
+      <Modified>2011-03-07T05:13:41.275-05:00</Modified>
+      <EntryId>5e73381c-0eb5-4127-9e70-851555c34046</EntryId>
+      <Description />
+      <Title>Returning an Interface IEnumerable, ICollection, IList</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

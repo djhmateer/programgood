@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-01-15T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://levelnis.co.uk/blog/the-wonderful-world-of-resharper" href="http://levelnis.co.uk/blog/the-wonderful-world-of-resharper"&gt;http://levelnis.co.uk/blog/the-wonderful-world-of-resharper&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-01-15T20:05:46.471875-05:00</Created>
+      <Modified>2012-01-15T20:05:46.471875-05:00</Modified>
+      <EntryId>3afbb5f0-ac99-4b1f-bb8f-e1b254bd09b5</EntryId>
+      <Description />
+      <Title>Resharper Userful Bits</Title>
+      <Categories>Resharper</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

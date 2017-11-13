@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-10-17T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>I don't even know what to say, this made things so much esaier!</Content>
+      <Created>2012-01-14T19:17:10.159375-05:00</Created>
+      <Modified>2012-01-14T19:17:10.159375-05:00</Modified>
+      <EntryId>521ce435-d353-44b9-9a18-ec7c3921f83c</EntryId>
+      <TargetTitle>Massive – Types in and outbound</TargetTitle>
+      <TargetEntryId>EB519D9C-C56B-4C29-B0D2-D003DCF2E9D4</TargetEntryId>
+      <Author>Madge</Author>
+      <AuthorEmail>garybusto@yahoo.com</AuthorEmail>
+      <AuthorHomepage>http://www.google.com/</AuthorHomepage>
+      <AuthorIPAddress>109.230.216.225</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

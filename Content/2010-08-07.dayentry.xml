@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Makes it easier to deploy in VS2010 (using web.debug.config and web.release.config)&lt;/p&gt;  &lt;p&gt;From the instructions here:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.sitefinity.com/devnet/forums/sitefinity-3-x/set-up-installation/installing-sitefinity-as-a-web-application-in-visual-studio.aspx"&gt;http://www.sitefinity.com/devnet/forums/sitefinity-3-x/set-up-installation/installing-sitefinity-as-a-web-application-in-visual-studio.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The biggest part is that SiteFinity uses User Profiles which are not available at design time in a web application (therefore it doesn’t compile).&amp;#160; To get around this we use the Web Profile Builder, which is a wrapper class which acts as a workaround.&lt;/p&gt;  &lt;p&gt;This was the only code I had issue with:&lt;/p&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;//ProfileCommon profile = (ProfileCommon)ProfileCommon.Create(CreateUserWizard1.UserName, true);&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;WebProfile profile = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; WebProfile(WebProfile.Create(CreateUserWizard1.UserName, &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;));&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;a href="http://forums.asp.net/p/1042824/3451445.aspx"&gt;http://forums.asp.net/p/1042824/3451445.aspx&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;Then we convert to a Web Application.&amp;#160; The major difference is that in web sites each page has its code-behind compiled into a seperate library, whereas in a web application all code behind gets compiled into a single library.&lt;/div&gt;
+
+&lt;p&gt;There is a secondary file too called yourpage.aspx.designer.cs which moves all of the control declarations into it (a partial class).&amp;#160; This allows VS2k5, 2k8, 2010 to generate code without dumping into the main .cs class, and allows the class access to the controls on the page.&lt;/p&gt;
+
+&lt;p&gt;Used FileZilla and it all works.&amp;#160; Now, next post on VS2010 publishing / deploying!&lt;/p&gt;</Content>
+      <Created>2010-08-06T23:51:20.102375-04:00</Created>
+      <Modified>2010-08-06T23:51:20.102375-04:00</Modified>
+      <EntryId>04b83650-f5a9-4e2c-8ca8-ed2ae4e2df26</EntryId>
+      <Description />
+      <Title>SiteFinity as a Web Application Project</Title>
+      <Categories>SiteFinity</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

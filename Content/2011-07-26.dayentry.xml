@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-07-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I use son of obsidian from &lt;a href="http://studiostyl.es/"&gt;http://studiostyl.es/&lt;/a&gt; with the following change:&lt;/p&gt;  &lt;p&gt;Current Line Extension to gray&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Visual-Studio-Style_11CEF/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Visual-Studio-Style_11CEF/image_thumb.png" width="644" height="425" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-07-26T06:17:51.774-04:00</Created>
+      <Modified>2011-07-26T06:17:51.774-04:00</Modified>
+      <EntryId>cd67a973-65f5-43b7-b692-5500cd059a4c</EntryId>
+      <Description />
+      <Title>Visual Studio Styles</Title>
+      <Categories>VS2010</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

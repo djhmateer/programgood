@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-30T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.joe-stevens.com/2010/02/17/asp-net-mvc-using-controller-updatemodel-when-using-a-viewmodel/"&gt;http://www.joe-stevens.com/2010/02/17/asp-net-mvc-using-controller-updatemodel-when-using-a-viewmodel/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Great so you don’t have to manually set properties in an update method.&lt;/p&gt;</Content>
+      <Created>2011-03-30T21:47:06.04775-04:00</Created>
+      <Modified>2011-03-30T21:47:06.04775-04:00</Modified>
+      <EntryId>d1c0187d-15d0-4865-9e81-27d4d6c9669e</EntryId>
+      <Description />
+      <Title>MVC3 UpdateModel</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

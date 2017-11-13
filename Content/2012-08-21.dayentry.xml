@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-08-20T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel-RS485USB_A1D2/485_2.jpg"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="485" border="0" alt="485" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel-RS485USB_A1D2/485_thumb.jpg" width="513" height="386" /&gt;&lt;/a&gt;     &lt;br /&gt;Prolific chipset USB-RS485 converter.&amp;#160; It didn’t work – loopback is giving nothing.&lt;/p&gt;  &lt;p&gt;Some great technical advice on &lt;a href="http://forums.whirlpool.net.au/forum-replies.cfm?t=1966464"&gt;http://forums.whirlpool.net.au/forum-replies.cfm?t=1966464&lt;/a&gt;&amp;#160; and &lt;a href="http://electronics.stackexchange.com/questions/38200/rs485-how-to-tell-if-hxps-2108f-prolific-is-working"&gt;http://electronics.stackexchange.com/questions/38200/rs485-how-to-tell-if-hxps-2108f-prolific-is-working&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel-RS485USB_A1D2/wires_2.jpg"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="wires" border="0" alt="wires" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel-RS485USB_A1D2/wires_thumb.jpg" width="459" height="345" /&gt;&lt;/a&gt;    &lt;br /&gt;Terminating resistor switch on right hand side is down (on).&amp;#160; Ground wire (green) is not needed I believe.&lt;/p&gt;  &lt;p&gt;I ended up buying another one &lt;a href="http://www.thepowerstore.com/product.asp?ID=2804"&gt;http://www.thepowerstore.com/product.asp?ID=2804&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;img alt="Power-One Control Unit PVI-USB-RS485" src="http://www.thepowerstore.com/photos/pvi-usb-rs485.jpg" width="237" height="230" /&gt;&lt;/p&gt;  &lt;p&gt;Which uses a different chipset and worked first time.&lt;/p&gt;  &lt;p&gt;&lt;a title="http://whirlpool.net.au/wiki/solar_software" href="http://whirlpool.net.au/wiki/solar_software"&gt;http://whirlpool.net.au/wiki/solar_software&lt;/a&gt; – good technical advice.&lt;/p&gt;</Content>
+      <Created>2012-08-21T06:44:29.4599671-04:00</Created>
+      <Modified>2012-08-21T06:52:08.1557199-04:00</Modified>
+      <EntryId>040fc8d5-27a9-4838-9f87-1c97b7b7f93b</EntryId>
+      <Description />
+      <Title>Solar Panel RS485–USB</Title>
+      <Categories>Solar Panels</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/solar_2.jpg"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="solar" border="0" alt="solar" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/solar_thumb.jpg" width="520" height="391" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;2 sub arrays which feed independently into the inverter.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/inverter_2.jpg"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="inverter" border="0" alt="inverter" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/inverter_thumb.jpg" width="312" height="414" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Power One PVI-3.0-OUTD-UK Inverter.&amp;#160; - 2 black cables at bottom are DC in.&amp;#160; Other cable in AC out.   &lt;br /&gt;Max output power 3.3kW&amp;#160; &lt;br /&gt;Max Continuous Output Power 3kW at 55oC&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/wiring_2.jpg"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="wiring" border="0" alt="wiring" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Solar-Panel_9DB6/wiring_thumb.jpg" width="464" height="349" /&gt;&lt;/a&gt;    &lt;br /&gt;Wired into mains.&amp;#160; Solar meter reads amount of power generated by inverter.&amp;#160; Left meter reads power coming into the house.&amp;#160; Left meter goes red when power is going out of the house – an error.&amp;#160; That meter can measure how much the house feeds onto the grid, but doesn’t appear to.&lt;/p&gt;</Content>
+      <Created>2012-08-21T06:29:22.7069817-04:00</Created>
+      <Modified>2012-08-21T06:29:22.7069817-04:00</Modified>
+      <EntryId>b7a55d3c-3aed-4905-b0fd-d2b2db21f013</EntryId>
+      <Description />
+      <Title>Solar Panels Hardware Setup</Title>
+      <Categories>Solar Panels</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

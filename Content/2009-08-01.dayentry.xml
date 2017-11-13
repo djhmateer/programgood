@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-31T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Interesting..added in C#2.0&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Collections.Generic;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+{
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[] args)
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// enumerates through the IEnumerable&lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// every time call GetInt() we receive a new incremented integer&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;foreach&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; i &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;in&lt;/span&gt; GetInt())
+            Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Got "&lt;/span&gt; &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; i.ToString());
+    }
+
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; IEnumerable&amp;lt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;&amp;gt; GetInt()
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// this method remembers its' state, so every time it is called, &lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// the next int is returned&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;for&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; i &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0; i &amp;lt; 5; i++)
+            yield &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; i;
+    }
+}&lt;/span&gt;&lt;/pre&gt;thanks to: http://www.c-sharpcorner.com/UploadFile/rmcochran/yieldreturn04022006113850AM/yieldreturn.aspx?ArticleID=4617984b-2209-4211-9d08-8f06e0fe2da5&lt;br&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2009-07-31T20:15:23.954-04:00</Created>
+      <Modified>2009-07-31T20:15:23.954-04:00</Modified>
+      <EntryId>15a43ec9-5ee6-44de-9645-c12102065a02</EntryId>
+      <Description />
+      <Title>Yield</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

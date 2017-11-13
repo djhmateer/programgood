@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-12-18T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;wire up via:&lt;/p&gt;  &lt;pre&gt;LoadingRow=&amp;quot;HomeGrid_OnLoadingRow&amp;quot;&lt;/pre&gt;
+
+&lt;div id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:724ccd28-fbbe-4806-abdf-e8399834d2f5" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;private&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;void&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; HomeGrid_OnLoadingRow(&lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;object&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; sender, &lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;DataGridRowEventArgs&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; e)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;        {&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;var&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; t &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Row&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;DataContext &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;as&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;Tab1PresentationModel&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// alternate colours and custom bottom colour for totals&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// if don&amp;#39;t do this we get phantom colouring of rows&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;bool&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; isRowEven &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;false&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;if&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; (e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Row&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;GetIndex()&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;%&lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;2&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;==&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;0&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                isRowEven &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;true&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;if&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; (t&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;ApplicationName&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Contains(&lt;/span&gt;&lt;span style="background:#22282a;color:#ec7600"&gt;&amp;quot;Grand Totals&amp;quot;&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;))&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            {&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Row&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Background &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;new&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;SolidColorBrush&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;(&lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;Colors&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;DarkGray);&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;else&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;if&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; (isRowEven)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            {&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// darker blue&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Row&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Background &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;new&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;SolidColorBrush&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;(&lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;Color&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;FromArgb(&lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;255&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;176&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;196&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;222&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;));&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;else&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            {&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// white ish&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;                e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Row&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Background &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;new&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;SolidColorBrush&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;(&lt;/span&gt;&lt;span style="background:#22282a;color:#678cb1"&gt;Color&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;FromArgb(&lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;37&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;233&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;238&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="background:#22282a;color:#ffcd22"&gt;244&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;));&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2012-12-19T10:26:57.7445145-05:00</Created>
+      <Modified>2012-12-19T10:26:57.7445145-05:00</Modified>
+      <EntryId>ce6b2848-43a8-4f79-a4da-39fb31d9b5dc</EntryId>
+      <Description />
+      <Title>Silverlight Alternating Colours on Grid and Special Cases</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="https://github.com/jeffhandley/riabooks" href="https://github.com/jeffhandley/riabooks"&gt;https://github.com/jeffhandley/riabooks&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://jeffhandley.com/archive/2012/12/10/RIA-Services-NuGet-Package-Updates-ndash-Including-Support-for-EntityFramework.aspx" href="http://jeffhandley.com/archive/2012/12/10/RIA-Services-NuGet-Package-Updates-ndash-Including-Support-for-EntityFramework.aspx"&gt;http://jeffhandley.com/archive/2012/12/10/RIA-Services-NuGet-Package-Updates-ndash-Including-Support-for-EntityFramework.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-12-19T10:38:34.947678-05:00</Created>
+      <Modified>2012-12-19T10:38:34.947678-05:00</Modified>
+      <EntryId>8aa65292-eef0-40ed-b03d-f09f6076c90e</EntryId>
+      <Description />
+      <Title>RIA Services and EF5</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

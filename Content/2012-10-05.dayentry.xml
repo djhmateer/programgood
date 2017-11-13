@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-04T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=QWELU7v5GxA&amp;amp;feature=related"&gt;http://www.youtube.com/watch?v=QWELU7v5GxA&amp;amp;feature=related&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;History&lt;/h3&gt;  &lt;p&gt;SL 1.0 (WPF Everywhere, JavaScript with Benefits) in 2007   &lt;br /&gt;SL 2.0 (CLR, DLR, DeepZoom) in 2008    &lt;br /&gt;SL 3.0 (2D/3D perspective eg tilt, GPU, Element Binding, Out of Browser…eg disconnected versions) in 2009    &lt;br /&gt;SL 4.0 (WebCam and mic, html inside SL, MEF – discoverability, WCF RIA, COM, Chrome support) in 2010    &lt;br /&gt;SL 5.0 in 2011&lt;/p&gt;</Content>
+      <Created>2012-10-05T12:25:14.2019428-04:00</Created>
+      <Modified>2012-10-05T12:25:14.2019428-04:00</Modified>
+      <EntryId>2fa32faa-994b-4277-abfc-8b9b1423b2c8</EntryId>
+      <Description />
+      <Title>SL for LOB Apps</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/SSDTSqlServer-Data-Tools_BEB2/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/SSDTSqlServer-Data-Tools_BEB2/image_thumb.png" width="622" height="426" /&gt;&lt;/a&gt;    &lt;br /&gt;Installing this to get DB Functionality in VS2012&lt;/p&gt;</Content>
+      <Created>2012-10-05T08:34:28.762996-04:00</Created>
+      <Modified>2012-10-05T08:34:28.762996-04:00</Modified>
+      <EntryId>1440bdec-c0e0-4971-aa09-50b36135e1a0</EntryId>
+      <Description />
+      <Title>SSDT–SqlServer Data Tools</Title>
+      <Categories>SQLServer;VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/gg430857(v=pandp.40).aspx"&gt;http://msdn.microsoft.com/en-us/library/gg430857(v=pandp.40).aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVVM-QuickStart_A9E7/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVVM-QuickStart_A9E7/image_thumb.png" width="481" height="286" /&gt;&lt;/a&gt;    &lt;br /&gt;The app takes data, then writes out to Output window when press submit&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/MVVM-QuickStart_A9E7/image_4.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/MVVM-QuickStart_A9E7/image_thumb_1.png" width="506" height="483" /&gt;&lt;/a&gt;    &lt;br /&gt;Wiring the Questionnaire View into the MainPage.xaml&lt;/p&gt;  &lt;p&gt;In the View:&lt;/p&gt;  &lt;p&gt;View – xaml   &lt;br /&gt;ViewModel – What the view binds towards a particular view(display)    &lt;br /&gt;Model – bottom&lt;/p&gt;</Content>
+      <Created>2012-10-05T12:26:06.8064984-04:00</Created>
+      <Modified>2012-10-05T12:26:06.8064984-04:00</Modified>
+      <EntryId>5e280de9-ba7b-4b62-aeeb-28ba8d196528</EntryId>
+      <Description />
+      <Title>MVVM QuickStart</Title>
+      <Categories>MVVM;Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

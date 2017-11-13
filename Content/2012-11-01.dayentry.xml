@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-31T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://blogs.msdn.com/b/kaevans/archive/2010/04/24/listboxes-in-silverlight.aspx"&gt;http://blogs.msdn.com/b/kaevans/archive/2010/04/24/listboxes-in-silverlight.aspx&lt;/a&gt; – Selection changed events&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=676"&gt;http://www.dotnetcurry.com/ShowArticle.aspx?ID=676&lt;/a&gt; – PagedCollection using a callback for ListBox&lt;/p&gt;  &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/7953956/multi-column-listbox"&gt;http://stackoverflow.com/questions/7953956/multi-column-listbox&lt;/a&gt; – multi column using the toolkit WrapPanel&lt;/p&gt;  &lt;p&gt;MultiSelect in a listbox – SelectionMode = Extended&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.codeproject.com/Articles/404827/Rubberband-Behavior-for-WPF-ListBox"&gt;http://www.codeproject.com/Articles/404827/Rubberband-Behavior-for-WPF-ListBox&lt;/a&gt; – Rubber band behaviour&lt;/p&gt;</Content>
+      <Created>2012-11-01T13:33:47.6786253-04:00</Created>
+      <Modified>2012-11-02T06:16:58.7220732-04:00</Modified>
+      <EntryId>e58deac3-7849-4dbd-b334-1cfaa677eed4</EntryId>
+      <Description />
+      <Title>ListBox</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

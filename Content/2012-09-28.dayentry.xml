@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-09-27T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From a vanilla project in VS2012.&amp;#160; The WCF Service Application (ie hosted in IIS):&lt;/p&gt;  &lt;p&gt;Can debug from a Console app and an Nunit project.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-WCF_D02B/image_4.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-WCF_D02B/image_thumb_1.png" width="543" height="316" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-WCF_D02B/image_6.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-WCF_D02B/image_thumb_2.png" width="714" height="196" /&gt;&lt;/a&gt;    &lt;br /&gt;For the self hosted WCF there are these options.&lt;/p&gt;</Content>
+      <Created>2012-09-28T12:17:08.0702051-04:00</Created>
+      <Modified>2012-09-28T12:17:08.0702051-04:00</Modified>
+      <EntryId>00381128-a149-4c1a-b3e6-fcc0ca46cc49</EntryId>
+      <Description />
+      <Title>Debugging WCF</Title>
+      <Categories>WCF</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

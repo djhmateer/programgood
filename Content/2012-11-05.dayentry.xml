@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-04T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:5ae1a476-0471-4e77-9633-bf23c7cb99a3" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #ffffff; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// Suppress Silverlight right-click menu for clicks on ListBoxItem elements&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;//AccountItemsT32.MouseRightButtonDown += delegate(object sender, MouseButtonEventArgs e)&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;//{&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;//    e.Handled = true;&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;//};&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#66747b"&gt;// Add the Mouse Right click Event Handler to disable all S/L right click.&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;this&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;MouseRightButtonDown &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;+=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; (s, e) &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&amp;gt;&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            {&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;                e&lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;Handled &lt;/span&gt;&lt;span style="background:#22282a;color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#22282a;color:#93c763"&gt;true&lt;/span&gt;&lt;span style="background:#22282a;color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt; &lt;span style="background:#22282a;color:#f1f2f3"&gt;            };&lt;/span&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;Using delegate and anonymous delegate syntax&lt;/p&gt;</Content>
+      <Created>2012-11-05T05:39:23.5655548-05:00</Created>
+      <Modified>2012-11-05T05:39:23.5655548-05:00</Modified>
+      <EntryId>8cff7872-6f2f-4932-9f24-f875228b1225</EntryId>
+      <Description />
+      <Title>Context Menu Right Click</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Silverlight Toolkit AutoCompleteBox – a control that provides suggested items for a TextBox&lt;/p&gt;</Content>
+      <Created>2012-11-05T10:33:56.0777335-05:00</Created>
+      <Modified>2012-11-05T10:33:56.0777335-05:00</Modified>
+      <EntryId>2b5dc02a-9600-4a86-95c8-e23a39d986d6</EntryId>
+      <Description />
+      <Title>AutoCompleteBox</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

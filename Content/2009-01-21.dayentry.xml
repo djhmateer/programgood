@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-01-20T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;/p&gt;A Big thanks to everyone who came to my presentation tonight on nUnit:&lt;br&gt;&lt;br&gt;&lt;blockquote&gt;In his mission to become a great developer, Dave will entertain you with 'How nUnit Inspired an Awesome Rock Song'.&amp;nbsp; Dave will demonstrate the time and heartache savings (which allowed time and energy to do the music). &lt;br&gt;&lt;br&gt;Tools and technoloiges (ab)used in this talk will be:&amp;nbsp; C#3.5SP1, VS2008 Express, PHP, JSON, MySQL, and nUnit.&amp;nbsp; I'll demo the Awesome Rock Song too! &lt;br&gt;&lt;br&gt;If you've heard of unit testing, this presentation is for you.&amp;nbsp; Bring your laptop and take away your first working unit test project.&amp;nbsp; Your future development projects will get easier with testing.&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/600_church.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;Lake Tekapo, NZ&lt;/font&gt;&lt;br&gt;&lt;br&gt;Here is the powerpoint presentation: &lt;a href="http://www.programgood.net/content/binary/HowNUnitInspiredAnAwesomeRockSong.zip"&gt;HowNUnitInspiredAnAwesomeRockSong.zip (1.1 MB)&lt;/a&gt;&lt;br&gt;&lt;br&gt;Here is all the source code (compiled and run on VS2008Express using .NET3.5SP1).&amp;nbsp; Nunit 2.4.8 installed.: &lt;a href="http://www.programgood.net/content/binary/nunitPresentation.zip"&gt;nunitPresentation.zip (606.4 KB)&lt;/a&gt;&lt;br&gt;&lt;br&gt;We discussed favourite tools and keyboard shortcuts, in relation to being a Tenfer (programmer that is 10 times as productive as others):&lt;br&gt;&lt;br&gt;&lt;a href="http://blogs.msdn.com/saraford"&gt;blogs.msdn.com/saraford&lt;/a&gt; - Visual studio tips and tricks&lt;br&gt;&lt;br&gt;&lt;a href="http://www.launchy.net"&gt;www.launchy.net&lt;/a&gt; - quick launcher&lt;br&gt;CLCL - &lt;a href="http://www.nakka.com/soft/clcl/index_eng.html"&gt;www.nakka.com/soft/clcl/index_eng.html&lt;/a&gt; - Clipboard multi&lt;br&gt;&lt;br&gt;Visual Studio Keyboard Shourtcuts&lt;br&gt;Ctrl Shift B - Build&lt;br&gt;Ctrl K, Ctrl C - Comment&lt;br&gt;Ctrt K, Ctrl U - Uncomment&lt;br&gt;F5 - run&lt;br&gt;F10 step through when debuggin&lt;br&gt;Ctrl B, Ctrl T - Bookmark Toggle&lt;br&gt;Ctrl B, Ctrl N - Goto next bookmark&lt;br&gt;Ctrl L - Delete Line&lt;br&gt;&lt;br&gt;Alt F, J - Recent projects open&lt;br&gt;Ctrl K, Ctrl D - Format a document&lt;br&gt;&lt;br&gt;Ctrl M, Ctrl M - collapse / expand&lt;br&gt;Ctrl M, Ctrl O - collapse all&lt;br&gt;&lt;br&gt;Split screen&lt;br&gt;&lt;br&gt;Windows Shortcuts&lt;br&gt;Win L - Lock&lt;br&gt;Win E - Explorer&lt;br&gt;Win D - Minimize all window.. press again to restore&lt;br&gt;Alt D - Goes to explorer bar (try in explorer, and firefox).. tab to autocomplete&lt;br&gt;Alt F4 - Close down window&lt;br&gt;Ctrl Shift Esc - Task manager&lt;br&gt;&lt;br&gt;Google tricks:&lt;br&gt;&amp;nbsp;- golf &amp;nbsp; - don't include golf in search&lt;br&gt;&amp;nbsp;"search for entire phrase" - searches for that entire phrase&lt;br&gt;&amp;nbsp;advanced settings to search in a date range&lt;br&gt;&lt;br&gt;Powerpoint&lt;br&gt;&amp;nbsp; B - black screen&lt;br&gt;&amp;nbsp; W - white screen&lt;br&gt;&amp;nbsp; type slide number and press enter to go to that slide&lt;br&gt;&lt;br&gt;Resharper&lt;br&gt;&amp;nbsp; Makes life faster&lt;br&gt;&lt;br&gt;&lt;a href="http://www.stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; - great programming question and answer site &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a href="http://www.programgood.net/content/binary/HowNUnitInspiredAnAwesomeRockSong.zip"&gt;&lt;br&gt;&lt;/a&gt;&lt;a href="http://www.programgood.net/content/binary/nunitPresentation.zip"&gt;&lt;br&gt;&lt;/a&gt;</Content>
+      <Created>2009-01-21T18:02:41.099-05:00</Created>
+      <Modified>2009-01-21T02:49:15.06675-05:00</Modified>
+      <EntryId>b0d593d6-79f4-453e-bb6f-0d3996dbe922</EntryId>
+      <Description />
+      <Title>How nUnit Inspired an Awesome Rock Song</Title>
+      <Categories>Presentations</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

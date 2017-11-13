@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-01-15T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/manAndGirl.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;Girl and man looking towards Mt Cook, NZ.&lt;/font&gt;&lt;br&gt;&lt;br&gt;To get nUnit working on VS 2008 Express, firstly download and install nUnit.&lt;br&gt;&lt;br&gt;Make a new console application.&amp;nbsp; Add the 3 nunit references you see below&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/ref.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;Open up the .csproj file.. in my case in: C:\code\stuff\HowNUnitInspiredConsole\HowNUnitInspiredConsole\HowNUnitInspiredConsole.csproj&lt;br&gt;&lt;br&gt;Where you see... add in the two Startxxx lines.&lt;br&gt;&lt;br&gt;&amp;nbsp;&amp;lt;PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "&amp;gt;&lt;br&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;StartAction&amp;gt;Program&amp;lt;/StartAction&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;StartProgram&amp;gt;C:\Program Files\NUnit 2.4.8\bin\nunit.exe&amp;lt;/StartProgram&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;DebugSymbols&amp;gt;true&amp;lt;/DebugSymbols&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;DebugType&amp;gt;full&amp;lt;/DebugType&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;Optimize&amp;gt;false&amp;lt;/Optimize&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;OutputPath&amp;gt;bin\Debug\&amp;lt;/OutputPath&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;DefineConstants&amp;gt;DEBUG;TRACE&amp;lt;/DefineConstants&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;ErrorReport&amp;gt;prompt&amp;lt;/ErrorReport&amp;gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;WarningLevel&amp;gt;4&amp;lt;/WarningLevel&amp;gt;&lt;br&gt;&amp;nbsp; &amp;lt;/PropertyGroup&amp;gt;&lt;br&gt;&lt;br&gt;Here is my first unit test for a web app:&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Collections.Generic;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Linq;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Text;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; NUnit.Framework;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Web.Script.Serialization;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Web.Util;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Net;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Web;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.IO;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System.Diagnostics;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;namespace&lt;/span&gt; HowNUnitInspiredConsole
+{
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; NUnitConsoleRunner
+    {
+        [STAThread]
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[] args)
+        {
+            NUnit.ConsoleRunner.Runner.Main(args);
+        }
+    }
+
+    [TestFixture]
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; FormTest
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// 1 is dev / local&lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// 2 is test&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; debugbit &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 2;
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; targetUri &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;""&lt;/span&gt;;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; targetUriNoHTTP &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;""&lt;/span&gt;;
+
+        [SetUp]
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Init()
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (debugbit == 1)
+            {
+                targetUri &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"http://192.168.139.128/drink/"&lt;/span&gt;;
+                targetUriNoHTTP &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"192.168.139.128/drink/"&lt;/span&gt;;
+            }
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (debugbit == 2)
+            {
+                targetUri &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"http://www.davemateer.com/drink/"&lt;/span&gt;;
+                targetUriNoHTTP &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"www.davemateer.com/drink/"&lt;/span&gt;;
+            }
+        }
+
+        [Test]
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; helloWorld()
+        {
+            WebClient client &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; WebClient();
+            StreamReader reader &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; StreamReader(client.OpenRead(targetUri &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"test/helloWorld.php"&lt;/span&gt;));
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; responseFromServer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; reader.ReadToEnd();
+
+            Assert.AreEqual(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Hello World"&lt;/span&gt;, responseFromServer);
+        }
+    }
+}
+
+
+
+&lt;/span&gt;&lt;/pre&gt;When the nUnit gui popped up, make sure it gets the correct .exe file.&amp;nbsp; I had to do a project add assembly, while the application was running.&lt;br&gt;&lt;br&gt;Run your application which should pop up with something like this:&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/nunit1.gif" border="0"&gt;</Content>
+      <Created>2009-01-15T21:24:03.239-05:00</Created>
+      <Modified>2009-01-21T02:49:52.06675-05:00</Modified>
+      <EntryId>3836dd2e-344e-4b11-a6bb-a860ddf4c9f3</EntryId>
+      <Description />
+      <Title>nUnit and Visual Studio 2008 Express</Title>
+      <Categories>Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

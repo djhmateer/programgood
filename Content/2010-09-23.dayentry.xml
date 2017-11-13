@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-09-22T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.internationalfreelancersday.com/"&gt;http://www.internationalfreelancersday.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;I’ll be attending some of the sessions.. at some crazy hours of the day here in NZ&lt;/p&gt; &lt;a href="http://www.internationalfreelancersday.com"&gt;&lt;img title="Logo - International Freelancers Day" alt="" src="http://www.internationalfreelancersday.com/wp-content/uploads/2010/02/Logo-International-Freelancers-Day-300x224.jpg" width="300" height="224" /&gt;</Content>
+      <Created>2010-09-23T17:39:38.469875-04:00</Created>
+      <Modified>2010-09-23T17:39:38.469875-04:00</Modified>
+      <EntryId>9c57292d-2663-4417-8929-cc8ba4c8c613</EntryId>
+      <Description />
+      <Title>International Freelancers Day</Title>
+      <Categories>Business Of Software</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

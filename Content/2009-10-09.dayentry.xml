@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-10-08T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>JP Boodhoo's Nothing But Dot Net Bootcamp (Sydney)&lt;br&gt;&lt;br&gt;&lt;br&gt;A mindblowing (melting) experience.&amp;nbsp; The overall summary of what I learned, is that I know where I want to go now.&amp;nbsp; Can see how I'd like to develop.&lt;br&gt;&lt;br&gt;A great series of articles on what we did:&lt;br&gt;http://www.davesquared.net/2009/08/nothin-but-net-sydney-2009-day-1.html&lt;br&gt;&lt;br&gt;Xerxes video discussing the camp:&lt;br&gt;http://ozalt.net/blog/virtual-alt-net-aug-17-jp-boodhoo-s-bootcamp/&lt;br&gt;&lt;br&gt;Over the last year I've started using:&lt;br&gt;&lt;br&gt;gvim - text editor (still getting used to it!)&lt;br&gt;git - source control&lt;br&gt;gmail - learned the keyboard shortcuts which has been amazing&lt;br&gt;launchy - quick launcher&lt;br&gt;vs2008 - black colour of fonts, class diagram&lt;br&gt;resharper - auto formatting of doc, easily navigate large codebases, refactorings, moving code, create classes quickly&lt;br&gt;console2 with powershell - use it for git, navigating between projects&lt;br&gt;windows - keyboard shortcuts like windows file exploring tabbing around&lt;br&gt;firefox 3.5 with vimperator extensions&lt;br&gt;beyond compare - easily put stuff live&lt;br&gt;alt tab replacement&lt;br&gt;balsamiq - for mocking up UI's&lt;br&gt;sdedit&amp;nbsp; - for doing sequence diagrams&lt;br&gt;&lt;br&gt;&lt;br&gt;Goal over the next 2 months is to write an application in a well architected manner.&amp;nbsp; &lt;br&gt;&lt;br&gt;Am starting with the MovieLibrary example (it could be used to catalog your home movies) we worked on at nbdn.&amp;nbsp; Basically putting a front end, and a DAL on the existing code.. &lt;br&gt;&lt;br&gt;Biggest lessons I've learned this year are:&lt;br&gt;&lt;br&gt;- have fun!&lt;br&gt;- to become a great develop you need to code, code, code &amp;lt;grin&amp;gt;&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screen1.gif" border="0"&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;br&gt;</Content>
+      <Created>2009-10-08T23:27:36.356-04:00</Created>
+      <Modified>2009-10-08T23:30:31.4342545-04:00</Modified>
+      <EntryId>488bd1b7-dae9-4939-aa43-115df8462e30</EntryId>
+      <Description />
+      <Title>Becoming a great developer</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

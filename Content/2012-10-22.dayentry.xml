@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-21T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/4c0ede8fdcfc_B0BE/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/4c0ede8fdcfc_B0BE/image_thumb.png" width="501" height="358" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Generated a POCO datastore.. and made his own domain service.&lt;/p&gt;  &lt;p&gt;Very clear with no edmx..&lt;/p&gt;  &lt;p&gt;Also does an authentication example.&lt;/p&gt;  &lt;p&gt;2.&amp;#160; Making Domain service business rules&lt;/p&gt;  &lt;p&gt;Client Side caching&lt;/p&gt;  &lt;p&gt;4. Validation Summary&lt;/p&gt;  &lt;p&gt;custom validation – in the domain service using ValidationResult / ValidationException &lt;/p&gt;  &lt;p&gt;eg CampaignValidator class with a static member…&lt;/p&gt;  &lt;p&gt;.shared.cs validator… purely client side validation.!&lt;/p&gt;  &lt;p&gt;**USe fiddler&lt;/p&gt;  &lt;p&gt;Unit Testing&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;SLUT – SilverLight Unit Testing&lt;/p&gt;    &lt;p&gt;WCF RIA test project – disable generated code.&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;OData – OPen Data Proocol&lt;/p&gt;</Content>
+      <Created>2012-10-22T04:58:36.2298114-04:00</Created>
+      <Modified>2012-10-22T04:58:36.2298114-04:00</Modified>
+      <EntryId>9070537f-379e-45a3-9bb7-0279dbd9e4b4</EntryId>
+      <Description />
+      <Title>WCF RIA Services Overview–Pluralsight</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-in-Silverlight-5_A52A/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Debugging-in-Silverlight-5_A52A/image_thumb.png" width="733" height="359" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Can see query method.&amp;#160; Also if there are errors, can see them.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://10rem.net/blog/2011/04/13/silverlight-5-debugging-bindings-with-xaml-breakpoints"&gt;http://10rem.net/blog/2011/04/13/silverlight-5-debugging-bindings-with-xaml-breakpoints&lt;/a&gt; – Conditional breakpoints&lt;/p&gt;</Content>
+      <Created>2012-10-22T06:47:54.1885624-04:00</Created>
+      <Modified>2012-10-22T06:47:54.1885624-04:00</Modified>
+      <EntryId>38fbdb6f-a0d9-48d8-b08e-f3ad9b7bce46</EntryId>
+      <Description />
+      <Title>Debugging Bindings in Silverlight 5</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

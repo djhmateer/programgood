@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-01-18T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;eg how to get Mon 29 Nov showing on a report&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.sqlservercentral.com/Forums/Topic290724-150-3.aspx#bm1023172"&gt;http://www.sqlservercentral.com/Forums/Topic290724-150-3.aspx#bm1023172&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-01-18T20:17:56.3083583-05:00</Created>
+      <Modified>2011-01-18T20:17:56.3083583-05:00</Modified>
+      <EntryId>14fc1f6b-824d-4514-bc9c-cf1d2902dea3</EntryId>
+      <Description />
+      <Title>Custom Dates in Reporting Services</Title>
+      <Categories>Reporting Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

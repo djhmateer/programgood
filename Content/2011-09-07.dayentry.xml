@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-09-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;At Jon Skeets talk in London.. trying to get an example working… &lt;a href="http://skillsmatter.com/"&gt;http://skillsmatter.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Compiling-Async-CTP-Library_BE38/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Compiling-Async-CTP-Library_BE38/image_thumb.png" width="644" height="325" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and in VS&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Compiling-Async-CTP-Library_BE38/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Compiling-Async-CTP-Library_BE38/image_thumb_1.png" width="590" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;This was after installing&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/vstudio/gg316360"&gt;http://msdn.microsoft.com/en-us/vstudio/gg316360&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;VS 2010 Async CTP (SP1 Refresh)….. possible conflict with Nuget?&lt;/p&gt;  &lt;p&gt;Possibly try in a vanilla VM&lt;/p&gt;</Content>
+      <Created>2011-09-07T08:37:12.196875-04:00</Created>
+      <Modified>2011-09-07T08:37:12.196875-04:00</Modified>
+      <EntryId>c2083290-9a92-4f68-8f02-ab87775b1b3d</EntryId>
+      <Description />
+      <Title>Compiling Async CTP Library</Title>
+      <Categories>Async;London Progressive DotNet</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

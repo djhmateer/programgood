@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-04-09T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Superior thinking demonstaretd above. Thanks!</Content>
+      <Created>2011-04-18T00:36:09.518875-04:00</Created>
+      <Modified>2011-04-18T00:36:09.518875-04:00</Modified>
+      <EntryId>17eeea1f-ef2c-477d-b4c7-8faa36a03590</EntryId>
+      <TargetTitle>Sudoku</TargetTitle>
+      <TargetEntryId>A33B0CA0-9974-4C89-A35D-6C3F1CFF5750</TargetEntryId>
+      <Author>Sunshine</Author>
+      <AuthorEmail>liuping@redtown570.com</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>193.4.57.122</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

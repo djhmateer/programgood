@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-04-14T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/VS2008ShowSolutionFile_F705/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/VS2008ShowSolutionFile_F705/image_thumb.png" width="802" height="397" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Tools, Options.. Always show solution :-)&lt;/p&gt;</Content>
+      <Created>2010-04-15T01:33:43.1725-04:00</Created>
+      <Modified>2010-04-15T01:33:43.1725-04:00</Modified>
+      <EntryId>f32da5bb-d380-4620-ae1b-9a5d6d55a4cb</EntryId>
+      <Description />
+      <Title>VS2008 – Show Solution File</Title>
+      <Categories>Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-09-27T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://documentcloud.github.com/backbone/"&gt;http://documentcloud.github.com/backbone/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;MVC for js?&lt;/p&gt;  &lt;p&gt;&lt;a href="http://documentcloud.github.com/backbone/examples/todos/index.html"&gt;http://documentcloud.github.com/backbone/examples/todos/index.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb.png" width="244" height="151" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.quora.com/What-are-some-good-resources-for-Backbone-js"&gt;http://www.quora.com/What-are-some-good-resources-for-Backbone-js&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;this is hard!&amp;#160; Rob used peepcode.com&amp;#160; backbone screencast.&amp;#160; Took him 2 weeks to do this.&lt;/p&gt;  &lt;p&gt;Use IIS Express.&lt;/p&gt;  &lt;h3&gt;Areas&lt;/h3&gt;  &lt;p&gt;Added an area called Api&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_1.png" width="244" height="168" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://localhost:50363/api/productions/"&gt;http://localhost:50363/api/productions/&lt;/a&gt;&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:229c400e-fead-499d-8a3a-61812121703b" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#93c763"&gt;namespace&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; VidPub&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Web&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Areas&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Api&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Controllers{&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;class&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;ProductionsController&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; : &lt;/span&gt;&lt;span style="color:#678cb1"&gt;ApplicationController&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#678cb1"&gt;DynamicModel&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; _productions;&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionsController(&lt;/span&gt;&lt;span style="color:#8c8cb4"&gt;ITokenHandler&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; tokenStore):&lt;/span&gt;&lt;span style="color:#93c763"&gt;base&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;(tokenStore) {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            _productions &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Productions&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;();&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        [&lt;/span&gt;&lt;span style="color:#678cb1"&gt;HttpGet&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;]&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;ActionResult&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Index() {&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; VidpubJSON(_productions&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;All());&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt; &lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_6.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_2.png" width="244" height="212" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Alt+J – in chrome to open downloads, then tab lots to show in folder&lt;/p&gt;  &lt;p&gt;Added backbone-min.js from another branch &lt;a href="https://github.com/documentcloud/backbone/tree/gh-pages"&gt;https://github.com/documentcloud/backbone/tree/gh-pages&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and underscore-min.js &lt;a href="http://documentcloud.github.com/underscore/"&gt;http://documentcloud.github.com/underscore/&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;VidPub/Productions - View&lt;/h3&gt;  &lt;p&gt;Backbone is Event-driven.&lt;/p&gt;  &lt;p&gt;el is short for Element.&lt;/p&gt;  &lt;p&gt;Reference an ID:&amp;#160; &lt;/p&gt;  &lt;pre&gt;#production-list&lt;/pre&gt;
+
+&lt;p&gt;Reference a class:&lt;/p&gt;
+
+&lt;p&gt;.production-list ?&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:7532b96a-8e32-4ba0-b96f-e2985a2190a7" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;&amp;lt;h1&amp;gt;Hello!&amp;lt;/h1&amp;gt;&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; view = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(view.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;asdf&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f74bea6d-78f7-49a3-9678-2d33dd01148b" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;underscore-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;backbone-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-admin.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_8.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_3.png" width="244" height="186" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;and refactoring:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:cd86ca0f-8b77-4c37-b2f4-ac31332e8050" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Tekpub&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; view = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(view.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;view:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:ace2e4e4-ecd8-4ccd-87b5-0ea0097eaadf" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;src=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;underscore-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;backbone-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-admin.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;h1&amp;gt;${name}&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_10.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_4.png" width="244" height="162" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;so all he’s doing here is pushing html into the dom.&lt;/p&gt;
+
+&lt;h3&gt;ViewEvents&lt;/h3&gt;
+
+&lt;p&gt;But its part of the template and not available when the page loads.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_12.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_5.png" width="244" height="158" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;View:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:ac8dc8c0-e14b-465f-8143-bcb165bb987e" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;src=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;underscore-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;backbone-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-admin.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;h1&amp;gt;${name}&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Click me!&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+&lt;p&gt;js&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:7dc2be5a-73fa-4e4b-ba87-e04b2f67db91" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a:&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    clickityClick: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;I been clicked&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Tekpub&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; view = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(view.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;here is an example of el not wired up.. and event doesn’t work:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:93527b8a-a436-41cc-93de-cdb7b28df48c" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a:&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    clickityClick: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;I been clicked&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Tekpub&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//$(this.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//sidestep el completly and getting jQuery to patch in the template&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; view = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#66747b"&gt;//$(&amp;quot;#production-list&amp;quot;).html(view.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    view.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Working With Data&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:3cb741b9-8940-4b3d-b2f0-52b4860704e4" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 500px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a:&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    clickityClick: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;I been clicked&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; production = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Production({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;MVC3!&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; view = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({model: production});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(view.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_14.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_6.png" width="244" height="190" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;pub/sub&lt;/p&gt;
+
+&lt;p&gt;binding/subscribing to the change event on this.clickityClick ** careful to use this inside function, otherwise js will look globally in the global window object.&lt;/p&gt;
+
+&lt;p&gt;Also setting model to a global variable so we can work with it:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_16.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_7.png" width="725" height="584" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Manually resetting the title to Peaches in chrome.&lt;/p&gt;
+
+&lt;p&gt;Bind our change event to render action in the view&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:4d894dd2-6e5d-44a4-93a5-448ad0a7da82" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 500px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;change&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        window.ViewModel = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a:&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    clickityClick: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;I been clicked&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; production = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Production({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;MVC3!&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({model: production});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(listView.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;then in chrome:&lt;/p&gt;
+
+&lt;p&gt;listView.model.set({name:&amp;quot;EF&amp;quot;})&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_18.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_8.png" width="244" height="204" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the this in this.model.toJSON()&amp;#160; keyword changes scope when fired outside of a view such as on a model or a collection&lt;/p&gt;
+
+&lt;p&gt;userscore library has a handy bindAll library which resets scope of this to the current view.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_20.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_9.png" width="162" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6c2e8aed-4d92-4d6e-8317-ca5633404428" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;change&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        window.ViewModel = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a:&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    clickityClick: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;I been clicked&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; production = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Production({ name: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;MVC3!&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({model: production});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(listView.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Backbone collections&lt;/h3&gt;
+
+&lt;p&gt;What if we need more than 1 model.&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:d1dbd677-4802-45a5-8a97-6e5cba6d7d70" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Productions = Backbone.Collection.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    model : Production,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    url: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_22.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_10.png" width="499" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_24.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_11.png" width="244" height="123" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;these are backbone models.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_26.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_12.png" width="244" height="177" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;actual model&lt;/p&gt;
+
+&lt;p&gt;reset the view to use a collection instead of a model.&lt;/p&gt;
+
+&lt;p&gt;“reset” whenever data is firehosed into collection.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;page is going to load&lt;/li&gt;
+
+  &lt;li&gt;view will be instantiated with empty collection&lt;/li&gt;
+
+  &lt;li&gt;el is going to be specified&lt;/li&gt;
+
+  &lt;li&gt;fetch is going to be called&lt;/li&gt;
+
+  &lt;li&gt;once fetch is completed, collection will fire its reset event&lt;/li&gt;
+
+  &lt;li&gt;which will fire the render event&lt;/li&gt;
+
+  &lt;li&gt;render will then push the templated data into el&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_28.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_13.png" width="244" height="231" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;productions.reset([{Title:&amp;quot;One&amp;quot;}, {Title:&amp;quot;Two&amp;quot;}])&amp;#160;&amp;#160; - this will changed the data on the screen as event driven will fire.&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:0334e9e6-f502-4fc3-a33e-a63bc69a3089" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Productions = Backbone.Collection.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    model : Production,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    url: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;productions = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Productions();&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//this.model.bind(&amp;quot;change&amp;quot;, this.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;reset&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//window.ViewModel = this.model;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//        &amp;quot;click a:&amp;quot;: &amp;quot;clickityClick&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//    clickityClick: function () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//        alert(&amp;quot;I been clicked&amp;quot;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#66747b"&gt;//    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//var html = this.template.tmpl(this.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#66747b"&gt;//var production = new Production({ name: &amp;quot;MVC3!&amp;quot; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#66747b"&gt;//listView = new ListView({model: production});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({ collection: productions, el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#66747b"&gt;//$(&amp;quot;#production-list&amp;quot;).html(listView.render().el);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    productions.fetch();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Backbone router&lt;/h3&gt;
+
+&lt;p&gt;24mins in.&lt;/p&gt;
+
+&lt;p&gt;using callback function success&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:1aded766-6561-4ed5-a6cb-ec0380b3a9b8" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Productions = Backbone.Collection.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    model : Production,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    url: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;productions = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Productions();&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;reset&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin = Backbone.Router.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({ collection: productions, el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    routes: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit/:id&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    index: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    edit: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (id) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//grab the model from the production&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).html(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;This id is &amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; + id);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//pass it to an editor&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    productions.fetch({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        success: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;hello2&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//create the router&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            window.app = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            Backbone.history.start();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        error: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//display a nice error page&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;editing: app.navigate(&amp;quot;edit/1&amp;quot;,true)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_30.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_14.png" width="244" height="150" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;#allows back button to work, and hyperlinking back to a certain page to work..all with ajax.&amp;#160; Power of backbone!&lt;/p&gt;
+
+&lt;h3&gt;Working with Data&lt;/h3&gt;
+
+&lt;pre&gt;&amp;lt;a href=&amp;quot;#&amp;quot; id=&amp;quot;${ID}&amp;quot;&amp;gt;${Title}&amp;lt;/a&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;not using this.. instead HTML5 data storage:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_32.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_15.png" width="244" height="171" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:88e91569-59d9-4fb2-9308-0965ffc91a37" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    idAttribute : &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;ID&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Productions = Backbone.Collection.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    model : Production,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    url: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;productions = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Productions();&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;reset&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;showForm&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    showForm: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (evt) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//get tje ID that was clicked&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; id = $(evt.currentTarget).data(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;production-id&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//navigate&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        app.navigate(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit/&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; + id, &lt;/span&gt;&lt;span style="color:#93c763"&gt;true&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;false&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;FormView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#productionFormTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin = Backbone.Router.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({ collection: productions, el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; FormView({ el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-form&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    routes: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit/:id&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    index: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    edit: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (id) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(formView.el).empty();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//grab the model from the production&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; model = productions.get(id);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView.model = model;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//$(&amp;quot;#production-list&amp;quot;).html(&amp;quot;This id is &amp;quot; + id);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//pass it to an editor&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    productions.fetch({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        success: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//create the router&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            window.app = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            Backbone.history.start();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        error: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//display a nice error page&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:d622a3bc-473f-4884-8552-cc39ac1c0e2e" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="background:#22282a;color:#8c8cb4"&gt;@{&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    ViewBag&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Title &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Productions&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    Layout &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;~/Views/Shared/_AdminLayout.cshtml&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;src=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;underscore-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;backbone-min.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;span style="background:#22282a;color:#8c8cb4"&gt;@&lt;/span&gt;&lt;span style="color:#678cb1"&gt;Assets&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Script(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-admin.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;a href=&amp;quot;#&amp;quot; data-production-id=&amp;quot;${ID}&amp;quot;&amp;gt;${Title}&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;productionFormTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;type=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;form id=&amp;quot;productionForm&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;Title&amp;quot; name=&amp;quot;Title&amp;quot; value=&amp;quot;${Title}&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;/form&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;script&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;class=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;column span-5 colborder&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;class=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;column span-14&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="background:#293134;color:#e0e2e4"&gt;id=&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;production-form&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#93c763"&gt;div&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;Form Binding&lt;/h3&gt;
+
+&lt;p&gt;we want to bind the form to the model.. we can .. using events.&amp;#160; will wire ourselves.. people working on modelbinders.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_34.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_16.png" width="583" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;showing the model being changed by the view.&lt;/p&gt;
+
+&lt;p&gt;formView.model.get(&amp;quot;Title&amp;quot;)&lt;/p&gt;
+
+&lt;p&gt;this should be automatic – use Derik Baily’s modelbinding.&lt;/p&gt;
+
+&lt;p&gt;Helpers:&amp;#160; copy existing Form.cshtml and rename to Template.cshtml&lt;/p&gt;
+
+&lt;p&gt;Nice button CSS, with jQuery template helper html.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_36.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_17.png" width="475" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;nice form using form.css wired through the layout page.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_38.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_18.png" width="434" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;date picker&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_42.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_20.png" width="226" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;just had to wire up the datepicker in formview, which wires us the jQueryUI datepicker.&amp;#160; jqueryUI is wired up through _adminlayout.&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:d4ed1ab2-ff80-440d-9c82-dc857dcb83af" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;FormView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#productionFormTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;change input&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;updateModel&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;submit #productionForm&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;save&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    save: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;false&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    updateModel: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (evt) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; field = $(evt.currentTarget);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; data = {};&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        data[field.attr(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;ID&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)] = field.val();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.set(data);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;.datepicker&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).datepicker();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;saving back to server:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_40.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_19.png" width="532" height="203" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+&lt;p&gt;reason we’re using IIS Express… cassini doesn’t always work with put.&lt;/p&gt;
+
+&lt;p&gt;rails like conventions&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_44.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_21.png" width="244" height="83" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_46.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_22.png" width="580" height="381" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;so data has been passed back to server via the formView.model.save() call or button press.&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:200ae150-ca8a-4dfb-8033-e67496c592e6" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Production = Backbone.Model.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    idAttribute: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;ID&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;     url: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.isNew() ? &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions/create&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; : &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions/edit/&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; + &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.get(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;ID&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;Productions = Backbone.Collection.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    model : Production,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    url: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/api/productions&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;productions = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Productions();&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;ListView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#listTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.bind(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;reset&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.render);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;click a&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;showForm&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    showForm: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (evt) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;     &lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//get the ID that was clicked&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; id = $(evt.currentTarget).data(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;production-id&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//navigate&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        app.navigate(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit/&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; + id, &lt;/span&gt;&lt;span style="color:#93c763"&gt;true&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;false&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.collection.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;FormView = Backbone.View.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        _.bindAll(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;render&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template = $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#productionFormTemplate&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    events: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;change input&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;updateModel&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;submit #productionForm&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;save&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    save: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.save(&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.attributes,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                success: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (model, response) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    model.collection.trigger(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;itemSaved&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, model);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                error: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (model, response) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    model.trigger(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;itemError&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;There was a problem saving &amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; + model.get(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Title&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;));&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        );&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;false&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    updateModel: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (evt) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; field = $(evt.currentTarget);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; data = {};&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        data[field.attr(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;ID&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)] = field.val();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.set(data);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    render: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; html = &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.template.tmpl(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.model.toJSON());&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;.el).html(html);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;.datepicker&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).datepicker();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;return&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;this&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin = Backbone.Router.extend({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    initialize: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ListView({ collection: productions, el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-list&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; FormView({ el: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#production-form&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    routes: {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;,&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit/:id&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;edit&amp;quot;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    index: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    edit: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (id) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        $(formView.el).empty();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//grab the model from the production&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; model = productions.get(id);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView.model = model;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        formView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//$(&amp;quot;#production-list&amp;quot;).html(&amp;quot;This id is &amp;quot; + id);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//pass it to an editor&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#66747b"&gt;//listView.render();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;jQuery(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    productions.fetch({&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        success: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//create the router&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            window.app = &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; ProductionAdmin();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            Backbone.history.start();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        },&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        error: &lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//display a nice error page&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            alert(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;MVC3 modelbinders did their job and title in the incoming json is title in our p object.&lt;/p&gt;
+
+&lt;p&gt;but we’re not using statically typed objects.. can’t access via FormCollection (as it isn’t a post).. so have coded around:&lt;/p&gt;
+
+&lt;h3&gt;Multiple types were found that match the controller named&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://ediblecode.com/blog/dot-net/asp-net-mvc/fixing-multiple-types-were-found-that-match-the-controller-named"&gt;http://ediblecode.com/blog/dot-net/asp-net-mvc/fixing-multiple-types-were-found-that-match-the-controller-named&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_50.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_24.png" width="644" height="201" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:c526b232-e5d8-4a9c-8fba-44ac650122b9" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#678cb1"&gt;ControllerBuilder&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Current&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;DefaultNamespaces&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Add(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;VidPub.Web.Controllers&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Date Problem&lt;/h3&gt;
+
+&lt;p&gt;Wrote and app to test:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:5ee6ba87-73f3-485a-8fbd-39d1132037ba" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#93c763"&gt;namespace&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; MassiveDateTest {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;class&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Program&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        &lt;/span&gt;&lt;span style="color:#93c763"&gt;static&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;void&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Main(&lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;[] args) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;// test dates in massive for NZ locale&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;           &lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//do an insert&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; table2 &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Productions&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//do it up - the new ID will be returned from the query&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;// fails with&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;// exec sp_executesql N&amp;#39;INSERT INTO Productions (Title,CreatedOn) &lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//VALUES (@0,@1)&amp;#39;,N&amp;#39;@0 nvarchar(4000),@1 nvarchar(4000)&amp;#39;,@0=N&amp;#39;Buck Fify Stuff&amp;#39;,@1=N&amp;#39;30/08/2011&amp;#39;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;   &lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; newID &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; table2&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Insert(&lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; { Title &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Buck Fify Stuff&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, CreatedOn &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;21/08/2011&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Console&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;WriteLine(newID);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; table &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Productions&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//grab all the productions&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; productions &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; table&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;All();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;foreach&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (&lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item &lt;/span&gt;&lt;span style="color:#93c763"&gt;in&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; productions) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#66747b"&gt;// coming through as 29/08/2011 12:00:00&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Console&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;WriteLine(item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Title &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;CreatedOn);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;// this works&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#66747b"&gt;//var newID = table2.Insert(new { Title = &amp;quot;Buck Fify Stuff&amp;quot;, CreatedOn = &amp;quot;08/30/2011&amp;quot; });&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;        }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;class&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;Productions&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; : &lt;/span&gt;&lt;span style="color:#678cb1"&gt;DynamicModel&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;         &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; Productions() : &lt;/span&gt;&lt;span style="color:#93c763"&gt;base&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;VidPub&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;Productions&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;ID&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;) {}&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    }&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and massive:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:13d7b085-e722-4a16-815b-442b08a12868" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 500px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;public&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;virtual&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;DbCommand&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; CreateInsertCommand(&lt;/span&gt;&lt;span style="color:#93c763"&gt;object&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; o) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#678cb1"&gt;DbCommand&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; result &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;null&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; expando &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; o&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;ToExpando();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; settings &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (&lt;/span&gt;&lt;span style="color:#8c8cb4"&gt;IDictionary&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#93c763"&gt;object&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)expando;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; sbKeys &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;StringBuilder&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; sbVals &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#93c763"&gt;new&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#678cb1"&gt;StringBuilder&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; stub &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;INSERT INTO {0} ({1}) &amp;#92;r&amp;#92;n VALUES ({2})&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            result &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; CreateCommand(stub, &lt;/span&gt;&lt;span style="color:#93c763"&gt;null&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;int&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; counter &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ffcd22"&gt;0&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            &lt;/span&gt;&lt;span style="color:#93c763"&gt;foreach&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (&lt;/span&gt;&lt;span style="color:#93c763"&gt;var&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item &lt;/span&gt;&lt;span style="color:#93c763"&gt;in&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; settings) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                sbKeys&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AppendFormat(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;{0},&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Key);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                sbVals&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AppendFormat(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;@{0},&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, counter&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;ToString());&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#66747b"&gt;// DM hack dates&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                &lt;/span&gt;&lt;span style="color:#93c763"&gt;if&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; (item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Key &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;==&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;CreatedOn&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;||&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Key &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;==&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;UpdatedOn&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;||&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Key &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;==&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;ReleasedOn&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;) {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; fulldate &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Value&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;ToString();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;[] dateArray &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; fulldate&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Split(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; day &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; dateArray[&lt;/span&gt;&lt;span style="color:#ffcd22"&gt;0&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;];&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; month &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; dateArray[&lt;/span&gt;&lt;span style="color:#ffcd22"&gt;1&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;];&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; year &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; dateArray[&lt;/span&gt;&lt;span style="color:#ffcd22"&gt;2&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;];&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    &lt;/span&gt;&lt;span style="color:#93c763"&gt;string&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; dateInUSFormat &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;=&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; month &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; day &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; &lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;+&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; year;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    result&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AddParam(dateInUSFormat);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                } &lt;/span&gt;&lt;span style="color:#93c763"&gt;else&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                    result&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AddParam(item&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Value);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;                counter&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;++&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;            }&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;so got it writing a British date from C# and transforming into US in the insert code.&lt;/p&gt;
+
+&lt;p&gt;put into main project and got it working for&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_52.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_25.png" width="359" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;but time comes in on save:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_54.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VidPu_8D48/image_thumb_26.png" width="300" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;p&gt;create not working for some reason. **datepicker is in US format already.. need to set to UK&lt;/p&gt;</Content>
+      <Created>2011-09-28T01:45:00.0327054-04:00</Created>
+      <Modified>2011-09-28T01:45:00.0327054-04:00</Modified>
+      <EntryId>21ee4800-b87f-4da2-b6ed-39b38c2b0631</EntryId>
+      <Description />
+      <Title>VidPub6–BackboneJS</Title>
+      <Categories>BackboneJS;VidPub</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

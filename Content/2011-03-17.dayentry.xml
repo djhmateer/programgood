@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-16T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;We going between date formats eg US to en-NA or British in Azure…:&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;globalization uiCulture=&lt;span style="color: #006080"&gt;&amp;quot;en&amp;quot;&lt;/span&gt; culture=&lt;span style="color: #006080"&gt;&amp;quot;en-NZ&amp;quot;&lt;/span&gt;/&amp;gt;&lt;br /&gt; &amp;lt;/system.web&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-16T21:23:24.704-04:00</Created>
+      <Modified>2011-03-16T21:23:24.704-04:00</Modified>
+      <EntryId>328b0f09-18b1-4ddf-8a34-485b089b3cd9</EntryId>
+      <Description />
+      <Title>Azure DateTimes and Globali(z)sation</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-04-20T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Have heard a lot about this, so am trying it out:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Balsamiq_9599/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Balsamiq_9599/image_thumb.png" width="558" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;can specify the dimensions of the page eg 1024.&lt;/p&gt;  &lt;p&gt;link bar.&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:3d6f8227-85f5-41eb-b2a9-cd03f163fd9c" class="wlWriterEditableSmartContent"&gt;&lt;div id="5d53b309-69b1-4376-afed-c033d5a4a057" style="margin: 0px; padding: 0px; display: inline;"&gt;&lt;div&gt;&lt;a href="http://www.youtube.com/watch?v=odOAMaBxHBY&amp;amp;feature=related" target="_new"&gt;&lt;img src="http://www.programgood.net/content/binary/WindowsLiveWriter/Balsamiq_9599/video565c4206c474.jpg" style="border-style: none" galleryimg="no" onload="var downlevelDiv = document.getElementById('5d53b309-69b1-4376-afed-c033d5a4a057'); downlevelDiv.innerHTML = &amp;quot;&amp;lt;div&amp;gt;&amp;lt;object width=\&amp;quot;425\&amp;quot; height=\&amp;quot;355\&amp;quot;&amp;gt;&amp;lt;param name=\&amp;quot;movie\&amp;quot; value=\&amp;quot;http://www.youtube.com/v/odOAMaBxHBY&amp;amp;hl=en\&amp;quot;&amp;gt;&amp;lt;\/param&amp;gt;&amp;lt;embed src=\&amp;quot;http://www.youtube.com/v/odOAMaBxHBY&amp;amp;hl=en\&amp;quot; type=\&amp;quot;application/x-shockwave-flash\&amp;quot; width=\&amp;quot;425\&amp;quot; height=\&amp;quot;355\&amp;quot;&amp;gt;&amp;lt;\/embed&amp;gt;&amp;lt;\/object&amp;gt;&amp;lt;\/div&amp;gt;&amp;quot;;" alt=""&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;first try of mocking up.. ok so paid the license which was super easy.&amp;#160; And within 2 hours I’d sent off the mockups I wanted to my project collaborator. &lt;/p&gt;</Content>
+      <Created>2010-04-21T19:56:36.75875-04:00</Created>
+      <Modified>2010-04-21T19:56:36.75875-04:00</Modified>
+      <EntryId>a1f1b27a-6392-469a-91e1-5979748fef19</EntryId>
+      <Description />
+      <Title>Balsamiq</Title>
+      <Categories>Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

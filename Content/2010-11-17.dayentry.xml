@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-16T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;An error message is available for this exception but cannot be displayed…&lt;/p&gt;  &lt;p&gt;Please install NETCFv35.Messages.EN.wm.cab&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blogs.msdn.com/b/martijnh/archive/2008/01/03/fixing-exception-messages-on-the-net-compact-framework-3-5.aspx"&gt;http://blogs.msdn.com/b/martijnh/archive/2008/01/03/fixing-exception-messages-on-the-net-compact-framework-3-5.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-11-17T16:13:43.332625-05:00</Created>
+      <Modified>2010-11-17T16:13:43.332625-05:00</Modified>
+      <EntryId>10cfe9a8-cb8c-493f-8192-f2f910b48261</EntryId>
+      <Description />
+      <Title>Dot Net Compact Framework / Windows Mobile 5</Title>
+      <Categories>Windows Mobile 5</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;DateTime EffectiveDate;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!DateTime.TryParse(cert.GetEffectiveDateString(), &lt;span style="color: #0000ff"&gt;out&lt;/span&gt; EffectiveDate))&lt;br /&gt;{&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-11-17T16:36:01.645125-05:00</Created>
+      <Modified>2010-11-17T16:36:01.645125-05:00</Modified>
+      <EntryId>e8a1774c-97d5-4597-aec9-0c3e95162dbb</EntryId>
+      <Description />
+      <Title>Out Parameter</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

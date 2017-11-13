@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-12T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Hey Rob,I am trying to use the WAS tool for my atalicppion, but when I try to add the perf counters, it gives me an error  Failed to load the perf counters from the computer . Do you know how to fix this? Which stress tool did you use in your demo for Devlink?</Content>
+      <Created>2012-05-14T04:04:22.078125-04:00</Created>
+      <Modified>2012-05-14T04:04:22.078125-04:00</Modified>
+      <EntryId>4df5b3d3-6a39-461a-aaf4-04e8ca9cabb7</EntryId>
+      <TargetTitle>IIS6 Metabase and AspBufferingLimit</TargetTitle>
+      <TargetEntryId>F09D2449-8EE5-418E-8337-3712898B2271</TargetEntryId>
+      <Author>Daniella</Author>
+      <AuthorEmail>hostmaster@nic.edu.cn</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003405946060</AuthorHomepage>
+      <AuthorIPAddress>178.32.1.249</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

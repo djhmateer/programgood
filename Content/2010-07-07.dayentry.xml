@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-07-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://techie-buzz.com/utilites/top-free-utilities-to-rename-multiple-files.html" href="http://techie-buzz.com/utilites/top-free-utilities-to-rename-multiple-files.html"&gt;http://techie-buzz.com/utilites/top-free-utilities-to-rename-multiple-files.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Free Utility called:&lt;/p&gt;  &lt;p&gt;Den4b Renamer&lt;/p&gt;  &lt;p&gt;Here I am removing (Custom) from filenames.&amp;#160; Awesome tool.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HowtoRenameMultipleFilesinWinXP_BF78/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HowtoRenameMultipleFilesinWinXP_BF78/image_thumb.png" width="519" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-07-06T21:37:22.5728897-04:00</Created>
+      <Modified>2010-07-06T21:37:22.5728897-04:00</Modified>
+      <EntryId>60e4fd8f-2702-4b75-90d8-0997c35cf105</EntryId>
+      <Description />
+      <Title>How to Rename Multiple Files in WinXP</Title>
+      <Categories>Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://social.msdn.microsoft.com/Forums/en-US/vbide/thread/44c23df2-324b-4d52-a267-c35b08aafe1d" href="http://social.msdn.microsoft.com/Forums/en-US/vbide/thread/44c23df2-324b-4d52-a267-c35b08aafe1d"&gt;http://social.msdn.microsoft.com/Forums/en-US/vbide/thread/44c23df2-324b-4d52-a267-c35b08aafe1d&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Strange issue creeping in.&lt;/p&gt;</Content>
+      <Created>2010-07-06T20:52:07.3487515-04:00</Created>
+      <Modified>2010-07-06T20:52:07.3487515-04:00</Modified>
+      <EntryId>970ae571-e6a0-481b-adc3-24673d331f55</EntryId>
+      <Description />
+      <Title>Cannot Enter Project Debug mode – VS2008</Title>
+      <Categories>VS2008</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

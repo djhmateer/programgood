@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-04-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Good to get the startmenu back – so can see what apps are installed:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Windows-8Classic-Shell_C6F2/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Windows-8Classic-Shell_C6F2/image_thumb.png" width="375" height="284" /&gt;&lt;/a&gt;    &lt;br /&gt;&lt;a href="http://download.cnet.com/Classic-Shell/3000-2072_4-75553853.html"&gt;http://download.cnet.com/Classic-Shell/3000-2072_4-75553853.html&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-04-16T09:12:53.0216621-04:00</Created>
+      <Modified>2013-04-16T09:12:53.0216621-04:00</Modified>
+      <EntryId>fee26422-bd27-47e4-9234-a59396a34af2</EntryId>
+      <Description />
+      <Title>Windows 8–Classic Shell</Title>
+      <Categories>Windows 8</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

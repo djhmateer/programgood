@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-01-17T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From &lt;a href="http://www.experts-exchange.com/Microsoft/Development/MS-SQL-Server/Q_26469215.html"&gt;http://www.experts-exchange.com/Microsoft/Development/MS-SQL-Server/Q_26469215.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;DECLARE @dt datetime   &lt;br /&gt;SET @dt = '2007-01-01'    &lt;br /&gt;WHILE @dt &amp;lt;= '2017-01-01' BEGIN    &lt;br /&gt;INSERT INTO SomeTable (DateColumn) VALUES (@dt)    &lt;br /&gt;&amp;#160;&amp;#160; SET @dt = DATEADD(day, 1, @dt)    &lt;br /&gt;END&lt;/p&gt;</Content>
+      <Created>2011-01-18T16:54:25.9018907-05:00</Created>
+      <Modified>2011-01-18T16:54:25.9018907-05:00</Modified>
+      <EntryId>3e338187-e57f-4f61-941c-3810d19737ca</EntryId>
+      <Description />
+      <Title>Insert Many Dates into a Table</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

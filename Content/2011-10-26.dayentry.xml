@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-10-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Use: &lt;a href="http://www.red-gate.com/products/dba/sql-azure-backup/download"&gt;http://www.red-gate.com/products/dba/sql-azure-backup/download&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;**SCRATCH ALL THIS BELOW**&lt;/p&gt;  &lt;p&gt;I used to use Generate scripts, however this can take a while.&lt;/p&gt;  &lt;p&gt;Now there is an Export option in the Silverlight admin interface:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_thumb.png" width="644" height="365" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;button in export:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_thumb_1.png" width="747" height="495" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Access key is found in Hosted Services, Storage&lt;/p&gt;  &lt;p&gt;Then before pressing go you need to make sure the container is there.&amp;#160; I used Azure Blob Storage Studio: &lt;a href="http://azureblobstudio.codeplex.com/"&gt;http://azureblobstudio.codeplex.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;To see if job has finished:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Export-database-in-Azure_C790/image_thumb_2.png" width="761" height="451" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;click on Status of the database.&lt;/p&gt;  &lt;p&gt;Its pretty fast.&amp;#160; Also a good way to tell if you’ve messed up any logon / password stuff.&lt;/p&gt;  &lt;p&gt;Then download the bacpac file using blob studio.&lt;/p&gt;  &lt;h3&gt;Restore the database on local SQL Server&lt;/h3&gt;  &lt;p&gt;couldn’t figure out how to restore a .bacpac file.. can do a .dacpac from the root of sqlserver in management studio.&lt;/p&gt;</Content>
+      <Created>2011-10-25T21:57:14.6401735-04:00</Created>
+      <Modified>2011-10-25T21:57:14.6401735-04:00</Modified>
+      <EntryId>2f0e07f3-25b5-4da2-b336-0edfdf456464</EntryId>
+      <Description />
+      <Title>Export database in Azure</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

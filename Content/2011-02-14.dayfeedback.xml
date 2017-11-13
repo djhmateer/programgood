@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-13T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>J6BYkb Cool! That's a clever way of lokiong at it!</Content>
+      <Created>2011-04-17T23:46:26.847-04:00</Created>
+      <Modified>2011-04-17T23:46:26.847-04:00</Modified>
+      <EntryId>f1f50362-8b41-4034-8ecb-a7e18fb63bf1</EntryId>
+      <TargetTitle>Linquer</TargetTitle>
+      <TargetEntryId>397CDE27-F83E-4508-812B-57430D0512BB</TargetEntryId>
+      <Author>Buckie</Author>
+      <AuthorEmail>delete@manrikiya.com</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>65.165.140.237</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

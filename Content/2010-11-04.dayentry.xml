@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-03T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Using LightSpeed and turning on OC.&lt;/p&gt;  &lt;p&gt;“The point of Optimistic Concurrency Checking is to prevent &amp;quot;Lost Updates&amp;quot;. A lost update is where two users update the same data with one of the updates overwriting the other. The effect is as if one of the updates never occured at all - it was lost.&lt;/p&gt;  &lt;p&gt;The benefit of Optimistic Concurrency Checking over Pessimistic Locking is that Optimistic Concurrency Checking does not require Database locks. Pessimistic Locking will use Database locks and this generally will reduce the concurrency the database can support.”&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.avaje.org/occ.html"&gt;http://www.avaje.org/occ.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;We have overridden the default behaviour of LightSpeed to have a column in each table called Version.&lt;/p&gt;</Content>
+      <Created>2010-11-04T17:49:16.774-04:00</Created>
+      <Modified>2010-11-04T17:49:16.774-04:00</Modified>
+      <EntryId>ce14d0c6-9d34-4625-a7bc-009c485b43d2</EntryId>
+      <Description />
+      <Title>Optimistic Concurrency</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

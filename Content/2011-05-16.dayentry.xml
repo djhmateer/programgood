@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://jamescbender.com/bendersblog/archive/2010/08/09/devlink-2010-slides-and-demo.aspx"&gt;http://jamescbender.com/bendersblog/archive/2010/08/09/devlink-2010-slides-and-demo.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;from devlink 2010&lt;/p&gt;  &lt;p&gt;Slideshow (look in notes) and code.&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Adapter&lt;/strong&gt;&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Decorator&lt;/strong&gt;&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Factory&lt;/strong&gt;&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Command&lt;/strong&gt;&lt;/p&gt;</Content>
+      <Created>2011-05-16T06:20:01.609125-04:00</Created>
+      <Modified>2011-05-16T06:20:01.609125-04:00</Modified>
+      <EntryId>9b86b152-3487-4180-a26e-d357ff0d3e91</EntryId>
+      <Description />
+      <Title>Patterns</Title>
+      <Categories>Patterns</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

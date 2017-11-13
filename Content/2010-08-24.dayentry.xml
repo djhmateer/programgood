@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-23T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;nslookup&lt;/p&gt;  &lt;p&gt;server 58.28.4.2 (this is World Exchange’s primary DNS in my case)&lt;/p&gt;  &lt;p&gt;set q=MX&amp;#160; - this will give the MY record&lt;/p&gt;  &lt;p&gt;mydomain.com&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;set q=A&amp;#160;&amp;#160; - this will give the A record&lt;/p&gt;  &lt;p&gt;CNAME, HINFO, PTR are all other queries&lt;/p&gt;</Content>
+      <Created>2010-08-23T20:19:27.057625-04:00</Created>
+      <Modified>2010-08-23T20:19:27.057625-04:00</Modified>
+      <EntryId>e2d2fe24-3d3c-4dfe-9844-413e260f6c44</EntryId>
+      <Description />
+      <Title>Checking MX Records</Title>
+      <Categories>DNS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://logging.apache.org/log4net/index.html"&gt;http://logging.apache.org/log4net/index.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Logging to the console in a console app: (thanks to &lt;a href="http://www.beefycode.com/?tag=/log4net"&gt;http://www.beefycode.com/?tag=/log4net&lt;/a&gt; for the great examples)&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;       {&lt;br /&gt;           log4net.Config.BasicConfigurator.Configure();&lt;br /&gt;           log4net.ILog log = log4net.LogManager.GetLogger(&lt;span style="color: #0000ff"&gt;typeof&lt;/span&gt;(Program));&lt;br /&gt;&lt;br /&gt;           log.Debug(&lt;span style="color: #006080"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;);&lt;br /&gt;           log.Info(&lt;span style="color: #006080"&gt;&amp;quot;I'm a simple log4net tutorial.&amp;quot;&lt;/span&gt;);&lt;br /&gt;           log.Warn(&lt;span style="color: #006080"&gt;&amp;quot;... better be careful ...&amp;quot;&lt;/span&gt;);&lt;br /&gt;           log.Error(&lt;span style="color: #006080"&gt;&amp;quot;ruh-roh: an error occurred&amp;quot;&lt;/span&gt;);&lt;br /&gt;           log.Fatal(&lt;span style="color: #006080"&gt;&amp;quot;OMG we're dooooooomed!&amp;quot;&lt;/span&gt;);&lt;br /&gt;&lt;br /&gt;           Console.ReadLine();  &lt;br /&gt;       }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Using app.config&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_thumb.png" width="644" height="306" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;configuration&amp;gt;&lt;br /&gt;  &amp;lt;configSections&amp;gt;&lt;br /&gt;    &amp;lt;section name=&lt;span style="color: #006080"&gt;&amp;quot;log4net&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;log4net.Config.Log4NetConfigurationSectionHandler, log4net&amp;quot;&lt;/span&gt;/&amp;gt;&lt;br /&gt;  &amp;lt;/configSections&amp;gt;&lt;br /&gt;&lt;br /&gt;  &amp;lt;log4net&amp;gt;&lt;br /&gt;    &amp;lt;appender name=&lt;span style="color: #006080"&gt;&amp;quot;ConsoleAppender&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;log4net.Appender.ConsoleAppender&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;      &amp;lt;layout type=&lt;span style="color: #006080"&gt;&amp;quot;log4net.Layout.SimpleLayout&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;    &amp;lt;/appender&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;root&amp;gt;&lt;br /&gt;      &amp;lt;level &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;INFO&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;      &amp;lt;appender-&lt;span style="color: #0000ff"&gt;ref&lt;/span&gt; &lt;span style="color: #0000ff"&gt;ref&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;ConsoleAppender&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;    &amp;lt;/root&amp;gt;&lt;br /&gt;  &amp;lt;/log4net&amp;gt;&lt;br /&gt;&amp;lt;/configuration&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;notice level is set to INFO only.&lt;/p&gt;
+
+&lt;h3&gt;Appenders&lt;/h3&gt;
+
+&lt;p&gt;An object that persists the log messages somewhere.&lt;/p&gt;
+
+&lt;p&gt;eg AdoNetAppender, ConsoleAppender, ColoredConsoleAppender, EventLogAppender, FileAppender (don’t use), RollingFileAppender, SmtpAppender&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_thumb_1.png" width="628" height="369" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;Layout&lt;/h3&gt;
+
+&lt;p&gt;All the different options:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.beefycode.com/post/Log4Net-Tutorial-pt-4-Layouts-and-Patterns.aspx"&gt;http://www.beefycode.com/post/Log4Net-Tutorial-pt-4-Layouts-and-Patterns.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;layout type=&lt;span style="color: #006080"&gt;&amp;quot;log4net.Layout.PatternLayout&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;        &amp;lt;conversionPattern &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;%line %date %-5level %logger - %message%newline&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;      &amp;lt;/layout&amp;gt;&lt;/pre&gt;
+  &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_thumb_2.png" width="624" height="321" /&gt;&lt;/a&gt; 
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;Real Life&lt;/h3&gt;
+
+&lt;div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;        {&lt;br /&gt;            log4net.Config.XmlConfigurator.Configure();&lt;br /&gt;            Log.Info(&lt;span style="color: #006080"&gt;&amp;quot;this is an info message&amp;quot;&lt;/span&gt;);&lt;br /&gt;            MyClass.WriteLog();&lt;br /&gt;&lt;br /&gt;            Console.ReadLine();&lt;br /&gt;        }  &lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MyClass&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; WriteLog()&lt;br /&gt;        {&lt;br /&gt;            Log.Info(&lt;span style="color: #006080"&gt;&amp;quot;this is an info message&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;    }  &lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Log4Net_AEA4/image_thumb_3.png" width="550" height="67" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Shows us which class called the logger.&lt;/p&gt;
+
+&lt;h3&gt;Web Apps&lt;/h3&gt;
+
+&lt;p&gt;Putting this in AssemblyInfo.cs&lt;/p&gt;
+
+&lt;p&gt;[assembly: log4net.Config.XmlConfigurator()]&lt;/p&gt;
+
+&lt;h3&gt;Connection Strings and AdoNetAppender&lt;/h3&gt;
+
+&lt;p&gt;bufferSize value=”1” – otherwise it won’t write each one seperatly&lt;/p&gt;
+
+&lt;p&gt;This proved hard&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://weblogs.asp.net/drnetjes/archive/2005/02/16/374780.aspx"&gt;http://weblogs.asp.net/drnetjes/archive/2005/02/16/374780.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;doing a search and replace here didn’t work&lt;/p&gt;
+
+&lt;p&gt;Nor did extending the provider&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/2441359/can-you-pull-the-connectionstring-for-a-log4net-adonetappender-from-elsewhere-in"&gt;http://stackoverflow.com/questions/2441359/can-you-pull-the-connectionstring-for-a-log4net-adonetappender-from-elsewhere-in&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;** this could be better: &lt;a href="http://blog.dynamicprogrammer.com/CommentView,guid,357a3fbe-59e7-4dd4-846a-89083e903532.aspx"&gt;http://blog.dynamicprogrammer.com/CommentView,guid,357a3fbe-59e7-4dd4-846a-89083e903532.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Recommended Practice in Code&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.beefycode.com/post/Log4Net-Recommended-Practices-pt-1-Your-Code.aspx"&gt;http://www.beefycode.com/post/Log4Net-Recommended-Practices-pt-1-Your-Code.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Whenever you catch an exception, log it.&lt;/p&gt;
+
+&lt;h3&gt;Internal Log4Net Logging&lt;/h3&gt;
+
+&lt;p&gt;When trying to figure out why somethings aren’t working (eg connection strings)&lt;/p&gt;
+
+&lt;p&gt;In web.config:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;add key=&lt;span style="color: #006080"&gt;&amp;quot;log4net.Internal.Debug&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;  &amp;lt;/appSettings&amp;gt;&lt;br /&gt;  &amp;lt;system.diagnostics&amp;gt;&lt;br /&gt;    &amp;lt;trace autoflush=&lt;span style="color: #006080"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;      &amp;lt;listeners&amp;gt;&lt;br /&gt;        &amp;lt;add&lt;br /&gt;         name=&lt;span style="color: #006080"&gt;&amp;quot;textWriterTraceListener&amp;quot;&lt;/span&gt;&lt;br /&gt;         type=&lt;span style="color: #006080"&gt;&amp;quot;System.Diagnostics.TextWriterTraceListener&amp;quot;&lt;/span&gt;&lt;br /&gt;         initializeData=&lt;span style="color: #006080"&gt;&amp;quot;c:\\log4net.txt&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;      &amp;lt;/listeners&amp;gt;&lt;br /&gt;    &amp;lt;/trace&amp;gt;&lt;br /&gt;  &amp;lt;/system.diagnostics&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-08-23T22:21:27.917-04:00</Created>
+      <Modified>2010-08-23T22:21:27.917-04:00</Modified>
+      <EntryId>3eef2d70-4bc8-477d-8ee1-55178483f4d9</EntryId>
+      <Description />
+      <Title>Log4Net</Title>
+      <Categories>Log4Net</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

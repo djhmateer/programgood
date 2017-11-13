@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-14T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;d/load 3.1 version of LightSpeed.&amp;#160; In the samples directory there is an MVC Film example.&amp;#160; Use vs2008.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part1/"&gt;http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part1/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part2/"&gt;http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part2/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part3/"&gt;http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part3/&lt;/a&gt; – setting up the site&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part4/"&gt;http://www.mindscapehq.com/staff/jeremy/index.php/2009/03/aspnet-mvc-part4/&lt;/a&gt; – model binding&lt;/p&gt;  &lt;p&gt;Model namespace is:&amp;#160; Filmfestival.Model&lt;/p&gt;  &lt;h3&gt;Testing&lt;/h3&gt;  &lt;p&gt;Using NUnit.&amp;#160; A TestFixture base class to setup the testing.&amp;#160; TestDriven.NET as a test runner.&lt;/p&gt;  &lt;h3&gt;Managing the LightSpeed Unit of Work on a Per Request basis&lt;/h3&gt;  &lt;p&gt;Sets up a base class for managing.&lt;/p&gt;  &lt;h3&gt;Home View&lt;/h3&gt;  &lt;p&gt;Pass a ViewModel&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedandMVC_84D1/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedandMVC_84D1/image_thumb.png" width="644" height="435" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; HomePageViewModel&lt;br /&gt;{&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; IList&amp;lt;Film&amp;gt; Films { get; set; }&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; IList&amp;lt;Location&amp;gt; Locations { get; set; }&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; Film FeaturedFilm { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;IList&amp;lt;Film&amp;gt; films = UnitOfWork.Films.ToList().OrderBy(o =&amp;gt; Guid.NewGuid()).Take(8).ToList();&lt;br /&gt; &lt;br /&gt;HomePageViewModel model = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; HomePageViewModel()&lt;br /&gt;{&lt;br /&gt;  Locations = UnitOfWork.Locations.ToList(),&lt;br /&gt;  Films = films,&lt;br /&gt;  FeaturedFilm = films[0]&lt;br /&gt;};&lt;br /&gt; &lt;br /&gt;&lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(model)&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Model Binder&lt;/h3&gt;
+
+&lt;p&gt;/home&lt;/p&gt;
+
+&lt;p&gt;/home/location/wellington&lt;/p&gt;
+
+&lt;p&gt;/home/location/christchurch&lt;/p&gt;
+
+&lt;p&gt;/film/new&lt;/p&gt;
+
+&lt;p&gt;ModelBinder is setup in global.asax&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;EntityModelBinder.Register(&lt;span style="color: #0000ff"&gt;typeof&lt;/span&gt;(FilmFestival.Model.UnitOfWork).Assembly);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Validation&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedandMVC_84D1/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedandMVC_84D1/image_thumb_1.png" width="387" height="297" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;This is done server side here using the LS model.&lt;/p&gt;</Content>
+      <Created>2011-03-15T19:25:40.1050271-04:00</Created>
+      <Modified>2011-03-15T19:25:40.1050271-04:00</Modified>
+      <EntryId>c1b47a9f-5e14-4466-b878-4a6f08942432</EntryId>
+      <Description />
+      <Title>LightSpeed and MVC</Title>
+      <Categories>LightSpeed;MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

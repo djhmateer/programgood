@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-13T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Hi Julian, sorry to spam your comment post here! I saw your tweet about selnilg your Canon Powershot G9 and am interested to enquire more about it. I do not use Twitter and couldn't find a contact email on your website hence the spamming. If you could kindly drop me an email, that will be really helpful. (and please don't forget to delete this comment after reading!) Thanks.</Content>
+      <Created>2012-07-29T01:28:39.200839-04:00</Created>
+      <Modified>2012-07-29T01:28:39.200839-04:00</Modified>
+      <EntryId>288510dd-27af-4c35-9450-e53281a0433a</EntryId>
+      <TargetTitle>Installing Orchard</TargetTitle>
+      <TargetEntryId>AA343944-FEC7-4BE1-ABB7-1258DAA5A048</TargetEntryId>
+      <Author>Nada</Author>
+      <AuthorEmail>coordinator@sloga-platform.org</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003406380241</AuthorHomepage>
+      <AuthorIPAddress>94.23.1.28</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-04-11T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.baremetalsoft.com/baretail/index.php"&gt;http://www.baremetalsoft.com/baretail/index.php&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;img alt="BareTail Screenshot" src="http://www.baremetalsoft.com/baretail/screenshot_main.gif" /&gt;&lt;/p&gt;</Content>
+      <Created>2013-04-12T05:02:55.80825-04:00</Created>
+      <Modified>2013-04-12T05:02:55.80825-04:00</Modified>
+      <EntryId>d478332f-00f9-4666-b085-0fd27909fd5c</EntryId>
+      <Description />
+      <Title>Baretail–realtime log monitoring tool</Title>
+      <Categories>Log Monitoring</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

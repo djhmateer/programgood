@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-02-24T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;img src="http://www.programgood.net/content/binary/matrix.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;Thanks to the original author of the code (google m7tr1x).. &lt;br&gt;&lt;br&gt;I had some great fun looking at the code, understanding how this effect works, and refactoring.&lt;br&gt;&lt;br&gt;The original code is below.. I suggest scrolling down, and looking at the refactored code and pictures describing how the effect works.&lt;br&gt;&lt;br&gt;Enjoy!&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;#define&lt;/span&gt; readkey
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;namespace&lt;/span&gt; m7tr1x
+{
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+    {
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt;[ ] args)
+        {
+            Console.Title &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"tH3 M7tr1x 3ff3&amp;lt;t"&lt;/span&gt;;
+            Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.DarkGreen;
+            Console.WindowLeft &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowTop &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0;
+            Console.WindowHeight &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.BufferHeight &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.LargestWindowHeight;
+            Console.WindowWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.BufferWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.LargestWindowWidth;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;#if&lt;/span&gt; readkey
+            Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"H1T 7NY K3Y T0 C0NT1NU3 =/"&lt;/span&gt;);
+            Console.ReadKey();
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;#endif&lt;/span&gt;
+            Console.CursorVisible &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, height;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] y;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] l;
+            Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; y, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; l);
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; ms;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;while&lt;/span&gt; ( &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt; )
+            {
+                DateTime t1 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; DateTime.Now;
+                MatrixStep(width, height, y, l);
+                ms &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 10 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;)( (TimeSpan)( DateTime.Now &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; t1 ) ).TotalMilliseconds;
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( ms &amp;gt; 0 )
+                    System.Threading.Thread.Sleep(ms);
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( Console.KeyAvailable )
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( Console.ReadKey().Key == ConsoleKey.F5 )
+                        Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; y, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; l);
+            }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;bool&lt;/span&gt; thistime &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;;
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; MatrixStep(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] y, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] l)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; x;
+            thistime &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; !thistime;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;for&lt;/span&gt; ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0 ; x &amp;lt; width ; ++x )
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; 11 == 10 )
+                {
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( !thistime )
+                        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;continue&lt;/span&gt;;
+                    Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.White;
+                }
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                {
+                    Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.DarkGreen;
+                    Console.SetCursorPosition(x, inBoxY(y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; 2 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; ( l[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/&lt;/span&gt; 40 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;*&lt;/span&gt; 2 ), height));
+                    Console.Write(R);
+                    Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.Green;
+                }
+                Console.SetCursorPosition(x, y[x]);
+                Console.Write(R);
+                y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; inBoxY(y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; 1, height);
+                Console.SetCursorPosition(x, inBoxY(y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; l[x], height));
+                Console.Write(' ');
+            }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] y, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[ ] l)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; h1;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; h2 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ( h1 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ( height &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowHeight ) &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/&lt;/span&gt; 2 ) &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/&lt;/span&gt; 2;
+            width &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; 1;
+            y &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[width];
+            l &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[width];
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; x;
+            Console.Clear();
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;for&lt;/span&gt; ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0 ; x &amp;lt; width ; ++x )
+            {
+                y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; r.Next(height);
+                l[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; r.Next(h2 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;*&lt;/span&gt; ( ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; 11 !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 10 ) ? 2 : 1 ), h1 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;*&lt;/span&gt; ( ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; 11 !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 10 ) ? 2 : 1 ));
+            }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; Random r &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Random();
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt; R
+        {
+            get
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; t &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; r.Next(10);
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( t &amp;lt;= 2 )
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)( '0' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; r.Next(10) );
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( t &amp;lt;= 4 )
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)( 'a' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; r.Next(27) );
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( t &amp;lt;= 6 )
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)( 'A' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; r.Next(27) );
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)( r.Next(32, 255) );
+            }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; inBoxY(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; n, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height)
+        {
+            n &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; n &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;%&lt;/span&gt; height;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; ( n &amp;lt; 0 )
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; n &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; height;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; n;
+        }
+    }
+}&lt;/span&gt;&lt;/pre&gt;Here is the refactored code:&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; System;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;namespace&lt;/span&gt; matrix
+{
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// fields&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; Random rand &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Random();
+        
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// properties&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt; AsciiCharacter
+        {
+            get
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; t &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; rand.Next(10);
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (t &amp;lt;= 2)
+                    &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// returns a number&lt;/span&gt;
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)('0' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; rand.Next(10));
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (t &amp;lt;= 4)
+                    &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// small letter&lt;/span&gt;
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)('a' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; rand.Next(27));
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (t &amp;lt;= 6)
+                    &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// capital letter&lt;/span&gt;
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)('A' &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; rand.Next(27));
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                    &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// any ascii character&lt;/span&gt;
+                    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;char&lt;/span&gt;)(rand.Next(32, 255));
+            }
+        }
+
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// methods&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main()
+        {
+            Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.DarkGreen;
+            Console.WindowLeft &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowTop &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0;
+            Console.WindowHeight &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.BufferHeight &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.LargestWindowHeight;
+            Console.WindowWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.BufferWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.LargestWindowWidth;
+            Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Hit Any Key To Continue"&lt;/span&gt;);
+            Console.ReadKey();
+            Console.CursorVisible &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;;
+            
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, height;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// setup array of starting y values&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] y;
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// width was 209, height was 81&lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// setup the screen and initial conditions of y&lt;/span&gt;
+            Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; y);
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// do the Matrix effect&lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// every loop all y's get incremented by 1&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;while&lt;/span&gt; ( &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt; )
+                UpdateAllColumns(width, height, y);
+        }
+
+        
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; UpdateAllColumns(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] y)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; x;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// draws 3 characters in each x column each time... &lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// a dark green, light green, and a space&lt;/span&gt;
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// y is the position on the screen&lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// y[x] increments 1 each time so each loop does the same thing but down 1 y value&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;for&lt;/span&gt; ( x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0 ; x &amp;lt; width ; ++x )
+            {
+                &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// the bright green character&lt;/span&gt;
+                Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.Green;
+                Console.SetCursorPosition(x, y[x]);
+                Console.Write(AsciiCharacter);
+
+                &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// the dark green character -  2 positions above the bright green character&lt;/span&gt;
+                Console.ForegroundColor &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; ConsoleColor.DarkGreen;
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; temp &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; 2;
+                Console.SetCursorPosition(x, inScreenYPosition(temp, height));
+                Console.Write(AsciiCharacter);
+
+                &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// the 'space' - 20 positions above the bright green character&lt;/span&gt;
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; temp1 &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; 20;
+                Console.SetCursorPosition(x, inScreenYPosition(temp1, height));
+                Console.Write(' ');
+
+                &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// increment y&lt;/span&gt;
+                y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; inScreenYPosition(y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; 1, height);
+            }
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// F5 to reset, F11 to pause and unpause&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (Console.KeyAvailable)
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (Console.ReadKey().Key == ConsoleKey.F5)
+                    Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; y);
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (Console.ReadKey().Key == ConsoleKey.F11)
+                    System.Threading.Thread.Sleep(1);
+            }
+
+        }
+
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// Deals with what happens when y position is off screen&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; inScreenYPosition(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; yPosition, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (yPosition &amp;lt; 0)
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; yPosition &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; height;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (yPosition &amp;lt; height)
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; yPosition;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; 0;
+        }
+
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// only called once at the start&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Initialize(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; width, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; height, &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;out&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[] y)
+        {
+            height &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowHeight;
+            width &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; Console.WindowWidth &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;-&lt;/span&gt; 1;
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// 209 for me.. starting y positions of bright green characters&lt;/span&gt;
+            y &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;[width];
+            
+            Console.Clear();
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// loops 209 times for me&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;for&lt;/span&gt; ( &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; x &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; 0 ; x &amp;lt; width ; ++x )
+            {
+                &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// gets random number between 0 and 81&lt;/span&gt;
+                y[x] &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; rand.Next(height);
+            }
+        }
+    }
+}&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;how it works:&lt;br&gt;&lt;br&gt;The screen draws each column.. my screen is 208 wide.. so it loops 208 times, each time drawing a bright green character, dark green character, and a space.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/number1.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;The second loop.. the y value has been incremented by 1.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/number2.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;The 3rd loop&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/number3.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;Enjoy!&lt;br&gt;</Content>
+      <Created>2009-02-25T14:47:32.79-05:00</Created>
+      <Modified>2009-02-25T15:05:17.556125-05:00</Modified>
+      <EntryId>fd2843fb-2372-4c78-bf60-4269cf0468cd</EntryId>
+      <Description />
+      <Title>Matrix Rain Effect in C# Console App</Title>
+      <Categories>Events;Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

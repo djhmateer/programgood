@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-05T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Too many comiplments too little space, thanks!</Content>
+      <Created>2011-08-23T05:44:51.203125-04:00</Created>
+      <Modified>2011-08-23T05:44:51.203125-04:00</Modified>
+      <EntryId>6c8db692-fd26-48f0-ba0b-f1bfcdf57c45</EntryId>
+      <TargetTitle>The Full Stack–1 EF Code First, MVC3</TargetTitle>
+      <TargetEntryId>0570F8EE-E6C6-42B6-842E-CEA7B503630F</TargetEntryId>
+      <Author>Doc</Author>
+      <AuthorEmail>info@piehole.co.uk</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>59.1.203.39</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

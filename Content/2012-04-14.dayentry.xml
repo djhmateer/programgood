@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-13T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;4 ways to install:&amp;#160; In summary I’ve found that WebPlatform Installer is easy..&amp;#160; Preferred way now is to enlist from source and use WebDeploy.&lt;/p&gt;  &lt;h3&gt;WebPlatform Installer&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_8.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_3.png" width="644" height="446" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;On local machine it is getting IIS7.5 express.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_12.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_5.png" width="644" height="443" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;On Server2008R2 EC2 Micro and the same on server2003 – this is good as it sets up WebDeploy which I use for source code enlistment deployment.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_16.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_7.png" width="644" height="435" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;it even helps with host headers etc!.. put on port 81 for testing…&amp;#160; and had to restart IIS.&lt;/p&gt;  &lt;p&gt;so this actually then gives WebDeploy functionality&lt;/p&gt;  &lt;p&gt;need to add in a firewall run… see source code below:&lt;/p&gt;  &lt;h3&gt;Webmatrix&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb.png" width="644" height="290" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Using webmatrix on local dev machine.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_6.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_2.png" width="244" height="225" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;set it up using SQL CE&lt;/p&gt;  &lt;h3&gt;Source Code download from Codeplex and WebDeploy&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_1.png" width="436" height="280" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Gives a sln file inside src which then compiles up fine.&lt;/p&gt;  &lt;p&gt;publish up to a 2008R2 server on EC2&lt;/p&gt;  &lt;p&gt;dev work needs write access to modules and themes folder..media folder needs write access&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_14.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_6.png" width="354" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Server2008R2 - Webdeploy as an easy way to publish live (and only do deltas).&amp;#160; And this is nice as it deploys the database as SQL Server Compact 4.0&lt;/p&gt;  &lt;p&gt;To change DB Settings easiest thing to do is delete all files in App_Data&lt;/p&gt;  &lt;p&gt;To get SQL Server working – remember to allow SQL Authentication on the server!&lt;/p&gt;  &lt;p&gt;Connection string I use is:&lt;/p&gt;  &lt;pre&gt;Data Source=.\;Initial Catalog=orcharddb;Persist Security Info=True;User ID=orcharddb;Password=secret&lt;/pre&gt;
+
+&lt;pre&gt;Data Source=.\SQLEXPRESS;Initial Catalog=orcharddb;Persist Security Info=True;User ID=orcharddb;Password=secret&lt;/pre&gt;
+
+&lt;pre&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_18.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_8.png" width="358" height="484" /&gt;&lt;/a&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;font face="Arial"&gt;Server2003 WebDeploy settings are different.&lt;/font&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;a title="http://ec2-50-112-6-13.us-west-2.compute.amazonaws.com/MsDeployAgentService" href="http://ec2-50-112-6-13.us-west-2.compute.amazonaws.com/MsDeployAgentService"&gt;http://ec2-50-112-6-13.us-west-2.compute.amazonaws.com/MsDeployAgentService&lt;/a&gt;&lt;/pre&gt;
+
+&lt;pre&gt;gallery url was:&lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; Orchard Gallery....&lt;a href="http://orchardproject.net/gallery/server/FeedService.svc"&gt;http://orchardproject.net/gallery/server/FeedService.svc&lt;/a&gt;&lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; now…&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &lt;a href="http://packages.orchardproject.net/FeedService.svc/"&gt;http://packages.orchardproject.net/FeedService.svc/&lt;/a&gt;&lt;/pre&gt;
+
+&lt;p&gt;so now I can publish up to live with all built changes on local… but connection string is wrong.. Potentially overkill as would only update modules on live?&lt;/p&gt;
+
+&lt;p&gt;issues with going to to server2003 (when I deleted all files up there.. got 404 errors.this was actually a connection string problem.)&amp;#160; Way around it was to install on the server using Web Platform Installer then copy all the files into the root.&lt;/p&gt;
+
+&lt;p&gt;optimization: &lt;a href="http://docs.orchardproject.net/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting"&gt;http://docs.orchardproject.net/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;full trust&lt;/p&gt;
+
+&lt;p&gt;not debug&lt;/p&gt;
+
+&lt;p&gt;no app pool recycling.. I’m using separate App Pools for each web app.&lt;/p&gt;
+
+&lt;p&gt;OK so just stick with 2 versions for now and develop modules on local and upload to live.&lt;/p&gt;
+
+&lt;h3&gt;Enlist in the Orchard Source via Mercurial&lt;/h3&gt;
+
+&lt;p&gt;Had to do this to deploy to Azure.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment"&gt;http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_10.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/image_thumb_4.png" width="244" height="83" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;didn’t work.&amp;#160; &lt;a href="https://hg01.codeplex.com/orchard"&gt;https://hg01.codeplex.com/orchard&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;but then it did &lt;img style="border-bottom-style: none; border-left-style: none; border-top-style: none; border-right-style: none" class="wlEmoticon wlEmoticon-smile" alt="Smile" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Installing-Orchard_A947/wlEmoticon-smile_2.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://docs.orchardproject.net/Documentation/Building-and-deploying-Orchard-from-a-source-code-drop"&gt;http://docs.orchardproject.net/Documentation/Building-and-deploying-Orchard-from-a-source-code-drop&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;from VS2010 command prompt.. build “compile;package” from c:\dec\orchard\hg&lt;/p&gt;
+
+&lt;p&gt;Just use VS2010 Web Deploy now.&amp;#160; Had a connection string problem which was giving me a 404 error on the server.&lt;/p&gt;</Content>
+      <Created>2012-04-14T08:31:23.299155-04:00</Created>
+      <Modified>2012-04-16T05:21:10.73875-04:00</Modified>
+      <EntryId>aa343944-fec7-4be1-abb7-1258daa5a048</EntryId>
+      <Description />
+      <Title>Installing Orchard</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

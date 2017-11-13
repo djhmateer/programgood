@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-06-22T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Python and Pygame&lt;/p&gt;  &lt;p&gt;C# and XNA.. and Real3D.NET&lt;/p&gt;  &lt;p&gt;C++ and … Graphics/3D engines: unity, Ogre3d&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Games Engines (&lt;a href="http://en.wikipedia.org/wiki/Game_engine"&gt;http://en.wikipedia.org/wiki/Game_engine&lt;/a&gt;) - is a ‘middleware’ system designed for the creation and development of video games.&lt;/p&gt;  &lt;p&gt;eg gamebryo c++.. used in Civilization&lt;/p&gt;  &lt;p&gt;Unreal - &lt;a href="http://www.udk.com/download"&gt;http://www.udk.com/download&lt;/a&gt;.. used in Gears of War.. and v.high end games&lt;/p&gt;  &lt;p&gt;Steam – a marketplace for games.&lt;/p&gt;  &lt;p&gt;Renderware – loose collection of other middleware libraries eg Havok (physics), Miles Sound System (sound), bink (video)&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Graphics engines are usually build on top of graphics APIs eg Direct3D or OpenGL which provide software abstraction to the GPU&lt;/p&gt;  &lt;p&gt;Low level libraries eg DirectX often use as they provide hardware independent access to other hardware eg mouse, keyboard, network, sound&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://rbwhitaker.wikidot.com/c-sharp-tutorials"&gt;http://rbwhitaker.wikidot.com/c-sharp-tutorials&lt;/a&gt; – C# from a gamers perspective&lt;/p&gt;</Content>
+      <Created>2012-06-23T11:13:46.9002045-04:00</Created>
+      <Modified>2012-06-23T11:13:46.9002045-04:00</Modified>
+      <EntryId>40d68fd3-df84-4df4-9690-f5b95da62082</EntryId>
+      <Description />
+      <Title>Gaming Overview</Title>
+      <Categories>Games</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Created in 1990 by Guido van Rossum who now works at Google.&lt;/p&gt;  &lt;p&gt;Supports OO and structured programming.&lt;/p&gt;  &lt;p&gt;“A quick and light language”&lt;/p&gt;  &lt;p&gt;Doesn’t have a really heavy type system.&amp;#160; Similar to Ruby, Perl, bash&lt;/p&gt;  &lt;p&gt;python.org to download windows installer&lt;/p&gt;  &lt;p&gt;good easy video tutorial: &lt;a href="http://www.youtube.com/watch?v=4Mf0h3HphEA"&gt;http://www.youtube.com/watch?v=4Mf0h3HphEA&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb.png" width="310" height="380" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;should have been print (“Hello World”)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.tutorialspoint.com/python/python_tutorial.pdf"&gt;http://www.tutorialspoint.com/python/python_tutorial.pdf&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;google python &lt;a href="http://www.youtube.com/watch?v=tKTZoB2Vjuk"&gt;http://www.youtube.com/watch?v=tKTZoB2Vjuk&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://thepythongamebook.com/en:start"&gt;http://thepythongamebook.com/en:start&lt;/a&gt; – python game book&lt;/p&gt;  &lt;p&gt;&lt;a href="http://inventwithpython.com/"&gt;http://inventwithpython.com/&lt;/a&gt; – invent games in python… looks good!&lt;/p&gt;  &lt;h3&gt;Hello World&lt;/h3&gt;  &lt;p&gt;print (“hello world”)&amp;#160; - as I’m using python 3.x&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_1.png" width="323" height="102" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and back to 2.7&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_2.png" width="205" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;h2&gt;Example Games in Pygame&lt;/h2&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_3.png" width="425" height="332" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;first successful game running in Python.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_10.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_4.png" width="394" height="314" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;another game from pygame which includes multiplater and a server.&lt;/p&gt;    &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_12.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_5.png" width="396" height="315" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://inventwithpython.com/pygame/chapter2.html"&gt;http://inventwithpython.com/pygame/chapter2.html&lt;/a&gt; – looks like a good games tutorial&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_14.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Python_96DC/image_thumb_6.png" width="391" height="314" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.pygame.org/project-Colorful+Snake-2166-.html"&gt;http://www.pygame.org/project-Colorful+Snake-2166-.html&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-06-23T11:45:34.831397-04:00</Created>
+      <Modified>2012-06-23T11:45:34.831397-04:00</Modified>
+      <EntryId>21eed4d1-ed0f-4e73-8c53-f7bc95495a42</EntryId>
+      <Description />
+      <Title>Python</Title>
+      <Categories>Python</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

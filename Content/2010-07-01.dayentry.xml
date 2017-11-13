@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-06-30T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Useful if you want the ASPNETDB to be in your local SQL Server instance rather than a flat file (which can be troublesome).&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/CreatinganewASP.NETMembershipDB_9176/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/CreatinganewASP.NETMembershipDB_9176/image_thumb.png" width="644" height="372" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Use trick of connection via server explorer, then F4 properties, then can copy and paste connection string into web.config.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/CreatinganewASP.NETMembershipDB_9176/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/CreatinganewASP.NETMembershipDB_9176/image_thumb_1.png" width="297" height="184" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-07-01T18:24:51.7995-04:00</Created>
+      <Modified>2010-07-01T18:24:51.7995-04:00</Modified>
+      <EntryId>538f7aa5-2883-4128-ba24-afbca141ab45</EntryId>
+      <Description />
+      <Title>Creating a new ASP.NET Membership DB</Title>
+      <Categories>ASP.NET Membersip;ASP.NET MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

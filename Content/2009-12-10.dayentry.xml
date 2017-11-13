@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-12-09T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h4&gt;&amp;#160;&lt;/h4&gt;  &lt;h4&gt;Chapter 8 – Arrays&lt;/h4&gt;  &lt;p&gt;Array cheat code:&lt;/p&gt;  &lt;p&gt;string[] names = new string[10]; // this array can only have 10 elements    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; names[0] = &amp;quot;Dave&amp;quot;;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; names[1] = &amp;quot;Heidi&amp;quot;;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; names[2] = &amp;quot;Scotty&amp;quot;;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; for (int i = 0; i &amp;lt; 3; i++)     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; {     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; lstOutput.Items.Add(names[i].ToString());     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; } &lt;/p&gt;  &lt;p&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; int[] coolNumbers = new int[10] {1,2,5,7,11,13,17,19,23,27};&amp;#160; // initializing an array &lt;/p&gt;  &lt;p&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; int[,] grades = new int[5,4]; // grades and which type eg Freshman, Sophmore, Junior, Senior    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; grades[0, 0] = 1;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; grades[1, 0] = 4;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;// Declare a single-dimensional array &lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] array1 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[5];&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;// Declare and set array element values&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] array2 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] { 1, 3, 5, 7, 9 };&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&amp;#160;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #008000"&gt;// Alternative syntax&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;[] array3 = { 1, 2, 3, 4, 5, 6 };&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Setting up a project template in Visual Studio.&amp;#160; Very useful if you don’t want a standard WinForms project etc.. to start with:&lt;/p&gt;
+
+&lt;p&gt;This is the way the book recommends starting a project.&amp;#160; Notice how few references, and we’re not using partial classes and&amp;#160; a seperate Program.cs file.&amp;#160; I like this method as it is keeping things very simple as easy to understand.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/screen8_2.gif"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="screen8" border="0" alt="screen8" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/screen8_thumb.gif" width="644" height="363" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;To export this as a template, go to File, Export as template.&lt;/p&gt;
+
+&lt;p&gt;Then to start a new project, do File, New then look for My Templates down the bottom.. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/screen10_2.gif"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="screen10" border="0" alt="screen10" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/screen10_thumb.gif" width="683" height="413" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Letter Count program&lt;/p&gt;
+
+&lt;p&gt;5 Steps&lt;/p&gt;
+
+&lt;p&gt;1) Initialisation&lt;/p&gt;
+
+&lt;p&gt;2) Input Step&lt;/p&gt;
+
+&lt;p&gt;&amp;#160; text is entered by the user&lt;/p&gt;
+
+&lt;p&gt;3) Process Step&lt;/p&gt;
+
+&lt;p&gt;&amp;#160; examine each letter types in the textbox and count how many times each alpha character occurs&lt;/p&gt;
+
+&lt;p&gt;4) Output Step&lt;/p&gt;
+
+&lt;p&gt;&amp;#160; Copy the letter counts to a listbox&lt;/p&gt;
+
+&lt;p&gt;5) Terminate&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb.png" width="347" height="568" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;for (int i = 0; i &amp;lt; input.Length; i++) // loop over each letter in the input string 
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; { 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; oneLetter = input[i]; // extract the letter we want to examine 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; index = oneLetter - LETTERA; // taking int 65 away from a character 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; if (index &amp;lt; 0 || index &amp;gt; MAXCHARS) // making sure range is between 0 and 25 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; continue; 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; count[index]++; // adding 1 to the count of the appropriate array 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; }&lt;/p&gt;
+
+&lt;p&gt;The output to the listbox is interesting in the string.Format.&lt;/p&gt;
+
+&lt;p&gt;for (int i = 0; i &amp;lt; MAXLETTERS; i++) 
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; { 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; // letter has 4 spaces and is right justified 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; // space has 20 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; // count is just displayed 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; buff = string.Format(&amp;quot;{0, 4} {1,20} {2} &amp;quot;, (char) (i + LETTERA), &amp;quot; &amp;quot;, count[i]); 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; lstOutput.Items.Add(buff);&lt;/p&gt;
+
+&lt;h4&gt;ListView&lt;/h4&gt;
+
+&lt;p&gt;Displaying formatted lists is very common, so there is special control for doing this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_1.png" width="346" height="505" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Go to columns.. and also change view to details, so the column headers are displayed on the output.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_2.png" width="760" height="394" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h4&gt;Multidimensional Arrays&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_3.png" width="327" height="371" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;int[,] myData = new int[number, 3];&amp;#160; // create new array with 3 dimensions&lt;/p&gt;
+
+&lt;p&gt;// Program and Display 
+  &lt;br /&gt;for (int i = 0; i &amp;lt; number; i++) 
+
+  &lt;br /&gt;{ 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; myData[i, 0] = i; 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; myData[i, 1] = i*i; 
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; myData[i, 2] = i*i*i; 
+
+  &lt;br /&gt;}&lt;/p&gt;
+
+&lt;h4&gt;Collections&lt;/h4&gt;
+
+&lt;p&gt;A collection is a set of objects which share the same characteristics eg strings&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_4.png" width="327" height="318" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;span class="kwrd"&gt;int&lt;/span&gt;[] days = &lt;span class="kwrd"&gt;new&lt;/span&gt; &lt;span class="kwrd"&gt;int&lt;/span&gt;[] {0,31,28,31,30,31,30,31,31,30,31,31 };        
+&lt;span class="kwrd"&gt;string&lt;/span&gt;[] weekDays = &lt;span class="kwrd"&gt;new&lt;/span&gt; &lt;span class="kwrd"&gt;string&lt;/span&gt;[] {&lt;span class="str"&gt;&amp;quot;Monday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Tuesday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Wednesday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Thursday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Friday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Saturday&amp;quot;&lt;/span&gt;, &lt;span class="str"&gt;&amp;quot;Sunday&amp;quot;&lt;/span&gt;}; 
+
+&lt;span class="kwrd"&gt;foreach&lt;/span&gt; (&lt;span class="kwrd"&gt;string&lt;/span&gt; str &lt;span class="kwrd"&gt;in&lt;/span&gt; weekDays) 
+{ 
+ lstOutput.Items.Add(str); 
+} 
+
+ &lt;span class="kwrd"&gt;foreach&lt;/span&gt; (&lt;span class="kwrd"&gt;int&lt;/span&gt; val &lt;span class="kwrd"&gt;in&lt;/span&gt; days) 
+ { 
+   lstOutput.Items.Add(val); 
+ }&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+
+
+
+
+
+
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;p&gt;Because arrays are objects, you can treat them as a collection and iterate over them with a foreach loop.&lt;/p&gt;
+
+&lt;h4&gt;ArrayList&lt;/h4&gt;
+
+&lt;p&gt;You can’t use a static array until it’s dimension has been set eg &lt;/p&gt;
+
+&lt;p&gt;string[] names = new string[100]&amp;#160; // this can hold 100 names, and no more!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_5.png" width="327" height="313" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;ArrayList names = new ArrayList();&lt;/p&gt;
+
+&lt;p&gt;names.Add(txtName.Text);&lt;/p&gt;
+
+&lt;h4&gt;Static multiarray, using ListView&lt;/h4&gt;
+
+&lt;p&gt;Ch9IdealWeights&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_14.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_6.png" width="322" height="429" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h4&gt;Random Values and Sorting&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_16.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_7.png" width="328" height="428" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Uses a list box which is populated by a 1 dimensional array of random numbers&lt;/p&gt;
+
+&lt;p&gt;Sorting is done via:&lt;/p&gt;
+
+&lt;p&gt;Array.Sort(arrayOfNumbers);&lt;/p&gt;
+
+&lt;h4&gt;Random Values and Stars&lt;/h4&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:3186afb2-e78e-4f24-96c4-405d92aec894" class="wlWriterEditableSmartContent"&gt;&lt;p&gt;RandomValues VS2008 &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/Ch8RandomValuesSort_1.zip" target="_blank"&gt;source&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_18.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/BeginningC3.0PartII_7A51/image_thumb_8.png" width="325" height="431" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;I built the stars using a loop.&amp;#160; However a better solution is:&lt;/p&gt;
+
+&lt;p&gt;string stars = “**********************************************************************”&lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;stars.Substring(0, howeverManyYouWant)&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+
+
+
+
+
+
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;p&gt;this was what I had:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:28a7e658-63e5-45ce-bcb3-1da2df797f94" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background: #ddd; max-height: 300px; overflow: auto"&gt;
+&lt;ol style="background: #000000; margin: 0 0 0 2.5em; padding: 0 0 0 5px; white-space: nowrap"&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#479445"&gt;// add appropriate number of start to the end of the string.&lt;/span&gt;&lt;/li&gt;
+&lt;li style="background: #0c0c0c"&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#cccc37"&gt;int&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;actualNumber&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; = &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;arrayOfNumbers&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;[&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;i&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;];&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#cccc37"&gt;string&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;stars&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; = &lt;/span&gt;&lt;span style="background:#11181a;color:#c89191"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;;&lt;/span&gt;&lt;/li&gt;
+&lt;li style="background: #0c0c0c"&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#479445"&gt;// build the number of stars&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#cccc37"&gt;for&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; (&lt;/span&gt;&lt;span style="background:#11181a;color:#cccc37"&gt;int&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;j&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; = &lt;/span&gt;&lt;span style="background:#11181a;color:#8acccf"&gt;1&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;j&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; &amp;lt;= &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;actualNumber&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;j&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;++)&lt;/span&gt;&lt;/li&gt;
+&lt;li style="background: #0c0c0c"&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;{&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;stars&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; += &lt;/span&gt;&lt;span style="background:#11181a;color:#c89191"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;;&lt;/span&gt;&lt;/li&gt;
+&lt;li style="background: #0c0c0c"&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;}&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;/li&gt;
+&lt;li style="background: #0c0c0c"&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#cccc37"&gt;string&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;output&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt; = &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;actualNumber&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;.&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;ToString&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;() + &lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;stars&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;lstResults&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;.&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;Items&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;.&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;Add&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;(&lt;/span&gt;&lt;span style="background:#11181a;color:#dfdfbf"&gt;output&lt;/span&gt;&lt;span style="background:#11181a;color:#c9d6d6"&gt;);&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2009-12-10T04:35:39.794-05:00</Created>
+      <Modified>2009-12-11T06:15:16.1065-05:00</Modified>
+      <EntryId>44da0677-2df1-4b48-94a5-7c00e99b8d5f</EntryId>
+      <Description />
+      <Title>Beginning C# 3.0 Part II</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

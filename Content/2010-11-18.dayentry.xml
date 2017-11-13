@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-17T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;something like:&lt;/p&gt;  &lt;p&gt;Array arraything = &amp;quot;abc, def&amp;quot;; &lt;/p&gt;  &lt;p&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; foreach (var item in arrayThing)   &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; {    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; Console.WriteLine(&amp;quot;item is: &amp;quot; + item);    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; }&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;This works becuase an array in enumerable&lt;/p&gt;</Content>
+      <Created>2010-11-17T19:56:35.22325-05:00</Created>
+      <Modified>2010-11-17T19:56:35.22325-05:00</Modified>
+      <EntryId>0b81882d-55ab-4c12-aa81-b7571af20a39</EntryId>
+      <Description />
+      <Title>Iterating over an Array</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.freewareppc.com/download/utilities/cabinstl.shtml"&gt;http://www.freewareppc.com/download/utilities/cabinstl.shtml&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-11-17T22:50:55.613875-05:00</Created>
+      <Modified>2010-11-17T22:50:55.613875-05:00</Modified>
+      <EntryId>3d1c2927-77f4-44fd-932c-07095d21edbc</EntryId>
+      <Description />
+      <Title>Installing a CAB file on a Windows Mobile Device</Title>
+      <Categories>Windows Mobile 5</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

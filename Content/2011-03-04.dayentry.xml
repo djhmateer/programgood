@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-03T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From &lt;a href="http://msdn.microsoft.com/en-us/library/ms173156.aspx"&gt;http://msdn.microsoft.com/en-us/library/ms173156.aspx&lt;/a&gt;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Car : IEquatable&amp;lt;Car&amp;gt;&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Make {get; set;}&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Model { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Year { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Implementation of IEquatable&amp;lt;T&amp;gt; interface&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; Equals(Car car)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;this&lt;/span&gt;.Make == car.Make &amp;amp;&amp;amp;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;this&lt;/span&gt;.Model == car.Model &amp;amp;&amp;amp;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;this&lt;/span&gt;.Year == car.Year)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;br /&gt;        }&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;When a class implements an interface, the class provides an implementation for all the members (properties and methods) defined by the interface&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href="http://msdn.microsoft.com/en-us/library/ms131187.aspx"&gt;IEquatable&amp;lt;T&amp;gt;&lt;/a&gt; interface announces to the user of the object that the object can determine whether it is equal to other objects of the same type, and the user of the interface does not have to know how this is implemented.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.devarticles.com/c/a/C-Sharp/Interface-IEnumerable-and-IEnumerator-in-C-sharp/1/"&gt;http://www.devarticles.com/c/a/C-Sharp/Interface-IEnumerable-and-IEnumerator-in-C-sharp/1/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What is an interface? 
+  &lt;br /&gt;&amp;quot;An interface is a collection of method definitions (without implementations) and constant values&amp;quot;. &lt;/p&gt;
+
+&lt;p&gt;Its purpose is to captures similarities between unrelated classes without forcing a class relationship,&lt;/p&gt;
+
+&lt;p&gt;IEnumerable and IEnumerator are the best interface examples there are for you to understand the role of interface. Classes implementing these two interfaces are classified as an enumerable collection. This means that class behaves like any other collection object written by Microsoft, such as an ArrayList. &lt;/p&gt;
+
+&lt;p&gt;There are many features that define an enumerable collection, and by implementing these two interfaces, the framework guarantees that this object has these features. For example, an enumerable collection must have a method called MoveNext, which moves the cursor within the collection one step forward. By implementing the IEnumerator interface, the class is promising (and is required) to implement this method. &lt;/p&gt;
+
+&lt;p&gt;As mentioned above, when a class implements these interfaces and is defined as an enumerable collection, it behaves like one as well. This means that it is capable of being iterated using a foreach statement, just like we can do with an ArrayList object. &lt;/p&gt;
+
+&lt;h5&gt;Programming to an Interface&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/383947/what-does-it-mean-to-program-to-an-interface"&gt;http://stackoverflow.com/questions/383947/what-does-it-mean-to-program-to-an-interface&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;common traits or behaviors that were exhibited by potentially many non-related classes of objects&lt;/p&gt;</Content>
+      <Created>2011-03-04T13:44:42.884375-05:00</Created>
+      <Modified>2011-03-06T16:10:07.728125-05:00</Modified>
+      <EntryId>1bdbbe7b-7f94-427c-a90f-e4be060f9150</EntryId>
+      <Description />
+      <Title>Implementing an Interface</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

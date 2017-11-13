@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-02T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>In preparation for JPBoodhoo's course in Sydney in a months time, I'm looking at the tooling he recommends and going through this videos on dnrtv.com&lt;br&gt;&lt;br&gt;this is going to be an ongoing list of ideas for me refer to.. excuse the mess!&lt;br&gt;&lt;br&gt;Setting up Subversion&lt;br&gt;http://www.west-wind.com/presentations/subversion/&lt;br&gt;&lt;br&gt;Console2 - console with an alpha transparency&lt;br&gt;AltTab - alt tab replacement&lt;br&gt;Resharper4.5 - makes VS2008 faster&lt;br&gt;Testdriven.net - unit testing easier&lt;br&gt;mbunit - unit testing framework&lt;br&gt;&lt;br&gt;&lt;br&gt;Keyboard shortcuts&lt;br&gt;&lt;br&gt;Testdriven.net - bound to&amp;nbsp; in VS2008, Tools, Options, Keyboard.&amp;nbsp; testdriven.net.runtests.. Ctrl-Shift-Alt-T&lt;br&gt;rerun tests is to testdriven.net.reruntest.. Ctrl-Shift-Alt-R&lt;br&gt;&lt;br&gt;Resharper&lt;br&gt;Ctrl-Alt-v&amp;nbsp; - introduce variable (highlight and it gens the variable)&lt;br&gt;Alt-Int - generate constructor and..... from an interface&lt;br&gt;F2 - rename&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2009-07-02T22:53:20.421375-04:00</Created>
+      <Modified>2009-07-02T22:53:20.421375-04:00</Modified>
+      <EntryId>65643b32-763b-4943-87a7-61955c5246b6</EntryId>
+      <Description />
+      <Title>Tooling and Setup</Title>
+      <Categories>ASP.NET Best Practise;Object Oriented Programming;Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-05-03T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.artisteer.com/"&gt;http://www.artisteer.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.drowningintechnicaldebt.com/ShawnWeisfeld/archive/2011/08/28/create-a-template-for-orchard.aspx"&gt;http://www.drowningintechnicaldebt.com/ShawnWeisfeld/archive/2011/08/28/create-a-template-for-orchard.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-05-04T07:29:37.189-04:00</Created>
+      <Modified>2012-05-04T07:29:37.189-04:00</Modified>
+      <EntryId>ce3587ec-01d6-499b-8a7d-59a2340510a4</EntryId>
+      <Description />
+      <Title>Web Design</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

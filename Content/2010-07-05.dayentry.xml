@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-07-04T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;While using Moq to test an MVC app, and Scott Hanselman’s NerdDinner app, I kept getting these strange errors.&lt;/p&gt;  &lt;p&gt;Problem was permissions on:&lt;/p&gt;  &lt;p&gt;C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys&lt;/p&gt;  &lt;p&gt;In Windows XP Pro, you need to disable simple file sharing.. from &lt;a title="http://www.windowsbbs.com/windows-xp/52502-cannot-change-permissions-folder.html" href="http://www.windowsbbs.com/windows-xp/52502-cannot-change-permissions-folder.html"&gt;http://www.windowsbbs.com/windows-xp/52502-cannot-change-permissions-folder.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_thumb.png" width="579" height="528" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Then I set perms to be full control to everyone:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_thumb_1.png" width="493" height="649" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;More granular perms are in here: &lt;a title="http://groups.google.co.uk/group/RhinoMocks/browse_thread/thread/26df68ff01567509/5ddebf407228edc4" href="http://groups.google.co.uk/group/RhinoMocks/browse_thread/thread/26df68ff01567509/5ddebf407228edc4"&gt;http://groups.google.co.uk/group/RhinoMocks/browse_thread/thread/26df68ff01567509/5ddebf407228edc4&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Now this code works:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Arg.UnabletoobtainpublickeyforStrongName_76E2/image_thumb_2.png" width="710" height="384" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;On Win7: C:\Users\All Users\Microsoft\Crypto\RSA\MachineKeys&lt;/p&gt;  &lt;p&gt;Takes some messing around with granting ownership of the directory, then setting full control to everyone.&lt;/p&gt;</Content>
+      <Created>2010-07-05T16:54:24.14325-04:00</Created>
+      <Modified>2010-07-05T16:54:24.14325-04:00</Modified>
+      <EntryId>08d3e832-71fb-4d71-b312-1e80f03597a1</EntryId>
+      <Description />
+      <Title>ArgumentException was unhandled by user code. Unable to obtain public key for StrongNameKeyPair</Title>
+      <Categories>ASP.NET MVC;Moq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

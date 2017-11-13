@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-04-07T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Dave! Your refactoring looks more elegant and clean.
+Alternatively, If you feel free to use mvcconrib,
+We can use similiar dynamic OrderBy extension in MvcConrib.Sorting namespace.
+
+using MvcContrib.Sorting;
+
+        public ActionResult Index(string sortColumn, bool? asc)
+        {
+            if (string.IsNullOrWhiteSpace(sortColumn))
+                sortColumn = &amp;quot;Number&amp;quot;;
+
+            asc = asc ?? true;
+            var query = _service.GetTags();
+
+            SortDirection sortDirection = asc == true ? SortDirection.Ascending : SortDirection.Descending;
+            query = query.OrderBy(sortColumn, sortDirection);
+
+            ViewBag.sortColumn = sortColumn;
+            ViewBag.asc = asc.Value;
+
+            return View(query);
+        }
+
+Thanks your kind posting. This is big help to me.</Content>
+      <Created>2011-04-08T02:32:14.565625-04:00</Created>
+      <Modified>2011-04-08T02:32:14.565625-04:00</Modified>
+      <EntryId>b1c79012-0964-4f62-8cc1-2f66b42572ca</EntryId>
+      <TargetTitle>Sorting Columns in MVC3</TargetTitle>
+      <TargetEntryId>7AFE86CC-5177-4CD1-94CC-AD47D8D9AAD4</TargetEntryId>
+      <Author>Sangsu Park</Author>
+      <AuthorEmail>pssblues@gmail.com</AuthorEmail>
+      <AuthorHomepage>http://supremeware.blogspot.com</AuthorHomepage>
+      <AuthorIPAddress>220.244.225.51</AuthorIPAddress>
+      <IsPublic>true</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotSpam</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; InfoPath.2; .NET4.0E)</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>arrive 15 to 20 &lt;a title="mbt shoes" href="http://www.mbt-shoes-outlet.net"&gt;mbt shoes&lt;/a&gt; minutes before the job &lt;a title="mbt sale" href="http://www.mbtshoes4u.net"&gt;mbt sale&lt;/a&gt; interview schedule &lt;a title="runescape items" href="http://www.runescapesaler.com"&gt;runescape items&lt;/a&gt; so &lt;a title="mbt shoes" href="http://www.mbtshoesbox.com"&gt;mbt shoes&lt;/a&gt; that you &lt;a title="runescape accounts" href="http://www.runescapesaler.com"&gt;runescape accounts&lt;/a&gt; get &lt;a title="mbt shoe" href="http://www.mbt-shoes-outlet.net"&gt;mbt shoe&lt;/a&gt; time &lt;a title="runescape powerleveling" href="http://www.runescapesaler.com"&gt;runescape powerleveling&lt;/a&gt; to cool &lt;a title="wholesale fashion jewelry" href="http://www.wholesalejewelrycity.com"&gt;wholesale fashion jewelry&lt;/a&gt; down &lt;a title="mbt shoes outlet" href="http://www.mbt-shoes-outlet.net"&gt;mbt shoes outlet&lt;/a&gt; and &lt;a title="cheap jewelry sale" href="http://www.wholesalejewelrycity.com"&gt;cheap jewelry sale&lt;/a&gt; get &lt;a title="sedu flat iron" href="http://www.chishairstraightener.com/sedu-flat-iron.html"&gt;sedu flat iron&lt;/a&gt; your &lt;a title="mbt walking shoes" href="http://www.mbtfreeshipping.com"&gt;mbt walking shoes&lt;/a&gt; mind &lt;a title="mbt shoes clearance" href="http://www.mbtshoesclearancer.net"&gt;mbt shoes clearance&lt;/a&gt; ready &lt;a title="mbt sandals clearance" href="http://www.sport-shoes-mbt.com"&gt;mbt sandals clearance&lt;/a&gt; for &lt;a title="mbt kisumu" href="http://www.mbtshoesbox.com"&gt;mbt kisumu&lt;/a&gt; the interview Don't worry even &lt;a title="buy mbt shoes" href="http://www.mbtshoesclearancer.net"&gt;buy mbt shoes&lt;/a&gt; the hearing &lt;a title="wholesale jewelry outlet" href="http://www.wholesalejewelrycity.com"&gt;wholesale jewelry outlet&lt;/a&gt; is a problemBasically &lt;a title="mbt sandals" href="http://www.mbtshoesbox.com"&gt;mbt sandals&lt;/a&gt; you are going &lt;a title="uk mbt shoes" href="http://www.mbtshoes5u.net"&gt;uk mbt shoes&lt;/a&gt; to &lt;a title="cheap wholesale jewelry" href="http://www.wholesalejewelrycity.com"&gt;cheap wholesale jewelry&lt;/a&gt; need to &lt;a title="mbt sale" href="http://www.mbtfreeshipping.com"&gt;mbt sale&lt;/a&gt; know &lt;a title="mbt women sandals" href="http://www.sport-shoes-mbt.com"&gt;mbt women sandals&lt;/a&gt; where you &lt;a title="rs money" href="http://www.buyrunescapegolds.com"&gt;rs money&lt;/a&gt; can &lt;a title="runescape gold" href="http://www.buyrunescapegolds.com"&gt;runescape gold&lt;/a&gt; go &lt;a title="cheap runescape money" href="http://www.buyrunescapegolds.com"&gt;cheap runescape money&lt;/a&gt; in &lt;a title="wholesale costume jewelry" href="http://www.wholesalejewelrycity.com"&gt;wholesale costume jewelry&lt;/a&gt; the &lt;a title="runescape money" href="http://www.buyrunescapegolds.com"&gt;runescape money&lt;/a&gt; event &lt;a title="mbt shoes sandals" href="http://www.sport-shoes-mbt.com"&gt;mbt shoes sandals&lt;/a&gt; you are on &lt;a title="mbt shoes" href="http://www.mbtshoesclearancer.net"&gt;mbt shoes&lt;/a&gt; the hunt for &lt;a title="mbt shoes sale" href="http://www.mbt-shoes-outlet.net"&gt;mbt shoes sale&lt;/a&gt; Christian &lt;a title="mbt shoes sale" href="http://www.mbtshoesclearancer.net"&gt;mbt shoes sale&lt;/a&gt; Louboutin high fashion &lt;a title="mbt clearance" href="http://www.mbtshoesclearancer.net"&gt;mbt clearance&lt;/a&gt; shoes &lt;a title="mbt outlet" href="http://www.mbt-shoes-outlet.net"&gt;mbt outlet&lt;/a&gt; and do &lt;a title="authentic mbt shoes" href="http://www.mbtfreeshipping.com"&gt;authentic mbt shoes&lt;/a&gt; a &lt;a title="rs items" href="http://www.runescapesaler.com"&gt;rs items&lt;/a&gt; great &lt;a title="discount mbt shoes" href="http://www.mbtshoesbox.com"&gt;discount mbt shoes&lt;/a&gt; hairstyle to &lt;a title="rs gold" href="http://www.buyrunescapegolds.com"&gt;rs gold&lt;/a&gt; make &lt;a title="wholesale jewelry" href="http://www.wholesalejewelrycity.com"&gt;wholesale jewelry&lt;/a&gt; you &lt;a title="runescape power leveling" href="http://www.runescapesaler.com"&gt;runescape power leveling&lt;/a&gt; more &lt;a title="mbt sandals sale" href="http://www.sport-shoes-mbt.com"&gt;mbt sandals sale&lt;/a&gt; charming &lt;a title="authentic mbt sale" href="http://www.mbtfreeshipping.com"&gt;authentic mbt sale&lt;/a&gt; But straighteners &lt;a title="mbt sandals" href="http://www.sport-shoes-mbt.com"&gt;mbt sandals&lt;/a&gt; proves &lt;a title="mbt shoes" href="http://www.mbtfreeshipping.com"&gt;mbt shoes&lt;/a&gt; to be the &lt;a title="sedu hair straightener" href="http://www.chishairstraightener.com/sedu-flat-iron.html"&gt;sedu hair straightener&lt;/a&gt; best &lt;a title="authentic mbt sale" href="http://www.mbt-shoes-outlet.net/mbt-fora-womens-shoes/"&gt;authentic mbt sale&lt;/a&gt; option &lt;a title="mbt sale uk" href="http://www.mbtshoes2u.net"&gt;mbt sale uk&lt;/a&gt; over &lt;a title="rs powerleveling" href="http://www.runescapesaler.com"&gt;rs powerleveling&lt;/a&gt; the other options as &lt;a title="cheap runescape gold" href="http://www.buyrunescapegolds.com"&gt;cheap runescape gold&lt;/a&gt; it &lt;a title="rs accounts" href="http://www.runescapesaler.com"&gt;rs accounts&lt;/a&gt; does &lt;a title="mbt uk" href="http://www.mbtshoes3u.net"&gt;mbt uk&lt;/a&gt; no &lt;a title="mbt shoes sale uk" href="http://www.mbtshoes6u.net"&gt;mbt shoes sale uk&lt;/a&gt;</Content>
+      <Created>2011-05-02T21:47:59.406-04:00</Created>
+      <Modified>2011-05-02T21:47:59.406-04:00</Modified>
+      <EntryId>93c1d50f-71bd-488c-84cf-9e8c48d14d2d</EntryId>
+      <TargetTitle>Sorting Columns in MVC3</TargetTitle>
+      <TargetEntryId>7AFE86CC-5177-4CD1-94CC-AD47D8D9AAD4</TargetEntryId>
+      <Author>Anine</Author>
+      <AuthorEmail>fbf002@yahoo.cn</AuthorEmail>
+      <AuthorHomepage />
+      <AuthorIPAddress>175.44.7.124</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.16) Gecko/20110319 Firefox/3.6.16</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>44cxQW  &lt;a href="http://wkntgebkblno.com/"&gt;wkntgebkblno&lt;/a&gt;, [url=http://mdgsoqugjfkg.com/]mdgsoqugjfkg[/url], [link=http://tpbdbjgeausy.com/]tpbdbjgeausy[/link], http://qeqemvxlqifk.com/</Content>
+      <Created>2011-12-23T23:53:47.706875-05:00</Created>
+      <Modified>2011-12-23T23:53:47.706875-05:00</Modified>
+      <EntryId>3bea29a5-7825-49f4-aa1a-75e05da56d20</EntryId>
+      <TargetTitle>Sorting Columns in MVC3</TargetTitle>
+      <TargetEntryId>7AFE86CC-5177-4CD1-94CC-AD47D8D9AAD4</TargetEntryId>
+      <Author>syfxjvni</Author>
+      <AuthorEmail>cfmyiw@bctcfy.com</AuthorEmail>
+      <AuthorHomepage>http://2rand[0,1,1]</AuthorHomepage>
+      <AuthorIPAddress>109.230.216.221</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

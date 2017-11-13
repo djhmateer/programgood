@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-09T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.mvcconf.com/"&gt;http://www.mvcconf.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.stevensanderson.com/2011/01/13/scaffold-your-aspnet-mvc-3-project-with-the-mvcscaffolding-package/"&gt;http://blog.stevensanderson.com/2011/01/13/scaffold-your-aspnet-mvc-3-project-with-the-mvcscaffolding-package/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.stevensanderson.com/2011/01/13/mvcscaffolding-standard-usage/"&gt;http://blog.stevensanderson.com/2011/01/13/mvcscaffolding-standard-usage/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;install-package MvcScaffolding&lt;/p&gt;  &lt;p&gt;scaffold controller car&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb.png" width="644" height="374" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;This uses EFCodeFirst (installed as a dependency of MvcScaffolding)&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System.ComponentModel.DataAnnotations;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;namespace&lt;/span&gt; ScaffoldDemo.Models&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Car&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CarID { get; set; }&lt;br /&gt;        [Required]&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Make { get; set; }&lt;br /&gt;        [Required]&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Model { get; set; }&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; Year { get; set; }&lt;br /&gt;    }&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Imported DataAnnotations and made 2 some required.&lt;/p&gt;
+
+&lt;h3&gt;Repository Pattern&lt;/h3&gt;
+
+&lt;p&gt;Currently controller code is directly coupled to the database.&amp;#160; Not good for unit testing.&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; CarsController : Controller&lt;br /&gt;   {&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; ScaffoldDemoContext context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ScaffoldDemoContext();&lt;br /&gt;&lt;br /&gt;       &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;       &lt;span style="color: #008000"&gt;// GET: /Car/&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ViewResult Index()&lt;br /&gt;       {&lt;br /&gt;           &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(context.Cars.ToList());&lt;br /&gt;       }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Scaffold Controller Car –Repository –Force&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_1.png" width="652" height="366" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;So now we could unit test by passing a mock car repository into our controller.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_2.png" width="720" height="317" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;People&lt;/h3&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; PersonId { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Name { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; EmailAddress { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Scaffold Controller Person –Repository &lt;/p&gt;
+
+&lt;p&gt;This makes the controller, views and updates the context.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_3.png" width="720" height="317" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;1 Person has Many Cars&lt;/h3&gt;
+
+&lt;p&gt;add in a PersonId field into car&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_10.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_4.png" width="287" height="191" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Scaffold Controller Car -Repository –Force&lt;/p&gt;
+
+&lt;p&gt;Scaffold Controller Person -Repository –Force&lt;/p&gt;
+
+&lt;p&gt;Add a few people into /People, then in /Cars&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_12.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_5.png" width="340" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Better way which shows more data:
+  &lt;br /&gt;&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Car&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CarID { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Make { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Model { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; Year { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; PersonId { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// so we can get the name of the person when showing the car&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// 1 person can have many cars&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;virtual&lt;/span&gt; Person Person { get; set; } &lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; PersonId { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Name { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; EmailAddress { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// 1 person can have many cars.&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// virtual for EF eager load&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;virtual&lt;/span&gt; ICollection&amp;lt;Car&amp;gt; Cars { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_14.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_6.png" width="678" height="346" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_16.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_7.png" width="678" height="346" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;How did it know to display Person.Name?&amp;#160; There is a convention eg Name, Subject etc..&lt;/p&gt;
+
+&lt;h3&gt;T4 Templating&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_18.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MvcScaffolding_9308/image_thumb_8.png" width="765" height="271" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;He implements a grid.&lt;/p&gt;</Content>
+      <Created>2011-03-10T18:36:47.907125-05:00</Created>
+      <Modified>2011-03-10T18:36:47.907125-05:00</Modified>
+      <EntryId>821fc944-78ca-425e-a8ee-3450e6495860</EntryId>
+      <Description />
+      <Title>Steve Sanderson - MvcScaffolding</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Had to install Powershell 2 (running XP).&lt;/p&gt;  &lt;p&gt;install-package EFCodeFirst.SqlServerCompact&amp;#160;&amp;#160; (just need to do tab after EF to get code completion)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_thumb.png" width="644" height="181" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_thumb_1.png" width="644" height="352" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Using static so don’t have to new up the ComicDemo here:&lt;/p&gt;  &lt;p&gt;This will add 3 new comics each time /home/showcomics is called!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_thumb_2.png" width="441" height="268" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_thumb_3.png" width="479" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;h4&gt;MVCScaffolding&lt;/h4&gt;  &lt;p&gt;install-package MvcScaffolding&lt;/p&gt;  &lt;p&gt;scaffold controller comicbook&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCConf_F31C/image_thumb_4.png" width="510" height="408" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;What his did:&lt;/p&gt;  &lt;p&gt;Scaffolding ComicBooksController...    &lt;br /&gt;Added controller 'Controllers\ComicBooksController.cs'     &lt;br /&gt;Added database context 'Models\MvcApplication2Context.cs'     &lt;br /&gt;Added 'ComicBooks' to database context 'Models\MvcApplication2Context.cs'     &lt;br /&gt;Added Create view at 'Views\ComicBooks\Create.cshtml'     &lt;br /&gt;Added Edit view at 'Views\ComicBooks\Edit.cshtml'     &lt;br /&gt;Added Delete view at 'Views\ComicBooks\Delete.cshtml'     &lt;br /&gt;Added Details view at 'Views\ComicBooks\Details.cshtml'     &lt;br /&gt;Added Index view at 'Views\ComicBooks\Index.cshtml'     &lt;br /&gt;Added _CreateOrEdit view at 'Views\ComicBooks\_CreateOrEdit.cshtml'&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;So have full working CRUD on 1 class – ComicBook.&lt;/p&gt;</Content>
+      <Created>2011-03-10T16:32:51.17275-05:00</Created>
+      <Modified>2011-03-10T16:32:51.17275-05:00</Modified>
+      <EntryId>4e86fd15-df8b-4041-b4ff-3b7845337aa1</EntryId>
+      <Description />
+      <Title>Phil Haack ComicBook Demo</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;As there is no template currently for MVC and Azure on 1.3:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.smarx.com/posts/asp-net-mvc-in-windows-azure"&gt;http://blog.smarx.com/posts/asp-net-mvc-in-windows-azure&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.jimandkatrin.com/CodeBlog/post/MVC3-in-Azure.aspx"&gt;http://www.jimandkatrin.com/CodeBlog/post/MVC3-in-Azure.aspx&lt;/a&gt; – Logging too&lt;/p&gt;  &lt;p&gt;&lt;a href="http://nerdwords.blogspot.com/2011/02/setting-up-mvc-3-for-azure-with_27.html"&gt;http://nerdwords.blogspot.com/2011/02/setting-up-mvc-3-for-azure-with_27.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3andAzure_E9F5/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3andAzure_E9F5/image_thumb.png" width="644" height="348" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;The trick to getting it working on Azure was to populate the database first.&amp;#160; If not then a it gave a very generic error.&lt;/p&gt;</Content>
+      <Created>2011-03-09T22:38:27.98525-05:00</Created>
+      <Modified>2011-03-10T14:48:56.6415-05:00</Modified>
+      <EntryId>2e6a8476-a4ae-402e-ba8d-52c398512017</EntryId>
+      <Description />
+      <Title>MVC3 Azure and Movie App</Title>
+      <Categories>Azure;MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://mvcmusicstore.codeplex.com/"&gt;http://mvcmusicstore.codeplex.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.asp.net/mvc/tutorials/mvc-music-store-part-1"&gt;http://www.asp.net/mvc/tutorials/mvc-music-store-part-1&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_thumb.png" width="644" height="361" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;h3&gt;Enumerating a List&lt;/h3&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; StoreController : Controller&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;// GET: /Store/&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index()&lt;br /&gt;        {&lt;br /&gt;            var genres = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;Genre&amp;gt; {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Genre { Name = &lt;span style="color: #006080"&gt;&amp;quot;Disco&amp;quot;&lt;/span&gt; },&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Genre { Name = &lt;span style="color: #006080"&gt;&amp;quot;Jazz&amp;quot;&lt;/span&gt; },&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Genre { Name = &lt;span style="color: #006080"&gt;&amp;quot;Rock&amp;quot;&lt;/span&gt; }&lt;br /&gt;            };&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(genres);&lt;br /&gt;        }&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;Then in the razor:&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;@model IEnumerable&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;MvcMusicStore.Models.Genre&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;@{&lt;br /&gt;    ViewBag.Title = &amp;quot;Store&amp;quot;;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;h3&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;Browse Genres&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;h3&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;p&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;Select from @Model.Count() genres:&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;p&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;ul&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;@foreach (var genre in Model)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;li&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;@genre.Name&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;li&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    }&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;ul&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+Very nice
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_thumb_1.png" width="244" height="216" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;h3&gt;Hyperlinks&lt;/h3&gt;
+
+&lt;div&gt;This works, but if we renamed our controller then it would break.&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;ul&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;@foreach (var genre in Model)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;li&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;a&lt;/span&gt; &lt;span style="color: #ff0000"&gt;href&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;/Store/Browse?genre=@genre.Name&amp;quot;&lt;/span&gt;@&lt;span style="color: #ff0000"&gt;genre&lt;/span&gt;.&lt;span style="color: #ff0000"&gt;Name&lt;/span&gt;&amp;amp;&lt;span style="color: #ff0000"&gt;lt&lt;/span&gt;;/&lt;span style="color: #ff0000"&gt;a&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;li&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    }&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;ul&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;h3&gt;Query Result Shaping&lt;/h3&gt;
+
+&lt;div&gt;When /Store/Browse?genre=Rock&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVCMusicStore_DF92/image_thumb_2.png" width="244" height="135" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// GET: /Store/Browse?genre=Disco&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Browse(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; genre)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Retrieve Genre and its associated albums from database&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//var genreModel = storeDB.Genres.Include(&amp;quot;Albums&amp;quot;).Single(g =&amp;gt; g.Name == genre);&lt;/span&gt;&lt;br /&gt;    var genreModel = storeDB.Genres.Single(g =&amp;gt; g.Name == genre);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(genreModel);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;I’m just displaying the name of the entity passed to the view, which is Rock.&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;h2&amp;gt;&lt;br /&gt;    Browsing Genre: @Model.Name&amp;lt;/h2&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;We can take advantage of EF’s feature to get other related entities ie Albums.&amp;#160; This allows us to pre fetch the albums.&amp;#160; Eager loading.&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;ActionLink() makes it easy to build &amp;lt;a&amp;gt; links and takes care url path encoding.&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;p&gt;Interesting Truncate method for HtmlHelper&lt;/p&gt;
+
+&lt;p&gt;Dropdowns (Html.DropDownList)&lt;/p&gt;
+
+&lt;p&gt;Role based authrorization on admin&lt;/p&gt;
+
+&lt;p&gt;ViewModels (page 108)&lt;/p&gt;
+
+&lt;p&gt;Ajax.ActionLink (instead of Html.ActionLink) to remove items from cart.&lt;/p&gt;
+
+&lt;h3&gt;Problem with web.config&lt;/h3&gt;
+
+&lt;p&gt;Account creation was unsuccessful. Please correct the errors and try again.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The password retrieval answer provided is invalid. Please check the value and try again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://mvcmusicstore.codeplex.com/discussions/233520"&gt;http://mvcmusicstore.codeplex.com/discussions/233520&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Strange issue, as I’m sure it worked yesterday.&amp;#160; This may not be quite right, but gets it working.&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color: #800000"&gt;xml&lt;/span&gt; &lt;span style="color: #ff0000"&gt;version&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;1.0&amp;quot;&lt;/span&gt;?&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;&amp;lt;!--&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;  For more information on how to configure your ASP.NET application, please visit&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;  http://go.microsoft.com/fwlink/?LinkId=152368&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;  --&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;configuration&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;connectionStrings&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;ApplicationServices&amp;quot;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #ff0000"&gt;connectionString&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true&amp;quot;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #ff0000"&gt;providerName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Data.SqlClient&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;MusicStoreEntities&amp;quot;&lt;/span&gt;&lt;br /&gt;         &lt;span style="color: #ff0000"&gt;connectionString&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\MvcMusicStore.mdf;User Instance=true&amp;quot;&lt;/span&gt;&lt;br /&gt;         &lt;span style="color: #ff0000"&gt;providerName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Data.SqlClient&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;connectionStrings&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;appSettings&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;key&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;ClientValidationEnabled&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;value&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt; &lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;key&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;UnobtrusiveJavaScriptEnabled&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;value&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt; &lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;appSettings&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;system.web&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;compilation&lt;/span&gt; &lt;span style="color: #ff0000"&gt;debug&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;targetFramework&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;4.0&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;assemblies&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;assembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;assembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;assembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;assembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;assembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;assemblies&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;compilation&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;authentication&lt;/span&gt; &lt;span style="color: #ff0000"&gt;mode&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;Forms&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;forms&lt;/span&gt; &lt;span style="color: #ff0000"&gt;loginUrl&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;~/Account/LogOn&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;timeout&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;2880&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;authentication&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;membership&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;clear&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;AspNetSqlMembershipProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;type&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Security.SqlMembershipProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;connectionStringName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;ApplicationServices&amp;quot;&lt;/span&gt;&lt;br /&gt;             &lt;span style="color: #ff0000"&gt;enablePasswordRetrieval&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;enablePasswordReset&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;requiresQuestionAndAnswer&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;requiresUniqueEmail&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br /&gt;             &lt;span style="color: #ff0000"&gt;maxInvalidPasswordAttempts&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;5&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;minRequiredPasswordLength&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;6&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;minRequiredNonalphanumericCharacters&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;passwordAttemptWindow&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;10&amp;quot;&lt;/span&gt;&lt;br /&gt;             &lt;span style="color: #ff0000"&gt;applicationName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;membership&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;profile&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;clear&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;AspNetSqlProfileProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;type&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Profile.SqlProfileProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;connectionStringName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;ApplicationServices&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;applicationName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;profile&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;roleManager&lt;/span&gt; &lt;span style="color: #ff0000"&gt;enabled&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;clear&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;AspNetSqlRoleProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;type&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Security.SqlRoleProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;connectionStringName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;ApplicationServices&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;applicationName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;AspNetWindowsTokenRoleProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;type&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Security.WindowsTokenRoleProvider&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;applicationName&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;providers&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;roleManager&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;pages&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;namespaces&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Helpers&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Mvc&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Mvc.Ajax&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Mvc.Html&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Routing&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;add&lt;/span&gt; &lt;span style="color: #ff0000"&gt;namespace&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.WebPages&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;namespaces&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;pages&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;system.web&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;system.webServer&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;validation&lt;/span&gt; &lt;span style="color: #ff0000"&gt;validateIntegratedModeConfiguration&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;modules&lt;/span&gt; &lt;span style="color: #ff0000"&gt;runAllManagedModulesForAllRequests&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;system.webServer&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;runtime&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;assemblyBinding&lt;/span&gt; &lt;span style="color: #ff0000"&gt;xmlns&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;urn:schemas-microsoft-com:asm.v1&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;dependentAssembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;assemblyIdentity&lt;/span&gt; &lt;span style="color: #ff0000"&gt;name&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;System.Web.Mvc&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;publicKeyToken&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;31bf3856ad364e35&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;bindingRedirect&lt;/span&gt; &lt;span style="color: #ff0000"&gt;oldVersion&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;1.0.0.0-2.0.0.0&amp;quot;&lt;/span&gt; &lt;span style="color: #ff0000"&gt;newVersion&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;3.0.0.0&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;/&amp;gt;&lt;/span&gt;&lt;br /&gt;      &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;dependentAssembly&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;assemblyBinding&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;runtime&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;  &lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;configuration&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Images from the database&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://forums.asp.net/p/1652452/4299847.aspx/1?How+to+load+image+from+database+in+mvcmusicstore+sample"&gt;http://forums.asp.net/p/1652452/4299847.aspx/1?How+to+load+image+from+database+in+mvcmusicstore+sample&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-09T22:37:55.79775-05:00</Created>
+      <Modified>2011-03-11T02:10:48.04775-05:00</Modified>
+      <EntryId>3e1636e9-a49e-4428-8a49-4ecc5b872f49</EntryId>
+      <Description />
+      <Title>MVC Music Store</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.pluralsight-training.net/microsoft/players/PSODPlayer.aspx?author=scott-allen&amp;amp;name=mvc3-introduction&amp;amp;mode=live&amp;amp;clip=0&amp;amp;course=aspdotnet-mvc3"&gt;http://www.pluralsight-training.net/microsoft/players/PSODPlayer.aspx?author=scott-allen&amp;amp;name=mvc3-introduction&amp;amp;mode=live&amp;amp;clip=0&amp;amp;course=aspdotnet-mvc3&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_DB41/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_DB41/image_thumb.png" width="350" height="142" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// id is in routes somewhere so mvc knows already to pass it through.&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Hello(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; id)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; Content(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;.Format(&lt;span style="color: #006080"&gt;&amp;quot;Hello world {0}&amp;quot;&lt;/span&gt;, id));&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5&gt;Query String&lt;/h5&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_DB41/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_DB41/image_thumb_1.png" width="404" height="100" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Hello(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; name)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; Content(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;.Format(&lt;span style="color: #006080"&gt;&amp;quot;Hello world {0}&amp;quot;&lt;/span&gt;, name));&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-09T21:39:35.500875-05:00</Created>
+      <Modified>2011-03-09T21:39:35.500875-05:00</Modified>
+      <EntryId>f1780617-a49a-445e-b205-b435ca762e07</EntryId>
+      <Description />
+      <Title>MVC3 PluralSight Video</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;h5&gt;ViewBag&lt;/h5&gt;  &lt;p&gt;Convenient late-bound way to pass bits of information to a view.&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// GET: /HelloWorld/Welcome&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Welcome(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; name, &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numTimes = 1)&lt;br /&gt;{&lt;br /&gt;    ViewBag.Message = &lt;span style="color: #006080"&gt;&amp;quot;Hello &amp;quot;&lt;/span&gt; + name;&lt;br /&gt;    ViewBag.NumTimes = numTimes;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View();&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;h5&gt;String Formatting in Razor&lt;/h5&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @String.Format(&amp;quot;{0:d}&amp;quot;, item.ReleaseDate)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @item.Genre&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @String.Format(&amp;quot;{0:c}&amp;quot;, item.Price)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;td&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Date {0:g} to {0:d} (that is, from general date to short date).&lt;/p&gt;
+
+&lt;p&gt;Price property from {0:F} to {0:c} (from float to currency).&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h5&gt;Keyboard Shortcuts&lt;/h5&gt;
+
+&lt;p&gt;Don’t seem to work.. however Right Click keyboard next to space, then go to Controller is useful.&lt;/p&gt;
+
+&lt;p&gt;Ctrl M Ctrl C – Add Controller&lt;/p&gt;
+
+&lt;p&gt;Ctrl M Ctl V – Add View&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h5&gt;HTML Helper Methods&lt;/h5&gt;
+
+&lt;p&gt;Html.LabelFor – displays the name of the field&lt;/p&gt;
+
+&lt;p&gt;Html.EditorFor – displays an input element where the user can enter a value.&lt;/p&gt;
+
+&lt;p&gt;Html.ValidationMessageFor&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt; &lt;span style="color: #ff0000"&gt;class&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;editor-label&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @Html.LabelFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.Title)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt; &lt;span style="color: #ff0000"&gt;class&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;editor-field&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @Html.EditorFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.Title)&lt;br /&gt;    @Html.ValidationMessageFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.Title)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt; &lt;span style="color: #ff0000"&gt;class&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;editor-label&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @Html.LabelFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.ReleaseDate)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt; &lt;span style="color: #ff0000"&gt;class&lt;/span&gt;&lt;span style="color: #0000ff"&gt;=&amp;quot;editor-field&amp;quot;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;br /&gt;    @Html.EditorFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.ReleaseDate)&lt;br /&gt;    @Html.ValidationMessageFor(model =&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt; model.ReleaseDate)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color: #800000"&gt;div&lt;/span&gt;&lt;span style="color: #0000ff"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h5&gt;Posting&lt;/h5&gt;
+
+&lt;p&gt;In the controller:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[HttpPost]&lt;br /&gt; public ActionResult Create(string title, DateTime releaseDate, string genre, decimal price)&lt;br /&gt; {&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[HttpPost]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Create(Movie newMovie) &lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (ModelState.IsValid) &lt;br /&gt;    {&lt;br /&gt;        db.Movies.Add(newMovie);&lt;br /&gt;        db.SaveChanges();&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;&amp;quot;Index&amp;quot;&lt;/span&gt;);&lt;br /&gt;    } &lt;br /&gt;    &lt;span style="color: #0000ff"&gt;else&lt;/span&gt; &lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(newMovie);&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h5&gt;MovieInitializer&lt;/h5&gt;
+
+&lt;p&gt;If the model changes in the code, this provides a way to recreate the db put in sample data.&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MovieInitializer : DropCreateDatabaseIfModelChanges&amp;lt;MovieDBContext&amp;gt;&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;override&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Seed(MovieDBContext context)&lt;br /&gt;    {&lt;br /&gt;        var movies = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;Movie&amp;gt; { &lt;br /&gt;&lt;br /&gt;             &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie { Title = &lt;span style="color: #006080"&gt;&amp;quot;When Harry Met Sally&amp;quot;&lt;/span&gt;,  &lt;br /&gt;                         ReleaseDate=DateTime.Parse(&lt;span style="color: #006080"&gt;&amp;quot;1989-1-11&amp;quot;&lt;/span&gt;),  &lt;br /&gt;                         Genre=&lt;span style="color: #006080"&gt;&amp;quot;Romantic Comedy&amp;quot;&lt;/span&gt;, &lt;br /&gt;                         Rating=&lt;span style="color: #006080"&gt;&amp;quot;R&amp;quot;&lt;/span&gt;, &lt;br /&gt;                         Price=7.00M}, &lt;br /&gt;&lt;br /&gt;             &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Movie { Title = &lt;span style="color: #006080"&gt;&amp;quot;Ghostbusters 2&amp;quot;&lt;/span&gt;,  &lt;br /&gt;                         ReleaseDate=DateTime.Parse(&lt;span style="color: #006080"&gt;&amp;quot;1986-2-23&amp;quot;&lt;/span&gt;),  &lt;br /&gt;                         Genre=&lt;span style="color: #006080"&gt;&amp;quot;Comedy&amp;quot;&lt;/span&gt;, &lt;br /&gt;                         Rating=&lt;span style="color: #006080"&gt;&amp;quot;R&amp;quot;&lt;/span&gt;, &lt;br /&gt;                         Price=9.00M},  &lt;br /&gt;         };&lt;br /&gt;&lt;br /&gt;        movies.ForEach(d =&amp;gt; context.Movies.Add(d));&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;then wire up:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_Start()&lt;br /&gt;{&lt;br /&gt;   DbDatabase.SetInitializer&amp;lt;MovieDBContext&amp;gt;(&lt;span style="color: #0000ff"&gt;new&lt;/span&gt; MovieInitializer());&lt;br /&gt;&lt;br /&gt;   AreaRegistration.RegisterAllAreas();&lt;br /&gt;   RegisterGlobalFilters(GlobalFilters.Filters);&lt;br /&gt;   RegisterRoutes(RouteTable.Routes);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h5&gt;Setting Precision in DB&lt;/h5&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MovieDBContext : DbContext&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DbSet&amp;lt;Movie&amp;gt; Movies { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;override&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; OnModelCreating(ModelBuilder modelBuilder)&lt;br /&gt;    {&lt;br /&gt;        modelBuilder.Entity&amp;lt;Movie&amp;gt;().Property(p =&amp;gt; p.Price).HasPrecision(18, 2);&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_thumb_1.png" width="644" height="392" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h5&gt;Validation&lt;/h5&gt;
+
+&lt;p&gt;Add to the Model and then it is enforced everywhere in the app.&lt;/p&gt;
+
+&lt;p&gt;System.ComponentModel.Validation – can apply to any class or property&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[Required(ErrorMessage = &lt;span style="color: #006080"&gt;&amp;quot;Genre must be specified&amp;quot;&lt;/span&gt;)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Genre { get; set; }&lt;br /&gt;&lt;br /&gt;[Required(ErrorMessage = &lt;span style="color: #006080"&gt;&amp;quot;Price Required&amp;quot;&lt;/span&gt;)]&lt;br /&gt;[Range(1, 100, ErrorMessage = &lt;span style="color: #006080"&gt;&amp;quot;Price must be between $1 and $100&amp;quot;&lt;/span&gt;)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;decimal&lt;/span&gt; Price { get; set; }&lt;br /&gt;&lt;br /&gt;[StringLength(5)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Rating { get; set; }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;EF will enforce too as well as the front end – both Javascript,(jquery.validate?) and serverside.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_thumb_2.png" width="453" height="651" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h5&gt;Update&lt;/h5&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[HttpPost]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Edit(Movie model)&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;try&lt;/span&gt;&lt;br /&gt;    {&lt;br /&gt;        var movie = db.Movies.Find(model.ID);&lt;br /&gt;&lt;br /&gt;        UpdateModel(movie);&lt;br /&gt;        db.SaveChanges();&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;&amp;quot;Details&amp;quot;&lt;/span&gt;, &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { id = model.ID });&lt;br /&gt;    }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;catch&lt;/span&gt; (Exception)&lt;br /&gt;    {&lt;br /&gt;        ModelState.AddModelError(&lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;Edit Failure, see inner exception&amp;quot;&lt;/span&gt;);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(model);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;UpdateModel(movie) copies the edited data in model into the movie in the db.&lt;/p&gt;
+
+&lt;h5&gt;Cloudifying&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3_AD07/image_thumb_3.png" width="644" height="443" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;The database had been created in SQLServerExpress.&amp;#160; I then added this user as an owner / admin for the whole system (dev only!)&lt;/p&gt;</Content>
+      <Created>2011-03-09T21:34:27.454-05:00</Created>
+      <Modified>2011-03-09T21:34:27.454-05:00</Modified>
+      <EntryId>8037641a-d388-4753-a546-4b89c126a49f</EntryId>
+      <Description />
+      <Title>MVC3</Title>
+      <Categories>MVC;Razor</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

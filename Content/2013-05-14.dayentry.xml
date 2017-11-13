@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-05-13T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Exploring how to program for an MSI 7970 graphics card.&lt;/p&gt;  &lt;p&gt;openCL&lt;/p&gt;  &lt;p&gt;AMD Catalyst Driver 12.10 driver suite for Radeon    &lt;br /&gt;MSI 7970     &lt;br /&gt;&lt;a href="http://support.amd.com/us/kbarticles/Pages/Catalystbetadriver1.aspx"&gt;http://support.amd.com/us/kbarticles/Pages/Catalystbetadriver1.aspx&lt;/a&gt;     &lt;br /&gt;170MB&lt;/p&gt;  &lt;p&gt;AMD APP SDK 2.8 - 180MB    &lt;br /&gt;AMD Acceleratd Parallel Processing SDK is a .. apps accelerated b AMD Stream Technology     &lt;br /&gt;Installed driver for CPU only&lt;/p&gt;  &lt;p&gt;PDF guide from main menu    &lt;br /&gt;samples in My Documents/AMD&lt;/p&gt;  &lt;p&gt;&amp;#160;&amp;#160;&amp;#160; can get samples working!&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/OpenCL_11395/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/OpenCL_11395/image_thumb.png" width="503" height="202" /&gt;&lt;/a&gt;     &lt;br /&gt;Got a binarySearch working in C++ on the CPU – as laptop had a NVidia card&amp;#160; and these examples were against AMD GPU.&lt;/p&gt;  &lt;p&gt;   &lt;br /&gt;nvidia latest supports cuda     &lt;br /&gt;&lt;a href="http://www.nvidia.co.uk/object/notebook-win8-win7-64bit-314.22-whql-driver-uk.html"&gt;http://www.nvidia.co.uk/object/notebook-win8-win7-64bit-314.22-whql-driver-uk.html&lt;/a&gt;     &lt;br /&gt;215MB     &lt;br /&gt;2013.03.25     &lt;br /&gt;314.22 &lt;/p&gt;</Content>
+      <Created>2013-05-14T07:03:10.3472117-04:00</Created>
+      <Modified>2013-05-14T07:03:31.0118102-04:00</Modified>
+      <EntryId>77e90022-9cc2-42b5-90fd-63be2c3562e2</EntryId>
+      <Description />
+      <Title>OpenCL</Title>
+      <Categories>Cuda;GPGPU;OpenCL</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;SQL Server diagrams are simple and useful, but when backup and restore they don’t get coppied. &lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.conceptdevelopment.net/Database/ScriptDiagram2008/" href="http://www.conceptdevelopment.net/Database/ScriptDiagram2008/"&gt;http://www.conceptdevelopment.net/Database/ScriptDiagram2008/&lt;/a&gt;&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Add sproc to the DB you want to export diagram&lt;/li&gt;    &lt;li&gt;Run sproc&lt;/li&gt;    &lt;li&gt;Copy and paste generated SQL, and run it on new DB you want to import the diagram to&lt;/li&gt; &lt;/ul&gt;</Content>
+      <Created>2013-05-14T07:37:52.8472627-04:00</Created>
+      <Modified>2013-05-14T07:37:52.8472627-04:00</Modified>
+      <EntryId>90bd44cf-624b-4971-977c-84a9df5ad21b</EntryId>
+      <Description />
+      <Title>Copy SQL Server Diagrams to another DB</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

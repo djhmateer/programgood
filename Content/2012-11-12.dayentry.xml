@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-11T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Ctrl R T – Run tests in Debug in Current Context&lt;/p&gt;  &lt;p&gt;use Debug.WriteLine&lt;/p&gt;  &lt;p&gt;Then look in the debug output window&lt;/p&gt;</Content>
+      <Created>2012-11-12T10:40:00.7543133-05:00</Created>
+      <Modified>2012-11-12T10:40:00.7543133-05:00</Modified>
+      <EntryId>7160d0d5-6618-434b-8808-1f538f38c94f</EntryId>
+      <Description />
+      <Title>VS2012 Testing and Output to console</Title>
+      <Categories>mstest;Testing;VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

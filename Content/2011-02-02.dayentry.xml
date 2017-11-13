@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-01T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/85353/best-general-svn-ignore-pattern"&gt;http://stackoverflow.com/questions/85353/best-general-svn-ignore-pattern&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-02T18:34:46.156875-05:00</Created>
+      <Modified>2011-02-02T18:34:46.156875-05:00</Modified>
+      <EntryId>273ff416-880d-4eea-b6cd-accb0bb828f4</EntryId>
+      <Description />
+      <Title>SVN Ignore Pattern</Title>
+      <Categories>Subversion</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Open Win 7 command prompt as administrator&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.tothepc.com/archives/windows7-command-prompt-administrator-rights/"&gt;http://www.tothepc.com/archives/windows7-command-prompt-administrator-rights/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Copy 2 dlls from GAC to root of c&lt;/p&gt;  &lt;p&gt;Microsoft.ReportViewer.ProcessingObjectModel.dll &lt;/p&gt;  &lt;p&gt;Mircosoft.RevportViewer.DataVisualization.dll&lt;/p&gt;  &lt;p&gt;cd C:\WINDOWS\ASSEMBLY\GAC_MSIL\Microsoft.ReportViewer.ProcessingObjectModel&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blogs.msdn.com/b/sqlazure/archive/2010/08/17/10051010.aspx"&gt;http://blogs.msdn.com/b/sqlazure/archive/2010/08/17/10051010.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-02T17:32:26.9225-05:00</Created>
+      <Modified>2011-02-02T17:32:26.9225-05:00</Modified>
+      <EntryId>43c36427-57a8-4c80-bc14-385f60c68f21</EntryId>
+      <Description />
+      <Title>Report Viewer Control in Azure</Title>
+      <Categories>Azure;Report Viewer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.computingunleashed.com/speed-up-windows-7-ultimate-guide-to.html"&gt;http://www.computingunleashed.com/speed-up-windows-7-ultimate-guide-to.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.computingunleashed.com/list-of-services-in-windows-7-that-can.html"&gt;http://www.computingunleashed.com/list-of-services-in-windows-7-that-can.html&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-02T01:02:34.0625781-05:00</Created>
+      <Modified>2011-02-02T01:02:34.0625781-05:00</Modified>
+      <EntryId>775cbbcc-1cfe-46e9-88e8-a5fd1b99d7e5</EntryId>
+      <Description />
+      <Title>Windows 7 Faster</Title>
+      <Categories>Windows 7</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

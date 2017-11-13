@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-14T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_thumb.png" width="671" height="379" /&gt;&lt;/a&gt;     &lt;br /&gt;PhotoViewer app is the sample Lab app getting photos async from Flickr.&lt;/p&gt;  &lt;p&gt;Also more labs on photoviewer here:&lt;/p&gt;  &lt;p&gt;Work\Win8\Labs More Win8…&lt;/p&gt;  &lt;p&gt;and the sample Wood Grove Bank&amp;#160; we worked on (with live tiles)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_10.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_thumb_4.png" width="717" height="406" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_12.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_thumb_5.png" width="718" height="406" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_14.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Win8-Samples_BE26/image_thumb_6.png" width="719" height="406" /&gt;&lt;/a&gt;     &lt;br /&gt;Left hand side green Wood Grove Bank live tile.&lt;/p&gt;</Content>
+      <Created>2012-10-15T08:43:11.7231547-04:00</Created>
+      <Modified>2012-10-17T10:54:40.0872748-04:00</Modified>
+      <EntryId>cd60dead-2c57-4cee-8e94-b7682450f400</EntryId>
+      <Description />
+      <Title>Win8 Samples</Title>
+      <Categories>Windows 8</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-16T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Also good ref sites are: &lt;a href="http://www.johnpapa.net"&gt;www.johnpapa.net&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://skywalkersoftwaredevelopment.net/blog/writing-an-orchard-webshop-module-from-scratch-part-1"&gt;http://skywalkersoftwaredevelopment.net/blog/writing-an-orchard-webshop-module-from-scratch-part-1&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-04-17T08:55:53.5825-04:00</Created>
+      <Modified>2012-04-17T08:56:04.55125-04:00</Modified>
+      <EntryId>e5ec86e5-7977-4bec-bfc1-be97efdaee09</EntryId>
+      <Description />
+      <Title>Orchard Reference Sites</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;h3&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Performance_BECF/image_thumb%5B11%5D_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image_thumb[11]" border="0" alt="image_thumb[11]" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Performance_BECF/image_thumb%5B11%5D_thumb.png" width="554" height="388" /&gt;&lt;/a&gt;&lt;/h3&gt;  &lt;p&gt;and have turned off worker process recycling in Performance too.&lt;/p&gt;  &lt;p&gt;Trust level is set to full in web.config, and debug is set to false.&lt;/p&gt;</Content>
+      <Created>2012-04-17T08:55:15.441875-04:00</Created>
+      <Modified>2012-04-17T08:55:15.441875-04:00</Modified>
+      <EntryId>f0426fba-7042-4ad6-bd6a-73af77e6a4f0</EntryId>
+      <Description />
+      <Title>Orchard Performance</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;From 4 part video by Brent Arias &lt;a href="http://www.ariasamp.net/"&gt;http://www.ariasamp.net/&lt;/a&gt; linked on &lt;a href="http://www.orchardproject.net"&gt;www.orchardproject.net&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb.png" width="644" height="360" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;adding in a subtitle to the minty theme&lt;/p&gt;  &lt;p&gt;Downloading Modules – Bing Maps and Image Gallery&lt;/p&gt;  &lt;p&gt;Adding them into the page via Widgets again:&amp;#160; (found that with Multiple themese installed, I had to disable other themes and only have the enabled one that I want to work).&lt;/p&gt;  &lt;h3&gt;Image Gallery&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_1.png" width="244" height="147" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;impressive and has nice lightbox feature.&lt;/p&gt;  &lt;p&gt;Trying to go live – have copied the database up to live using generate scripts and this to do a complete blank of the tables:&lt;/p&gt;  &lt;p&gt;exec sp_msforeachtable 'DROP TABLE ?'&lt;/p&gt;  &lt;p&gt;want to exclude settings.txt when I do a deploy as it overwrites the db connection string on the live server.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image7.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image7_thumb.png" width="244" height="138" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;bin\orchard&lt;/p&gt;  &lt;p&gt;if problems then can remove stuff from here.&lt;/p&gt;  &lt;h2&gt;Content Types&lt;/h2&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_16.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_7.png" width="644" height="289" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;going into Content Types, Blog&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_18.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_8.png" width="644" height="468" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;adding a Body part which allows us to use html&lt;/p&gt;  &lt;p&gt;Added in a blog, and a blog post.&amp;#160; However only get the first 120 characters of the blog and not the whole article which is annoying.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_20.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_9.png" width="644" height="272" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Add in Designer Tools – going for a Shape Tracing feature.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_22.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_10.png" width="644" height="432" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;shape tracing&lt;/p&gt;  &lt;p&gt;Content Type&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_24.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_11.png" width="244" height="174" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;now can see the entire blogpost&lt;/p&gt;  &lt;p&gt;Top Level Zones / Content Types / Local Zones&lt;/p&gt;  &lt;p&gt;Keep changes in a theme (or ideally a new one)&lt;/p&gt;  &lt;h3&gt;No Tags&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_28.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_13.png" width="244" height="107" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;change footer:31 to -&lt;/p&gt;  &lt;h3&gt;No Comments&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_30.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_14.png" width="644" height="261" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;but this is in the Module..bad practice to edit directly.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_32.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_15.png" width="244" height="188" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Footer is the zone.&lt;/p&gt;  &lt;h3&gt;Layers&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_34.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_16.png" width="279" height="413" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Creating a custom layer so that the image gallery will display only when the user is authenticated and not on home page.&lt;/p&gt;  &lt;h3&gt;Users&lt;/h3&gt;  &lt;p&gt;Add new users into Roles which are settable.&amp;#160; The roles just are reallly what is allowed in the back end.&lt;/p&gt;  &lt;p&gt;If want users to see different content on the front end then look at module Quanta&lt;/p&gt;  &lt;h3&gt;Eventing / Messaging&lt;/h3&gt;  &lt;p&gt;.. eg if anyone leaves a comment then we want an email.&lt;/p&gt;  &lt;h2&gt;Book Review Widget&lt;/h2&gt;  &lt;p&gt;Content Type has Content Parts&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_11.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_2.png" width="195" height="277" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;content type is book review, content parts are: Body, Containable (lists) and Tags&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_13.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Customising-Orchard_B7A2/image_thumb_3.png" width="288" height="312" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;have added 2 custom fields&lt;/p&gt;</Content>
+      <Created>2012-04-17T08:54:25.48875-04:00</Created>
+      <Modified>2012-04-17T08:54:25.48875-04:00</Modified>
+      <EntryId>ff505b42-0865-4037-9705-5fc9a1367c3f</EntryId>
+      <Description />
+      <Title>Customising Orchard</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;rom VS2010 command prompt.. build “compile;package” from c:\dev\orchard\hg&lt;/p&gt;  &lt;p&gt;then package is … but got issues with newly installed image modules&lt;/p&gt;    &lt;p&gt;error when building and using imagegallery.&lt;/p&gt;  &lt;p&gt;Tried disabling it on the interface and removing from front end, however it is still in the solution.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://stefantsov.com/msbuild-and-msdeploy-for-orchard"&gt;http://stefantsov.com/msbuild-and-msdeploy-for-orchard&lt;/a&gt; – deploying with MSBUILD&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Deploying_BEF1/image_thumb5_thumb_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image_thumb5_thumb" border="0" alt="image_thumb5_thumb" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Deploying_BEF1/image_thumb5_thumb_thumb.png" width="644" height="406" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;used to be all files in this project folder.. now all files in project.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://orchard.codeplex.com/discussions/350016"&gt;http://orchard.codeplex.com/discussions/350016&lt;/a&gt; – Bertrand describes how he deploys using webdeploy.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://orchard.codeplex.com/discussions/283821"&gt;http://orchard.codeplex.com/discussions/283821&lt;/a&gt; – looks like it should work!&lt;/p&gt;  &lt;p&gt;Make sure connection string settings are correct on the server, otherwise will get a 404 error!&lt;/p&gt;  &lt;p&gt;look in Logs&lt;/p&gt;  &lt;p&gt;DataConnectionString: Data Source=.\SQLEXPRESS;Initial Catalog=orcharddb;Persist Security Info=True;User ID=orcharddb;Password=secret&lt;/p&gt;</Content>
+      <Created>2012-04-17T08:35:32.035625-04:00</Created>
+      <Modified>2012-04-17T08:35:32.035625-04:00</Modified>
+      <EntryId>ada43cf5-b0bf-438c-84f8-3502f32c4777</EntryId>
+      <Description />
+      <Title>Orchard Deployment from Source</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Goals:    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; website demoing projects I've done over many years     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; to give people ideas about what can be done easily     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; to sell myself     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; for it to become my 'CV'     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; look at stackoverflow CV - link to it     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; actual CV - link to it     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; CMS that I can use in many places     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; large codebase to explore&lt;/p&gt;  &lt;h3&gt;Examples&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/OrchardSetting-Up-Portfolio-Website_A643/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/OrchardSetting-Up-Portfolio-Website_A643/image_thumb.png" width="644" height="380" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;nice and simple.&lt;/p&gt;</Content>
+      <Created>2012-04-17T08:57:42.941875-04:00</Created>
+      <Modified>2012-04-17T08:57:42.941875-04:00</Modified>
+      <EntryId>a5ea8e71-76ec-46b5-822b-c34a64479a21</EntryId>
+      <Description />
+      <Title>Orchard–Setting Up Portfolio Website</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

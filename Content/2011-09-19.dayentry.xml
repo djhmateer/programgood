@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-09-18T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Gherkin in the language/parser of the .feature files&lt;/p&gt;  &lt;p&gt;Cucumber is what SpecFlow is based off&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BookShopSpecFlow_EAE5/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BookShopSpecFlow_EAE5/image_thumb.png" width="644" height="368" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The Feature is a story.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BookShopSpecFlow_EAE5/image_4.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BookShopSpecFlow_EAE5/image_thumb_1.png" width="462" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;class file showing how to translate the Gherkin into something we can test.&lt;/p&gt;  &lt;p&gt;Using MSTest here.&lt;/p&gt;  &lt;p&gt;We are testing the whole stack here!&amp;#160; Albeit not the actual browser, but plugging into Bookshop and testing everything down from there.&lt;/p&gt;  &lt;p&gt;Generating Reports&lt;/p&gt;  &lt;p&gt;C:\Program Files (x86)\TechTalk\SpecFlow&lt;/p&gt;</Content>
+      <Created>2011-09-18T23:53:52.892875-04:00</Created>
+      <Modified>2011-09-18T23:53:52.892875-04:00</Modified>
+      <EntryId>6d1bb47b-d8cc-4440-b5b6-e038ed0f4e5f</EntryId>
+      <Description />
+      <Title>BookShop–SpecFlow</Title>
+      <Categories>SpecFlow</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

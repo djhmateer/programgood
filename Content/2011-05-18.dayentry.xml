@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-17T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;CREATE&lt;/span&gt; &lt;span style="color: #0000ff"&gt;FUNCTION&lt;/span&gt; Guid_Empty()&lt;br /&gt;&lt;span style="color: #0000ff"&gt;RETURNS&lt;/span&gt; UniqueIdentifier&lt;br /&gt;&lt;span style="color: #0000ff"&gt;AS&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;BEGIN&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;RETURN&lt;/span&gt; &lt;span style="color: #0000ff"&gt;cast&lt;/span&gt;(&lt;span style="color: #0000ff"&gt;cast&lt;/span&gt;(0 &lt;span style="color: #0000ff"&gt;as&lt;/span&gt; &lt;span style="color: #0000ff"&gt;binary&lt;/span&gt;) &lt;span style="color: #0000ff"&gt;as&lt;/span&gt; uniqueidentifier)&lt;br /&gt;&lt;span style="color: #0000ff"&gt;END&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;GO&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;SELECT&lt;/span&gt; MerchantUID, EmailToSendReport1, EmailToSendReport2, EmailToSendReport3, EmailToSendReport4 &lt;br /&gt;&lt;span style="color: #0000ff"&gt;FROM&lt;/span&gt; aspnet_Profile2 &lt;br /&gt;&lt;span style="color: #0000ff"&gt;WHERE&lt;/span&gt; UserType = 1 &lt;span style="color: #0000ff"&gt;and&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #008000"&gt;-- where MerchantUID is not a null Guid.. uses function Guid_Empty&lt;/span&gt;&lt;br /&gt;ISNULL(MerchantUID, dbo.Guid_EMPTY()) != dbo.Guid_EMPTY()&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-05-18T04:36:30.43725-04:00</Created>
+      <Modified>2011-05-18T04:36:30.43725-04:00</Modified>
+      <EntryId>6f55f3ea-2b02-4697-8034-34fd37db9726</EntryId>
+      <Description />
+      <Title>SQL Selecting a Null Guid</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

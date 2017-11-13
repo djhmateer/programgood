@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-24T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From a SO question:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;p&gt;&lt;span style="color: #0000ff"&gt;namespace&lt;/span&gt; ConsoleApplication1&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;Hello world&amp;quot;&lt;/span&gt;);&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; &lt;span style="color: #0000ff"&gt;value&lt;/span&gt; = SendEmail(&lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; SendEmail(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; subject)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #cc6633"&gt;#region&lt;/span&gt; Parameter assertions&lt;br /&gt;            Debug.Assert(subject != &lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;);&lt;br /&gt;            &lt;span style="color: #cc6633"&gt;#endregion&lt;/span&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; subject;&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&amp;#160;&lt;/p&gt;&lt;p&gt;&amp;#160;&lt;/p&gt;&lt;font style="background-color: #ffffff"&gt;&lt;/font&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Put Debug.Assert() everywhere in the code where you want have sanity checks to ensure invariants. When you compile a Release build (i.e., no DEBUG compiler constant), the calls to Debug.Assert() will be removed so they won't affect performance.&lt;/p&gt;
+
+&lt;p&gt;You should still throw exceptions before calling Debug.Assert(). The assert just makes sure that everything is as expected while you're still developing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/129120/when-should-i-use-debug-assert"&gt;http://stackoverflow.com/questions/129120/when-should-i-use-debug-assert&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-08-25T18:08:48.270625-04:00</Created>
+      <Modified>2010-08-25T18:08:48.270625-04:00</Modified>
+      <EntryId>9fbde7a3-15f1-4b72-a4f4-9e4bdd238053</EntryId>
+      <Description />
+      <Title>Debug.Assert()</Title>
+      <Categories>Debug</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

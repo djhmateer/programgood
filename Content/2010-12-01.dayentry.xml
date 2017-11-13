@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-30T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;pre&gt;Use SQL Server Management Studio to generate scripts.&lt;/pre&gt;&lt;pre&gt;System.OutOfMemoryException – when you get this trying to run a query in SQL Server Management Studio&lt;/pre&gt;&lt;pre&gt;sqlcmd -S YOURSQLSERVER\INSTANCENAME -i "C:\Your Script.sql”&lt;/pre&gt;&lt;pre&gt;&amp;nbsp;&lt;/pre&gt;</Content>
+      <Created>2010-12-01T13:55:34.3645-05:00</Created>
+      <Modified>2010-12-01T14:26:06.098875-05:00</Modified>
+      <EntryId>2b6824da-d065-4bc7-88fe-f690cb8bad13</EntryId>
+      <Description />
+      <Title>Processing Large DB Files – MSSQL</Title>
+      <Categories>Database</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

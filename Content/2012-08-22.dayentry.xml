@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-08-21T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Firstly setup PVOutput, and turn on API.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.google.com/p/pvoutput-integration-service/"&gt;http://code.google.com/p/pvoutput-integration-service/&lt;/a&gt;    &lt;br /&gt;This Java app runs as a windows service, and scans the Aurora Communicator log files every 10 mins, then uploads to PVOutput.org.&amp;#160; Logs are setup in Communicator, Data Logger, c:\Logs is the default for service.&amp;#160; I am writing to log file every 1 minute.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputAutomatic-Data-Upload_B798/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputAutomatic-Data-Upload_B798/image_thumb.png" width="435" height="105" /&gt;&lt;/a&gt;    &lt;br /&gt;Conf settings, including PVOutput API key and number of&amp;#160; system, are in here.&lt;/p&gt;  &lt;p&gt;Uses Tanukisoftware Java Service Wrapper under the hood to make Windows Service install to be easier.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputAutomatic-Data-Upload_B798/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputAutomatic-Data-Upload_B798/image_thumb_2.png" width="496" height="254" /&gt;&lt;/a&gt;    &lt;br /&gt;Then we get updates every 10 minutes on the website.&amp;#160; Been a cloudy day with very heavy rain showers.&amp;#160; When sunshines it max’s out the inverter (3.3kW) which happened at 1pm.&lt;/p&gt;</Content>
+      <Created>2012-08-22T09:19:25.4348272-04:00</Created>
+      <Modified>2012-08-22T09:19:25.4348272-04:00</Modified>
+      <EntryId>823e580f-1933-44b0-b8a0-5b49eddea727</EntryId>
+      <Description />
+      <Title>PVOutput–Automatic Data Upload</Title>
+      <Categories>Solar Panels</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_thumb_2.png" width="439" height="203" /&gt;&lt;/a&gt;    &lt;br /&gt;Found it was better getting historical CSV data using aurora monitor &lt;a href="http://auroramonitor.sourceforge.net/"&gt;http://auroramonitor.sourceforge.net/&lt;/a&gt;&amp;#160; Inverter, Retrieve Daily Energy.&amp;#160; I then got about 11 months of daily total data (which is the lifetime on the inverter so far).&lt;/p&gt; &lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_thumb_3.png" width="289" height="404" /&gt;&lt;/a&gt;  &lt;br /&gt;Loading manually. CSV seemed easier.   &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_10.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputSolar-Power-MonitoringLoading-Da_AC22/image_thumb_4.png" width="562" height="457" /&gt;&lt;/a&gt;    &lt;br /&gt;For some reason aurora monitor didn’t get some of the earlier data, so used Communicator to get that data.&lt;/p&gt;</Content>
+      <Created>2012-08-22T07:59:50.6479943-04:00</Created>
+      <Modified>2012-08-22T07:59:50.6479943-04:00</Modified>
+      <EntryId>38b2d754-45bf-473c-b62c-d73f1cd87c0b</EntryId>
+      <Description />
+      <Title>PVOutput–Solar–Loading Historical Data</Title>
+      <Categories>Solar Panels</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;   &lt;br /&gt;Charting in PVoutput is done in javascript using highcharts.com&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Ability to compare with similar systems within close proximity sllows short/long term performance issues to be identified&lt;/li&gt;    &lt;li&gt;Can upload energy consumption data from home monitoring devices&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputData_DC49/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputData_DC49/image_thumb_1.png" width="610" height="484" /&gt;&lt;/a&gt;    &lt;br /&gt;Good view showing actual money earned by Feed In Tarrif (FIT) over months.&lt;/p&gt;    &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputData_DC49/image_9.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/PVOutputData_DC49/image_thumb_3.png" width="613" height="402" /&gt;&lt;/a&gt;    &lt;br /&gt;Monthly comparison of system against a similar 50km away.&amp;#160; High westerly winds today, and heavy showers with sunny spells, so High Hazliebank system worse, as weather probably better in the East.&lt;/p&gt;</Content>
+      <Created>2012-08-22T17:16:34.2515181-04:00</Created>
+      <Modified>2012-08-22T17:16:34.2515181-04:00</Modified>
+      <EntryId>71f28ef1-c488-4cb0-bb79-ebb600f495a8</EntryId>
+      <Description />
+      <Title>PVOutput–Data</Title>
+      <Categories>Solar Panels</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

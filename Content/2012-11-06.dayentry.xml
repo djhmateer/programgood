@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-05T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://varunpuranik.wordpress.com/2011/06/29/wcf-ria-services-support-for-ef-4-1-and-ef-code-first/"&gt;http://varunpuranik.wordpress.com/2011/06/29/wcf-ria-services-support-for-ef-4-1-and-ef-code-first/&lt;/a&gt; – interesting manual code&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_thumb.png" width="492" height="443" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Doing an edmx&lt;/p&gt;  &lt;p&gt;TestDBEntities.. Default Code Gen strategies&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_4.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_thumb_1.png" width="244" height="153" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Trying Identity on Person table with test rig code.&lt;/p&gt;  &lt;p&gt;None – value of the property is set in the application and persisted to the database.&amp;#160; Default for most of the properties&lt;/p&gt;  &lt;p&gt;StoreGeneratedPattern=&amp;quot;Identity&amp;quot; simply tells EF that the value will be generated DB-side on insert, and that it shouldn't supply a value in insert statements.&amp;#160; This is used by default for all PK’s using IDENTITY setting.&lt;/p&gt;  &lt;p&gt;Computed – the value of the property is et in the db during each persistence.&amp;#160; This setting is by default used for properties mapped to columns with TIMESTAMP or ROWVERSION.&lt;/p&gt;  &lt;p&gt;None&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscapehq.com/documentation/lightspeed/Controlling-the-Database-Mapping/Identity-Generation"&gt;http://www.mindscapehq.com/documentation/lightspeed/Controlling-the-Database-Mapping/Identity-Generation&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_6.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Silverlight-RIA-and-EFPK-Scenarios_DAE0/image_thumb_2.png" width="244" height="191" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.ladislavmrnka.com/2011/03/the-bug-in-storegeneratedpattern-fixed-in-vs-2010-sp1/"&gt;http://www.ladislavmrnka.com/2011/03/the-bug-in-storegeneratedpattern-fixed-in-vs-2010-sp1/&lt;/a&gt; – Bug in EF fixed in 2010 SP1&lt;/p&gt;  &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/13251136/ef-with-keytable-sequence-style-pk"&gt;http://stackoverflow.com/questions/13251136/ef-with-keytable-sequence-style-pk&lt;/a&gt; – Question on SO regarding this.&lt;/p&gt;</Content>
+      <Created>2012-11-06T08:35:37.2201842-05:00</Created>
+      <Modified>2012-11-06T08:35:37.2201842-05:00</Modified>
+      <EntryId>543863da-283b-4c3e-85ab-6a4ce3033c7e</EntryId>
+      <Description />
+      <Title>Silverlight RIA and EF–PK Identity Generation</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/gg602748(v=vs.91).aspx"&gt;http://msdn.microsoft.com/en-us/library/gg602748(v=vs.91).aspx&lt;/a&gt; – how to implement in EF.&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blogs.msdn.com/b/rickandy/archive/2011/02/17/handling-optimistic-concurrency-exception-with-ef-and-mvc-3.aspx"&gt;http://blogs.msdn.com/b/rickandy/archive/2011/02/17/handling-optimistic-concurrency-exception-with-ef-and-mvc-3.aspx&lt;/a&gt; – manually implementing in MVC3&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blogs.msdn.com/b/alexj/archive/2009/05/20/tip-19-how-to-use-optimistic-concurrency-in-the-entity-framework.aspx"&gt;http://blogs.msdn.com/b/alexj/archive/2009/05/20/tip-19-how-to-use-optimistic-concurrency-in-the-entity-framework.aspx&lt;/a&gt; – implmenting…2009&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-US/data/jj592904"&gt;http://msdn.microsoft.com/en-US/data/jj592904&lt;/a&gt; – manully implmenting the pattern&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application"&gt;http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;- add a timestamp column&lt;/p&gt;  &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/11771267/entity-framework-5-0-handle-optimistic-concurrency-exception"&gt;http://stackoverflow.com/questions/11771267/entity-framework-5-0-handle-optimistic-concurrency-exception&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-11-06T08:32:37.708249-05:00</Created>
+      <Modified>2012-11-06T08:32:37.708249-05:00</Modified>
+      <EntryId>4c978b2b-f345-4359-a536-916b3045ca13</EntryId>
+      <Description />
+      <Title>Optimistic Concurrency and EF and RIA</Title>
+      <Categories>Entity Framework;RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

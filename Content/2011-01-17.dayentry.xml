@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-01-16T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=KB2006191&amp;amp;DownloadId=8227"&gt;http://code.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=KB2006191&amp;amp;DownloadId=8227&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Here are the scripts put together in 1 file:&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:9a5fd989-87db-4d65-ace0-0cbc41f1f8a7" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/aspnetdbonAzure_BA9B/aspnetAzure_1.sql" target="_blank"&gt;file&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;  &lt;p&gt;Remember to point your web app to the database to populate it ie in Visual Studio, click on the icon at the top in solution explorer to launch the web app.&lt;/p&gt;</Content>
+      <Created>2011-01-16T19:34:27.95775-05:00</Created>
+      <Modified>2011-02-02T16:31:21.250625-05:00</Modified>
+      <EntryId>e41260d2-726c-4724-9723-3a72efd38629</EntryId>
+      <Description />
+      <Title>aspnetdb on Azure</Title>
+      <Categories>Azure;SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

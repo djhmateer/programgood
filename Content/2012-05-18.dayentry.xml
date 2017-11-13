@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-05-17T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;In addition to handling instance construction, Inversion of Control containers can also handle lifetime and scope for you.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/TekPub4IoC-continued_F29C/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/TekPub4IoC-continued_F29C/image_thumb.png" width="244" height="128" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:05c0503c-4f16-4286-9613-53529c9a9da9" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#008000"&gt;//.InSingletonScope resolve it later on, but resolve it only once, use the same instance after that.&lt;/span&gt;&lt;br&gt; &lt;span style="color:#008000"&gt;//injector.Bind&amp;lt;IClock, SystemClock&amp;gt;().InSingletonScope();&lt;/span&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;.InSingletonScope resolve it later on, but resolve it only once, use the same instance after that.&lt;/p&gt;  &lt;p&gt;Testability!&lt;/p&gt;  &lt;p&gt;singletons – global state is the enemy of simplicity! let IoC containers do stuff.&lt;/p&gt;  &lt;p&gt;logging is okay as its fine generally to have all the system call into the same logger&lt;/p&gt;  &lt;p&gt;for the clock – Jon is always using an interface, and DI.&lt;/p&gt;</Content>
+      <Created>2012-05-18T18:33:20.515625-04:00</Created>
+      <Modified>2012-05-18T18:33:20.515625-04:00</Modified>
+      <EntryId>afbde867-9ae7-4726-a8ac-7a1f7f2c9a9d</EntryId>
+      <Description />
+      <Title>TekPub4–IoC continued</Title>
+      <Categories>IoC;JonSkeet;TekPub</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Taking the manually done dependency injection and using a factory now (then go away from factory to home grown&amp;#160; IoC)&lt;/p&gt;  &lt;p&gt;   &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:729929f0-1e97-411a-bfd7-bbcaf872ca59" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#008000"&gt;//is this unneeded complexity if its a smaller app?  Actually this is a Factory&lt;/span&gt;&lt;br&gt;     &lt;span style="color:#008000"&gt;//jon recommends if can keep in main method, then keep manual DI.&lt;/span&gt;&lt;br&gt;     &lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Injector&lt;/span&gt;&lt;br&gt;     {&lt;br&gt;         &lt;span style="color:#008000"&gt;//getting ugly as can be literally 100&amp;#39;s of dependencies&lt;/span&gt;&lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; CreateClock()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#008000"&gt;//a singleton&lt;/span&gt;&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#2b91af"&gt;SystemClock&lt;/span&gt;.Instance;&lt;br&gt;         }&lt;br&gt; &lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt; CreateLicence()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt;(&lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt;.UnixEpoch, CreateClock());&lt;br&gt;         }&lt;br&gt; &lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt; CreateTimeZone()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt;.GetSystemDefault();&lt;br&gt;         }&lt;br&gt; &lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt; CreateCalendarSystem()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt;.Iso;&lt;br&gt;         }&lt;br&gt; &lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt; CreateDiary()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt;(CreateClock(),  CreateCalendarSystem(), CreateTimeZone());&lt;br&gt;         }&lt;br&gt; &lt;br&gt;         &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt; CreateDiaryPresenter()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt;(CreateDiary(), CreateLicence());&lt;br&gt;         }&lt;br&gt;     }&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;and then:&lt;/p&gt;  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:a15304bb-624c-486f-b905-57e6abfd6165" class="wlWriterEditableSmartContent"&gt; &lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt; &lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Main()&lt;br&gt;         {&lt;br&gt;             &lt;span style="color:#008000"&gt;// newing up the factory&lt;/span&gt;&lt;br&gt;             &lt;span style="color:#2b91af"&gt;Injector&lt;/span&gt; injector = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Injector&lt;/span&gt;();&lt;br&gt;             &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; presenter = injector.CreateDiaryPresenter();&lt;br&gt;             presenter.Start();&lt;br&gt;         }&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;p&gt;outtake to video 5..outtake…IoC.&amp;#160; Basically wanting to make things more generic:&lt;/p&gt;  &lt;p&gt;structuremap, ninject, autofac, Unity are IoC&lt;/p&gt;  &lt;p&gt;eg in an MVC app I&amp;#160; &lt;a href="http://www.programgood.net/2011/09/20/VidPub1SettingUpSolution.aspx"&gt;http://www.programgood.net/2011/09/20/VidPub1SettingUpSolution.aspx&lt;/a&gt;:&lt;/p&gt;  &lt;p&gt;“Every time you see a request for ILogger interface in a controller, return a new NLogger class”&lt;/p&gt;  &lt;pre&gt;kernel.Bind&amp;lt;ILogger&amp;gt;().To&amp;lt;NLogger&amp;gt;();&lt;/pre&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:72bc327c-691a-46b4-8185-fd5cd44343af" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;[&lt;span style="color:#2b91af"&gt;TestFixture&lt;/span&gt;]&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Program&lt;/span&gt;&lt;br&gt;
+{&lt;br&gt;
+    [&lt;span style="color:#2b91af"&gt;Test&lt;/span&gt;]&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; MainTest()&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//manually setting up the dependencies&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock = &lt;span style="color:#2b91af"&gt;SystemClock&lt;/span&gt;.Instance;&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt; diary = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt;(clock, &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt;.Iso, &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt;.GetSystemDefault());&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//licence expired in 1970, and current time is systemclock time&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt; licence = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt;(&lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt;.UnixEpoch, clock);&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; presenter = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt;(diary, licence);&lt;br&gt;
+        presenter.Start();&lt;br&gt;
+&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//IoC&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//Injector injector = new Injector();&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//injector.Bind&amp;lt;IClock, SystemClock&amp;gt;();&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//injector.Bind&amp;lt;DateTimeZone&amp;gt;(DateTimeZone.GetSystemDefault());&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//injector.Bind&amp;lt;Instant&amp;gt;(Instant.FromUtc(2000,1,1,0,0,0));&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//injector.Bind&amp;lt;CalendarSystem&amp;gt;(CalendarSystem.Iso);&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+        &lt;span style="color:#008000"&gt;////you&amp;#39;ve got all these things.. now do stuff please&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//var presenter = injector.Resolve&amp;lt;DiaryPresenter&amp;gt;();&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//presenter.Start();&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+        &lt;br&gt;
+    }&lt;br&gt;
+}&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt;&lt;br&gt;
+{&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt; diary;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt; licence;&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; DiaryPresenter(&lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt; diary, &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt; licence)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.diary = diary;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.licence = licence;&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Start()&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.WriteLine(&lt;span style="color:#a31515"&gt;&amp;quot;Today is {&lt;/span&gt;&lt;span style="color:#3cb371"&gt;0}&lt;/span&gt;&lt;span style="color:#a31515"&gt;&amp;quot;&lt;/span&gt;, diary.FormatToday());&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.WriteLine(&lt;span style="color:#a31515"&gt;&amp;quot;Licence expired? {&lt;/span&gt;&lt;span style="color:#3cb371"&gt;0}&lt;/span&gt;&lt;span style="color:#a31515"&gt;&amp;quot;&lt;/span&gt;, licence.HasExpired);&lt;br&gt;
+    }&lt;br&gt;
+}&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt;&lt;br&gt;
+{&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//fields&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt; expirey;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock;&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; Licence(&lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt; expirey, &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//variables or local variables&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.expirey = expirey;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.clock = clock;&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//property&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;bool&lt;/span&gt; HasExpired&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;get&lt;/span&gt; { &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; clock.Now &amp;gt;= expirey; }&lt;br&gt;
+    }&lt;br&gt;
+}&lt;br&gt;
+&lt;br&gt;
+&lt;span style="color:#008000"&gt;//calendaring application which will want to know what time it is too!&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt;&lt;br&gt;
+{&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;LocalDatePattern&lt;/span&gt; outputPattern = &lt;span style="color:#2b91af"&gt;LocalDatePattern&lt;/span&gt;.CreateWithInvariantInfo(&lt;span style="color:#a31515"&gt;&amp;quot;yyyy-MM-dd&amp;quot;&lt;/span&gt;);&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//fields&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt; calendar;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;readonly&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt; timeZone;&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//by demanding the dependencies in the constructor, classes are more flexible&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//especially if they are interfacess&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; Diary(&lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock, &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt; calendar, &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt; timeZone)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.clock = clock;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.calendar = calendar;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;this&lt;/span&gt;.timeZone = timeZone;&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;string&lt;/span&gt; FormatToday()&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//in system default timezone, and system default calendar&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//DateTime dateTime = DateTime.Today;&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;LocalDate&lt;/span&gt; date = clock.Now.InZone(timeZone, calendar).LocalDateTime.Date;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (date.Month == 4)&lt;br&gt;
+        {  &lt;span style="color:#008000"&gt;//ncrunch showing black here - so tests are not covering this codepath&lt;/span&gt;&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; &lt;span style="color:#a31515"&gt;&amp;quot;April fool&amp;quot;&lt;/span&gt;;&lt;br&gt;
+        }&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; outputPattern.Format(date);&lt;br&gt;
+    }&lt;br&gt;
+}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A working version of the code with manual DI.&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:eeeaa83d-674a-445c-8b7a-13bfc612dd2c" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Program&lt;/span&gt;&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;static&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color:#0000ff"&gt;string&lt;/span&gt;[] args)&lt;br&gt;
+        {&lt;br&gt;
+            &lt;span style="color:#008000"&gt;//manually setting up the dependencies&lt;/span&gt;&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;IClock&lt;/span&gt; clock = &lt;span style="color:#2b91af"&gt;SystemClock&lt;/span&gt;.Instance;&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt; diary = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Diary&lt;/span&gt;(clock, &lt;span style="color:#2b91af"&gt;CalendarSystem&lt;/span&gt;.Iso, &lt;span style="color:#2b91af"&gt;DateTimeZone&lt;/span&gt;.GetSystemDefault());&lt;br&gt;
+            &lt;span style="color:#008000"&gt;//licence expired in 1970, and current time is systemclock time&lt;/span&gt;&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt; licence = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt;(&lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt;.UnixEpoch, clock);&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; presenter = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt;(diary, licence);&lt;br&gt;
+            presenter.Start();&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.WriteLine(&lt;span style="color:#a31515"&gt;&amp;quot;Type in 1 for good licence, 2 for expired&amp;quot;&lt;/span&gt;);&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;string&lt;/span&gt; userInput = &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.ReadLine();&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (userInput == &lt;span style="color:#a31515"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;)&lt;br&gt;
+            {&lt;br&gt;
+                &lt;span style="color:#008000"&gt;//really need public properties on licence to reset it rather than instantiating a new one!&lt;/span&gt;&lt;br&gt;
+                licence = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Licence&lt;/span&gt;(&lt;span style="color:#2b91af"&gt;Instant&lt;/span&gt;.FromUtc(2020,1,1,0,0,0), clock);&lt;br&gt;
+                presenter = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;DiaryPresenter&lt;/span&gt;(diary, licence);&lt;br&gt;
+            }&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.WriteLine(&lt;span style="color:#a31515"&gt;&amp;quot;License expiredx: {&lt;/span&gt;&lt;span style="color:#3cb371"&gt;0}&lt;/span&gt;&lt;span style="color:#a31515"&gt;&amp;quot;&lt;/span&gt;, licence.HasExpired);&lt;br&gt;
+            &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.ReadLine();&lt;br&gt;
+        }&lt;br&gt;
+    }&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Made a new console project referencing the class project.&amp;#160; Proves that it does work as a real application and not just in test.&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:ea17f983-fecd-4561-b44b-0c8e9dd77126" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #ffffff; max-height: 400px; overflow: auto; padding: 2px 5px;"&gt;&lt;span style="color:#0000ff"&gt;class&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Injector&lt;/span&gt;&lt;br&gt;
+{&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//going to be able to bind by instance and by type&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//where TConcrete derives from TKey&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//TKey is going to be what we provide&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//from type to a way of getting to an instance of that type&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Dictionary&lt;/span&gt;&amp;lt;&lt;span style="color:#2b91af"&gt;Type&lt;/span&gt;,&lt;span style="color:#2b91af"&gt;Func&lt;/span&gt;&amp;lt;&lt;span style="color:#0000ff"&gt;object&lt;/span&gt;&amp;gt;&amp;gt; providers = &lt;span style="color:#0000ff"&gt;new&lt;/span&gt; &lt;span style="color:#2b91af"&gt;Dictionary&lt;/span&gt;&amp;lt;&lt;span style="color:#2b91af"&gt;Type&lt;/span&gt;, &lt;span style="color:#2b91af"&gt;Func&lt;/span&gt;&amp;lt;&lt;span style="color:#0000ff"&gt;object&lt;/span&gt;&amp;gt;&amp;gt;();&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//eg whenever you want IClock, use the SystemClock type&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Bind &amp;lt;TKey, TConcrete&amp;gt;() &lt;span style="color:#0000ff"&gt;where&lt;/span&gt; TConcrete : TKey&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//where we&amp;#39;re &lt;/span&gt;&lt;br&gt;
+        providers[&lt;span style="color:#0000ff"&gt;typeof&lt;/span&gt;(TKey)] = () =&amp;gt; ResolveByType(&lt;span style="color:#0000ff"&gt;typeof&lt;/span&gt;(TConcrete));&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;private&lt;/span&gt; &lt;span style="color:#0000ff"&gt;object&lt;/span&gt; ResolveByType(&lt;span style="color:#2b91af"&gt;Type&lt;/span&gt; type)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Console&lt;/span&gt;.WriteLine(&lt;span style="color:#a31515"&gt;&amp;quot;Resolving...{&lt;/span&gt;&lt;span style="color:#3cb371"&gt;0}&lt;/span&gt;&lt;span style="color:#a31515"&gt;&amp;quot;&lt;/span&gt;, type);&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//assume we&amp;#39;re got a single constructor in the type we&amp;#39;re passing in&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; constructor = type.GetConstructors().SingleOrDefault();&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//if we don&amp;#39;t have a constructor then maybe a static method&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (constructor != &lt;span style="color:#0000ff"&gt;null&lt;/span&gt;)&lt;br&gt;
+        {&lt;br&gt;
+            &lt;span style="color:#008000"&gt;//want to invoke the constructor, but need to resolve all of its dependencies&lt;/span&gt;&lt;br&gt;
+            &lt;span style="color:#008000"&gt;//eg when we ask for a diary, get me a clock, get me a calendar, get me a timezone&lt;/span&gt;&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; arguments = constructor.GetParameters() &lt;br&gt;
+                                       .Select(parameterInfo =&amp;gt; Resolve(parameterInfo.ParameterType))&lt;br&gt;
+                                       .ToArray();&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; constructor.Invoke(arguments);&lt;br&gt;
+        }&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//Instance is a property on system clock&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//we&amp;#39;re trying to find something on systemclock... however it was a field, thats why GetProperty wasn&amp;#39;t returning it.&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//var instanceProperty = type.GetProperty(&amp;quot;Instance&amp;quot;, BindingFlags.Public | BindingFlags.Static);&lt;/span&gt;&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;var&lt;/span&gt; instanceField = type.GetField(&lt;span style="color:#a31515"&gt;&amp;quot;Instance&amp;quot;&lt;/span&gt;);&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; instanceField.GetValue(&lt;span style="color:#0000ff"&gt;null&lt;/span&gt;);&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;public&lt;/span&gt; &lt;span style="color:#0000ff"&gt;void&lt;/span&gt; Bind&amp;lt;T&amp;gt;(T instance)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#008000"&gt;//returns the instance&lt;/span&gt;&lt;br&gt;
+        providers[&lt;span style="color:#0000ff"&gt;typeof&lt;/span&gt;(T)] = () =&amp;gt; instance;&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;internal&lt;/span&gt; TKey Resolve&amp;lt;TKey&amp;gt;()&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; (TKey)Resolve(&lt;span style="color:#0000ff"&gt;typeof&lt;/span&gt;(TKey));&lt;br&gt;
+    }&lt;br&gt;
+&lt;br&gt;
+    &lt;span style="color:#008000"&gt;//how do we resolve something?&lt;/span&gt;&lt;br&gt;
+    &lt;span style="color:#0000ff"&gt;internal&lt;/span&gt; &lt;span style="color:#0000ff"&gt;object&lt;/span&gt; Resolve(&lt;span style="color:#2b91af"&gt;Type&lt;/span&gt; type)&lt;br&gt;
+    {&lt;br&gt;
+        &lt;span style="color:#2b91af"&gt;Func&lt;/span&gt;&amp;lt;&lt;span style="color:#0000ff"&gt;object&lt;/span&gt;&amp;gt; provider; &lt;br&gt;
+&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;if&lt;/span&gt; (providers.TryGetValue(type, &lt;span style="color:#0000ff"&gt;out&lt;/span&gt; provider))&lt;br&gt;
+        {&lt;br&gt;
+            &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; provider();&lt;br&gt;
+        }&lt;br&gt;
+        &lt;span style="color:#0000ff"&gt;return&lt;/span&gt; ResolveByType(type);&lt;br&gt;
+    }&lt;br&gt;
+}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;need to come back to this and understand**&lt;/p&gt;</Content>
+      <Created>2012-05-18T17:22:46.921875-04:00</Created>
+      <Modified>2012-05-18T18:14:15.125-04:00</Modified>
+      <EntryId>fb929952-3bbf-4110-8adf-bd1e6d02c178</EntryId>
+      <Description />
+      <Title>TekPub4 and 5–Jon Skeet–IoC</Title>
+      <Categories>Factory;JonSkeet;TekPub</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

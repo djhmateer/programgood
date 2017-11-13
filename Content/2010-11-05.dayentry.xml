@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-04T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;Debug.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;asdf&amp;quot;&lt;/span&gt;);&lt;br /&gt;System.Diagnostics.Trace.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;asdfasdf&amp;quot;&lt;/span&gt;);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;Second one works in release mode.&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;Useful to : &amp;quot;Redirect all Output Window text to the Immediate Window&amp;quot; is checked under Tools -&amp;gt; Options -&amp;gt; Debugging -&amp;gt; General.&lt;/div&gt;</Content>
+      <Created>2010-11-04T22:31:46.0865-04:00</Created>
+      <Modified>2010-11-04T22:31:46.0865-04:00</Modified>
+      <EntryId>5fa15cf5-2197-4b96-a316-c39331808921</EntryId>
+      <Description />
+      <Title>Debug Messages</Title>
+      <Categories>VS2010</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

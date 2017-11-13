@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-12-09T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.jeffblankenburg.com/2009/07/01/day-1-mouse-events-in-silverlight/" href="http://www.jeffblankenburg.com/2009/07/01/day-1-mouse-events-in-silverlight/"&gt;http://www.jeffblankenburg.com/2009/07/01/day-1-mouse-events-in-silverlight/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;use a tooltip?&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx" href="http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx"&gt;http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;setting a tooltip with many rows in SL:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://stackoverflow.com/questions/7627131/how-to-set-tooltip-with-many-rows-for-each-dynamic-listbox-item-in-silverlight" href="http://stackoverflow.com/questions/7627131/how-to-set-tooltip-with-many-rows-for-each-dynamic-listbox-item-in-silverlight"&gt;http://stackoverflow.com/questions/7627131/how-to-set-tooltip-with-many-rows-for-each-dynamic-listbox-item-in-silverlight&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;binding to the whole listboxitem:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://silverlight.su/blog/post/2011/01/11/ToolTip-for-each-ListBoxItem.aspx" href="http://silverlight.su/blog/post/2011/01/11/ToolTip-for-each-ListBoxItem.aspx"&gt;http://silverlight.su/blog/post/2011/01/11/ToolTip-for-each-ListBoxItem.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;styling of the tooltip:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx" href="http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx"&gt;http://www.silverlightshow.net/items/Using-the-ToolTip-control-in-Silverlight-2.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;nested listbox binding in SL:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.c-sharpcorner.com/uploadfile/dhananjaycoder/nested-listbox-binding-in-silverlight/" href="http://www.c-sharpcorner.com/uploadfile/dhananjaycoder/nested-listbox-binding-in-silverlight/"&gt;http://www.c-sharpcorner.com/uploadfile/dhananjaycoder/nested-listbox-binding-in-silverlight/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-12-10T08:44:20.4696437-05:00</Created>
+      <Modified>2012-12-10T08:44:20.4696437-05:00</Modified>
+      <EntryId>47cf3620-f53f-4229-abbd-ed2a8b483f11</EntryId>
+      <Description />
+      <Title>Mouse Hover Over and Tooltips</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-one.aspx" href="http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-one.aspx"&gt;http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-one.aspx&lt;/a&gt;&amp;#160;&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;A specific Domain Context on each VM&lt;/li&gt;    &lt;li&gt;A general Domain Context instance shared across all ViewModels&lt;/li&gt;    &lt;li&gt;Mix of above&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Domain-Context-Strategy-in-RIA_E9AA/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Domain-Context-Strategy-in-RIA_E9AA/image_thumb.png" width="588" height="247" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and &lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-two.aspx" href="http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-two.aspx"&gt;http://www.silverlightshow.net/items/Silverlight-WCF-RIA-Services-strategies-for-handling-your-Domain-Context-part-two.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-12-10T12:39:36.7771697-05:00</Created>
+      <Modified>2012-12-10T12:39:36.7771697-05:00</Modified>
+      <EntryId>bcc87631-a25e-4e4d-94e3-475c1d937d95</EntryId>
+      <Description />
+      <Title>Domain Context Strategy in RIA</Title>
+      <Categories>RIA Services;Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

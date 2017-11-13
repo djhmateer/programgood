@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-10-26T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;div&gt;From the example DemoApp of EagerLoading (screencast example)&lt;/div&gt;  &lt;div&gt;&amp;#160;&lt;/div&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;_context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; LightSpeedContext&amp;lt;ModelUnitOfWork&amp;gt;&lt;br /&gt;      {&lt;br /&gt;        ConnectionString = &lt;span style="color: #006080"&gt;&amp;quot;Data Source=Store.db3;&amp;quot;&lt;/span&gt;,&lt;br /&gt;        Logger = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TraceLogger(),&lt;br /&gt;        DataProvider = DataProvider.SQLite3,&lt;br /&gt;        PluralizeTableNames = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;&lt;br /&gt;      };&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;the other logger is a consolelogger&lt;/p&gt;</Content>
+      <Created>2010-10-26T23:50:46.7872836-04:00</Created>
+      <Modified>2010-10-26T23:51:02.5232698-04:00</Modified>
+      <EntryId>143ccd50-81ec-4138-8d0e-9423c6866fc1</EntryId>
+      <Description />
+      <Title>TraceLogger in LightSpeed</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedWebFormsCRUD_E13C/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedWebFormsCRUD_E13C/image_thumb.png" width="644" height="206" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;From:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.mindscape.co.nz/forums/Thread.aspx?PostID=8912" href="http://www.mindscape.co.nz/forums/Thread.aspx?PostID=8912"&gt;http://www.mindscape.co.nz/forums/Thread.aspx?PostID=8912&lt;/a&gt; look for filedownload link&lt;/p&gt;</Content>
+      <Created>2010-10-26T23:01:36.1101652-04:00</Created>
+      <Modified>2010-10-26T23:01:36.1101652-04:00</Modified>
+      <EntryId>3f062b01-a61d-4455-88f9-86a8655b3126</EntryId>
+      <Description />
+      <Title>Lightspeed WebForms CRUD</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Great screencast on:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.mindscape.co.nz/products/lightspeed/screencasts.aspx"&gt;http://www.mindscape.co.nz/products/lightspeed/screencasts.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Eager loading stops massive numbers of queries when you do something like this:&lt;/p&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;  {&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (Product product &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; Repository.Current.UnitOfWork.Products) &lt;span style="color: #008000"&gt;//.WithAggregate(&amp;quot;AllSkus&amp;quot;)&lt;/span&gt;&lt;br /&gt;      {&lt;br /&gt;        Console.WriteLine(product.Name);&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (Sku sku &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; product.Skus)&lt;br /&gt;        {&lt;br /&gt;          Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot; - &amp;quot;&lt;/span&gt; + sku.DisplayName);&lt;br /&gt;        }&lt;br /&gt;      }&lt;br /&gt;&lt;br /&gt;      Console.ReadLine();&lt;br /&gt;    }&lt;br /&gt;  }&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_thumb.png" width="245" height="569" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;
+
+  &lt;p&gt;Either by using a named Aggregate above, which is a property of the relationship between Sku and Product&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_thumb_2.png" width="319" height="577" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+  &lt;p&gt;or just by turning eager loading on (but this will bring back all the skus)&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EagerLoadinginLightSpeed_D658/image_thumb_1.png" width="165" height="264" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+  &lt;p&gt;This is all to stop massive numbers of queries of the db.&lt;/p&gt;
+&lt;/div&gt;</Content>
+      <Created>2010-10-26T22:19:54.4321446-04:00</Created>
+      <Modified>2010-10-26T22:19:54.4321446-04:00</Modified>
+      <EntryId>76bbb738-9e83-48bf-ab66-1f630c00b666</EntryId>
+      <Description />
+      <Title>Eager Loading in LightSpeed</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NET4GridView_D1BA/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NET4GridView_D1BA/image_thumb.png" width="644" height="464" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.4guysfromrolla.com/articles/020310-1.aspx"&gt;http://www.4guysfromrolla.com/articles/020310-1.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Making styling nicer and arrows for sorting direction.&lt;/p&gt;</Content>
+      <Created>2010-10-26T21:55:49.0810308-04:00</Created>
+      <Modified>2010-10-26T21:55:49.0810308-04:00</Modified>
+      <EntryId>42f504f1-d5e1-4072-b08e-e09e5b7042ea</EntryId>
+      <Description />
+      <Title>ASP.NET4 GridView</Title>
+      <Categories>ASP.NET WebForms</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedSimpleWeb_A83E/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedSimpleWeb_A83E/image_thumb.png" width="527" height="507" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Here is the code:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Page_Load(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            LightSpeedContext&amp;lt;NorthModelUnitOfWork&amp;gt; _context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; LightSpeedContext&amp;lt;NorthModelUnitOfWork&amp;gt;(&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;);&lt;br /&gt;            _context.Logger = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TraceLogger();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (var uow = _context.CreateUnitOfWork())&lt;br /&gt;            {&lt;br /&gt;                IList&amp;lt;Product&amp;gt; listOfProducts = uow.Find&amp;lt;Product&amp;gt;();&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (Product product &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; listOfProducts)&lt;br /&gt;                {&lt;br /&gt;                    TextBox1.Text += product.ProductName + Environment.NewLine;&lt;br /&gt;                }&lt;br /&gt;            }&lt;br /&gt;        }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;and here is the web.config:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;configSections&amp;gt;&lt;br /&gt;    &amp;lt;section name=&lt;span style="color: #006080"&gt;&amp;quot;lightSpeedContexts&amp;quot;&lt;/span&gt;&lt;br /&gt;             type=&lt;span style="color: #006080"&gt;&amp;quot;Mindscape.LightSpeed.Configuration.LightSpeedConfigurationSection, Mindscape.LightSpeed&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;  &amp;lt;/configSections&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;  &amp;lt;lightSpeedContexts&amp;gt;&lt;br /&gt;    &amp;lt;add name=&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;&lt;br /&gt;         dataProvider=&lt;span style="color: #006080"&gt;&amp;quot;SqlServer2008&amp;quot;&lt;/span&gt;&lt;br /&gt;         connectionStringName=&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;  &amp;lt;/lightSpeedContexts&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;  &amp;lt;connectionStrings&amp;gt;&lt;br /&gt;    &amp;lt;add name=&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;&lt;br /&gt;         connectionString=&lt;span style="color: #006080"&gt;&amp;quot;Data Source=.\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=SSPI&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;    &amp;lt;add name=&lt;span style="color: #006080"&gt;&amp;quot;ApplicationServices&amp;quot;&lt;/span&gt;&lt;br /&gt;     connectionString=&lt;span style="color: #006080"&gt;&amp;quot;data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true&amp;quot;&lt;/span&gt;&lt;br /&gt;     providerName=&lt;span style="color: #006080"&gt;&amp;quot;System.Data.SqlClient&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;  &amp;lt;/connectionStrings&amp;gt;&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The .lsmodel is simply 1 table currently of Products from Northwind.&lt;/p&gt;
+
+&lt;h3&gt;Abstract out&lt;/h3&gt;
+
+&lt;p&gt;From: &lt;a href="http://www.mindscape.co.nz/forums/Thread.aspx?PostID=8798"&gt;http://www.mindscape.co.nz/forums/Thread.aspx?PostID=8798&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The above (a tightly scoped UnitOfWork) would work, however generally for web applications particularly when data binding you will find that you need to keep the UnitOfWork active for the duration of the web request so the ideal approach is to instantiate a UnitOfWork instance as required on a per request basis and then re-use that during the request and ensure it is disposed at the end of the request so the associated database connection can be closed etc.&lt;/p&gt;
+
+&lt;p&gt;The PerRequestUnitOfWorkScope class pretty much encapsulated that behavior, in that it creates a UnitOfWork instance as required and then stores that in HttpContext.Items for later re-use in that request. What it does not do however is dispose of the UnitOfWork, and you will need to do this yourself, either by explicitely disposing the PerRequestUnitOfWorkScope, or the UnitOfWork.&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;So in global.asax&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; LightSpeedContext&amp;lt;NorthModelUnitOfWork&amp;gt; _context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; LightSpeedContext&amp;lt;NorthModelUnitOfWork&amp;gt;(&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;);&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; PerRequestUnitOfWorkScope&amp;lt;NorthModelUnitOfWork&amp;gt; Scope;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_Start(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #008000"&gt;// Code that runs on application startup&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_End(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #008000"&gt;//  Code that runs on application shutdown&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_Error(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #008000"&gt;// Code that runs when an unhandled error occurs&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Session_Start(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #008000"&gt;// Code that runs when a new session is started&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_BeginRequest(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            _context.Logger = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TraceLogger();&lt;br /&gt;            Scope = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PerRequestUnitOfWorkScope&amp;lt;NorthModelUnitOfWork&amp;gt;(_context);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Application_EndRequest(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            Scope.Dispose();&lt;br /&gt;        }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;and now in webpage:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Page_Load(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;        {&lt;br /&gt;            var uow = Global.Scope.Current;&lt;br /&gt;            IList&amp;lt;Product&amp;gt; listOfProducts = uow.Find&amp;lt;Product&amp;gt;();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (Product product &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; listOfProducts)&lt;br /&gt;            {&lt;br /&gt;                TextBox1.Text += product.ProductName + Environment.NewLine;&lt;br /&gt;            }&lt;br /&gt;        }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-10-27T19:11:42.058625-04:00</Created>
+      <Modified>2010-10-27T19:11:42.058625-04:00</Modified>
+      <EntryId>9603fe96-9204-4bbb-a483-297e2f1b9d21</EntryId>
+      <Description />
+      <Title>LightSpeed – Simple Web</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

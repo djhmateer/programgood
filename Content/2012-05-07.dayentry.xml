@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-05-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;From wikipedia:&lt;/p&gt;  &lt;p&gt;During the meeting, each team member answers three questions:&lt;sup&gt;&lt;a href="http://en.wikipedia.org/wiki/Scrum_(development)#cite_note-schwaberp135-10"&gt;[11]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;What have you done since yesterday? &lt;/li&gt;    &lt;li&gt;What are you planning to do today? &lt;/li&gt;    &lt;li&gt;Any impediments/stumbling blocks?&lt;/li&gt; &lt;/ul&gt;</Content>
+      <Created>2012-05-07T14:12:41.43575-04:00</Created>
+      <Modified>2012-05-07T14:12:41.43575-04:00</Modified>
+      <EntryId>585601a5-8c09-482c-aeb9-db96005d7dcd</EntryId>
+      <Description />
+      <Title>Scrum</Title>
+      <Categories>Scrum</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

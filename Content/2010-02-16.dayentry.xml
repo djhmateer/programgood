@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-15T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists" href="http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists"&gt;http://www.mikesdotnetting.com/Article/128/Get-The-Drop-On-ASP.NET-MVC-DropDownLists&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;1) SelectListItem – Value and Text property assigned&lt;/p&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; northwindDataContext();&lt;br /&gt;IEnumerable&amp;lt;SelectListItem&amp;gt; items = db.Categories.Select(c =&amp;gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SelectListItem {Value = c.CategoryID.ToString(), Text = c.CategoryName});&lt;br /&gt;ViewData[&lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;] = items;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;in the view:&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;%= Html.DropDownList(&lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;) %&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;which is the pretty much the same as:&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;%= Html.DropDownList(&lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;, (IEnumerable&amp;lt;SelectListItem&amp;gt;)ViewData[&lt;span style="color: #006080"&gt;&amp;quot;Categories&amp;quot;&lt;/span&gt;]) %&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;2) SelectList is tidier, and gives a couple of overloads including selected (in the case below number 3):&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;var query = db.Categories.Select(c =&amp;gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {c.CategoryID , c.CategoryName});&lt;br /&gt;ViewData[&lt;span style="color: #006080"&gt;&amp;quot;Categories&amp;quot;&lt;/span&gt;] = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SelectList(query.AsEnumerable(), &lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;CategoryName&amp;quot;&lt;/span&gt;,3);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_thumb.png" width="244" height="211" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;h3&gt;PostBack&lt;/h3&gt;
+
+&lt;p&gt;On the product view:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;% &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (Html.BeginForm(&lt;span style="color: #0000ff"&gt;null&lt;/span&gt;, &lt;span style="color: #0000ff"&gt;null&lt;/span&gt;, FormMethod.Post, &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { id = &lt;span style="color: #006080"&gt;&amp;quot;TheForm&amp;quot;&lt;/span&gt; })) {%&amp;gt; &lt;br /&gt;&amp;lt;%=Html.DropDownList(&lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;, (SelectList)ViewData[&lt;span style="color: #006080"&gt;&amp;quot;Categories&amp;quot;&lt;/span&gt;], &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { onchange=&lt;span style="color: #006080"&gt;&amp;quot;this.form.submit();&amp;quot;&lt;/span&gt;})%&amp;gt;&lt;br /&gt;&amp;lt;%}%&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;and the product controller:&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;? categoryid)&lt;br /&gt;{&lt;br /&gt;    var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; northwindDataContext();&lt;br /&gt;&lt;br /&gt;    var query = db.Categories.Select(c =&amp;gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {c.CategoryID, c.CategoryName});&lt;br /&gt;    ViewData[&lt;span style="color: #006080"&gt;&amp;quot;Categories&amp;quot;&lt;/span&gt;] = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SelectList(query.AsEnumerable(), &lt;span style="color: #006080"&gt;&amp;quot;CategoryID&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;CategoryName&amp;quot;&lt;/span&gt;);&lt;br /&gt;&lt;br /&gt;    List&amp;lt;Product&amp;gt; products;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (categoryid == &lt;span style="color: #0000ff"&gt;null&lt;/span&gt;)&lt;br /&gt;        products = db.Products.ToList();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;else&lt;/span&gt;&lt;br /&gt;        products = (from p &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.Products&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; p.CategoryID == categoryid&lt;br /&gt;                    select p).ToList();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(products);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;which gives:&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_thumb_1.png" width="644" height="154" /&gt;&lt;/a&gt;&amp;#160; &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;The database I used was Northwind: &lt;a title="http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=06616212-0356-46a0-8da2-eebc53a68034&amp;amp;displayLang=en" href="http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=06616212-0356-46a0-8da2-eebc53a68034&amp;amp;displayLang=en"&gt;http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=06616212-0356-46a0-8da2-eebc53a68034&amp;amp;displayLang=en&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;Used LinqToSQL.&lt;/div&gt;
+
+&lt;div&gt;ASP.NET MVC version 1&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;h3&gt;Run Implementation&lt;/h3&gt;
+
+&lt;div&gt;Found I had to sort a generic list&lt;/div&gt;
+
+&lt;div&gt;&lt;a title="http://dotnetslackers.com/community/blogs/simoneb/archive/2007/06/20/How-to-sort-a-generic-List_3C00_T_3E00_.aspx" href="http://dotnetslackers.com/community/blogs/simoneb/archive/2007/06/20/How-to-sort-a-generic-List_3C00_T_3E00_.aspx"&gt;http://dotnetslackers.com/community/blogs/simoneb/archive/2007/06/20/How-to-sort-a-generic-List_3C00_T_3E00_.aspx&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;The crowd goes wild:&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DropDownListinASP.NETMVC_A11C/image_thumb_2.png" width="644" height="279" /&gt;&lt;/a&gt; &lt;/div&gt;</Content>
+      <Created>2010-02-15T19:52:58.6570103-05:00</Created>
+      <Modified>2010-02-15T20:12:16.5920983-05:00</Modified>
+      <EntryId>6d381aa7-979a-4227-9768-35af8c53a0e1</EntryId>
+      <Description />
+      <Title>DropDownList and Postback in ASP.NET MVC</Title>
+      <Categories>ASP.NET MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-04-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;ruby script/generate scaffold flight departure:datetime arrival:datetime destination:string baggage_allowance:decimal capacity:integer&lt;/p&gt;  &lt;p&gt;ruby script/generate scaffold seat flight_id:integer name:string baggage:decimal&lt;/p&gt;  &lt;p&gt;rake db:migrate&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb.png" width="644" height="241" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb_1.png" width="338" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;What we want is a form that has the flight info on it, then the ability to add a new seat booking.&lt;/p&gt;  &lt;h5&gt;Partials&lt;/h5&gt;  &lt;p&gt;Coppied seat/new.html.erb&amp;#160; into flight/show.html.erb file rendering as a partial&lt;/p&gt;  &lt;p&gt;_new_seat.html.erb&lt;/p&gt;  &lt;p&gt;Changed:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;% form_for(seat) do |f| %&amp;gt;     &lt;br /&gt;&amp;#160; &amp;lt;%= f.error_messages %&amp;gt; &lt;/p&gt;    &lt;p&gt;&amp;#160; &amp;lt;p&amp;gt;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.label :flight_id %&amp;gt;&amp;lt;br /&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.text_field :flight_id %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.label :name %&amp;gt;&amp;lt;br /&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.text_field :name %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.label :baggage %&amp;gt;&amp;lt;br /&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.text_field :baggage %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= f.submit 'Create' %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;lt;% end %&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;the form_for(@seat) to (seat) to become a local variable to the partial.&amp;#160; This is good practise.&lt;/p&gt;  &lt;p&gt;called the partial from flights/show.html.erb as&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;%= render :partial=&amp;gt;&amp;quot;new_seat&amp;quot;, :locals=&amp;gt;{:seat=&amp;gt;Seat.new(:flight_id=&amp;gt;@flight.id)}%&amp;gt;&lt;/p&gt;    &lt;p&gt;&amp;lt;% form_for(seat) do |f| %&amp;gt;     &lt;br /&gt;&amp;#160; &amp;lt;%= f.error_messages %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;%= f.hidden_field :flight_id %&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb_3.png" width="439" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;We also need a partial for the seat list&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_10.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb_4.png" width="233" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;however this is bad as its displaying the seats for all flights&lt;/p&gt;  &lt;h5&gt;Connect the models together&lt;/h5&gt;  &lt;p&gt;means we don’t need to use finders.. it works automatically.&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;class Flight &amp;lt; ActiveRecord::Base     &lt;br /&gt;&amp;#160; has_many :seats      &lt;br /&gt;end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;then when rendering out the listing of seats we can pass in the array&amp;#160; in show.html.erb&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;%= render :partial=&amp;gt;&amp;quot;seat_list&amp;quot;, :locals=&amp;gt;{:seats=&amp;gt; @flight.seats}%&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;in the model:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;belongs_to :flight     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; def validate      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; if baggage &amp;gt; Flight.find(flight_id).baggage_allowance      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; errors.add_to_base(&amp;quot;You have too much baggage&amp;quot;)      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; end      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; if flight.seats.size &amp;gt;= flight.capacity      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; errors.add_to_base(&amp;quot;The flight is fully booked&amp;quot;)      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; end      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_12.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb_5.png" width="244" height="209" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;another custom validator in the seat model&lt;/p&gt;  &lt;p&gt;if flight.seats.size &amp;gt;= flight.capacity   &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; errors.add_to_base(&amp;quot;The flight is fully booked&amp;quot;)    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; end&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_14.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRMultipleTables_DF0B/image_thumb_6.png" width="204" height="244" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;**TO DO put in a validator that checks there is a number for baggage&lt;/p&gt;</Content>
+      <Created>2010-04-07T00:40:27.898875-04:00</Created>
+      <Modified>2010-04-07T00:40:27.898875-04:00</Modified>
+      <EntryId>055e56a8-f5a1-45f5-b2ad-ff112a2a2ab8</EntryId>
+      <Description />
+      <Title>RoR Multiple Tables</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;ruby script/generate scaffold client_workout client_name:string trainer:string duration_mins:integer date_of_workout:date paid_amount:decimal&lt;/p&gt;  &lt;p&gt;rake db:migrate&lt;/p&gt;  &lt;p&gt;Problem is that the scaffolding app doesn’t do exactly what we want.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb.png" width="631" height="397" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;what we want is just the listing for Lenny Goldberg ie a filter.&lt;/p&gt;  &lt;h5&gt;Creating a Form with no Model&lt;/h5&gt;  &lt;p&gt;instead of form_for&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;% form_for(@ad,:url=&amp;gt;{:action=&amp;gt;'update'}) do |f| %&amp;gt;     &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Name&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :name %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Description&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_area :description %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Price&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :price %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Seller&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :seller_id %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Email&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :email %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Img url&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :img_url %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;%= f.submit &amp;quot;Update&amp;quot; %&amp;gt;&amp;lt;/p&amp;gt;      &lt;br /&gt;&amp;lt;% end %&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;we use form_tag&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;% form_tag &amp;quot;/client_workouts/find&amp;quot; do%&amp;gt;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= text_field_tag :search_string%&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%= submit_tag &amp;quot;Search&amp;quot; %&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;% end %&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_2.png" width="644" height="164" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_1.png" width="689" height="177" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;by putting in dave into the search box, we can see it coming through in the controller by using puts to output to the console.&lt;/p&gt;  &lt;p&gt;So we only need those records where client_name = the search string.&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;def find     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; puts params[:search_string]      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @client_workouts = ClientWorkout.find_all_by_client_name(params[:search_string])       &lt;br /&gt;&amp;#160; end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;The framework creates finders for each attribute.. eg find_all_by_client_name.&lt;/p&gt;  &lt;p&gt;and I just wired up to a find.html.erb file.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_3.png" width="655" height="406" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;however we want to search on trainer as well ie where client_name=”Lenny Goldbery” or trainer = “Lenny Goldberg”&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;@client_workouts = ClientWorkout.find(:all, :conditions=&amp;gt;[&amp;quot;client_name = ? OR trainer = ?&amp;quot;,     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; params[:search_string], params[:search_string]])&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_10.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_4.png" width="537" height="351" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;The crowd goes wild!&amp;#160; Can filter on client_name or trainer.&lt;/p&gt;  &lt;h3&gt;Validators&lt;/h3&gt;  &lt;p&gt;A number:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;class ClientWorkout &amp;lt; ActiveRecord::Base     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; validates_numericality_of :paid_amount      &lt;br /&gt;end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;Mandatory:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;class ClientWorkout &amp;lt; ActiveRecord::Base     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; validates_numericality_of :paid_amount      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; validates_presence_of :trainer      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; validates_presence_of :client_name      &lt;br /&gt;end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_12.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_5.png" width="291" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Doing it on custom code:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;class Ad &amp;lt; ActiveRecord::Base     &lt;br /&gt;&amp;#160; validates_presence_of :price      &lt;br /&gt;&amp;#160; validates_presence_of :name      &lt;br /&gt;end&lt;/p&gt;    &lt;p&gt;def create     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad = Ad.new(params[:ad])      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; if @ad.save      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; redirect_to &amp;quot;/ads/#{@ad.id}&amp;quot;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; else      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; render :template =&amp;gt; &amp;quot;ads/new&amp;quot;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; end      &lt;br /&gt;&amp;#160; end&lt;/p&gt;    &lt;p&gt;&amp;lt;% form_for(@ad,:url=&amp;gt;{:action=&amp;gt;'create'}) do |f| %&amp;gt;     &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;%=f.error_messages%&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_14.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/RoRDatabaseFinders_CE0F/image_thumb_6.png" width="780" height="508" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-04-06T23:50:05.961375-04:00</Created>
+      <Modified>2010-04-06T23:50:05.961375-04:00</Modified>
+      <EntryId>3f1ef77f-5fb5-40a5-81ee-045e3cbc9991</EntryId>
+      <Description />
+      <Title>RoR – Database Finders – Fix The Scaffold</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt; here is how we do it from scaffolding:&lt;/p&gt;  &lt;h3&gt;Symbols and Strings&lt;/h3&gt;  &lt;p&gt;&amp;lt;%= f.label :seat_id_seq %&amp;gt;&amp;#160;&amp;#160; This is a symbol.&amp;#160; They always start with a colon.&amp;#160; Generally used to name things.&amp;#160; Mostly interchangeable with strings.&lt;/p&gt;  &lt;p&gt;&amp;lt;%= f.label “Seat #” %&amp;gt;&amp;#160;&amp;#160; This is a string.&lt;/p&gt;  &lt;h3&gt;Add a column to the DB&lt;/h3&gt;  &lt;p&gt;to add the database we:&lt;/p&gt;  &lt;p&gt;ruby script/generate scaffold ticket name:string seat_id_seq:string address:text price_paid:decimal email_address:string&lt;/p&gt;  &lt;p&gt;to add a row:&lt;/p&gt;  &lt;p&gt;ruby script/generate migration AddPhoneToTickets phone:string&lt;/p&gt;  &lt;p&gt;important bit is Add…To…&lt;/p&gt;  &lt;p&gt;then &lt;/p&gt;  &lt;p&gt;rake db:migrate&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb.png" width="644" height="240" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;then changed the 4 view to display the new field.&lt;/p&gt;  &lt;h3&gt;Starting From Scratch&lt;/h3&gt;  &lt;p&gt;The scaffolding can create too much code!&amp;#160; Here is an app just generating 1 page to start with (a show page)&lt;/p&gt;  &lt;p&gt;ruby script/generate model ad name:string description:text price:decimal seller_id:integer email:string img_url:string&lt;/p&gt;  &lt;p&gt;models have singular names eg ticket, ad&lt;/p&gt;  &lt;h5&gt;Controller&lt;/h5&gt;  &lt;p&gt;ruby script/generate controller ads&lt;/p&gt;  &lt;p&gt;controllers have plural names&lt;/p&gt;  &lt;h5&gt;Routes&lt;/h5&gt;  &lt;p&gt;map.connect '/ads/:id', :controller=&amp;gt;'ads', :action=&amp;gt;'show'&lt;/p&gt;  &lt;p&gt;use the ads_controller.rb, and the show template.&lt;/p&gt;  &lt;h5&gt;View&lt;/h5&gt;  &lt;p&gt;show.html.erb&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;p&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;b&amp;gt;Name:&amp;lt;/b&amp;gt;&amp;lt;%= @ad.name %&amp;gt;       &lt;br /&gt;&amp;lt;/p&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_1.png" width="644" height="465" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;h5&gt;Index Page&lt;/h5&gt;  &lt;p&gt;controller:&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;#160; def index      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; @ads = Ad.find(:all)       &lt;br /&gt;&amp;#160; end&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;index.html.erb&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;% for ad in @ads%&amp;gt;      &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/ads/&amp;lt;%= ad.id%&amp;gt;&amp;quot;&amp;gt;&amp;lt;%=ad.name%&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;       &lt;br /&gt;&amp;lt;% end %&amp;gt;       &lt;br /&gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;route&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;map.connect 'ads/', :controller=&amp;gt;'ads', :action=&amp;gt;'index'&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_2.png" width="174" height="366" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;h5&gt;Layouts&lt;/h5&gt;  &lt;p&gt;images into public/images&lt;/p&gt;  &lt;p&gt;stylesheet into public/stylesheets&lt;/p&gt;  &lt;p&gt;apps/views/layouts/ads.html.erb&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_3.png" width="589" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;h5&gt;Post New Ads Online&lt;/h5&gt;  &lt;p&gt;&lt;/p&gt;  &lt;h5&gt;routes&lt;/h5&gt;  &lt;blockquote&gt;   &lt;p&gt;map.connect 'ads/new', :controller=&amp;gt;'ads', :action=&amp;gt;'new'      &lt;br /&gt;map.connect 'ads/create', :controller=&amp;gt;'ads', :action=&amp;gt;'create'&lt;/p&gt; &lt;/blockquote&gt;  &lt;h5&gt;viewff&lt;/h5&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;ads/new.html.erb&lt;/p&gt;  &lt;p&gt;and the form will be submitted to:&lt;/p&gt;  &lt;p&gt;ads/create&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h5&gt;RoR Text Editor&lt;/h5&gt;  &lt;p&gt;Am trying &lt;a title="http://www.e-texteditor.com/" href="http://www.e-texteditor.com/"&gt;http://www.e-texteditor.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;ctrl shift p – toggle between project view and editor view&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.e-texteditor.com/wiki/index.php/Projects#Keyboard_navigation" href="http://www.e-texteditor.com/wiki/index.php/Projects#Keyboard_navigation"&gt;http://www.e-texteditor.com/wiki/index.php/Projects#Keyboard_navigation&lt;/a&gt; – keyboard shortcuts&lt;/p&gt;  &lt;h5&gt;Create Form Helper&lt;/h5&gt;  &lt;p&gt;Rails can create forms that are associated with model objects. so in new.html.erb&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;lt;% form_for(@ad,:url=&amp;gt;{:action=&amp;gt;'create'}) do |f| %&amp;gt;      &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Name&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :name %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Description&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_area :description %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Price&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :price %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Seller&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :seller_id %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Email&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :email %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Img url&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :img_url %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;%= f.submit &amp;quot;Create&amp;quot; %&amp;gt;&amp;lt;/p&amp;gt;       &lt;br /&gt;&amp;lt;% end %&amp;gt;&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;eg this comes out as:&lt;/p&gt;  &lt;blockquote&gt;   &lt;pre&gt;&amp;lt;b&amp;gt;Name&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;input id=&amp;quot;ad_name&amp;quot; name=&amp;quot;ad[name]&amp;quot; size=&amp;quot;30&amp;quot; type=&amp;quot;text&amp;quot; /&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_4.png" width="319" height="484" /&gt;&lt;/a&gt; &lt;/pre&gt;
+
+&lt;p&gt;so when the submit button is pressed, this routes back to the create action in the AdsController.&lt;/p&gt;
+
+&lt;h5&gt;Controller&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;def new 
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad = Ad.new&amp;#160;&amp;#160;&amp;#160; &lt;br /&gt;&amp;#160; end&lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;br /&gt;&amp;#160; def create 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad = Ad.new(params[:ad]) 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad.save 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; redirect_to &amp;quot;/ads/#{@ad.id}&amp;quot; 
+
+    &lt;br /&gt;&amp;#160; end&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;note:&amp;#160; create an empty ad object before passing onto new&lt;/p&gt;
+
+&lt;p&gt;and we have an automatic redirect to the listing&lt;/p&gt;
+
+&lt;p&gt;otherwise could have commented out and it would go automatically to create.html.erb:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_5.png" width="243" height="244" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h5&gt;Edit a Record&lt;/h5&gt;
+
+&lt;p&gt;routes add in &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;map.connect 'ads/:id/edit', :controller=&amp;gt;'ads', :action=&amp;gt;'edit' 
+    &lt;br /&gt;map.connect 'ads/:id/update', :controller=&amp;gt;'ads', :action=&amp;gt;'update'&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;controller add in&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;def edit 
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad = Ad.find(params[:id]) 
+
+    &lt;br /&gt;&amp;#160; end 
+
+    &lt;br /&gt;&amp;#160; def update 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad = Ad.find(params[:id]) 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; @ad.update_attributes(params[:ad]) 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; redirect_to&amp;quot;/ads/#{@ad.id}&amp;quot; 
+
+    &lt;br /&gt;&amp;#160; end&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;view add in&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&amp;lt;% form_for(@ad,:url=&amp;gt;{:action=&amp;gt;'update'}) do |f| %&amp;gt; 
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Name&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :name %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Description&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_area :description %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Price&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :price %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Seller&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :seller_id %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Email&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :email %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;Img url&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;%= f.text_field :img_url %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;#160; &amp;lt;p&amp;gt;&amp;lt;%= f.submit &amp;quot;Update&amp;quot; %&amp;gt;&amp;lt;/p&amp;gt; 
+
+    &lt;br /&gt;&amp;lt;% end %&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5&gt;Security&lt;/h5&gt;
+
+&lt;p&gt;in the AdsController&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;before_filter :check_logged_in, :only =&amp;gt; [:edit, :update]&lt;/p&gt;
+
+  &lt;p&gt;&amp;#160; private 
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; def check_logged_in 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; authenticate_or_request_with_http_basic(&amp;quot;Ads&amp;quot;) do |username, password| 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; username == &amp;quot;admin&amp;quot; &amp;amp;&amp;amp; password == &amp;quot;secret&amp;quot; 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; end 
+
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160; end&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_14.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_6.png" width="684" height="280" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h5&gt;Delete&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_16.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/HeadFirstRails_BD02/image_thumb_7.png" width="176" height="244" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Just calling a single action on the controller called destory which then redirects back to index.&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;**TODO put this live&lt;/p&gt;</Content>
+      <Created>2010-04-06T22:11:31.430125-04:00</Created>
+      <Modified>2010-04-06T22:52:19.086375-04:00</Modified>
+      <EntryId>a3856a95-713b-4268-824a-af2d2a1fa29a</EntryId>
+      <Description />
+      <Title>Head First Rails – Creating an App From Scratch</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;The last week of looking at RoR:&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Does all the plumbing if you follow the convention&lt;/li&gt;    &lt;li&gt;Amazing how little code you need to write&lt;/li&gt;    &lt;li&gt;The important stuff for CRUD apps is all there – validators, db relationships, CRUD functionality&lt;/li&gt;    &lt;li&gt;The ORM works&lt;/li&gt;    &lt;li&gt;Fast to develop!&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;In summary this look like a wonderful technology for putting together CRUD based business apps fast.&lt;/p&gt;  &lt;p&gt;Shared hosting seems to be harder than .NET / PHP, however heroku.com is a great free resource.&lt;/p&gt;  &lt;p&gt;Commercially speaking I think it would work very well in an enterprise where there is a need to develop apps fast (when isn’t there!) that do not require huge performance (I would argue that most apps I’ve worked on would be well suited in RoR).&lt;/p&gt;</Content>
+      <Created>2010-04-07T17:47:42.336375-04:00</Created>
+      <Modified>2010-04-07T17:47:42.336375-04:00</Modified>
+      <EntryId>2032c9ce-b531-42b1-907e-c12fef258044</EntryId>
+      <Description />
+      <Title>RoR Thoughts so Far</Title>
+      <Categories>Ruby on Rails</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

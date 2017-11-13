@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-02T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>You've hit the ball out the park! Inrecdible!</Content>
+      <Created>2011-04-17T23:51:44.06575-04:00</Created>
+      <Modified>2011-04-17T23:51:44.06575-04:00</Modified>
+      <EntryId>f5e56c61-3691-473c-9ef6-73757007dc2f</EntryId>
+      <TargetTitle>Fields and Properties and AutoProperties</TargetTitle>
+      <TargetEntryId>65A2C440-6B5B-415E-ACA1-3F5428C5AE5C</TargetEntryId>
+      <Author>Kevlyn</Author>
+      <AuthorEmail>e.nitrocurd@debian.org</AuthorEmail>
+      <AuthorHomepage>http://www.bing.com/</AuthorHomepage>
+      <AuthorIPAddress>193.2.241.60</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

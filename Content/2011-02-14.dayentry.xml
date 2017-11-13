@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-13T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.sqltolinq.com/"&gt;http://www.sqltolinq.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;A tool to convert SQL to Linq.&amp;#160; Uses Linq to SQL or EF.&lt;/p&gt;</Content>
+      <Created>2011-02-13T20:25:36.906875-05:00</Created>
+      <Modified>2011-02-13T20:25:36.906875-05:00</Modified>
+      <EntryId>397cde27-f83e-4508-812b-57430d0512bb</EntryId>
+      <Description />
+      <Title>Linquer</Title>
+      <Categories>Linq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

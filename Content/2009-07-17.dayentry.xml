@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-16T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>A simple MVC (Model View Controller) implementation..code by Jimmy Chandra&lt;br&gt;http://stackoverflow.com/questions/1107720/mvc-c-simplest-possible-implementation&lt;br&gt;&lt;br&gt;Why use MVC?&amp;nbsp; Similar reasons to MVP - testability and seperation of concerns&lt;br&gt;&lt;br&gt;&lt;a href="http://www.programgood.net/content/binary/Simple.MVC.zip"&gt;Simple.MVC.zip (167.25 KB)&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/Drawing4.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;1. Program.cs runs, running Main.. as is standard in a Win Forms app.&amp;nbsp; Difference from MVP is that main here is instantiating and running a controller class first of all, instead of newing up the view, which calls the controller/presenter.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;);
+            
+            TopEmployeeController controller &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; TopEmployeeController();
+            Application.Run(controller.View &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;as&lt;/span&gt; Form);
+        }&lt;/span&gt;&lt;/pre&gt;2. Controller is instantiated and constructor called:&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;        private&lt;/span&gt; ITopEmployeeView _view;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; Employee _employee;
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;bool&lt;/span&gt; _monitoring;
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; TopEmployeeController()
+        {
+            _employee &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Employee();
+            _view &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; TopEmployeeForm(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;, _employee);
+        }&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;3. Controller news up an employee (dumb).. then a view of type TopEmployeeForm, passing its self (the controller) and employee to it.&lt;br&gt;&lt;br&gt;4. View (the observer) subscribes to the model (the subject) so that when model.OnPropertyChange is called, view.UpdateView is called.&amp;nbsp; This is the observer pattern, made easier in C# using events.. which is using a delegate. &lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;/span&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// view&lt;/span&gt;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; TopEmployeeForm(ITopEmployeeController controller, Employee model)
+        {
+            _controller &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; controller;
+            _model &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; model;
+
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;//Let the model know that this view is interested if the model change&lt;/span&gt;
+            _model.OnPropertyChange += &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Action(UpdateView);
+
+            InitializeComponent();
+&lt;/span&gt;&lt;/pre&gt;        }&lt;/span&gt;&lt;/pre&gt;6. When Button is pressed on the view.&amp;nbsp; The controller.GetTopEmplyee method is called.&amp;nbsp; This calls model.MontorChanges:&lt;br&gt;&lt;pre&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;/span&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// controller&lt;/span&gt;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; GetTopEmployee()&lt;br&gt;        {&lt;br&gt;            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (!_monitoring)&lt;br&gt;            {&lt;br&gt;                _monitoring &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;true&lt;/span&gt;;&lt;br&gt;                _employee.MonitorChanges();&lt;br&gt;            }&lt;br&gt;        }&lt;/span&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;7. MonitorChanges does some waiting code, then every second calls FirePropertyChange().  Which calls model.OnPropertyChange. &lt;br&gt;Which is really a delegate to View.UpdateView&lt;br&gt;&lt;/pre&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// model&lt;/span&gt;
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;event&lt;/span&gt; Action OnPropertyChange;
+
+&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; FirePropertyChange()
+        {
+            var propChange &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; OnPropertyChange;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (propChange !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;)
+            {
+                OnPropertyChange();
+            }
+        }&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;8. The view method which runs every second and displays the name on the form.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// view&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; UpdateView()
+        {
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// to do with threading&lt;/span&gt;
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;.InvokeRequired)
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;.Invoke(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Action(UpdateView));
+            }
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+            {
+                TopEmployeeName &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; _model.FullName;
+            }
+        }&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;a href="http://www.programgood.net/content/binary/Simple.MVC.zip"&gt;&lt;br&gt;&lt;/a&gt;</Content>
+      <Created>2009-07-17T16:16:06.702-04:00</Created>
+      <Modified>2009-07-17T16:34:43.84325-04:00</Modified>
+      <EntryId>55ec44ed-b372-4d8b-a792-36192bb7fb9e</EntryId>
+      <Description />
+      <Title>Simple MVC in WinForms</Title>
+      <Categories>MVC;Object Oriented Programming;Patterns;Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

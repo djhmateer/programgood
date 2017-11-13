@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-04-01T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Right click on any xaml file in solution explorer&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Open with &lt;/li&gt;    &lt;li&gt;Source Code (Text) Editor &lt;/li&gt;    &lt;li&gt;Set as default &lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Much faster to load, but not to change between files.&lt;/p&gt;  &lt;p&gt;Shift+F7 to View Designer to check.&lt;/p&gt;</Content>
+      <Created>2013-04-02T09:36:34.268204-04:00</Created>
+      <Modified>2013-04-02T09:48:46.2950558-04:00</Modified>
+      <EntryId>7c59c421-7731-4833-9227-7ffef5feead9</EntryId>
+      <Description />
+      <Title>XAML–Speed up VS2012</Title>
+      <Categories>VS2012;XAML</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Introduced in .NET 3.5&lt;/p&gt;  &lt;p&gt;Using Linqpad against my .web DLL which includes the EF4 context.&amp;#160; SL project.&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Implicit joins (so don’t have to explicity say each join)&lt;/li&gt;    &lt;li&gt;Dot notation (or fluent) as opposed to Query Expression syntax&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;.Where – from &lt;a href="http://www.blackwasp.co.uk/LinqQueries.aspx"&gt;http://www.blackwasp.co.uk/LinqQueries.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;developers = employees.Where(&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;e =&amp;gt; (e.Title.Contains(&lt;/code&gt;&lt;code&gt;&amp;quot;Developer&amp;quot;&lt;/code&gt;&lt;code&gt;) &amp;amp;&amp;amp; e.Salary &amp;gt; 35000)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;|| (!e.Title.Contains(&lt;/code&gt;&lt;code&gt;&amp;quot;Developer&amp;quot;&lt;/code&gt;&lt;code&gt;) &amp;amp;&amp;amp; e.Salary &amp;lt; 25000));&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;developers =&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;from&lt;/code&gt; &lt;code&gt;e &lt;/code&gt;&lt;code&gt;in&lt;/code&gt; &lt;code&gt;employees&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;where&lt;/code&gt; &lt;code&gt;(e.Title.Contains(&lt;/code&gt;&lt;code&gt;&amp;quot;Developer&amp;quot;&lt;/code&gt;&lt;code&gt;) &amp;amp;&amp;amp; e.Salary &amp;gt; 35000)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;|| (!e.Title.Contains(&lt;/code&gt;&lt;code&gt;&amp;quot;Developer&amp;quot;&lt;/code&gt;&lt;code&gt;) &amp;amp;&amp;amp; e.Salary &amp;lt; 25000)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;select&lt;/code&gt; &lt;code&gt;e;&lt;/code&gt;&lt;/p&gt;  &lt;h3&gt;Let – reduce complexity&lt;/h3&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;developers =&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;from&lt;/code&gt; &lt;code&gt;e &lt;/code&gt;&lt;code&gt;in&lt;/code&gt; &lt;code&gt;employees&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;let&lt;/code&gt; &lt;code&gt;isDeveloper = e.Title.Contains(&lt;/code&gt;&lt;code&gt;&amp;quot;Developer&amp;quot;&lt;/code&gt;&lt;code&gt;)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;where&lt;/code&gt; &lt;code&gt;(isDeveloper &amp;amp;&amp;amp; e.Salary &amp;gt; 35000)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;|| (!isDeveloper &amp;amp;&amp;amp; e.Salary &amp;lt; 25000)&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&lt;code&gt;&lt;/code&gt;&lt;code&gt;select&lt;/code&gt; &lt;code&gt;e;&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h3&gt;Projections – eg Select&lt;/h3&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;names = employees.Where(e =&amp;gt; e.Salary &amp;gt; 30000).Select(e =&amp;gt; e.Name);&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;or Anonymous&lt;/p&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;namesAndTitles = employees.Select(e =&amp;gt; &lt;/code&gt;&lt;code&gt;new&lt;/code&gt; &lt;code&gt;{ e.Name, e.Title });&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;Or assign to &lt;/p&gt;  &lt;p&gt;&lt;code&gt;var&lt;/code&gt; &lt;code&gt;namesAndTitles = employees.Select(e =&amp;gt; &lt;/code&gt;&lt;code&gt;new&lt;/code&gt; &lt;code&gt;{ Employee = e.Name, Job = e.Title });&lt;/code&gt;&lt;/p&gt;  &lt;p&gt;.Any()&lt;/p&gt;  &lt;p&gt;.SelectMany()&amp;#160; - from &lt;a href="http://www.blackwasp.co.uk/LinqOneToManyProjection.aspx"&gt;http://www.blackwasp.co.uk/LinqOneToManyProjection.aspx&lt;/a&gt;&amp;#160; allowing 1 to many to be flattened and queries&lt;/p&gt;  &lt;h3&gt;Group By Multiple&lt;/h3&gt;  &lt;pre&gt;&lt;code&gt;var query = (from t in Transactions
+             group t by new {t.MaterialID, t.ProductID}
+             into grp
+                    select new
+                    {
+                        grp.Key.MaterialID,
+                        grp.Key.ProductID,
+                        Quantity = grp.Sum(t =&amp;gt; t.Quantity)
+                    }).ToList();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</Content>
+      <Created>2013-04-02T12:52:36.3150206-04:00</Created>
+      <Modified>2013-04-02T12:52:36.3150206-04:00</Modified>
+      <EntryId>d1dfec7e-4a62-4f65-be3c-29e8a97487db</EntryId>
+      <Description />
+      <Title>Linq</Title>
+      <Categories>Linq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

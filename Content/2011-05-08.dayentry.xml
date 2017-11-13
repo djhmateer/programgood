@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-07T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;To display:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DateFormattinginReportingServices_EC3A/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DateFormattinginReportingServices_EC3A/image_thumb.png" width="345" height="257" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;I bring back a from SQL:&lt;/p&gt;  &lt;p&gt;CONVERT(varchar(10), DATEADD(hh,13,VoucherRedemption.RedeemedAtUTC), 105) as RedeemedAtLocalShortDateInSQL&lt;/p&gt;  &lt;p&gt;eg 14-02-2011&lt;/p&gt;  &lt;p&gt;Then in RS.. Chart, Series Properties, Category Field put in eg RedeemedAtLocalShortDateInSQL&lt;/p&gt;  &lt;p&gt;and in Axis Properties: Custom format:&amp;#160; ddd dd MMM&lt;/p&gt;</Content>
+      <Created>2011-05-08T00:49:23.702875-04:00</Created>
+      <Modified>2011-05-08T00:49:23.702875-04:00</Modified>
+      <EntryId>9258403f-179d-4693-8630-a13d6914e96e</EntryId>
+      <Description />
+      <Title>Date Formatting in Reporting Services</Title>
+      <Categories>Report Viewer;Reporting Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

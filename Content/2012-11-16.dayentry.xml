@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-15T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Ctrl + R, Ctrl + T&amp;#160; - Debug in current context&lt;/p&gt;  &lt;p&gt;Ctrl + R, A&amp;#160; - Run all tests&lt;/p&gt;  &lt;p&gt;Alt S W Enter… Test Explorer window&lt;/p&gt;</Content>
+      <Created>2012-11-16T04:31:40.5773738-05:00</Created>
+      <Modified>2012-11-21T06:40:42.8755408-05:00</Modified>
+      <EntryId>7f2158be-2e43-4ac0-a5c6-f09597c11ad6</EntryId>
+      <Description />
+      <Title>VS2012 Test Runner</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

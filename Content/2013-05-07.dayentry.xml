@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-05-06T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.brentozar.com/blitz/"&gt;http://www.brentozar.com/blitz/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Good at analysing indexes.&lt;/p&gt;</Content>
+      <Created>2013-05-07T09:29:53.3869164-04:00</Created>
+      <Modified>2013-05-07T09:29:53.3869164-04:00</Modified>
+      <EntryId>c35ad3fd-79e0-4f6a-976f-4866efb877fc</EntryId>
+      <Description />
+      <Title>SQL Performance–Blitz</Title>
+      <Categories>Index;Performance;SQL;SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

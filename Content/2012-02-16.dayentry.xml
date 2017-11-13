@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-02-15T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;users&lt;/p&gt;  &lt;p&gt;roles – have permissions&lt;/p&gt;  &lt;p&gt;permissions – always grant, never deny&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;anonymous user,&lt;/p&gt;  &lt;p&gt; anonymous role, view site&lt;/p&gt;  &lt;p&gt;permission – view site and add a comment&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Users-Role-and-Permissions-in-Orchard_A11F/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Users-Role-and-Permissions-in-Orchard_A11F/image_thumb.png" width="644" height="366" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;granular. explicit granted to a role, or implicitly granted through other permissions.&lt;/p&gt;</Content>
+      <Created>2012-02-16T17:36:06.5555-05:00</Created>
+      <Modified>2012-02-16T17:45:27.758625-05:00</Modified>
+      <EntryId>ae939ee1-f5d7-4766-9095-999ff958c05a</EntryId>
+      <Description />
+      <Title>Users Role and Permissions in Orchard</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;To make LiveWriter work on blogging – turn on Remote Blog Publishing in Modules.&lt;/p&gt;</Content>
+      <Created>2012-02-16T17:15:36.696125-05:00</Created>
+      <Modified>2012-02-16T17:15:36.696125-05:00</Modified>
+      <EntryId>a8c72f95-6c4d-4f0b-a4a4-d0b70259f06c</EntryId>
+      <Description />
+      <Title>Orchard Blogging</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Three different prices of themes: &lt;/p&gt;  &lt;p&gt;**need to install advanced menu?&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb.png" width="560" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;SampleKit&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_1.png" width="644" height="456" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Temple&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_2.png" width="644" height="471" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Interface&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_3.png" width="644" height="476" /&gt;&lt;/a&gt;&lt;/p&gt;        &lt;p&gt;Adele&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_10.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_4.png" width="644" height="471" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Vinil&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_12.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_5.png" width="592" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;eshop&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_14.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_6.png" width="594" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;empower **ebst yet but not green?&lt;/p&gt;    &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_16.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_7.png" width="644" height="398" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;invent&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_18.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_8.png" width="517" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;metro **2nd fave&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_20.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_9.png" width="616" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;wepro&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_22.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_10.png" width="546" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;dark&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_24.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/BIND-Tuning_E0AF/image_thumb_11.png" width="644" height="400" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;zeus&lt;/p&gt;</Content>
+      <Created>2012-02-15T23:15:59.133625-05:00</Created>
+      <Modified>2012-02-15T23:15:59.133625-05:00</Modified>
+      <EntryId>15070810-1e7f-47e3-ab82-5040f86b46e1</EntryId>
+      <Description />
+      <Title>BIND Tuning–Themes for Orchard</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://docs.orchardproject.net/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting"&gt;http://docs.orchardproject.net/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;changed compilation debug=”false” in web.config&lt;/p&gt;  &lt;p&gt;added in system.web:&lt;/p&gt;  &lt;pre&gt;&lt;code&gt;&amp;lt;trust level=&amp;quot;Full&amp;quot; originUrl=&amp;quot;&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;use warmup (settings, performance) – not tried that one yet.&amp;#160; Seems to be okay with the module KeepAlive and the above two settings.&lt;/p&gt;</Content>
+      <Created>2012-02-15T21:32:34.946125-05:00</Created>
+      <Modified>2012-02-15T21:32:34.946125-05:00</Modified>
+      <EntryId>b9e35d3a-81b4-49c5-ae03-4fac0306764b</EntryId>
+      <Description />
+      <Title>Performance of Orchard on Azure</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://litemedia.info/automate-deploy-of-your-orchard-cms-to-azure"&gt;http://litemedia.info/automate-deploy-of-your-orchard-cms-to-azure&lt;/a&gt;.. good thought for SDK1.4&lt;/p&gt;</Content>
+      <Created>2012-02-15T19:26:33.852375-05:00</Created>
+      <Modified>2012-02-15T19:26:33.852375-05:00</Modified>
+      <EntryId>fb5325c6-1593-47f7-9672-15efbb94e798</EntryId>
+      <Description />
+      <Title>Automating deployment of Orchard to Azure</Title>
+      <Categories>Azure;Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Adding a module so that it persists.&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Adding-a-Module-to-Orchard-on-Azure_BB70/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Adding-a-Module-to-Orchard-on-Azure_BB70/image_thumb.png" width="811" height="444" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;trick was to rename the package downloaded to a .zip.&amp;#160; Then drill into content. modules.&lt;/p&gt;  &lt;p&gt;then follow instructions on &lt;a href="http://docs.orchardproject.net/Documentation/Deploying-Orchard-to-Windows-Azure"&gt;http://docs.orchardproject.net/Documentation/Deploying-Orchard-to-Windows-Azure&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-02-15T19:22:46.258625-05:00</Created>
+      <Modified>2012-02-15T19:22:46.258625-05:00</Modified>
+      <EntryId>6dccc8b4-98cc-4e0c-b160-986976749b5a</EntryId>
+      <Description />
+      <Title>Adding a Module to Orchard on Azure</Title>
+      <Categories>Azure;Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

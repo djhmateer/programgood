@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-02T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Setting up RDP to a Windows Azure Instance:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.syntaxc4.net/post/2010/12/16/Setting-up-RDP-to-a-Windows-Azure-Instance-Part-1.aspx"&gt;http://blog.syntaxc4.net/post/2010/12/16/Setting-up-RDP-to-a-Windows-Azure-Instance-Part-1.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Be very careful to upload the cer to the Management Certificates section of the admin interface (Silverlight)&lt;/p&gt;  &lt;p&gt;&lt;a title="http://blog.bareweb.eu/2011/01/using-certificates-in-windows-azure-management/" href="http://blog.bareweb.eu/2011/01/using-certificates-in-windows-azure-management/"&gt;http://blog.bareweb.eu/2011/01/using-certificates-in-windows-azure-management/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;then WebDeploy&lt;/p&gt;  &lt;p&gt;&lt;a href="http://dunnry.com/blog/2010/12/20/UsingWebDeployWithWindowsAzure.aspx"&gt;http://dunnry.com/blog/2010/12/20/UsingWebDeployWithWindowsAzure.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;For development only, using webdeploy.&lt;/p&gt;  &lt;p&gt;When creating certificates remember to click the password bit.. so it gives a .pfx file&lt;/p&gt;</Content>
+      <Created>2011-02-02T21:17:40.39125-05:00</Created>
+      <Modified>2011-02-07T14:40:41.32875-05:00</Modified>
+      <EntryId>8a2cd11d-0eb3-47a0-9f44-126ccd9ea80b</EntryId>
+      <Description />
+      <Title>Fast Updates – Webdeploy to Azure</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

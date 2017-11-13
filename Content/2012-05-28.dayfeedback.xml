@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-05-27T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>表示英文太菜，可否把Guy的评论也稍微翻译下。。。My version of the qeoutisn starts out by restricting the input to seven letters (for Scrabble) and it was assumed you'd discard any word longer than the rack or shorter than the current best solution so a 32-bit word suffices with some finesses hinted below.Candidates who think a bitmask alone would suffice, don't understand the distinction between a bag and a set. //set俺懂，bag是啥意思？关键字眼不理解真是害死人啊。。。</Content>
+      <Created>2012-07-29T07:14:55.6118509-04:00</Created>
+      <Modified>2012-07-29T07:14:55.6118509-04:00</Modified>
+      <EntryId>f24c27c5-daac-4eec-9fa2-b7755286abbe</EntryId>
+      <TargetTitle>Tekpub 16–List and Generics</TargetTitle>
+      <TargetEntryId>3A749A3F-F73A-413E-8B22-B0BA7E95A2C7</TargetEntryId>
+      <Author>Fabio</Author>
+      <AuthorEmail>aka.st.poelten@aon.at</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003406360664</AuthorHomepage>
+      <AuthorIPAddress>177.142.82.218</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

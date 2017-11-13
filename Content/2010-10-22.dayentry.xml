@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-10-21T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedLINQQueries_E666/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedLINQQueries_E666/image_thumb.png" width="644" height="477" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Extension Method and Query syntax.&lt;/p&gt;</Content>
+      <Created>2010-10-21T23:23:26.87675-04:00</Created>
+      <Modified>2010-10-21T23:23:26.87675-04:00</Modified>
+      <EntryId>3115408d-073d-4cf5-ab5b-a0071966bf08</EntryId>
+      <Description />
+      <Title>LightSpeed – LINQ Queries</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedQueries_E479/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedQueries_E479/image_thumb.png" width="644" height="477" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Interesting.. WinForms.&lt;/p&gt;</Content>
+      <Created>2010-10-21T23:15:25.486125-04:00</Created>
+      <Modified>2010-10-21T23:15:25.486125-04:00</Modified>
+      <EntryId>c2cb3ee7-202e-4e03-bde6-308100ae22ce</EntryId>
+      <Description />
+      <Title>LightSpeed - Queries</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedStore_DF06/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedStore_DF06/image_thumb.png" width="644" height="318" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Architecture is (quoted):&lt;/p&gt;  &lt;p&gt;The sample uses the standard ASP.NET page lifecycle architecture, but applies a seperation of concerns around the Model (LightSpeed Entities), Views (ASP.NET Pages). Process and application controller logic is handled within the code behind of each page, this includes any interaction'   &lt;br /&gt;with the LightSpeed unit of work. &lt;/p&gt;  &lt;p&gt;The unit of work within LightSpeed is scoped around a single page request, and is completed at the end of each page as it becomes unloaded (refer: StorePage::Page_Unload) &lt;/p&gt;  &lt;p&gt;Each View is based of a base class (StorePage) which provides common functionality. &lt;/p&gt;  &lt;p&gt;Validation concerns are handled by using Validation support within LightSpeed and annotating our Model with the validation rules.&lt;/p&gt;  &lt;p&gt;**can’t see the lsmodel in here**&lt;/p&gt;</Content>
+      <Created>2010-10-21T23:11:08.93925-04:00</Created>
+      <Modified>2010-10-21T23:11:08.93925-04:00</Modified>
+      <EntryId>32e659da-ff7e-4894-bb51-a80073fb927c</EntryId>
+      <Description />
+      <Title>Lightspeed - Store</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedWinformsStore_DBE2/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedWinformsStore_DBE2/image_thumb.png" width="644" height="215" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Using Sqlite (db3) database&lt;/p&gt;  &lt;p&gt;Wires up events on: ToolStrip, ListBox and ListView&lt;/p&gt;</Content>
+      <Created>2010-10-21T22:42:51.033-04:00</Created>
+      <Modified>2010-10-21T22:42:51.033-04:00</Modified>
+      <EntryId>9b707542-51e7-4900-bb58-bdfb0849c578</EntryId>
+      <Description />
+      <Title>Lightspeed – Winforms Store</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedFilmFestival_DAC5/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightspeedFilmFestival_DAC5/image_thumb.png" width="644" height="457" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;MVC1 example using LS&lt;/p&gt;  &lt;p&gt;Testing in nUnit.&amp;#160; Only a few tests.&lt;/p&gt;  &lt;p&gt;Logging here to output console.. tried in VS2010 and it didn’t work as expected.&lt;/p&gt;</Content>
+      <Created>2010-10-21T22:37:27.861125-04:00</Created>
+      <Modified>2010-10-21T22:37:27.861125-04:00</Modified>
+      <EntryId>8b0ca5a4-c195-4d8a-92e3-8ec1003248e2</EntryId>
+      <Description />
+      <Title>Lightspeed - FilmFestival</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedDTOs_E78F/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/LightSpeedDTOs_E78F/image_thumb.png" width="267" height="412" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Interesting using services.. couldn’t get working **todo**&lt;/p&gt;</Content>
+      <Created>2010-10-21T23:28:22.43925-04:00</Created>
+      <Modified>2010-10-21T23:28:22.43925-04:00</Modified>
+      <EntryId>24cf4bfd-e740-4a4e-8e0e-1aab1974c1b4</EntryId>
+      <Description />
+      <Title>LightSpeed – DTOs</Title>
+      <Categories>LightSpeed</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

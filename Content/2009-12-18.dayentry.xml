@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-12-17T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Ch11CommonInputObjectsandDebugging_908D/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Ch11CommonInputObjectsandDebugging_908D/image_thumb.png" width="487" height="383" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;rb – Radio Button&lt;/p&gt;  &lt;p&gt;cbk - Checkbox&lt;/p&gt;  &lt;p&gt;cmb – Combobox&lt;/p&gt;  &lt;p&gt;dtp – DateTimePicker&lt;/p&gt;  &lt;h5&gt;Debug helper code&lt;/h5&gt;  &lt;p&gt;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;     &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; exp1 = 5;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; exp2 = 0;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;try&lt;/span&gt;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;throw&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ArgumentOutOfRangeException();&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; result = exp1 / exp2;&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;catch&lt;/span&gt; (DivideByZeroException)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    MessageBox.Show(&lt;span style="color: #006080"&gt;&amp;quot;Expression 1 is 0, please reenter&amp;quot;&lt;/span&gt;);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;catch&lt;/span&gt; (Exception ex)&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;{&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    MessageBox.Show(&lt;span style="color: #006080"&gt;&amp;quot;Bad things are afoot:\r\n&amp;quot;&lt;/span&gt; + ex.Message + &lt;span style="color: #006080"&gt;&amp;quot;\r\n&amp;quot;&lt;/span&gt; + ex.StackTrace);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;&lt;span style="color: #0000ff"&gt;finally&lt;/span&gt; {&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;    MessageBox.Show(&lt;span style="color: #006080"&gt;&amp;quot;and finally&amp;quot;&lt;/span&gt;);&lt;/pre&gt;
+&lt;!--CRLF--&gt;
+
+    &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"&gt;}&lt;/pre&gt;
+&lt;!--CRLF--&gt;&lt;/div&gt;
+&lt;/div&gt;</Content>
+      <Created>2009-12-18T05:33:20.671875-05:00</Created>
+      <Modified>2009-12-18T06:17:02-05:00</Modified>
+      <EntryId>10de8f19-44fe-40e9-93d8-05c34a2a6de5</EntryId>
+      <Description />
+      <Title>Ch11 – Common Input Objects and Debugging</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;h5&gt;Chrome and Google&lt;/h5&gt;  &lt;p&gt;Ctrl Enter to open link in new tab&lt;/p&gt;  &lt;p&gt;Up / Down arrow to select different search items&lt;/p&gt;  &lt;h5&gt;VS2010&lt;/h5&gt;  &lt;p&gt;Shift Del – deletes line and puts into clipboard&lt;/p&gt;  &lt;p&gt;Ctrl Space – intellisense&lt;/p&gt;  &lt;p&gt;Ctrl – , Ctrl Shift -&amp;#160;&amp;#160;&amp;#160; Jumps forwards, back to where you are editing.&lt;/p&gt;  &lt;p&gt;Ctrl +&lt;/p&gt;  &lt;p&gt;Alt R, Alt R – Refactor, Rename (F2 has stopped working for some reason).. or Shift F10, R R&lt;/p&gt;  &lt;p&gt;Control , – Goto something&lt;/p&gt;  &lt;p&gt;Control . – import namespace&lt;/p&gt;  &lt;p&gt;Ctrl + E, D&amp;#160;&amp;#160; Format Document&lt;/p&gt;  &lt;p&gt;Shift + F10, U&amp;#160;&amp;#160; Run tests.. only does 1 if in that test.&lt;/p&gt;  &lt;p&gt;Ctrl R Ctrl T – Run Test (in debug).. to get Test Window to open, run the app (say forms app) and open the window.&amp;#160; it remembers!&lt;/p&gt;  &lt;p&gt;Ctrl R, T – Run test&lt;/p&gt;  &lt;p&gt;Ctrl R A = Run test in current context &lt;/p&gt;  &lt;p&gt;Shift Alt C – Add class&lt;/p&gt;  &lt;h5&gt;VS2008&lt;/h5&gt;  &lt;p&gt;Shift Alt Enter – Full Screen&lt;/p&gt;  &lt;p&gt;Ctrl + M, O – Collapse all methods&lt;/p&gt;  &lt;p&gt;Ctrl + M, P – Expand all methods&lt;/p&gt;  &lt;p&gt;Ctrl M, Ctrl M – Collapse / Expand current method&lt;/p&gt;  &lt;p&gt;Ctrl + Alt – navigate between methods quickly&lt;/p&gt;  &lt;p&gt;Ctrl -&amp;#160;&amp;#160;&amp;#160;&amp;#160; - if you go to a method, this brings you back to where you were&lt;/p&gt;  &lt;p&gt;Ctrl space – intellisense&lt;/p&gt;  &lt;p&gt;Ctrl . – puts in a using statement (if needed)&lt;/p&gt;  &lt;p&gt;Alt V P – View Solution&lt;/p&gt;  &lt;p&gt;Alt V V – View Server Explorer (DB)&lt;/p&gt;  &lt;h5&gt;VS – Web&lt;/h5&gt;  &lt;p&gt;Alt B H to publish a website&lt;/p&gt;  &lt;p&gt;Alt B O to select configuration manager&lt;/p&gt;  &lt;p&gt;Ctrl Shift N – hides non visual controls.. clashes with resharper&lt;/p&gt;  &lt;h5&gt;Resharper&lt;/h5&gt;  &lt;p&gt;Alt Enter – do stuff&lt;/p&gt;  &lt;p&gt;Alt Insert – Resharper generate&lt;/p&gt;  &lt;p&gt;Ctrl Shift R – Refactor (ie to extract a method)&lt;/p&gt;  &lt;p&gt;Ctrl + Q – Resharper.. documentation&lt;/p&gt;  &lt;p&gt;Alt Up / Down – go to next member / tag&lt;/p&gt;  &lt;p&gt;Ctrl Shift N – go to a file&lt;/p&gt;  &lt;p&gt;Ctrl Shift Alt N – go to a method anywhere&lt;/p&gt;  &lt;h5&gt;VS – MVC&lt;/h5&gt;  &lt;p&gt;ctrl M, ctrl C – add a controller&lt;/p&gt;  &lt;p&gt;ctrl M, ctrl&amp;#160; V – Add a view&lt;/p&gt;  &lt;h5&gt;Vimperator&lt;/h5&gt;  &lt;p&gt;:set guioptions+=mT&amp;#160;&amp;#160; - have created an autohotkey script for this&lt;/p&gt;  &lt;p&gt;:mkv!&amp;#160; - save settings&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;j and k – up and down&lt;/p&gt;  &lt;p&gt;ctrl d and ctr u – page up and down&lt;/p&gt;  &lt;p&gt;shift G and GG – bottom and top&lt;/p&gt;  &lt;p&gt;/ – search&lt;/p&gt;  &lt;p&gt;N – next… shift N previous &lt;/p&gt;  &lt;p&gt;:qa and shift zz and&amp;#160;&amp;#160; - exit&lt;/p&gt;  &lt;p&gt;d – delete tab &lt;/p&gt;  &lt;p&gt;Shift H or alt left arrow - back&lt;/p&gt;  &lt;p&gt;O to open a URL with current page selected&lt;/p&gt;  &lt;p&gt;t – tabopen&lt;/p&gt;  &lt;p&gt;f – follow&lt;/p&gt;  &lt;p&gt;F – follow in new window&lt;/p&gt;  &lt;p&gt;gt flip between tabs&lt;/p&gt;  &lt;p&gt;escape up arrow – shows the history in vimperator!&lt;/p&gt;  &lt;p&gt;:qmark g &lt;a href="http://www.gmail.com"&gt;http://www.gmail.com&lt;/a&gt;&amp;#160;&amp;#160; - adds a quickmark&lt;/p&gt;  &lt;p&gt;gog&amp;#160;&amp;#160; - goes to the quickmark g&amp;#160; (gmail in my case)&lt;/p&gt;  &lt;h5&gt;Windows&lt;/h5&gt;  &lt;p&gt;tab tab – on login screen (winxp) this highlights the box&lt;/p&gt;  &lt;p&gt;win l – lock&lt;/p&gt;  &lt;p&gt;win d – minimize&lt;/p&gt;  &lt;p&gt;win e – explorer&lt;/p&gt;  &lt;p&gt;explorer type ph quickly to go to the first directory starting with ‘ph’&lt;/p&gt;  &lt;p&gt;alt f4 – close&lt;/p&gt;  &lt;p&gt;shift alt space n – minimize (with launch installed, otherwise alt space n)&lt;/p&gt;  &lt;p&gt;Alt Tab &lt;/p&gt;  &lt;p&gt;Alt Esc – cycle through open windows&lt;/p&gt;  &lt;p&gt;F4 – Alt D&amp;#160; - display address bar in explorer&lt;/p&gt;  &lt;p&gt;Shift F10 – right click&lt;/p&gt;  &lt;p&gt;Ctrl Escape – display start menu&lt;/p&gt;  &lt;p&gt;Backspace – go up a level in windows explorer&lt;/p&gt;  &lt;p&gt;Win M – minimize&lt;/p&gt;  &lt;p&gt;Win SHIFT M – restore&lt;/p&gt;  &lt;p&gt;Nul Lock + Asterisk – in explorer display all subfolders under this one&lt;/p&gt;  &lt;p&gt;Win F – Find (am trying out Windows Search 4.0)&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h5&gt;Quicktime Player&lt;/h5&gt;  &lt;p&gt;L – fast forward&lt;/p&gt;  &lt;p&gt;K – fast backwards&lt;/p&gt;  &lt;h5&gt;Outlook&lt;/h5&gt;  &lt;p&gt;F9 – Send and Reeive All&lt;/p&gt;  &lt;h4&gt;Programming Winform Element Names&lt;/h4&gt;  &lt;p&gt;txt – Text Box&lt;/p&gt;  &lt;p&gt;lbl – Label&lt;/p&gt;  &lt;p&gt;lst – Listbox&lt;/p&gt;  &lt;p&gt;rb – Radio Button&lt;/p&gt;  &lt;p&gt;cbk - Checkbox&lt;/p&gt;  &lt;p&gt;cmb – Combobox&lt;/p&gt;  &lt;p&gt;dtp – DateTimePicker&lt;/p&gt;  &lt;p&gt;mnu – Menu Options (that go in MDI)&lt;/p&gt;  &lt;h4&gt;Language&lt;/h4&gt;  &lt;p&gt;rvalue – register value&lt;/p&gt;  &lt;p&gt;lvalue – location value&lt;/p&gt;  &lt;p&gt;MDI – Multiple Document Interface&lt;/p&gt;  &lt;p&gt;RDC – Really Dumb Code&lt;/p&gt;</Content>
+      <Created>2009-12-18T04:46:20.046875-05:00</Created>
+      <Modified>2011-03-07T15:06:09.165625-05:00</Modified>
+      <EntryId>70ec0862-e12b-4629-a335-74f1abbb6e15</EntryId>
+      <Description />
+      <Title>Keyboard Shortcuts and Language</Title>
+      <Categories>Keyboard Shortcuts</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

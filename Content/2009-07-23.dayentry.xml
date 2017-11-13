@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-22T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Delegates, delegate to another method.&amp;nbsp; In this example, depending on which person is wired up - Suzanne or Amy.. depends on which method is called when the Get the ingredient button is called.&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/screendump123.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;source code here..&lt;a href="http://www.programgood.net/content/binary/delegateIngredients.zip"&gt;delegateIngredients.zip (91.58 KB)&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/screendump12.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;    &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// can be used to create a variable that can point to any method that takes an int parameter and returns a string&lt;/span&gt;
+    &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;delegate&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; GetSecretIngredient(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt; amount);
+&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;On the form:&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;        // so variable ingredientMethod of type delegate GetSecretIngredient currently points to a null method&lt;/span&gt;
+        GetSecretIngredient ingredientMethod &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; getSuzanne_Click(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+        {
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// suzanne.MySecretIngredientMethod property returns a new instance of the the GetSecretIngredient delegate thats&lt;/span&gt;
+            &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// pointing to her secret ingredient method.&lt;/span&gt;
+            ingredientMethod &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; GetSecretIngredient(suzanne.MySecretIngredientMethod);
+        }
+&lt;/span&gt;&lt;/pre&gt;When button is pressed it will go to either the suzanne.MySecretIngredientMethod or the amy.AmySecretIngredientMethod&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; useIngredient_Click(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (ingredientMethod !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;)
+                Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"I'll add "&lt;/span&gt; &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; ingredientMethod((&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;int&lt;/span&gt;)amount.Value));
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+                Console.WriteLine(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"I dont have a secret ingredient"&lt;/span&gt;);
+        }
+&lt;/span&gt;&lt;/pre&gt;Good duck example here:&lt;br&gt;http://stackoverflow.com/questions/687626/the-purpose-of-delegates&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a href="http://www.programgood.net/content/binary/delegateIngredients.zip"&gt;&lt;br&gt;&lt;/a&gt;</Content>
+      <Created>2009-07-22T20:30:56.295-04:00</Created>
+      <Modified>2009-07-22T20:41:23.74875-04:00</Modified>
+      <EntryId>7f2d5d93-01f5-4110-a29b-588c96d9256e</EntryId>
+      <Description />
+      <Title>Delegates in C#</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

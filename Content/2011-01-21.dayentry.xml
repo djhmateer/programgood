@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-01-20T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;download and Install .net4&lt;/p&gt;  &lt;p&gt;go in here:&lt;/p&gt;  &lt;p&gt;C:\Windows\Microsoft.NET\Framework64\v4.0.30319&lt;/p&gt;  &lt;p&gt;aspnet_regiis -i&lt;/p&gt;</Content>
+      <Created>2011-01-20T23:30:31.8695-05:00</Created>
+      <Modified>2011-02-02T00:00:50.1364599-05:00</Modified>
+      <EntryId>43ab4271-eb94-4aec-a46f-47b0b8cab2ff</EntryId>
+      <Description />
+      <Title>Setting up .NET on IIS7 and 6</Title>
+      <Categories>IIS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;To get RS working on an ASP.NET4 webserver, we need:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://wishmesh.com/2010/09/iis-7-5-parser-error-message-could-not-load-file-or-assembly-microsoft-reportviewer-webforms/" href="http://wishmesh.com/2010/09/iis-7-5-parser-error-message-could-not-load-file-or-assembly-microsoft-reportviewer-webforms/"&gt;http://wishmesh.com/2010/09/iis-7-5-parser-error-message-could-not-load-file-or-assembly-microsoft-reportviewer-webforms/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=A941C6B2-64DD-4D03-9CA7-4017A0D164FD" href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=A941C6B2-64DD-4D03-9CA7-4017A0D164FD"&gt;http://www.microsoft.com/downloads/en/details.aspx?FamilyID=A941C6B2-64DD-4D03-9CA7-4017A0D164FD&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-01-20T23:12:41.33825-05:00</Created>
+      <Modified>2011-01-20T23:12:41.33825-05:00</Modified>
+      <EntryId>1a69009e-1307-4c3b-8167-f03275868699</EntryId>
+      <Description />
+      <Title>Reportviewer Redistributable</Title>
+      <Categories>Reporting Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

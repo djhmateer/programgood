@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-08T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://thedatafarm.com/blog/tools/asp-net-iis6-network-service-and-sql-server/"&gt;http://thedatafarm.com/blog/tools/asp-net-iis6-network-service-and-sql-server/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;On the master database:&lt;/p&gt;  &lt;p&gt;exec sp_grantlogin 'NT AUTHORITY\NETWORK SERVICE'&lt;/p&gt;  &lt;p&gt;Then go to Management Studio, and add in this user.&lt;/p&gt;</Content>
+      <Created>2010-08-09T17:27:46.071125-04:00</Created>
+      <Modified>2010-08-09T17:27:46.071125-04:00</Modified>
+      <EntryId>b22907df-c49d-4f38-ab13-bc13a12c75af</EntryId>
+      <Description />
+      <Title>Login failed for NT AUTHORITY/NETWORK SERVICE</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.sitefinity.com/devnet/forums/sitefinity-3-x/developing-with-sitefinity/javascript-files.aspx"&gt;http://www.sitefinity.com/devnet/forums/sitefinity-3-x/developing-with-sitefinity/javascript-files.aspx&lt;/a&gt;&lt;/p&gt;  &lt;div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot;&amp;lt;%=HttpContext.Current.Request.ApplicationPath.EndsWith(&amp;quot;&lt;/span&gt;/&lt;span style="color: #006080"&gt;&amp;quot;) ? HttpContext.Current.Request.ApplicationPath : HttpContext.Current.Request.ApplicationPath + &amp;quot;&lt;/span&gt;/&lt;span style="color: #006080"&gt;&amp;quot; %&amp;gt;Res/Scripts/jquery-1.3.2.min.download.js&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt; &amp;lt;/script&amp;gt; &lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;I had a strange bug in Chrome where the css didn’t load properly using this in the masterpage.&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;Scripts&amp;gt;
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &amp;lt;asp:ScriptReference Path=&amp;quot;&lt;a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;"&gt;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&lt;/a&gt; /&amp;gt;
+
+  &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; &amp;lt;asp:ScriptReference Path=&amp;quot;~/javascript/jquery.colorbox.js&amp;quot; /&amp;gt;
+
+  &lt;br /&gt;&amp;lt;/Scripts&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;This may have been a timing issue as I am now getting jquery from my website and not google.&lt;/p&gt;</Content>
+      <Created>2010-08-08T22:19:46.289875-04:00</Created>
+      <Modified>2010-08-09T00:35:16.321125-04:00</Modified>
+      <EntryId>c44a4439-e5c3-4cf1-a9b4-3366b4e6e5f6</EntryId>
+      <Description />
+      <Title>Javascript in SiteFinity</Title>
+      <Categories>SiteFinity</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/vcsharp/aa336758.aspx"&gt;http://msdn.microsoft.com/en-us/vcsharp/aa336758.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-08-09T18:50:53.289875-04:00</Created>
+      <Modified>2010-08-09T18:50:53.289875-04:00</Modified>
+      <EntryId>627ff469-43ae-481a-b475-9441e0a42a13</EntryId>
+      <Description />
+      <Title>101 Linq Samples</Title>
+      <Categories>Linq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

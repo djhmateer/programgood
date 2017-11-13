@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-01-13T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;select @@version&lt;/p&gt;</Content>
+      <Created>2013-01-14T08:49:58.1450108-05:00</Created>
+      <Modified>2013-01-14T08:49:58.1450108-05:00</Modified>
+      <EntryId>20dbe2c9-f7d6-4da9-935e-348bfa6fe096</EntryId>
+      <Description />
+      <Title>SQL Server Version</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;On client machine:&lt;/p&gt;  &lt;p&gt;Control Panel:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/HyperV_DBAF/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/HyperV_DBAF/image_thumb.png" width="630" height="317" /&gt;&lt;/a&gt;    &lt;br /&gt;Click on HyperV&lt;/p&gt;</Content>
+      <Created>2013-01-14T10:40:00.790764-05:00</Created>
+      <Modified>2013-01-14T10:40:00.790764-05:00</Modified>
+      <EntryId>6848baaa-c03b-4825-8a1f-a207cfb90390</EntryId>
+      <Description />
+      <Title>HyperV</Title>
+      <Categories>HyperV</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

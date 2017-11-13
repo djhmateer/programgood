@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-03T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;When displaying a repeater on an aspx page:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;asp:Repeater ID=&lt;span style="color: #006080"&gt;&amp;quot;Repeater1&amp;quot;&lt;/span&gt; runat=&lt;span style="color: #006080"&gt;&amp;quot;server&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            &amp;lt;ItemTemplate&amp;gt;&lt;br /&gt;            &amp;lt;%#DataBinder.Eval(Container.DataItem, &lt;span style="color: #006080"&gt;&amp;quot;FileName&amp;quot;&lt;/span&gt;)%&amp;gt;&lt;br /&gt;            &amp;lt;/ItemTemplate&amp;gt;&lt;br /&gt;        &amp;lt;/asp:Repeater&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;or shorter:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;asp:Repeater ID=&lt;span style="color: #006080"&gt;&amp;quot;Repeater1&amp;quot;&lt;/span&gt; runat=&lt;span style="color: #006080"&gt;&amp;quot;server&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;           &amp;lt;ItemTemplate&amp;gt;&lt;br /&gt;           &amp;lt;%#Eval(&lt;span style="color: #006080"&gt;&amp;quot;FileName&amp;quot;&lt;/span&gt;)%&amp;gt;&lt;br /&gt;           &amp;lt;/ItemTemplate&amp;gt;&lt;br /&gt;       &amp;lt;/asp:Repeater&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;It is important to remember to make FileName a property and not just a public field ie this works&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; ImageThing&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FileName {get; set; }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; DisplayThumbnailImages()&lt;br /&gt;{&lt;br /&gt;    ImageThing imageThing1 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ImageThing();&lt;br /&gt;    ImageThing imageThing2 = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ImageThing();&lt;br /&gt;    imageThing1.FileName = &lt;span style="color: #006080"&gt;&amp;quot;asdf.jpg&amp;quot;&lt;/span&gt;;&lt;br /&gt;    imageThing2.FileName = &lt;span style="color: #006080"&gt;&amp;quot;aaa.jpg&amp;quot;&lt;/span&gt;;&lt;br /&gt;&lt;br /&gt;    List&amp;lt;ImageThing&amp;gt; imagesToRender = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;ImageThing&amp;gt;();&lt;br /&gt;    imagesToRender.Add(imageThing1);&lt;br /&gt;    imagesToRender.Add(imageThing2);&lt;br /&gt;&lt;br /&gt;    Repeater1.DataSource = imagesToRender;&lt;br /&gt;    Repeater1.DataBind();&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;this doesn’t&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; ImageThing&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FileName;&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;A property encapsulates a field.&lt;/p&gt;</Content>
+      <Created>2010-08-04T19:04:00.477375-04:00</Created>
+      <Modified>2010-08-04T22:41:24.383625-04:00</Modified>
+      <EntryId>cf5cab24-c664-4dea-8f81-eae35517bcbb</EntryId>
+      <Description />
+      <Title>Difference Between a Property and a Field using Repeaters</Title>
+      <Categories>c# language;SiteFinity</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;31mins.&amp;#160; He took a template from freecsstemplates.org and put it into SiteFintiy&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.sitefinity.com/devnet/webinars/designing-skinning-with-sitefinity.aspx"&gt;http://www.sitefinity.com/devnet/webinars/designing-skinning-with-sitefinity.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-08-03T22:30:48.008625-04:00</Created>
+      <Modified>2010-08-03T22:30:48.008625-04:00</Modified>
+      <EntryId>8abdaa09-d9d9-4232-8e72-da70effc9278</EntryId>
+      <Description />
+      <Title>Sitefinity - Theming</Title>
+      <Categories>SiteFinity</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

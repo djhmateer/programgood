@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-02-27T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/13752998/compare-two-files-in-visual-studio-2012"&gt;http://stackoverflow.com/questions/13752998/compare-two-files-in-visual-studio-2012&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-02-28T04:04:09.0541141-05:00</Created>
+      <Modified>2013-02-28T04:04:09.0541141-05:00</Modified>
+      <EntryId>126bc4d4-475c-4e44-839a-ebb8968211d7</EntryId>
+      <Description />
+      <Title>Compare Files in VS</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://stackoverflow.com/questions/10952185/disable-file-preview-in-vs2012" href="http://stackoverflow.com/questions/10952185/disable-file-preview-in-vs2012"&gt;http://stackoverflow.com/questions/10952185/disable-file-preview-in-vs2012&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Makes great perf improvement&lt;/p&gt;</Content>
+      <Created>2013-02-28T06:16:40.7281172-05:00</Created>
+      <Modified>2013-02-28T06:16:40.7281172-05:00</Modified>
+      <EntryId>cd1cdcad-8efb-4db2-989c-0ffdb782515d</EntryId>
+      <Description />
+      <Title>Disable File Preview in VS2012–Perf Improve</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2008-11-07T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;h3&gt;Why ProgramGood.Net?&lt;/h3&gt;To have fun!&lt;br&gt;Explore the world of programming&lt;br&gt;To inspire, educate and entertain &lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;div align="left"&gt;&lt;img src="http://www.programgood.net/content/binary/3Guys_500.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;On the way to Machu Picchu, Peru&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+&lt;h3&gt;What inspired you to start this?&lt;/h3&gt;Google searching - "How to Become a Great Programmer"&lt;br&gt;Great Article - 10 Years &lt;a href="http://norvig.com/21-days.html"&gt;norvig.com/21-days.html&lt;/a&gt;&lt;br&gt;http://steve.yegge.googlepages.com/practicing-programming&lt;br&gt;http://graysmatter.codivation.com/HowIAmBecomingABetterDeveloperPart1OfInfinity.aspx&lt;br&gt;&lt;br&gt;Highlights were:&lt;br&gt;&lt;blockquote&gt;Read a chapter a week from a programming book&lt;br&gt;Code the examples&lt;br&gt;Listen to Podcasts and Screencasts&lt;br&gt;Learn a new language every year!&lt;br&gt;Learn about the business of software development&lt;br&gt;Teach / Present topics&lt;br&gt;Have a mentor and be a mentor&lt;br&gt;&lt;br&gt;&lt;/blockquote&gt;
+&lt;h3&gt;What Topics Do You Want To Cover?&lt;/h3&gt;
+
+&lt;b&gt;C# Language&lt;/b&gt; - am working through Head First C# 3.5&lt;br&gt;&lt;blockquote&gt;OOP Concepts&lt;br&gt;Types and References&lt;br&gt;Encapsulation&lt;br&gt;Inheritance&lt;br&gt;Interfaces&lt;br&gt;Collections&lt;br&gt;Files&lt;br&gt;Exceptions&lt;br&gt;Events and Delegates&lt;br&gt;LINQ&lt;br&gt;&lt;br&gt;Recursion&lt;br&gt;Anonymous Types&lt;br&gt;Delegates&lt;br&gt;&amp;nbsp;&lt;br&gt;DataAdapters etc..Datasets (are they evil?)&lt;br&gt;&lt;/blockquote&gt;&lt;b&gt;&lt;br&gt;PHP &lt;/b&gt;- A useful language! &lt;br&gt;&lt;blockquote&gt;Web Services&lt;br&gt;Design Patterns&lt;br&gt;Unit Testing&lt;br&gt;ORM&lt;br&gt;Libraries&lt;br&gt;IDE's / Tools&amp;nbsp;JSON/XML&lt;br&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;b&gt;Reporting Services&lt;/b&gt; 2000 / 2005 / 2008 - Everyone likes reports!&amp;nbsp; Good programmers have good tools.&lt;br&gt;
+&amp;nbsp;How to produce good reports&lt;br&gt;&lt;br&gt;&lt;b&gt;How To Develop Software&lt;/b&gt;&lt;br&gt;XP Approach vs classic Waterfall Approach&lt;br&gt;StackOverflow example of how to develop software&lt;br&gt;&lt;br&gt;Test Driven Development - TDD&lt;br&gt;&lt;br&gt;&lt;b&gt;Testing&lt;/b&gt;&lt;br&gt;nUnit&lt;br&gt;nUnitASP&lt;br&gt;waitr&lt;br&gt;TestDriven.Net&lt;br&gt;NCover&lt;br&gt;cruisecontrol.net&lt;br&gt;dbunit&lt;br&gt;&lt;br&gt;&lt;b&gt;SourceControl&lt;/b&gt;&lt;br&gt;&amp;nbsp;TortoiseSVN and Subversion&lt;br&gt;&lt;br&gt;&lt;b&gt;Bug Tracking&lt;/b&gt;&lt;br&gt;Excel!&lt;br&gt;&lt;br&gt;&lt;b&gt;CodeGenerators / ORM / Helper&lt;/b&gt;&lt;br&gt;Entity framework - EntityDataSource and
+GridViews/DetailsViews/&lt;wbr&gt;FormViews&lt;br&gt;Dynamic Data web
+projects - create all standard list/details/edit/delete
+pages&lt;span style="font-size: 11pt; color: rgb(31, 73, 125);"&gt;&lt;br&gt;&lt;/span&gt;LINQ to SQL - don't use?&lt;span style="font-size: 11pt; color: rgb(31, 73, 125);"&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;CodeSmithnHibernate&lt;br&gt;Subsonic&lt;br&gt;
+openaccess?&lt;br&gt;TypeMock / RhinoMocks&lt;br&gt;NHibernate&lt;br&gt;Lightspeed&lt;br&gt;CSLA&lt;br&gt;&lt;br&gt;&lt;b&gt;Tools&lt;/b&gt;&lt;br&gt;Visual Studio&lt;br&gt;&amp;nbsp; Tips on how to use Visual Studio...&lt;br&gt;Resharper&lt;br&gt;reflector&lt;br&gt;
+&lt;h4&gt;App Types&lt;/h4&gt;&amp;nbsp;Console&lt;br&gt;&amp;nbsp;WinForm&lt;br&gt;&amp;nbsp;WebForm&lt;br&gt;&amp;nbsp;Webservice&lt;br&gt;&amp;nbsp;WPF&lt;br&gt;&amp;nbsp;Silverlight&lt;br&gt;&lt;br&gt;&lt;b&gt;Patterns&lt;/b&gt; - What are they.. families&lt;br&gt;MS Patterns and Practises group&lt;br&gt;Enterprise Library&lt;br&gt;MVC Framework&lt;br&gt;MVP&lt;br&gt;IoC&lt;br&gt;&lt;h4&gt;Web ASP.NET&lt;/h4&gt;&amp;nbsp;Framworks and how to do stuff quickly&lt;br&gt;&amp;nbsp;Membership&lt;br&gt;&amp;nbsp;MasterPages&lt;br&gt;
+&lt;h4&gt;Open Source Projects - understand others code&lt;/h4&gt;&amp;nbsp;ProjectRun&lt;br&gt;&amp;nbsp;dasBlog&lt;br&gt;&amp;nbsp;examples from www.asp.net&lt;br&gt;&amp;nbsp;codeplex&lt;br&gt;&amp;nbsp;BackgroundMotion&lt;br&gt;&amp;nbsp;DineOut&lt;br&gt;&amp;nbsp;StockTrader&lt;br&gt;&amp;nbsp;Vertigo&lt;br&gt;&lt;h4&gt;Fun Challenges&lt;/h4&gt;&amp;nbsp;Project Run&lt;br&gt;&amp;nbsp;Project September&lt;br&gt;&amp;nbsp;Charity Project&lt;br&gt;&amp;nbsp;Coding Challenge (code breaker)&lt;br&gt;&amp;nbsp;Perl/Python fun ones&lt;br&gt;&amp;nbsp;Mapping - Jamie&lt;br&gt;&amp;nbsp;Project Infotainmnet&lt;br&gt;&amp;nbsp;Music Project - KitInABox&lt;br&gt;&amp;nbsp;Code Monkeys (how long to create Shakespeare)&lt;br&gt;&amp;nbsp;Treasure Sprint - &lt;a href="http://treasuresprint.blogspot.com"&gt;treasuresprint.blogspot.com&lt;/a&gt;&lt;br&gt;&lt;br&gt;Coding Competitions&lt;br&gt;&lt;br&gt;&lt;h4&gt;Programmers / Developers I Admire and why&lt;/h4&gt;&amp;nbsp;Scott Hanselman&lt;br&gt;&amp;nbsp;JP Boodhoo&lt;br&gt;&amp;nbsp;Ron Jacobs&lt;br&gt;&amp;nbsp;Carl Franklin&lt;br&gt;&amp;nbsp;Scott Gu&lt;br&gt;&amp;nbsp;Scott Stanfield&lt;br&gt;&amp;nbsp;Adam Cogan&lt;br&gt;&amp;nbsp;Vertigo&lt;br&gt;&amp;nbsp;Peter Jonesie&lt;br&gt;&amp;nbsp;Bill Gates&lt;br&gt;&amp;nbsp;James Kovacs&lt;br&gt;&amp;nbsp;Mario Szpuszta&lt;br&gt;&amp;nbsp;Matthew Macdonald&lt;br&gt;&amp;nbsp;Ken Schwaber - scrum&lt;br&gt;&amp;nbsp;Rocky Lhotka - csla&lt;br&gt;&lt;br&gt;
+&lt;h4&gt;Traits of a great Programmer&lt;/h4&gt;&amp;nbsp;Curiosity&lt;br&gt;&amp;nbsp;Humble&lt;br&gt;&amp;nbsp;Learn about successful projects and read source code&lt;br&gt;&amp;nbsp;Play with others code&lt;br&gt;&amp;nbsp;Have readable code&lt;br&gt;&lt;h4&gt;Great Books and Why&lt;/h4&gt;&amp;nbsp;Mythical Man Month&lt;br&gt;&amp;nbsp;Head First C# Programming 3.5&lt;br&gt;&amp;nbsp;Joel Spolskys books&lt;br&gt;&amp;nbsp;The Pragmatic Programmer&lt;br&gt;&amp;nbsp;Software Craftsmanship&lt;br&gt;&amp;nbsp;Coder to Developer&lt;br&gt;&amp;nbsp;** - how quiet conditions are super important... 2 person office.. close doors.&lt;br&gt;Great Blogs and why&lt;br&gt;&amp;nbsp;stackoverflow&lt;br&gt;&amp;nbsp;Joel Spolsky&lt;br&gt;Thinking in Code&lt;br&gt;&lt;h4&gt;Languages - where they came from.. strengths and weaknesses&lt;/h4&gt;&amp;nbsp;OOP / Procedural / Functional&lt;br&gt;&amp;nbsp;C#&lt;br&gt;&amp;nbsp;VB&lt;br&gt;&amp;nbsp;Java&lt;br&gt;&amp;nbsp;Python&lt;br&gt;&amp;nbsp;Ruby / RoR&lt;br&gt;&amp;nbsp;PHP&lt;br&gt;&amp;nbsp;SQL&lt;br&gt;&amp;nbsp;F#&lt;br&gt;&amp;nbsp;oCaml&lt;br&gt;&amp;nbsp;Prolog&lt;br&gt;&amp;nbsp;C / C++&lt;br&gt;&amp;nbsp;Lisp&lt;br&gt;&amp;nbsp;Fortran&lt;br&gt;&amp;nbsp;Cobol&lt;br&gt;&lt;h4&gt;Fun Geek Language&lt;/h4&gt;&amp;nbsp; YAGNI - You Aint Gunna Need It&lt;br&gt;&amp;nbsp; This smells - something doesn't feel right&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;h4&gt;Where did The Domain Name Come From?&lt;/h4&gt;Came from iWantToProgramGood... Written English has never been my strong point, and I never seem to wrote in sentences... only statements... followed by dots....and when I went to look at domain names, register.com suggested ProgramGood.Net.. How appropriate!&lt;br&gt;&lt;br&gt;Lets start the journey!&lt;br&gt;
+&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/venezuela1_500.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;Venezuela, sunset.&amp;nbsp; About 4500m.&lt;/font&gt;&lt;br&gt;</Content>
+      <Created>2008-11-08T15:38:51.406-05:00</Created>
+      <Modified>2008-11-17T14:37:09.315375-05:00</Modified>
+      <EntryId>99a8d9d5-cd84-4a38-8071-2187511ed23f</EntryId>
+      <Description />
+      <Title>Goals / Background of ProgramGood.Net</Title>
+      <Categories>Goals of Blog</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>Classes / Objects&lt;br&gt;&lt;br&gt;Variables&lt;br&gt;&lt;br&gt;Methods&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Types and References&lt;br&gt;&lt;p&gt;&lt;/p&gt;</Content>
+      <Created>2008-11-07T20:49:37.406-05:00</Created>
+      <Modified>2008-11-08T15:41:33.046875-05:00</Modified>
+      <EntryId>e7028904-d2c3-43a0-ab3c-4ed5d39ccb08</EntryId>
+      <Description />
+      <Title>OOP in DotNet</Title>
+      <Categories>Object Oriented Programming</Categories>
+      <Author>admin</Author>
+      <IsPublic>false</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

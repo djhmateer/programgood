@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-12-06T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.jayway.com/2011/05/17/bind-from-xaml-to-property-defined-in-code-behind/" href="http://www.jayway.com/2011/05/17/bind-from-xaml-to-property-defined-in-code-behind/"&gt;http://www.jayway.com/2011/05/17/bind-from-xaml-to-property-defined-in-code-behind/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-12-07T11:19:12.2525015-05:00</Created>
+      <Modified>2012-12-07T11:19:12.2525015-05:00</Modified>
+      <EntryId>f5e1e4de-9398-4690-9294-1be3ccc261fb</EntryId>
+      <Description />
+      <Title>Binding to properties in a CodeBehind</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

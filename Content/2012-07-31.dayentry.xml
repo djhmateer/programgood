@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-07-30T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Unfuddle offer free unlimited repos, private SVN hosting for 2 people.&amp;#160; More people you’ve got to pay.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_thumb.png" width="456" height="222" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Created a new repo in the browser.&lt;/p&gt;  &lt;h3&gt;Checking Out Repo from SVN Server&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_thumb_1.png" width="358" height="287" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Created a blank directory called c:\dev\TestSVNSolution   &lt;br /&gt;Right click on TestSVNSolution and did a checkout (shown above, of the blank repo I’d created in unfuddle)&lt;/p&gt;  &lt;h3&gt;Adding new file to SVN Server&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/SubversionLive-hosting-with-Unfuddle_AE2C/image_thumb_2.png" width="156" height="84" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;create new file on local disc   &lt;br /&gt;right click, TortoiseSVN, Add.&amp;#160; Then TortoiseSVN commit.&lt;/p&gt;</Content>
+      <Created>2012-07-31T07:40:38.579942-04:00</Created>
+      <Modified>2012-07-31T07:40:38.579942-04:00</Modified>
+      <EntryId>aaafff1b-a52f-4814-bf2d-a2ae61db0ed0</EntryId>
+      <Description />
+      <Title>Subversion–Live hosting with Unfuddle</Title>
+      <Categories>Subversion</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

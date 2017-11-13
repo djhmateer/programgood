@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx"&gt;http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://weblogs.asp.net/scottgu/archive/2010/07/23/entity-framework-4-code-first-custom-database-schema-mapping.aspx"&gt;http://weblogs.asp.net/scottgu/archive/2010/07/23/entity-framework-4-code-first-custom-database-schema-mapping.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://weblogs.asp.net/scottgu/archive/2010/08/03/using-ef-code-first-with-an-existing-database.aspx"&gt;http://weblogs.asp.net/scottgu/archive/2010/08/03/using-ef-code-first-with-an-existing-database.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Install-Package EFCodeFirst&lt;/p&gt;  &lt;p&gt;Starting with a really simple example:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Dinner&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; DinnerID { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Title { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime EventDate { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Address { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; HostedBy { get; set; }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;then in DinnerController:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; DinnerController : Controller&lt;br /&gt;{&lt;br /&gt;    NerdDinnerReloadedContext context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; NerdDinnerReloadedContext();&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// GET: /Dinner/&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(context.Dinners.ToList());&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// GET: /Dinner/Details/5&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Details(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View();&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// GET: /Dinner/Create&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Create()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View();&lt;br /&gt;    } &lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// POST: /Dinner/Create&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    [HttpPost]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Create(Dinner dinner)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (ModelState.IsValid)&lt;br /&gt;        {&lt;br /&gt;            context.Dinners.Add(dinner);&lt;br /&gt;            context.SaveChanges();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;&amp;quot;Index&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(dinner);&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;and the context:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; NerdDinnerReloadedContext : DbContext&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DbSet&amp;lt;Dinner&amp;gt; Dinners { get; set; }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Very simple… and this does work, and will generate a database&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_thumb.png" width="312" height="103" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;Existing Database - Model First&lt;/h3&gt;
+
+&lt;p&gt;Here I am defining my model&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_thumb_2.png" width="644" height="127" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;then wiring it up to the existing database&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_thumb_1.png" width="644" height="149" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;EF Code first uses a convention where context classes by default look for a connection string that has the same name as the context class.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EntityFramework_B1E1/image_thumb_3.png" width="652" height="428" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h4&gt;&lt;em&gt;The type 'MvcApplication1.Models.Cake' is not a supported entity type.&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Possible helper: &lt;a href="http://mvcscaffolding.codeplex.com/discussions/247163"&gt;http://mvcscaffolding.codeplex.com/discussions/247163&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-10T20:20:55.829-05:00</Created>
+      <Modified>2011-03-13T16:10:20.219625-04:00</Modified>
+      <EntryId>0fe043e2-c181-4212-82da-d491a9134bc2</EntryId>
+      <Description />
+      <Title>Entity Framework – Code First</Title>
+      <Categories>Entity Framework;MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

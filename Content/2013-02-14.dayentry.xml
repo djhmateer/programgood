@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-02-13T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;A great tool where you can see what the changes are in XAML in real time.&lt;/p&gt;  &lt;p&gt;&lt;a title="http://xamlspy.com" href="http://xamlspy.com"&gt;http://xamlspy.com&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-02-14T04:46:25.1122165-05:00</Created>
+      <Modified>2013-02-14T04:46:25.1122165-05:00</Modified>
+      <EntryId>1591dd30-2d3b-42ce-bbb4-e971b8bd8bcd</EntryId>
+      <Description />
+      <Title>XAMLSpy</Title>
+      <Categories>Silverlight;XAML</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

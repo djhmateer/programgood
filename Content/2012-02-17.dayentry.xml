@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-02-16T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="https://www.myazurestorage.com/"&gt;https://www.myazurestorage.com/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The Windows Azure MyAzureStorage is a web based application that gives you the ability to browse your Windows Azure Storage tables and create, edit, delete, and copy entities.&lt;/p&gt;</Content>
+      <Created>2012-02-16T23:25:06.758625-05:00</Created>
+      <Modified>2012-02-16T23:25:06.758625-05:00</Modified>
+      <EntryId>866c8304-ceb9-435a-9a6f-c06010036d45</EntryId>
+      <Description />
+      <Title>MyAzureStorage</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_thumb.png" width="326" height="460" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Looking at the standard theme.&lt;/p&gt;  &lt;p&gt;Layout can be thought of as master page – define overall structure of page.&lt;/p&gt;  &lt;p&gt;HTML5 tags like header, aside, footer, article&lt;/p&gt;  &lt;pre&gt;Script.Require(&amp;quot;jQuery&amp;quot;); – possibly better would be to cdn it&lt;/pre&gt;
+
+&lt;pre&gt;Script.Include(&amp;quot;hello.js&amp;quot;);&lt;/pre&gt;
+
+&lt;p&gt;Made new folder called Scripts… need to put in a web.config to say serve up as static pages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_thumb_1.png" width="644" height="367" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;seeing the branding element via jquery:&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:c4670f1d-dc2e-4da9-97a7-742e3aea3ded" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;$(&lt;/span&gt;&lt;span style="color:#93c763"&gt;function&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; () {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    $(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;#branding&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;).after(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;#39;&amp;lt;span class=&amp;quot;hello&amp;quot;&amp;gt;Hello from our script in the theme!&amp;lt;/span&amp;gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;});&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;Wiring up in Layout.cshtml&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:2f385440-f50d-41ec-8d3a-5b82f1e54b14" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#f1f2f3"&gt;    SetMeta(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;, &lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;IE=edge,chrome=1&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    Style&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Include(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;http://fonts.googleapis.com/css?family=Lobster&amp;amp;subset=latin&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    Style&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Include(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;site.css&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;);&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    Script&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Require(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;jQuery&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AtHead();&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    Script&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;Include(&lt;/span&gt;&lt;span style="color:#ec7600"&gt;&amp;quot;hello.js&amp;quot;&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;)&lt;/span&gt;&lt;span style="color:#e8e2b7"&gt;.&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;AtFoot();&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_6.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_thumb_2.png" width="513" height="182" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;custom.css&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:7599deb7-f453-4255-989f-909080677bdf" class="wlWriterEditableSmartContent"&gt;
+&lt;div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"&gt;
+&lt;div style="background-color: #000000; max-height: 300px; overflow: auto; padding: 2px 5px; white-space: nowrap"&gt;&lt;span style="color:#678cb1"&gt;span.hello&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt; {&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;    &lt;/span&gt;&lt;span style="color:#8c8cb4"&gt;background-color&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;: &lt;/span&gt;&lt;span style="color:#ec7600"&gt;#dddddd&lt;/span&gt;&lt;span style="color:#f1f2f3"&gt;;&lt;/span&gt;&lt;br&gt;
+&lt;span style="color:#f1f2f3"&gt;}&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;which does this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_8.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Orchard-Themes-and-Widgets_A578/image_thumb_3.png" width="244" height="210" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-02-16T20:55:44.477375-05:00</Created>
+      <Modified>2012-02-16T20:55:44.477375-05:00</Modified>
+      <EntryId>84df4b5a-f042-4053-9fac-cc04941983ee</EntryId>
+      <Description />
+      <Title>Orchard Themes</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;F5 – Play presentation&lt;/p&gt;  &lt;p&gt;Shift F5 – play from current slide&lt;/p&gt;  &lt;p&gt;B – Black or W – White&lt;/p&gt;  &lt;p&gt;Alt S – Goto slide&lt;/p&gt;</Content>
+      <Created>2012-02-17T04:52:08.868-05:00</Created>
+      <Modified>2012-02-17T04:52:08.868-05:00</Modified>
+      <EntryId>45df4705-b6fc-4a02-860f-7409a136a9b7</EntryId>
+      <Description />
+      <Title>PowerPoint Keyboard Shortcuts</Title>
+      <Categories>powerpoint</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

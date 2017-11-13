@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-05-08T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Need latest build of r# &lt;a href="http://download.jetbrains.com/resharper/ReSharperSetup.7.1.3000.1964.msi"&gt;http://download.jetbrains.com/resharper/ReSharperSetup.7.1.3000.1964.msi&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;To get test runner working in vs2012.2 update&lt;/p&gt;</Content>
+      <Created>2013-05-09T05:56:08.8797001-04:00</Created>
+      <Modified>2013-05-09T05:56:08.8797001-04:00</Modified>
+      <EntryId>7033fc76-fccc-4bbf-b561-47f3a89327b9</EntryId>
+      <Description />
+      <Title>Resharper and VS2012.2</Title>
+      <Categories>Resharper</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-12-12T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.&lt;/p&gt;  &lt;p&gt;What is the smallest positive number that is &lt;dfn&gt;evenly divisible&lt;/dfn&gt; by all of the numbers from 1 to 20?&lt;/p&gt;  &lt;p&gt;Or ‘Exactly Divisible’&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberToTest = 1;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;while&lt;/span&gt; (1 == 1)&lt;br /&gt;{&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; divisible = &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 1; j &amp;lt;= 20; j++)&lt;br /&gt;   {&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (numberToTest % j != 0)&lt;br /&gt;       {&lt;br /&gt;           divisible = &lt;span style="color: #0000ff"&gt;false&lt;/span&gt;;&lt;br /&gt;           &lt;span style="color: #0000ff"&gt;break&lt;/span&gt;;&lt;br /&gt;       }&lt;br /&gt;   }&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (divisible)&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;break&lt;/span&gt;;&lt;br /&gt;   numberToTest++;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 1; i &amp;lt;= 20; i++)&lt;br /&gt;   Console.WriteLine(i + &lt;span style="color: #006080"&gt;&amp;quot; &amp;quot;&lt;/span&gt; + numberToTest / i);&lt;br /&gt;&lt;br /&gt;Console.WriteLine(numberToTest); // 232 792 560&lt;/pre&gt;
+
+  &lt;br /&gt;This took me a while with an elementary programming mistake.. corrected and got it.&amp;#160; I will try and build in more testing into the following problems to avoid simple errors.&lt;/div&gt;</Content>
+      <Created>2010-12-12T20:11:13.456125-05:00</Created>
+      <Modified>2010-12-12T20:11:13.456125-05:00</Modified>
+      <EntryId>f2c51446-c2d7-48b0-91cd-2e6e3f99138c</EntryId>
+      <Description />
+      <Title>Euler #5 – Smallest number divisible by all number 1 to 20</Title>
+      <Categories>Euler</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

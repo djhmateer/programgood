@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-29T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://jasonhaley.com/blog/post/2011/03/22/How-to-Add-MVC-3-Project-Types-to-the-Azure-Cloud-Service-Wizard.aspx"&gt;http://jasonhaley.com/blog/post/2011/03/22/How-to-Add-MVC-3-Project-Types-to-the-Azure-Cloud-Service-Wizard.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-30T06:27:27.454-04:00</Created>
+      <Modified>2011-03-30T06:27:27.454-04:00</Modified>
+      <EntryId>cb501db5-df4c-4452-be17-53f3c68f9669</EntryId>
+      <Description />
+      <Title>Adding MVC3 Project Type into VS2010</Title>
+      <Categories>MVC;VS2010</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://blog.stevex.net/string-formatting-in-csharp/"&gt;http://blog.stevex.net/string-formatting-in-csharp/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-30T17:01:51.407125-04:00</Created>
+      <Modified>2011-03-30T17:01:51.407125-04:00</Modified>
+      <EntryId>ffc37d5c-03e7-47eb-a386-3d706d070f25</EntryId>
+      <Description />
+      <Title>String Format</Title>
+      <Categories>dotNet</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2008-11-06T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Christchurch CodeCamp 2008 was a resounding success:&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/builders1_500.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;Setting up Friday evening Andy, MattT, MattS.. a giant puzzle!&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Here is Mats entertaining presentation on SQL 2008 for Developers:&amp;nbsp; &lt;a href="http://www.programgood.net/content/binary/CodeCamp_MatVelloso.zip"&gt;CodeCamp_MatVelloso.zip (941.34 KB)&lt;/a&gt;&lt;br&gt;&lt;br&gt;Other great presentations were:&lt;br&gt;&lt;br&gt;Ivan Towlson - Thinking in WPF&lt;br&gt;&lt;a href="http://hestia.typepad.com/flatlander/2008/11/christchurch-code-camp-2008---thinking-in-wpf.html" target="_blank"&gt;http://hestia.typepad.com/&lt;wbr&gt;flatlander/2008/11/&lt;wbr&gt;christchurch-code-camp-2008---&lt;wbr&gt;thinking-in-wpf.html&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;Andy Scrase - A C#3.0 Whirlwind Tour&lt;br&gt;&lt;a href="http://buildwith.net/" target="_blank"&gt;http://buildwith.net&lt;/a&gt;&lt;br&gt;&lt;br&gt;John Rusk - LINQ to SQL Optimation&lt;br&gt;&lt;a href="http://dotnet.agilekiwi.com/blog/2008/11/linq-to-sql-presentation.html" target="_blank"&gt;http://dotnet.agilekiwi.com/&lt;wbr&gt;blog/2008/11/linq-to-sql-&lt;wbr&gt;presentation.html&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;Ben Reid - Could Computing&lt;br&gt;&lt;a href="http://cloudservices.blogspot.com/" target="_blank"&gt;http://cloudservices.blogspot.&lt;wbr&gt;com&lt;/a&gt;&lt;br&gt;&lt;br&gt;--------------------&lt;br&gt;After lunch&lt;br&gt;&lt;br&gt;Lightning:&lt;br&gt;Gary Payne on jQuery&lt;br&gt;&lt;a href="http://sharethelearning.blogspot.com/2008/11/jquery-introduction-talk-at.html" target="_blank"&gt;http://sharethelearning.&lt;wbr&gt;blogspot.com/2008/11/jquery-&lt;wbr&gt;introduction-talk-at.html&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;Matt Tester&lt;br&gt;&lt;a href="http://pureblue.wordpress.com/2008/11/04/christchurch-code-camp-design-with-paper-prototypes/" target="_blank"&gt;http://pureblue.wordpress.com/&lt;wbr&gt;2008/11/04/christchurch-code-&lt;wbr&gt;camp-design-with-paper-&lt;wbr&gt;prototypes/&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;Matt Smith - Sharepoint Development&lt;br&gt;&lt;a href="http://blog.mattsmith.co.nz/" target="_blank"&gt;http://blog.mattsmith.co.nz&lt;/a&gt;&lt;br&gt;&lt;br&gt;Del Robinson - Tour of BI Projects and technology&lt;br&gt;&lt;a href="http://www.omegatech.co.nz/powerpoints/Business_Intelligence_StatisticsNZ.ppt" target="_blank"&gt;http://www.omegatech.co.nz/&lt;wbr&gt;powerpoints/Business_&lt;wbr&gt;Intelligence_StatisticsNZ.ppt&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;Dave Roys - Navision Perspective&lt;br&gt;&lt;a href="http://gaspodethewonderdog.blogspot.com/2008/11/codecamp-2008-nav-resources.html" target="_blank"&gt;http://gaspodethewonderdog.&lt;wbr&gt;blogspot.com/2008/11/codecamp-&lt;wbr&gt;2008-nav-resources.html&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+Kirk Jackson - Overcoming your Web Insecurity&lt;br&gt;&lt;a href="http://pageofwords.com/blog/2008/11/01/ChristchurchCodeCampOvercomingYourWebInsecurity.aspx" target="_blank"&gt;http://pageofwords.com/blog/&lt;wbr&gt;2008/11/01/&lt;wbr&gt;ChristchurchCodeCampOvercoming&lt;wbr&gt;YourWebInsecurity.aspx&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pageofwords.com/blog/2008/11/02/LearningsFromChristchurchCodeCamp.aspx" target="_blank"&gt;http://pageofwords.com/blog/&lt;wbr&gt;2008/11/02/&lt;wbr&gt;LearningsFromChristchurchCodeC&lt;wbr&gt;amp.aspx&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/MattIntergenSign_500.jpg" border="0"&gt;&lt;br&gt;&lt;font size="1"&gt;MattS.. The sign says Recovery&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color="#888888"&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;a href="http://www.programgood.net/content/binary/toDoList.zip"&gt;&lt;br&gt;&lt;/a&gt;&lt;a href="http://www.programgood.net/content/binary/CodeCamp_MatVelloso.zip"&gt;&lt;br&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</Content>
+      <Created>2008-11-07T17:02:06.75-05:00</Created>
+      <Modified>2008-11-09T02:49:07.28125-05:00</Modified>
+      <EntryId>ad547cb8-431a-4f04-9f0a-1943dbbf5116</EntryId>
+      <Description />
+      <Title>CodeCamp 2008 Christchurch</Title>
+      <Categories>Events</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>false</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

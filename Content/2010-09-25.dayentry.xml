@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-09-24T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I saw some interesting code:&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (; contours != &lt;span style="color: #0000ff"&gt;null&lt;/span&gt;; contours = contours.HNext)&lt;br /&gt;{&lt;br /&gt; Contour&amp;lt;Point&amp;gt; approxContour = contours.ApproxPoly(contours.Perimeter * 0.02, contours.Storage);&lt;br /&gt; img.Draw(approxContour, &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Bgr(1, 1, 251), 2);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I’d never seen the initial part of the for statement missing so I played:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 1; i &amp;lt;= 5; i++) &lt;span style="color: #008000"&gt;// normal usage&lt;/span&gt;&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;i count is {0}&amp;quot;&lt;/span&gt;, i);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; k = 1;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (; k&amp;lt;=5; k++) &lt;span style="color: #008000"&gt;// missing first bit&lt;/span&gt;&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;k count is {0}&amp;quot;&lt;/span&gt;, k);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; m = 1;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (; m &amp;lt;= 5;) &lt;span style="color: #008000"&gt;// missing last bit too&lt;/span&gt;&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;m count is {0}&amp;quot;&lt;/span&gt;, m);&lt;br /&gt;            m++;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (; ; ) &lt;span style="color: #008000"&gt;// infinite loop, never breaks out&lt;/span&gt;&lt;br /&gt;        {&lt;br /&gt;            &lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;        Contour contA = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Contour { x = 10, y = 20 };&lt;br /&gt;        Contour contB = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Contour { x = 50, y = 60 };&lt;br /&gt;        Contour contC = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Contour { x = 90, y = 100 };&lt;br /&gt;&lt;br /&gt;        List&amp;lt;Contour&amp;gt; listOfContours = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;Contour&amp;gt;();&lt;br /&gt;        listOfContours.Add(contA); &lt;span style="color: #008000"&gt;// better way to add to a collection?&lt;/span&gt;&lt;br /&gt;        listOfContours.Add(contB);&lt;br /&gt;        listOfContours.Add(contC);&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (Contour contour &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; listOfContours)&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;x is {0}&amp;quot;&lt;/span&gt;, contour.x.ToString());&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;y is {0}&amp;quot;&lt;/span&gt;, contour.y.ToString());&lt;br /&gt;            Console.WriteLine();&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 0;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;while&lt;/span&gt; (j &amp;lt; 5)&lt;br /&gt;        {&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;While loop counter is {0}&amp;quot;&lt;/span&gt;, j.ToString());&lt;br /&gt;            j++;&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Contour&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; x;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; y;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//public int x { get; set; }&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//public int y { get; set; }&lt;/span&gt;&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-09-24T22:21:54.26675-04:00</Created>
+      <Modified>2010-09-25T01:00:28.844875-04:00</Modified>
+      <EntryId>15bb2001-4bd9-4707-bcab-e9e81dc584fe</EntryId>
+      <Description />
+      <Title>For Loops</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

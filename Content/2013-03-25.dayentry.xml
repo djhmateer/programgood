@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-03-24T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://visualstudiogallery.msdn.microsoft.com/a83505c6-77b3-44a6-b53b-73d77cba84c8" href="http://visualstudiogallery.msdn.microsoft.com/a83505c6-77b3-44a6-b53b-73d77cba84c8"&gt;http://visualstudiogallery.msdn.microsoft.com/a83505c6-77b3-44a6-b53b-73d77cba84c8&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;then: &lt;a title="http://vscommands.squaredinfinity.com/features" href="http://vscommands.squaredinfinity.com/features"&gt;http://vscommands.squaredinfinity.com/features&lt;/a&gt;&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Compare files&lt;/li&gt;    &lt;li&gt;Highlights output in different colours in output window&lt;/li&gt;    &lt;li&gt;Hide top menu&lt;/li&gt;    &lt;li&gt;Make top menu Sentence Case&lt;/li&gt; &lt;/ul&gt;</Content>
+      <Created>2013-03-25T13:23:46.1286607-04:00</Created>
+      <Modified>2013-03-25T13:23:46.1286607-04:00</Modified>
+      <EntryId>815f2983-5b75-48da-a5bd-9533bee0fe0e</EntryId>
+      <Description />
+      <Title>VS Commands for VS2012</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

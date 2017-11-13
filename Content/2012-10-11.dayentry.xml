@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-10T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Display a Toast when the machine connects to the network (displays a message)&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;1 cpu second (every 1 or 2 hours)&lt;/li&gt;    &lt;li&gt;2 cpu seconds (every 15mins on lock)&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Will happen even when the app is not running, or has never been run on the machine.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://visualstudiogallery.msdn.microsoft.com/bb764f67-6b2c-4e14-b2d3-17477ae1eaca"&gt;http://visualstudiogallery.msdn.microsoft.com/bb764f67-6b2c-4e14-b2d3-17477ae1eaca&lt;/a&gt;&amp;#160;&amp;#160; bing maps sdk for win8&lt;/p&gt;</Content>
+      <Created>2012-10-11T06:44:10.757823-04:00</Created>
+      <Modified>2012-10-11T06:44:10.757823-04:00</Modified>
+      <EntryId>89a72954-3509-41b0-b11c-fe73339586dd</EntryId>
+      <Description />
+      <Title>Win8 Background Tasks</Title>
+      <Categories>Windows 8</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-14T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I’m trying to do something like RemoveAccountFromRole&lt;/p&gt; &lt;p&gt;Can do it with an Invoke method call on RIA, however it doesn’t refresh the data on the front end:&lt;/p&gt; &lt;p&gt;Although the Invoke attribute is optional, to be considered an invoke method a &lt;br&gt;method shouldn’t take entities as a parameter or return an entity, IEnumerable, or &lt;br&gt;IQueryable of entities as a result.&lt;/p&gt; &lt;h3&gt;Conventions&lt;/h3&gt; &lt;p&gt;Get, Insert, Update, Delete&lt;/p&gt; &lt;p&gt;Testing a domainservice:&lt;/p&gt; &lt;p&gt;&lt;a title="https://msdnrss.thecoderblogs.com/2011/08/unit-testing-a-wcf-ria-domainservice-part-3-the-domainservicetesthost/" href="https://msdnrss.thecoderblogs.com/2011/08/unit-testing-a-wcf-ria-domainservice-part-3-the-domainservicetesthost/"&gt;https://msdnrss.thecoderblogs.com/2011/08/unit-testing-a-wcf-ria-domainservice-part-3-the-domainservicetesthost/&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Getting the correct context to work on so INotifyPropertyChanged works.&lt;/p&gt; &lt;p&gt;Update a single entity&lt;/p&gt; &lt;p&gt;Update Multiple&lt;/p&gt; &lt;h3&gt;Forcing a Rebind&lt;/h3&gt; &lt;p&gt;couldn’t get this to work..&lt;/p&gt;&lt;pre&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // Force rebind - doesn't work&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //BindingExpression bindExp = AccountItemsT32.GetBindingExpression(ListBox.ItemsSourceProperty);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //Binding bind = bindExp.ParentBinding;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //AccountItemsT32.SetBinding(ListBox.ItemsSourceProperty, bind);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //AccountItemsT32.GetBindingExpression(ListBox.ItemsSourceProperty).UpdateSource();&lt;/pre&gt;&lt;pre&gt;&amp;nbsp;&lt;/pre&gt;
+&lt;h3&gt;Eager Loading&lt;/h3&gt;
+&lt;p&gt;&lt;a title="http://blogs.msdn.com/b/alexj/archive/2009/06/02/tip-22-how-to-make-include-really-include.aspx" href="http://blogs.msdn.com/b/alexj/archive/2009/06/02/tip-22-how-to-make-include-really-include.aspx"&gt;http://blogs.msdn.com/b/alexj/archive/2009/06/02/tip-22-how-to-make-include-really-include.aspx&lt;/a&gt; – workaround for joins and includes&lt;/p&gt;
+&lt;h3&gt;Reload DomainContext&lt;/h3&gt;
+&lt;p&gt;&lt;a title="http://stackoverflow.com/questions/3899721/silverlight-4-ria-update-item-in-domaindatasource-only-updates-after-refresh" href="http://stackoverflow.com/questions/3899721/silverlight-4-ria-update-item-in-domaindatasource-only-updates-after-refresh"&gt;http://stackoverflow.com/questions/3899721/silverlight-4-ria-update-item-in-domaindatasource-only-updates-after-refresh&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-11-15T11:14:16.6989363-05:00</Created>
+      <Modified>2012-11-15T11:14:16.6989363-05:00</Modified>
+      <EntryId>5248dd0f-6aca-414c-9152-1c6e410f5f07</EntryId>
+      <Description />
+      <Title>Silverlight RIA</Title>
+      <Categories>Entity Framework;RIA Services;Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;nuGet package called RIAServices.UnitTesting&amp;#160;&amp;#160;&amp;#160; Aug 18th 2011&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.silverlightshow.net/items/WCF-RIA-Services-Part-8-Testing-and-Debugging.aspx" href="http://www.silverlightshow.net/items/WCF-RIA-Services-Part-8-Testing-and-Debugging.aspx"&gt;http://www.silverlightshow.net/items/WCF-RIA-Services-Part-8-Testing-and-Debugging.aspx&lt;/a&gt;&amp;#160;&amp;#160; - Brian Noyes 10 part series on RIA&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Mastering LOB apps in SL:&amp;#160; &lt;a title="http://www.amazon.com/gp/product/1849683549/ref=as_li_tf_tl?ie=UTF8&amp;amp;amp;tag=silverl-20&amp;amp;amp;linkCode=as2&amp;amp;amp;camp=1789&amp;amp;amp;creative=9325&amp;amp;amp;creativeASIN=1849683549" href="http://www.amazon.com/gp/product/1849683549/ref=as_li_tf_tl?ie=UTF8&amp;amp;amp;tag=silverl-20&amp;amp;amp;linkCode=as2&amp;amp;amp;camp=1789&amp;amp;amp;creative=9325&amp;amp;amp;creativeASIN=1849683549"&gt;http://www.amazon.com/gp/product/1849683549/ref=as_li_tf_tl?ie=UTF8&amp;amp;amp;tag=silverl-20&amp;amp;amp;linkCode=as2&amp;amp;amp;camp=1789&amp;amp;amp;creative=9325&amp;amp;amp;creativeASIN=1849683549&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-11-15T12:35:19.5339951-05:00</Created>
+      <Modified>2012-11-15T12:35:19.5339951-05:00</Modified>
+      <EntryId>a1ffcd2e-4eac-4843-b1d5-d7d6e5e623da</EntryId>
+      <Description />
+      <Title>RIA Testing</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

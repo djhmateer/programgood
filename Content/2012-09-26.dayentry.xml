@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-09-25T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=JlyND7b2-YA"&gt;http://www.youtube.com/watch?v=JlyND7b2-YA&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/WCF_D41F/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/WCF_D41F/image_thumb.png" width="412" height="352" /&gt;&lt;/a&gt;    &lt;br /&gt;Very simple project with 3 methods working through WCF.&lt;/p&gt;</Content>
+      <Created>2012-09-26T10:09:31.3159573-04:00</Created>
+      <Modified>2012-09-26T10:09:31.3159573-04:00</Modified>
+      <EntryId>36deb38f-95aa-4437-b61f-0317b65c4502</EntryId>
+      <Description />
+      <Title>WCF–EvalServiceLibrary</Title>
+      <Categories />
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.youtube.com/watch?gl=GB&amp;amp;v=Dn7ollDhbe4"&gt;http://www.youtube.com/watch?gl=GB&amp;amp;v=Dn7ollDhbe4&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;HelloWcfHostConsoleApplication – using console app&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;in real life this would be a WCF Service Application&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;HelloWcfServiceLibrary – using console app&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;in real life this would be a WCF Service Library (templated code genned)&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;Client Side Proxy, Server Side component both implement IHelloWcfService&lt;/p&gt;  &lt;p&gt;On the client there will be a proxy object which implements IHelloWcfService, which allows us to call the method SayHello&lt;/p&gt;  &lt;p&gt;HelloWcfClientConsoleApplication – console app.&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;Add Service reference will generate the proxy method for us on the client.&lt;/p&gt;    &lt;p&gt;How to reference IHelloWcfService on the client?&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_4.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_thumb_1.png" width="447" height="235" /&gt;&lt;/a&gt;     &lt;br /&gt;This runs multiple projects at startup&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_8.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_thumb.png" width="534" height="357" /&gt;&lt;/a&gt;    &lt;br /&gt;App running which can hit the breakpoint in the Host.&lt;/p&gt;  &lt;h3&gt;Testing WCF Project&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_6.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_thumb_2.png" width="483" height="319" /&gt;&lt;/a&gt;     &lt;br /&gt;Very simple test using the interface hack.&amp;#160; Notice no templating has been used at all.&amp;#160; POCO’s and a single WCF DLL – System.ServiceModel&lt;/p&gt;  &lt;h3&gt;Testing and Debugging WCF Services&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/bb157687.aspx"&gt;http://msdn.microsoft.com/en-us/library/bb157687.aspx&lt;/a&gt; – limitations of WCF debugging&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.microsoft.com/en-us/download/confirmation.aspx?id=21459"&gt;http://www.microsoft.com/en-us/download/confirmation.aspx?id=21459&lt;/a&gt; – WCF 4&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/ms734712.aspx"&gt;http://msdn.microsoft.com/en-us/library/ms734712.aspx&lt;/a&gt; – WCF in MSDN&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_10.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/78da3bae8bf9_C03A/image_thumb_3.png" width="423" height="394" /&gt;&lt;/a&gt;    &lt;br /&gt;Start the host in debug mode in VS.&amp;#160; Then run the test in debug mode using TestDriven.&amp;#160; Can then step through client and server sides of the code.&lt;/p&gt;</Content>
+      <Created>2012-09-26T06:56:34.8388398-04:00</Created>
+      <Modified>2012-09-26T06:56:34.8388398-04:00</Modified>
+      <EntryId>cadf8a08-e321-4031-9921-ca035eef7520</EntryId>
+      <Description />
+      <Title>WCF Intro</Title>
+      <Categories>WCF</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

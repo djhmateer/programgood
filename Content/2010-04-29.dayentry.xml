@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-04-28T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I’m using a Windows2008 shared server there.&lt;/p&gt;  &lt;p&gt;When I go&lt;/p&gt;  &lt;p&gt;&lt;a title="http://cmstest.mateerit.co.nz/sitefinity/admin/pages.aspx?select=6bfb28b5-8858-40e0-b41c-c4de7377dc25&amp;amp;action=saved" href="http://cmstest.mateerit.co.nz/sitefinity/admin/pages.aspx?select=6bfb28b5-8858-40e0-b41c-c4de7377dc25&amp;amp;action=saved"&gt;http://cmstest.mateerit.co.nz/sitefinity/admin/pages.aspx?select=6bfb28b5-8858-40e0-b41c-c4de7377dc25&amp;amp;action=saved&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;2010-04-25 02:28:11 W3SVC3267 WINPLESK8 119.47.118.16 GET /Rejected-By-UrlScan ~/sitefinity/admin/pages.aspx?select=6bfb28b5-8858-40e0-b41c-c4de7377dc25 80 - 118.90.119.91 HTTP/1.1 Mozilla/5.0+(Windows;+U;+Windows+NT+5.1;+en-GB;+rv:1.9.2.3)+Gecko/20100401+Firefox/3.6.3 .ASPNET=1AFB9766977A21A55E7B9BAF3F27FCCD8DAF9A049A7845DD4405823A6777D6E80FE4233EF6C403BEAAEA4E0E981AAD087B225606D56470A932DD82D59DDDD76DD0AF4C5BCB1A3ACCAD31BB26B8541EB84B1602F1834AC23A72327049A436D1C2;+ASP.NET_SessionId=mbucdi45fpa5ee55bddc5qy0;+.ASPXROLES=ipJFW4T_cJvPAYLQ5ZPJt3W3ZvEDmRcZaR65fdIMjQk4lclLmuzIb0-8SdEZtVinSUlefJlWwobKC3KhexUfFinsek_a-SavHnIQ2LZneONdBBZFDAxeSURWQiBvbIDY1WVktLDKeaYMpC5q1i36pGdXFoWZRAe_jSDPSPDqvCVLPma-BCUAq5dYtyFnHdgIYhKIg39XxHJvRao8sseVFm5DJLi0GSSGoEp4vgMh5EeK1KmgR0-pXiYTB5j4Rcap18QBjA2d8Bexcwr_Iugw41jm-ph9SCspbunO0ws1X6IC9ejiCCB5AydiKsKsYYQhcnLcXIOzFSspfOOYmm3RF1v6TnVv9xytzJzn14NP5Dh-h_wRYnWXbpM_hyfDTiVBEEvu1yFC6HMMD-PQ2BH_FzJ0SmWxKIoikslK6EG41KrFfwrcaRWyBDxkWoddsgVF0 http://cmstest.mateerit.co.nz/sitefinity/admin/Pages.aspx cmstest.mateerit.co.nz 404 0 2 1218 1231 468&lt;/p&gt;  &lt;p&gt;So it looks like a Rejected-By-UrlScan issue&lt;/p&gt;  &lt;p&gt;URLScan is configured to reject certain requests. URLScan.ini&lt;/p&gt;  &lt;p&gt;Another email to my providers openhost.co.nz who turned off URLScan for me.&lt;/p&gt;</Content>
+      <Created>2010-04-29T19:18:49.859375-04:00</Created>
+      <Modified>2010-04-29T19:18:49.859375-04:00</Modified>
+      <EntryId>c38dd544-e0b7-490b-9e2e-a6db7714872d</EntryId>
+      <Description />
+      <Title>Installing SiteFinity on a Shared Host</Title>
+      <Categories>SiteFinity</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.sourcegear.com/fortress/"&gt;http://www.sourcegear.com/fortress/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;An Application Lifecycle Management tool.&lt;/p&gt;  &lt;p&gt;Version Control based on Vault.&lt;/p&gt;  &lt;p&gt;Work Item Tracking&lt;/p&gt;  &lt;p&gt;Admin Web Front End:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_1.png" width="656" height="474" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;There is a repo front end&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb.png" width="644" height="378" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;VS Integration (Work Item Tracking)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_2.png" width="244" height="148" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://support.sourcegear.com/"&gt;http://support.sourcegear.com/&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;How to Add a Solution into Source Control&lt;/h3&gt;  &lt;p&gt;Make sure VS knows about Fortress:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_10.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_4.png" width="639" height="361" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Right click solution file in VS and do add to &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_3.png" width="265" height="161" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;Easy to add in files and see diffs within VS.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_12.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_5.png" width="644" height="365" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Doing a change to a file which is in source control (page2).&lt;/p&gt;  &lt;h3&gt;Working With Tasks&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_14.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_6.png" width="644" height="325" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Here I am checking in some code against a feature request.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_16.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_7.png" width="644" height="178" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Something which I find confusing is why are there 2 unresolved tasks in ‘Get bones of the site working’, and I click on them and it shows:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_18.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/SourceGearFortress_822A/image_thumb_8.png" width="644" height="178" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;Here the status of the tasks are both Completed.&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Overall I get what it is doing, and am about to use it for real in a project now.&lt;/p&gt;</Content>
+      <Created>2010-04-29T19:09:51.234375-04:00</Created>
+      <Modified>2010-04-29T19:09:51.234375-04:00</Modified>
+      <EntryId>bb77745e-915d-4d08-b5ef-33826d6eee78</EntryId>
+      <Description />
+      <Title>SourceGear Fortress</Title>
+      <Categories>SourceGear Fortress;Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Bug/Issue Trackers&lt;/p&gt;  &lt;p&gt;Confluence / Jira issue &lt;/p&gt;  &lt;p&gt;Fogbugz&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Mocking:&lt;/p&gt;  &lt;p&gt;balsamiq – integrates into confluence/jira/fogbugz&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Tools_893B/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Tools_893B/image_thumb.png" width="644" height="349" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Screen Capture in WinXP - cropper&lt;/p&gt;</Content>
+      <Created>2010-04-29T19:49:23.421875-04:00</Created>
+      <Modified>2010-04-29T19:49:23.421875-04:00</Modified>
+      <EntryId>3c495fee-7d5a-43fa-8277-71f345290d36</EntryId>
+      <Description />
+      <Title>Tools</Title>
+      <Categories>Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-05T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;NuGet installed EntityFramework and then SQLCE.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/fda363ad6356_F140/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/fda363ad6356_F140/image_thumb.png" width="740" height="350" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Had to type own code first Poco, and showing EF and SqlServerCe&lt;/p&gt;  &lt;p&gt;Rename MyProductContect to ProductContext – just do it and press ctrl . (instead of F2)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/fda363ad6356_F140/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/fda363ad6356_F140/image_thumb_1.png" width="775" height="419" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Did full CRUD using EF Code First and SqlCE.&lt;/p&gt;</Content>
+      <Created>2011-08-06T12:44:48.328125-04:00</Created>
+      <Modified>2011-08-06T12:44:48.328125-04:00</Modified>
+      <EntryId>0570f8ee-e6c6-42b6-842e-cea7b503630f</EntryId>
+      <Description />
+      <Title>The Full Stack–1 EF Code First, MVC3</Title>
+      <Categories>ASP.NET MVC;Entity Framework</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

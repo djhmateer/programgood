@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-08-04T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I’m getting data using LINQ to SQL, then showing on the front end.&amp;#160; If I want a null coming from the database to default to something:&lt;/p&gt;  &lt;div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;telerik:GridTemplateColumn HeaderText=&lt;span style="color: #006080"&gt;&amp;quot;Image&amp;quot;&lt;/span&gt; UniqueName=&lt;span style="color: #006080"&gt;&amp;quot;Image&amp;quot;&lt;/span&gt;&amp;gt;  &lt;br /&gt;                        &amp;lt;ItemTemplate&amp;gt;  &lt;br /&gt;                            &amp;lt;asp:Label ID=&lt;span style="color: #006080"&gt;&amp;quot;asdf&amp;quot;&lt;/span&gt; runat=&lt;span style="color: #006080"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; Text=&lt;span style="color: #006080"&gt;'&amp;lt;%# String.IsNullOrEmpty(Convert.ToString(Eval(&amp;quot;Image1&amp;quot;))) ? &amp;quot;noImage.jpg&amp;quot; : Eval(&amp;quot;Image1&amp;quot;)%&amp;gt;'&lt;/span&gt;&amp;gt;&amp;lt;/asp:Label&amp;gt;&lt;br /&gt;                           &amp;lt;a href=&lt;span style="color: #006080"&gt;&amp;quot;&amp;lt;%=VirtualPathUtility.ToAbsolute(&amp;quot;&lt;/span&gt;~/&lt;span style="color: #006080"&gt;&amp;quot;)%&amp;gt;showFrontEndMaterialDetail.aspx?materialId=&amp;lt;%# Eval(&amp;quot;&lt;/span&gt;Id&lt;span style="color: #006080"&gt;&amp;quot;)%&amp;gt;&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;                            &amp;lt;img src=&lt;span style="color: #006080"&gt;&amp;quot;&amp;lt;%=VirtualPathUtility.ToAbsolute(&amp;quot;&lt;/span&gt;~/&lt;span style="color: #006080"&gt;&amp;quot;)%&amp;gt;Images/Uploaded/Thumbs/&amp;lt;%# Eval(&amp;quot;&lt;/span&gt;Image1&lt;span style="color: #006080"&gt;&amp;quot;) ?? &amp;quot;&lt;/span&gt;noPhoto.jpg&lt;span style="color: #006080"&gt;&amp;quot; %&amp;gt;&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/a&amp;gt;&lt;br /&gt;                   &lt;br /&gt;                        &amp;lt;/ItemTemplate&amp;gt;  &lt;br /&gt;                     &amp;lt;/telerik:GridTemplateColumn&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;Thanks to these people:&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://stackoverflow.com/questions/3411155/c-eval-aspx-fun"&gt;http://stackoverflow.com/questions/3411155/c-eval-aspx-fun&lt;/a&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/3410942/linq-to-sql-default-value-nullable"&gt;http://stackoverflow.com/questions/3410942/linq-to-sql-default-value-nullable&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-08-04T22:25:49.539875-04:00</Created>
+      <Modified>2010-08-04T22:25:49.539875-04:00</Modified>
+      <EntryId>751b2afa-02ce-4603-b349-1052756bbf6d</EntryId>
+      <Description />
+      <Title>Default Values in Eval</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

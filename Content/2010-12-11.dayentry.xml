@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-12-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://weblogs.asp.net/scottgu/archive/2007/04/08/new-orcas-language-feature-lambda-expressions.aspx"&gt;Lambda expressions&lt;/a&gt; are a simpler syntax for anonymous delegates&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// anonymous delegate&lt;/span&gt;&lt;br /&gt;var evens = Enumerable&lt;br /&gt;                .Range(1, 100)&lt;br /&gt;                .Where(&lt;span style="color: #0000ff"&gt;delegate&lt;/span&gt;(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; x) { &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; (x % 2) == 0; })&lt;br /&gt;                .ToList();&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;// lambda expression&lt;/span&gt;&lt;br /&gt;var evens = Enumerable&lt;br /&gt;                .Range(1, 100)&lt;br /&gt;                .Where(x =&amp;gt; (x % 2) == 0)&lt;br /&gt;                .ToList();&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;I think this is clearer:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// anonymous delegate&lt;/span&gt;&lt;br /&gt;IEnumerable&amp;lt;&lt;span style="color: #0000ff"&gt;int&lt;/span&gt;&amp;gt; evens = Enumerable&lt;br /&gt;                .Range(1, 100)&lt;br /&gt;                .Where(&lt;span style="color: #0000ff"&gt;delegate&lt;/span&gt;(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; x) { &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; (x % 2) == 0; })&lt;br /&gt;                .ToList();  // forcers immediate query evaluation&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Many thanks to &lt;a href="http://stackoverflow.com/questions/167343/c-lambda-expression-why-should-i-use-this"&gt;http://stackoverflow.com/questions/167343/c-lambda-expression-why-should-i-use-this&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-12-11T02:43:38.5655-05:00</Created>
+      <Modified>2010-12-11T02:48:16.28425-05:00</Modified>
+      <EntryId>8e1d06be-a88b-4ec7-8f08-ce977b34c245</EntryId>
+      <Description />
+      <Title>Lambda Expressions</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

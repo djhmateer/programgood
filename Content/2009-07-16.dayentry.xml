@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-07-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>Easy to understand, working example WinForms app using MVP (Model View Presenter) pattern.&lt;br&gt;&lt;br&gt;Why use this pattern?&amp;nbsp; Testability and maintainability (ie loosely coupled so less likely to break!)&lt;br&gt;&lt;br&gt;Download &lt;a href="http://www.programgood.net/content/binary/noddy.zip"&gt;noddy.zip (106.62 KB)&lt;/a&gt; (VS2008)&lt;br&gt;&lt;br&gt;Notes:&lt;br&gt;View is dumb and does render logic&lt;br&gt;View never talks to the model (or any business entity eg customer) directly&lt;br&gt;Presenter retries data and manipulates&lt;br&gt;Model is the data and business rules&lt;br&gt;&lt;br&gt;usually MVP sits on top of an ORM or Database Abstraction / Business Logic layer:&lt;br&gt;&lt;img src="http://www.programgood.net/content/binary/Drawing1.jpg" border="0"&gt;&lt;br&gt;&lt;br&gt;How it works:&lt;br&gt;&lt;br&gt;1) Application comes to Program.cs which calls Form1.cs.. no MVP code here.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Program
+    {
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/// The main entry point for the application.&lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/// Standard code.. nothing MVP&lt;/span&gt;
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+        [STAThread]
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;static&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;false&lt;/span&gt;);
+            Application.Run(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Form1());
+        }
+    }&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;2) Form1 (which is the view in MVP) which implements IView interface (**why**).. instantiates a new MainPresenter calling it presenter.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; partial &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; Form1 : Form, IView
+    {
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; MainPresenter presenter;
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; Form1()
+        {
+            InitializeComponent();
+             presenter &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; MainPresenter(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;);
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; btnPostCustomer_Click(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+        {
+            presenter.PostCustomer();
+        }
+
+        &lt;span style="color: Green; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;// IView members&lt;/span&gt;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; FirstName
+        {
+            get { &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; txtFirstName.Text; }
+            set { txtFirstName.Text &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; value; }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; LastName
+        {
+            get { &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;return&lt;/span&gt; txtLastName.Text; }
+            set { txtLastName.Text &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; value; }
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; DisplayResult(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; result)
+        {
+            MessageBox.Show(result);
+        }
+    }&lt;/span&gt;&lt;/pre&gt;3) MainPresenter constructor runs, and is passed in the view object of type IView. (**could we have just passed it in as a Form object?**)&lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;class&lt;/span&gt; MainPresenter
+    {
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; IView view;
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; MainModel model &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; MainModel();
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; MainPresenter(IView view)
+        {
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;this&lt;/span&gt;.view &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; view;    
+        }
+
+        &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; PostCustomer()
+        {
+            Debug.Assert(view !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;try&lt;/span&gt;
+            {
+                Customer customer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Customer(view.FirstName, view.LastName);
+                model.PostCustomer(customer);
+                view.DisplayResult(customer.ToString() &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;" posted"&lt;/span&gt;);
+            }
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;catch&lt;/span&gt;(Exception ex)
+            {
+                view.DisplayResult(ex.Message);
+            }
+        }
+    }&lt;/span&gt;&lt;/pre&gt;4) App is run, names are filled in, and Post button is submitted.&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;img src="http://www.programgood.net/content/binary/screendump.gif" border="0"&gt;&lt;br&gt;&lt;br&gt;5) View code (form1.cs) runs presenter.PostCustomer&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;private&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; btnPostCustomer_Click(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;object&lt;/span&gt; sender, EventArgs e)
+        {
+            presenter.PostCustomer();
+        }&lt;/span&gt;&lt;/pre&gt;6) presenter creates a new customer (which could be seen as being outside of MVP, and more in an entity later, as the model layer is usually light, and only relating the modelviews) and passes in the names.&amp;nbsp; Nothing special on the constructor of customer.&amp;nbsp; &lt;br&gt;&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; PostCustomer()
+        {
+            Debug.Assert(view !&lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;null&lt;/span&gt;);
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;try&lt;/span&gt;
+            {
+                Customer customer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; Customer(view.FirstName, view.LastName);
+                model.PostCustomer(customer);
+                view.DisplayResult(customer.FullName() &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;+&lt;/span&gt; &lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;" posted"&lt;/span&gt;);
+            }
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;catch&lt;/span&gt;(Exception ex)
+            {
+                view.DisplayResult(ex.Message);
+            }
+        }&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;7) Presenter calls the main model to PostCustomer which writes out to disk the Customer which has just been entered.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; PostCustomer(Customer customer)
+        {
+            XmlSerializer serializer &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; XmlSerializer(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;typeof&lt;/span&gt;(Customer));
+
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;if&lt;/span&gt; (File.Exists(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Customer.xml"&lt;/span&gt;))
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; (FileStream stream &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; FileStream(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Customer.xml"&lt;/span&gt;, FileMode.Append, FileAccess.Write))
+                {
+                    serializer.Serialize(stream, customer);
+                }
+            }
+            &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;else&lt;/span&gt;
+            {
+                &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;using&lt;/span&gt; (FileStream stream &lt;span style="color: Red; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;=&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;new&lt;/span&gt; FileStream(&lt;span style="color: rgb(102, 102, 102); background-color: rgb(228, 228, 228); font-family: Courier New; font-size: 11px;"&gt;"Customer.xml"&lt;/span&gt;, FileMode.Create, FileAccess.Write))
+                {
+                    serializer.Serialize(stream, customer);
+                }
+            }
+        }&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;8) Presenter calls the view to DisplayResult, passing in the customer data as a string.&lt;br&gt;&lt;pre&gt;&lt;span style="color: Black; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;public&lt;/span&gt; &lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;void&lt;/span&gt; DisplayResult(&lt;span style="color: Blue; background-color: transparent; font-family: Courier New; font-size: 11px;"&gt;string&lt;/span&gt; result)
+        {
+            MessageBox.Show(result);
+        }&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;&lt;br&gt;Included in the download are simple tests on the ViewModel and Domain model.&amp;nbsp; Also Form2 which has a Form2Presenter.&amp;nbsp; Uses same ViewModel (hmm probably should have a seperate one), and the same domain model (customer.cs).&amp;nbsp; Next step for me is to get tests working on the Presenters.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a href="http://www.programgood.net/content/binary/noddy.zip"&gt;&lt;/a&gt;</Content>
+      <Created>2009-07-15T22:38:59.78-04:00</Created>
+      <Modified>2009-07-17T00:49:57.390125-04:00</Modified>
+      <EntryId>a4d78d60-874e-44ed-9fab-22a5620db068</EntryId>
+      <Description />
+      <Title>Simple MVP</Title>
+      <Categories>MVP;Patterns;Testing</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

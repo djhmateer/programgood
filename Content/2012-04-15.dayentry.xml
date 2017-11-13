@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-14T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Ctrl T – Type..eg HomeController (hc)&lt;/p&gt;  &lt;p&gt;Ctrl Shift T – Navigate to File&lt;/p&gt;  &lt;p&gt;Ctrl Alt T – method.. eg hc.index&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Resharper-Tricks_FBDC/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Resharper-Tricks_FBDC/image_thumb.png" width="244" height="100" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Ctrl R, Ctrl M – Extract method &lt;/p&gt;  &lt;p&gt;Ctrl Shift Alt – Move a method up and down.&lt;/p&gt;  &lt;p&gt;type method eg MakeCalculator… then ctrl enter… introduce variable&lt;/p&gt;  &lt;p&gt;Alt Shift Space – brings up help&lt;/p&gt;  &lt;p&gt;Also Keith Braithwaite at NDC 2011 video&lt;/p&gt;  &lt;p&gt;WHEN creating a method in TDD which doesn’t exist yet.&lt;/p&gt;  &lt;p&gt;Inspect Next Error/Previous error - shift Alt Page Up&lt;/p&gt;  &lt;p&gt;REFACTOR&lt;/p&gt;  &lt;p&gt;Ctrl Shift R – Refactor menu&lt;/p&gt;  &lt;p&gt;Ctrl Shift Backspace –go back to last place was editing&lt;/p&gt;  &lt;p&gt;Ctrl , – recent files viewed&lt;/p&gt;  &lt;p&gt;Ctrl Shift W – smart select eg word, line etc&lt;/p&gt;  &lt;p&gt;Ctrl E C – Code Cleanup.&lt;/p&gt;  &lt;p&gt;Ctrl E U – Surround with eg Try Catch&lt;/p&gt;</Content>
+      <Created>2012-04-15T12:54:58.7075-04:00</Created>
+      <Modified>2012-05-18T18:25:41.734375-04:00</Modified>
+      <EntryId>d7026b8e-9fb4-4969-a97f-d9739931dbc5</EntryId>
+      <Description />
+      <Title>Resharper Tricks</Title>
+      <Categories>Resharper</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

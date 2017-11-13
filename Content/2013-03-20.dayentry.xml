@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-03-19T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;In web.config&lt;/p&gt;  &lt;p&gt;&amp;lt;appSettings&amp;gt;&lt;/p&gt;  &lt;p&gt;&amp;lt;add key=&amp;quot;OverrideWindowsUser&amp;quot; value=&amp;quot;qnrl\asdf&amp;quot; /&amp;gt;&lt;/p&gt;  &lt;p&gt;&amp;lt;/appSettings&amp;gt;&lt;/p&gt;  &lt;p&gt;In the aspx page:&lt;/p&gt;  &lt;p&gt;&amp;#160;&amp;#160;&amp;#160; &amp;lt;param name=&amp;quot;initParams&amp;quot; value=&amp;quot;Client=&amp;lt;%= System.Configuration.ConfigurationManager.AppSettings[&amp;quot;OverrideWindowsUser&amp;quot;] %&amp;gt;&amp;quot; /&amp;gt;&lt;/p&gt;  &lt;p&gt;Then in app.xaml.cs in Application_Startup:&lt;/p&gt;  &lt;p&gt;OverrideWindowsUserName = e.InitParams[&amp;quot;Client&amp;quot;];&lt;/p&gt;  &lt;p&gt;Then in MainPage.xaml.cs&lt;/p&gt;  &lt;p&gt;overrideWindowsUserName = (App.Current as App).OverrideWindowsUserName;&lt;/p&gt;</Content>
+      <Created>2013-03-20T12:04:59.4077291-04:00</Created>
+      <Modified>2013-03-20T12:05:55.4865806-04:00</Modified>
+      <EntryId>29e95404-3253-450d-b8e4-4766b6782baf</EntryId>
+      <Description />
+      <Title>Passing web.config data to Silverlight UI</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

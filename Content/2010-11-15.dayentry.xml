@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-11-14T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;pre class="csharpcode"&gt;&amp;lt;asp:CheckBox runat=&lt;span class="str"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; ID=&lt;span class="str"&gt;&amp;quot;cbxActive&amp;quot;&lt;/span&gt; Checked=&lt;span class="str"&gt;'&amp;lt;%# Eval(&amp;quot;Active&amp;quot;).ToString().Equals(&amp;quot;True&amp;quot;) %&amp;gt;'&lt;/span&gt; /&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;&lt;/p&gt;
+
+&lt;p&gt;This didn’t work when I wanted to save back using an ObjectDataSource.&lt;/p&gt;
+
+&lt;p&gt;Workaround was to use a bindable RadcomboBox&lt;/p&gt;</Content>
+      <Created>2010-11-15T18:57:34.36775-05:00</Created>
+      <Modified>2010-11-15T18:57:34.36775-05:00</Modified>
+      <EntryId>a06e3d85-4527-48a8-91b0-5688ded7197f</EntryId>
+      <Description />
+      <Title>Binding to a Checkbox in an Edit Grid Template</Title>
+      <Categories>Telerik</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

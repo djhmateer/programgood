@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-29T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/"&gt;http://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Web Application Projects too.&lt;/p&gt;</Content>
+      <Created>2011-05-30T01:15:17.9685-04:00</Created>
+      <Modified>2011-05-30T01:15:17.9685-04:00</Modified>
+      <EntryId>aaa83d23-500b-4861-8e11-f096fdeacdde</EntryId>
+      <Description />
+      <Title>Azure Multiple Sites in one Role</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/5134875/azure-multiple-web-sites-with-one-role-but-some-dont-get-rebuilt-when-i-publish"&gt;http://stackoverflow.com/questions/5134875/azure-multiple-web-sites-with-one-role-but-some-dont-get-rebuilt-when-i-publish&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-05-30T00:38:42.37475-04:00</Created>
+      <Modified>2011-05-30T00:38:42.37475-04:00</Modified>
+      <EntryId>82af8826-8cb2-4067-9624-75f95a5ace2e</EntryId>
+      <Description />
+      <Title>Azure multiple sites one role but some don’t get rebuilt</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://blog.smarx.com/posts/controlling-application-pool-idle-timeouts-in-windows-azure"&gt;http://blog.smarx.com/posts/controlling-application-pool-idle-timeouts-in-windows-azure&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-05-30T00:36:10.702875-04:00</Created>
+      <Modified>2011-05-30T00:36:10.702875-04:00</Modified>
+      <EntryId>caa59c00-c2aa-4ca1-87b4-6db09ff6c71e</EntryId>
+      <Description />
+      <Title>Disable App Pool Timeout in Windows Azure</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://connect.microsoft.com/VisualStudio/feedback/details/641913/visual-studio-azure-tools-sdk-1-3-not-packaging-multiple-sites-correctly"&gt;http://connect.microsoft.com/VisualStudio/feedback/details/641913/visual-studio-azure-tools-sdk-1-3-not-packaging-multiple-sites-correctly&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;workarounds.&lt;/p&gt;</Content>
+      <Created>2011-05-30T18:27:02.484125-04:00</Created>
+      <Modified>2011-05-30T18:27:02.484125-04:00</Modified>
+      <EntryId>cc266e6d-8663-4fd1-9257-19e8647ab3d0</EntryId>
+      <Description />
+      <Title>Azure tools not packaging multiple sites correctly</Title>
+      <Categories>Azure</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

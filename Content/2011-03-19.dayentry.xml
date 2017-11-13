@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-18T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;ValidationSummary(false)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ValidationMVC3_97F4/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ValidationMVC3_97F4/image_thumb_1.png" width="599" height="295" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;h3&gt;View (no javascript)&lt;/h3&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;@model datePickerTemp2.Models.PersonEditModel&lt;br /&gt;&lt;br /&gt;@Model.MessageToDisplay&lt;br /&gt;&lt;br /&gt;@&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (Html.BeginForm()) {&lt;br /&gt;    @Html.ValidationSummary(&lt;span style="color: #0000ff"&gt;false&lt;/span&gt;)&lt;br /&gt;    &amp;lt;fieldset&amp;gt;&lt;br /&gt;        &amp;lt;legend&amp;gt;Person&amp;lt;/legend&amp;gt;&lt;br /&gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-label&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.LabelFor(m =&amp;gt; m.Person.FirstName)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-field&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.EditorFor(m =&amp;gt; m.Person.FirstName)&lt;br /&gt;            @Html.ValidationMessageFor(m =&amp;gt; m.Person.FirstName, &lt;span style="color: #006080"&gt;&amp;quot;You must enter a First Name&amp;quot;&lt;/span&gt;)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;Model:&lt;/h3&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person&lt;br /&gt;{&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FirstName { get; set; }&lt;br /&gt;    [DataType(DataType.Date)]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime DateOfBirth { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;View (javascript)&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;@model datePickerTemp2.Models.PersonEditModel&lt;br /&gt;&lt;br /&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot;@Url.Content(&amp;quot;&lt;/span&gt;~/Scripts/jquery.validate.min.js&lt;span style="color: #006080"&gt;&amp;quot;)&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot;@Url.Content(&amp;quot;&lt;/span&gt;~/Scripts/jquery.validate.unobtrusive.min.js&lt;span style="color: #006080"&gt;&amp;quot;)&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&lt;br /&gt;@Model.MessageToDisplay&lt;br /&gt;&lt;br /&gt;@&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (Html.BeginForm()) {&lt;br /&gt;    @Html.ValidationSummary(&lt;span style="color: #0000ff"&gt;true&lt;/span&gt;)&lt;br /&gt;    &amp;lt;fieldset&amp;gt;&lt;br /&gt;        &amp;lt;legend&amp;gt;Person&amp;lt;/legend&amp;gt;&lt;br /&gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-label&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.LabelFor(m =&amp;gt; m.Person.FirstName)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-field&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.EditorFor(m =&amp;gt; m.Person.FirstName)&lt;br /&gt;            @Html.ValidationMessageFor(m =&amp;gt; m.Person.FirstName, &lt;span style="color: #006080"&gt;&amp;quot;You must enter a First Name&amp;quot;&lt;/span&gt;)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-label&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.LabelFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;        &amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-field&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;            @Html.EditorFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;            @Html.ValidationMessageFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;        &amp;lt;p&amp;gt;&lt;br /&gt;            &amp;lt;input type=&lt;span style="color: #006080"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;Save&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;        &amp;lt;/p&amp;gt;&lt;br /&gt;    &amp;lt;/fieldset&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;ValidationSummary(true)&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ValidationMVC3_97F4/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ValidationMVC3_97F4/image_thumb_2.png" width="438" height="247" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;There will be no postback if a firstname is blank.&amp;#160; DateOfBirth uses postback, however you have to have FirstName passing before it will actually postback.&lt;/p&gt;</Content>
+      <Created>2011-03-19T19:37:48.48525-04:00</Created>
+      <Modified>2011-03-19T21:31:41.563375-04:00</Modified>
+      <EntryId>ca9c2117-41b6-40ba-b9b0-9c9c4cd12f88</EntryId>
+      <Description />
+      <Title>Validation MVC3</Title>
+      <Categories>MVC;Razor</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;From &lt;a href="http://blogs.msdn.com/b/stuartleeks/archive/2011/01/25/asp-net-mvc-3-integrating-with-the-jquery-ui-date-picker-and-adding-a-jquery-validate-date-range-validator.aspx"&gt;http://blogs.msdn.com/b/stuartleeks/archive/2011/01/25/asp-net-mvc-3-integrating-with-the-jquery-ui-date-picker-and-adding-a-jquery-validate-date-range-validator.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;When implementing remember to add custom attribute to the correct property in the model:&lt;/p&gt;  &lt;p&gt;DateType(DateType.Date)&lt;/p&gt;  &lt;p&gt;and add a reference to DataAnnotations - System.ComponentModel.DataAnnotations&lt;/p&gt;  &lt;h3&gt;View&lt;/h3&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-label&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;    @Html.LabelFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;lt;div &lt;span style="color: #0000ff"&gt;class&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;editor-field&amp;quot;&lt;/span&gt;&amp;gt;&lt;br /&gt;    @Html.EditorFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;    @Html.ValidationMessageFor(m =&amp;gt; m.Person.DateOfBirth)&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Use templated helpers to automatically wire up the date picker whenever it renders an editor for a date (ie a property annotated with DataType.Date).&lt;/p&gt;
+
+&lt;p&gt;If you add this annotation MVC3 will look for a partial view&lt;/p&gt;
+
+&lt;h3&gt;Partial View - \EditorTemplates\Date.cshtml&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;@model DateTime&lt;br /&gt;@Html.TextBox(&lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;, Model.ToString(&lt;span style="color: #006080"&gt;&amp;quot;dd/MM/yyyy&amp;quot;&lt;/span&gt;), &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; { @&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; = &lt;span style="color: #006080"&gt;&amp;quot;date&amp;quot;&lt;/span&gt; }) **TODO Wire up&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;So when we render now:&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_thumb.png" width="535" height="255" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;The error you are seeing is because javascript validation is turned on, and its is getting confused with UK/US datetimes. 
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;_Layout.cshtml&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot;@Url.Content(&amp;quot;&lt;/span&gt;~/Scripts/jquery-ui.js&lt;span style="color: #006080"&gt;&amp;quot;)&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;link href=&lt;span style="color: #006080"&gt;&amp;quot;@Url.Content(&amp;quot;&lt;/span&gt;~/Content/themes/&lt;span style="color: #0000ff"&gt;base&lt;/span&gt;/jquery-ui.css&lt;span style="color: #006080"&gt;&amp;quot;)&amp;quot;&lt;/span&gt; rel=&lt;span style="color: #006080"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;script src=&lt;span style="color: #006080"&gt;&amp;quot;@Url.Content(&amp;quot;&lt;/span&gt;~/Scripts/EditorHookup.js&lt;span style="color: #006080"&gt;&amp;quot;)&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Scripts/EditorHookup.js&lt;/h3&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;reference path=&amp;quot;jquery-1.4.4.js&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;reference path=&amp;quot;jquery-ui.js&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;$(document).ready(function () {&lt;br /&gt;    $(&lt;span style="color: #006080"&gt;'.date'&lt;/span&gt;).datepicker({dateFormat: &lt;span style="color: #006080"&gt;&amp;quot;dd/mm/yy&amp;quot;&lt;/span&gt;});&lt;br /&gt;});&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_thumb_2.png" width="312" height="390" /&gt;&lt;/a&gt; 
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;DateRange&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/DatePickerandMVC3_8255/image_thumb_1.png" width="691" height="240" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person&lt;br /&gt;{&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FirstName { get; set; }&lt;br /&gt;    [DataType(DataType.Date)]&lt;br /&gt;    [DateRange(&lt;span style="color: #006080"&gt;&amp;quot;2010/12/01&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;2010/12/16&amp;quot;&lt;/span&gt;)]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime DateOfBirth { get; set; }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;DateRange is simply:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; DateRangeAttribute : ValidationAttribute&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;const&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; DateFormat = &lt;span style="color: #006080"&gt;&amp;quot;yyyy/MM/dd&amp;quot;&lt;/span&gt;;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;const&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; DefaultErrorMessage = &lt;span style="color: #006080"&gt;&amp;quot;'{0}' must be a date between {1:d} and {2:d}.&amp;quot;&lt;/span&gt;;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime MinDate { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateTime MaxDate { get; set; }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DateRangeAttribute(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; minDate, &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; maxDate)&lt;br /&gt;        : &lt;span style="color: #0000ff"&gt;base&lt;/span&gt;(DefaultErrorMessage)&lt;br /&gt;    {&lt;br /&gt;        MinDate = ParseDate(minDate);&lt;br /&gt;        MaxDate = ParseDate(maxDate);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;override&lt;/span&gt; &lt;span style="color: #0000ff"&gt;bool&lt;/span&gt; IsValid(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;value&lt;/span&gt; == &lt;span style="color: #0000ff"&gt;null&lt;/span&gt; || !(&lt;span style="color: #0000ff"&gt;value&lt;/span&gt; &lt;span style="color: #0000ff"&gt;is&lt;/span&gt; DateTime))&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff"&gt;true&lt;/span&gt;;&lt;br /&gt;        }&lt;br /&gt;        DateTime dateValue = (DateTime)&lt;span style="color: #0000ff"&gt;value&lt;/span&gt;;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; MinDate &amp;lt;= dateValue &amp;amp;&amp;amp; dateValue &amp;lt;= MaxDate;&lt;br /&gt;    }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;override&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FormatErrorMessage(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; name)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; String.Format(CultureInfo.CurrentCulture, ErrorMessageString,&lt;br /&gt;            name, MinDate, MaxDate);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; DateTime ParseDate(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; dateValue)&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; DateTime.ParseExact(dateValue, DateFormat, CultureInfo.InvariantCulture);&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-19T18:54:31.719625-04:00</Created>
+      <Modified>2011-03-30T18:55:05.719625-04:00</Modified>
+      <EntryId>aef0e174-ff63-402b-b889-1f294a82f2ee</EntryId>
+      <Description />
+      <Title>DatePicker and MVC3</Title>
+      <Categories>MVC;Razor</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

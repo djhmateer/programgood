@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-07-11T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;A web application testing system&lt;/p&gt;  &lt;p&gt;&lt;a href="http://seleniumhq.org/download/"&gt;http://seleniumhq.org/download/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Selenium Remote Control runs tests in multiple browsers.. can do in C#&lt;/p&gt;  &lt;p&gt;Selenium Grid can distribute tests across multiple servers.&lt;/p&gt;  &lt;p&gt;&lt;a title="http://thetestingblog.com/2010/02/02/selenium-rc-in-console-app/" href="http://thetestingblog.com/2010/02/02/selenium-rc-in-console-app/"&gt;http://thetestingblog.com/2010/02/02/selenium-rc-in-console-app/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Here is a console, running in C# calling the Selenium libraries, which call a java webserver&lt;/p&gt;  &lt;p&gt;To start the server dowloads\selenium-remote-control-1.0.3&amp;#160;&amp;#160; java -jar selenium-server.jar&lt;/p&gt;  &lt;p&gt;There did seem to be an issue with the include statement of the Selenium core.. I got it working by deleing the using statement, then Ctrl . somewhere..&amp;#160; code in C:\code\SeleniumTest&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Selenium_FCC1/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Selenium_FCC1/image_thumb.png" width="644" height="322" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;It is easy to put in a rough speed test (8secs here.. was 45 secs with no caching and having to start up the webserver after having left it).&lt;/p&gt;  &lt;p&gt;To explore soon:&lt;/p&gt;  &lt;p&gt;- Fill out forms&lt;/p&gt;  &lt;p&gt;- Actual assertions (can use nUnit)&lt;/p&gt;  &lt;p&gt;- Handle ‘test’ edition of sitefinity gracefully&lt;/p&gt;  &lt;p&gt;- Force no cache on browser&lt;/p&gt;  &lt;p&gt;- Test functionality of site on different browsers&lt;/p&gt;</Content>
+      <Created>2010-07-12T02:07:41.903375-04:00</Created>
+      <Modified>2010-07-12T02:09:35.122125-04:00</Modified>
+      <EntryId>230b436b-40ce-42b7-a849-5b2d40e6d056</EntryId>
+      <Description />
+      <Title>Selenium</Title>
+      <Categories>Selenium</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

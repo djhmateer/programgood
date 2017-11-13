@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-13T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Using VS2010. Create a model.&amp;#160; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EFandMVC3Simple_786E/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EFandMVC3Simple_786E/image_thumb.png" width="158" height="168" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;this also puts in an entry into web.config&lt;/p&gt;  &lt;p&gt;Create a controller&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[HandleError]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; CarsController : Controller&lt;br /&gt;{&lt;br /&gt;&lt;br /&gt;     eftestEntities _db;&lt;br /&gt;&lt;br /&gt;     &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; CarsController()&lt;br /&gt;     {&lt;br /&gt;         _db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; eftestEntities();&lt;br /&gt;     }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// GET: /Cars/&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index()&lt;br /&gt;    {&lt;br /&gt;        var cars = _db.Cars.ToList();&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(cars);&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;then right click and create a view:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/EFandMVC3Simple_786E/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/EFandMVC3Simple_786E/image_thumb_1.png" width="393" height="292" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;I had to put data in the db, and only view works.&lt;/p&gt;</Content>
+      <Created>2011-03-14T15:36:26.11025-04:00</Created>
+      <Modified>2011-03-14T15:36:26.11025-04:00</Modified>
+      <EntryId>ed44eaac-5da7-4dfd-aad0-3009708ddfcf</EntryId>
+      <Description />
+      <Title>EF and MVC3 Simple</Title>
+      <Categories>Entity Framework;MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Downloaded EF CTP5 &lt;a href="http://blogs.msdn.com/b/adonet/archive/2010/12/14/ef-feature-ctp5-released.aspx"&gt;http://blogs.msdn.com/b/adonet/archive/2010/12/14/ef-feature-ctp5-released.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Created a database and a model in EF&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_thumb.png" width="155" height="167" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Added DbContext Generator (right click inside edmx file)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_thumb_1.png" width="684" height="293" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;scaffold controller people –Force&lt;/p&gt;  &lt;p&gt;Comment out generated dbcontext&lt;/p&gt;  &lt;p&gt;Change peoplecontroller to point to new entities&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_thumb_2.png" width="485" height="551" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Problem here is that FirstName is not required&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/MVC3MvcScaffoldingandEFModelFirst_8E9C/image_thumb_3.png" width="569" height="338" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;/p&gt;  &lt;p&gt;yet in the model it is not nullable.&lt;/p&gt;  &lt;p&gt;I can fix it by going to:&lt;/p&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;namespace&lt;/span&gt; EFTest.Models&lt;br /&gt;{&lt;br /&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System.Collections.Generic;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System.ComponentModel.DataAnnotations;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;partial&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Person&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Primitive properties&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; PersonID { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; Age { get; set; }&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; System.DateTime DateOfBirth { get; set; }&lt;br /&gt;    [Required]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; FirstName { get; set; }&lt;br /&gt;&lt;br /&gt;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;and adding in a Required field using DataAnnotations.&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-14T18:59:15.407125-04:00</Created>
+      <Modified>2011-03-14T18:59:15.407125-04:00</Modified>
+      <EntryId>efdbd56b-5fd4-4a34-bf04-d2e48b1246d3</EntryId>
+      <Description />
+      <Title>MVC3 MvcScaffolding and EF Model First</Title>
+      <Categories>Entity Framework;MVC;MvcScaffolding</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

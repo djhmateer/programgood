@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-12-21T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;In my exploration of Open Source projects of interest I came across this one.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.hanselman.com/blog/RemovingDeadTracksDuplicatesThatDontExistFromITunesUsingC.aspx"&gt;http://www.hanselman.com/blog/RemovingDeadTracksDuplicatesThatDontExistFromITunesUsingC.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/12993fa613fa_C9B8/image_2.png"&gt;&lt;img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/12993fa613fa_C9B8/image_thumb.png" width="767" height="592" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;So I think iTunes actually does find duplicates now &lt;img style="border-bottom-style: none; border-left-style: none; border-top-style: none; border-right-style: none" class="wlEmoticon wlEmoticon-smile" alt="Smile" src="http://www.programgood.net/content/binary/Windows-Live-Writer/12993fa613fa_C9B8/wlEmoticon-smile_2.png" /&gt;&amp;#160; .. but interesting code:&lt;/p&gt;  &lt;pre class="csharpcode"&gt; &lt;span class="kwrd"&gt;public&lt;/span&gt; &lt;span class="kwrd"&gt;partial&lt;/span&gt; &lt;span class="kwrd"&gt;class&lt;/span&gt; Form1 : Form
+    {
+        &lt;span class="kwrd"&gt;private&lt;/span&gt; &lt;span class="kwrd"&gt;volatile&lt;/span&gt; &lt;span class="kwrd"&gt;bool&lt;/span&gt; _shouldStop;&lt;/pre&gt;
+
+&lt;pre class="csharpcode"&gt;“Volatile: Over-simplifying and paraphrasing:&lt;br /&gt;volatile indicates that every read operation needs to re-read from memory because there might be other threads updating the variable.”&lt;/pre&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;a href="http://stackoverflow.com/questions/1186515/interlocked-and-volatile"&gt;http://stackoverflow.com/questions/1186515/interlocked-and-volatile&lt;/a&gt;&lt;/pre&gt;
+
+&lt;pre class="csharpcode"&gt;Maybe dropped in .NET5? &lt;a href="http://www.bluebytesoftware.com/blog/2010/12/04/SayonaraVolatile.aspx"&gt;http://www.bluebytesoftware.com/blog/2010/12/04/SayonaraVolatile.aspx&lt;/a&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Architecture&lt;/h3&gt;
+
+&lt;p&gt;All in code behind the winform.&lt;/p&gt;
+
+&lt;p&gt;ListView with columns&lt;/p&gt;
+
+&lt;p&gt;Label1 and a Progress Bar.&lt;/p&gt;
+
+&lt;p&gt;checkBoxRemove&lt;/p&gt;
+
+&lt;h3&gt;&amp;#160;&lt;/h3&gt;
+
+&lt;p&gt;Worker is on a different thread to the UI. and is spun up when the button is pressed:&lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;span class="rem"&gt;//button1 is find dead tracks&lt;/span&gt;
+        &lt;span class="kwrd"&gt;private&lt;/span&gt; &lt;span class="kwrd"&gt;void&lt;/span&gt; button1_Click(&lt;span class="kwrd"&gt;object&lt;/span&gt; sender, EventArgs e)
+        {
+            &lt;span class="kwrd"&gt;this&lt;/span&gt;._shouldStop = &lt;span class="kwrd"&gt;false&lt;/span&gt;;
+            &lt;span class="kwrd"&gt;this&lt;/span&gt;.buttonCancel.Enabled = &lt;span class="kwrd"&gt;true&lt;/span&gt;;
+            &lt;span class="kwrd"&gt;this&lt;/span&gt;.listView1.Items.Clear();
+
+            &lt;span class="kwrd"&gt;this&lt;/span&gt;.worker = &lt;span class="kwrd"&gt;new&lt;/span&gt; Thread(&lt;span class="kwrd"&gt;this&lt;/span&gt;.FindDeadTracks);
+            &lt;span class="kwrd"&gt;this&lt;/span&gt;.worker.Start();
+        }&lt;/pre&gt;
+
+&lt;pre class="csharpcode"&gt;&amp;#160;&lt;/pre&gt;
+
+&lt;h3&gt;Helper methods for FindDeadTracks and RemoveDuplicates&lt;/h3&gt;
+
+&lt;p&gt;SetupProgress(max value eg trackcount) – this sets up the ProgressBar (we’re on the worker thread so have to invoke back to UI).. which magically calls the SetupProgress again and sets the max value of the progress bar&lt;/p&gt;
+
+&lt;p&gt;in FindDeadTracks (worker thread)&lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;span class="rem"&gt;//setup the progress control&lt;/span&gt;
+&lt;span class="kwrd"&gt;this&lt;/span&gt;.SetupProgress(trackCount);&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;p&gt;&lt;span class="kwrd"&gt;then in class level&lt;/span&gt;&lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;span class="kwrd"&gt;delegate&lt;/span&gt; &lt;span class="kwrd"&gt;void&lt;/span&gt; SetupProgressCallback(&lt;span class="kwrd"&gt;int&lt;/span&gt; max);&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;pre class="csharpcode"&gt;&lt;span class="kwrd"&gt;private&lt;/span&gt; &lt;span class="kwrd"&gt;void&lt;/span&gt; SetupProgress(&lt;span class="kwrd"&gt;int&lt;/span&gt; max)
+        {
+            &lt;span class="kwrd"&gt;if&lt;/span&gt; (&lt;span class="kwrd"&gt;this&lt;/span&gt;.progressBar1.InvokeRequired)
+            {
+                SetupProgressCallback cb = &lt;span class="kwrd"&gt;new&lt;/span&gt; SetupProgressCallback(SetupProgress);
+                &lt;span class="kwrd"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span class="kwrd"&gt;new&lt;/span&gt; &lt;span class="kwrd"&gt;object&lt;/span&gt;[] { max });
+            }
+            &lt;span class="kwrd"&gt;else&lt;/span&gt;
+            {
+                &lt;span class="kwrd"&gt;this&lt;/span&gt;.progressBar1.Maximum = max;
+                &lt;span class="kwrd"&gt;this&lt;/span&gt;.progressBar1.Minimum = 1;
+                &lt;span class="kwrd"&gt;this&lt;/span&gt;.progressBar1.Step = 1;
+                &lt;span class="kwrd"&gt;this&lt;/span&gt;.progressBar1.Value = 1;
+            }
+        }&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;p&gt;nifty!&amp;#160; worker thread calls it first, which it then goes into the InvokeRequired section.&amp;#160; Then the delegate calls it.&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;p&gt;IncrementProgress – both worker methods can call this (its already been setup).&amp;#160; Same as above.. just increments a step&lt;/p&gt;
+
+&lt;p&gt;UpdateLabel – updates label1&lt;/p&gt;
+
+&lt;h3&gt;FindDeadTrack&lt;/h3&gt;
+
+&lt;p&gt;goes through and looks for an empty filename or an exception on System.File.IO.Exists&lt;/p&gt;
+
+&lt;h3&gt;Remove Duplicates&lt;/h3&gt;
+
+&lt;p&gt;Dictionary for trackCollection.&amp;#160; where key string could be:&amp;#160; FarewellYngwie MalmsteenRising Force&amp;#160;&amp;#160;&amp;#160; notice there are spaces&lt;/p&gt;
+
+&lt;pre class="csharpcode"&gt;var trackCollection = &lt;span class="kwrd"&gt;new&lt;/span&gt; Dictionary&amp;lt;&lt;span class="kwrd"&gt;string&lt;/span&gt;, IITTrack&amp;gt;();&lt;/pre&gt;
+&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;
+
+&lt;p&gt;The app will never add duplicates into the trackCollection&lt;/p&gt;
+
+&lt;p&gt;ArrayList for tracksToRemove&lt;/p&gt;
+
+&lt;p&gt;&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;&lt;style type="text/css"&gt;
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }&lt;/style&gt;&lt;/p&gt;
+
+&lt;pre class="code"&gt;&lt;span style="color: blue"&gt;using &lt;/span&gt;System;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Collections.Generic;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.ComponentModel;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Data;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Drawing;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Linq;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Text;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Threading;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Windows.Forms;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;System.Collections;
+&lt;span style="color: blue"&gt;using &lt;/span&gt;iTunesLib;
+
+&lt;span style="color: blue"&gt;namespace &lt;/span&gt;iTunesCOMSample
+{
+    &lt;span style="color: blue"&gt;public partial class &lt;/span&gt;&lt;span style="color: #2b91af"&gt;Form1 &lt;/span&gt;: &lt;span style="color: #2b91af"&gt;Form
+    &lt;/span&gt;{
+        &lt;span style="color: blue"&gt;private volatile bool &lt;/span&gt;_shouldStop;
+        &lt;span style="color: blue"&gt;private &lt;/span&gt;&lt;span style="color: #2b91af"&gt;Thread &lt;/span&gt;worker;
+
+        &lt;span style="color: blue"&gt;public &lt;/span&gt;Form1()
+        {
+            InitializeComponent();
+        }
+        
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;Form1_Load(&lt;span style="color: blue"&gt;object &lt;/span&gt;sender, &lt;span style="color: #2b91af"&gt;EventArgs &lt;/span&gt;e)
+        {
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.label1.Text = &lt;span style="color: #a31515"&gt;&amp;quot;&amp;quot;&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.buttonCancel.Enabled = &lt;span style="color: blue"&gt;false&lt;/span&gt;;
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;RemoveDuplicates()
+        {
+            &lt;span style="color: green"&gt;//create a reference to iTunes
+            &lt;/span&gt;&lt;span style="color: blue"&gt;var &lt;/span&gt;iTunes = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;iTunesAppClass&lt;/span&gt;();
+
+            &lt;span style="color: green"&gt;//get a reference to the collection of all tracks
+            &lt;/span&gt;&lt;span style="color: #2b91af"&gt;IITTrackCollection &lt;/span&gt;tracks = iTunes.LibraryPlaylist.Tracks;
+
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;trackCount = tracks.Count;
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;numberChecked = 0;
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;numberDuplicateFound = 0;
+            &lt;span style="color: green"&gt;//dictionary is key,value
+            &lt;/span&gt;&lt;span style="color: blue"&gt;var &lt;/span&gt;trackCollection = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;Dictionary&lt;/span&gt;&amp;lt;&lt;span style="color: blue"&gt;string&lt;/span&gt;, &lt;span style="color: #2b91af"&gt;IITTrack&lt;/span&gt;&amp;gt;();
+            &lt;span style="color: blue"&gt;var &lt;/span&gt;tracksToRemove = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;ArrayList&lt;/span&gt;();
+
+            &lt;span style="color: green"&gt;//setup the progress control
+            &lt;/span&gt;&lt;span style="color: blue"&gt;this&lt;/span&gt;.SetupProgress(trackCount);
+
+            &lt;span style="color: blue"&gt;for &lt;/span&gt;(&lt;span style="color: blue"&gt;int &lt;/span&gt;i = trackCount; i &amp;gt; 0; i--)
+            {
+                &lt;span style="color: blue"&gt;if &lt;/span&gt;(tracks[i].Kind == &lt;span style="color: #2b91af"&gt;ITTrackKind&lt;/span&gt;.ITTrackKindFile)
+                {
+                    &lt;span style="color: blue"&gt;if &lt;/span&gt;(!&lt;span style="color: blue"&gt;this&lt;/span&gt;._shouldStop)
+                    {
+                        numberChecked++;
+                        &lt;span style="color: blue"&gt;this&lt;/span&gt;.IncrementProgress();
+                        &lt;span style="color: blue"&gt;this&lt;/span&gt;.UpdateLabel(&lt;span style="color: #a31515"&gt;&amp;quot;Checking track # &amp;quot; &lt;/span&gt;+ numberChecked.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; - &amp;quot; &lt;/span&gt;+ tracks[i].Name);
+                        &lt;span style="color: green"&gt;//eg key: FarewellYngwie MalmsteenRising Force&amp;quot;  notice there are spaces
+
+                        &lt;/span&gt;&lt;span style="color: blue"&gt;string &lt;/span&gt;trackKey = tracks[i].Name + tracks[i].Artist + tracks[i].Album;
+
+                        &lt;span style="color: blue"&gt;if &lt;/span&gt;(!trackCollection.ContainsKey(trackKey))
+                            trackCollection.Add(trackKey, tracks[i]);
+                        &lt;span style="color: blue"&gt;else &lt;/span&gt;&lt;span style="color: green"&gt;//if the trackCollection does have this song already
+                        &lt;/span&gt;{
+                            &lt;span style="color: green"&gt;//if not in the same album or not by the same artist?
+                            &lt;/span&gt;&lt;span style="color: blue"&gt;if &lt;/span&gt;(trackCollection[trackKey].Album != tracks[i].Album || trackCollection[trackKey].Artist != tracks[i].Artist)
+                                trackCollection.Add(trackKey, tracks[i]);
+                            &lt;span style="color: green"&gt;//if track in collection has a higherbitrate than current
+                            &lt;/span&gt;&lt;span style="color: blue"&gt;else if &lt;/span&gt;(trackCollection[trackKey].BitRate &amp;gt; tracks[i].BitRate)
+                            {
+                                &lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;fileTrack = (&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack&lt;/span&gt;)tracks[i];
+                                numberDuplicateFound++;
+                                tracksToRemove.Add(tracks[i]);
+                            }
+                            &lt;span style="color: green"&gt;//bitrate is higher in this one so replace the one in trackCollection with this version.
+                            //default just replace the existing track with this one
+                            &lt;/span&gt;&lt;span style="color: blue"&gt;else
+                            &lt;/span&gt;{
+                                &lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;fileTrack = (&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack&lt;/span&gt;)tracks[i];
+                                trackCollection[trackKey] = fileTrack;
+                                numberDuplicateFound++;
+                                tracksToRemove.Add(tracks[i]);
+                            }                            
+                        }
+                    }
+                }                                
+            }
+
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.SetupProgress(tracksToRemove.Count);
+
+            &lt;span style="color: green"&gt;//tracksToRemove is an ArrayList
+            &lt;/span&gt;&lt;span style="color: blue"&gt;for &lt;/span&gt;(&lt;span style="color: blue"&gt;int &lt;/span&gt;i = 0; i &amp;lt; tracksToRemove.Count; i++)
+            {
+                &lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;track = (&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack&lt;/span&gt;)tracksToRemove[i];
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.UpdateLabel(&lt;span style="color: #a31515"&gt;&amp;quot;Removing &amp;quot; &lt;/span&gt;+ track.Name);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.IncrementProgress();
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.AddTrackToList((&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack&lt;/span&gt;)tracksToRemove[i]);
+
+                &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.checkBoxRemove.Checked)
+                    track.Delete();
+            }
+
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.UpdateLabel(&lt;span style="color: #a31515"&gt;&amp;quot;Checked &amp;quot; &lt;/span&gt;+ numberChecked.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; tracks and &amp;quot; &lt;/span&gt;+ numberDuplicateFound.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; duplicate tracks found.&amp;quot;&lt;/span&gt;);
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.SetupProgress(1);
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;FindDeadTracks()
+        {
+            &lt;span style="color: green"&gt;//create a reference to iTunes
+            &lt;/span&gt;&lt;span style="color: #2b91af"&gt;iTunesAppClass &lt;/span&gt;iTunes = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;iTunesAppClass&lt;/span&gt;();
+
+            &lt;span style="color: green"&gt;//get a reference to the collection of all tracks
+            &lt;/span&gt;&lt;span style="color: #2b91af"&gt;IITTrackCollection &lt;/span&gt;tracks = iTunes.LibraryPlaylist.Tracks;
+
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;trackCount = tracks.Count;
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;numberChecked = 0;
+            &lt;span style="color: blue"&gt;int &lt;/span&gt;numberDeadFound = 0;
+
+            &lt;span style="color: green"&gt;//setup the progress control
+            &lt;/span&gt;&lt;span style="color: blue"&gt;this&lt;/span&gt;.SetupProgress(trackCount);
+
+            &lt;span style="color: blue"&gt;for &lt;/span&gt;(&lt;span style="color: blue"&gt;int &lt;/span&gt;i = trackCount; i &amp;gt; 0; i--)
+            {
+                &lt;span style="color: blue"&gt;if &lt;/span&gt;(!&lt;span style="color: blue"&gt;this&lt;/span&gt;._shouldStop)
+                {
+                    &lt;span style="color: #2b91af"&gt;IITTrack &lt;/span&gt;track = tracks[i];
+                    numberChecked++;
+                    &lt;span style="color: blue"&gt;this&lt;/span&gt;.IncrementProgress();
+                    &lt;span style="color: blue"&gt;this&lt;/span&gt;.UpdateLabel(&lt;span style="color: #a31515"&gt;&amp;quot;Checking track # &amp;quot; &lt;/span&gt;+ numberChecked.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; - &amp;quot; &lt;/span&gt;+ track.Name);
+                    
+                    &lt;span style="color: blue"&gt;if &lt;/span&gt;(track.Kind == &lt;span style="color: #2b91af"&gt;ITTrackKind&lt;/span&gt;.ITTrackKindFile)
+                    {
+                        &lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;fileTrack = (&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack&lt;/span&gt;)track;                        
+
+                        &lt;span style="color: green"&gt;//if the file doesn't exist, we'll delete it from iTunes
+                        &lt;/span&gt;&lt;span style="color: blue"&gt;if &lt;/span&gt;(fileTrack.Location == &lt;span style="color: #2b91af"&gt;String&lt;/span&gt;.Empty)
+                        {
+                            numberDeadFound++;
+                            &lt;span style="color: blue"&gt;this&lt;/span&gt;.AddTrackToList(fileTrack);
+
+                            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.checkBoxRemove.Checked)
+                                fileTrack.Delete();
+                        }
+                        &lt;span style="color: blue"&gt;else if &lt;/span&gt;(!System.IO.&lt;span style="color: #2b91af"&gt;File&lt;/span&gt;.Exists(fileTrack.Location))
+                        {
+                            numberDeadFound++;
+                            &lt;span style="color: blue"&gt;this&lt;/span&gt;.AddTrackToList(fileTrack);
+
+                            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.checkBoxRemove.Checked)
+                                fileTrack.Delete();
+                        }
+                    }
+                }
+            }
+
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.UpdateLabel(&lt;span style="color: #a31515"&gt;&amp;quot;Checked &amp;quot; &lt;/span&gt;+ numberChecked.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; tracks and &amp;quot; &lt;/span&gt;+ numberDeadFound.ToString() + &lt;span style="color: #a31515"&gt;&amp;quot; dead tracks found.&amp;quot;&lt;/span&gt;);
+            &lt;span style="color: green"&gt;//sets the progressbar back to nothing
+            &lt;/span&gt;&lt;span style="color: blue"&gt;this&lt;/span&gt;.SetupProgress(1);
+        }
+
+        &lt;span style="color: blue"&gt;#region &lt;/span&gt;Button clicks
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;buttonCancel_Click(&lt;span style="color: blue"&gt;object &lt;/span&gt;sender, &lt;span style="color: #2b91af"&gt;EventArgs &lt;/span&gt;e)
+        {
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;._shouldStop = &lt;span style="color: blue"&gt;true&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.buttonCancel.Enabled = &lt;span style="color: blue"&gt;false&lt;/span&gt;;
+        }
+
+        &lt;span style="color: green"&gt;//button1 is find dead tracks
+        &lt;/span&gt;&lt;span style="color: blue"&gt;private void &lt;/span&gt;button1_Click(&lt;span style="color: blue"&gt;object &lt;/span&gt;sender, &lt;span style="color: #2b91af"&gt;EventArgs &lt;/span&gt;e)
+        {
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;._shouldStop = &lt;span style="color: blue"&gt;false&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.buttonCancel.Enabled = &lt;span style="color: blue"&gt;true&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.listView1.Items.Clear();
+
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.worker = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;Thread&lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.FindDeadTracks);
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.worker.Start();
+        }
+
+        &lt;span style="color: green"&gt;//button2 is duplicates
+        &lt;/span&gt;&lt;span style="color: blue"&gt;private void &lt;/span&gt;button2_Click(&lt;span style="color: blue"&gt;object &lt;/span&gt;sender, &lt;span style="color: #2b91af"&gt;EventArgs &lt;/span&gt;e)
+        {
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;._shouldStop = &lt;span style="color: blue"&gt;false&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.buttonCancel.Enabled = &lt;span style="color: blue"&gt;true&lt;/span&gt;;
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.listView1.Items.Clear();
+
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.worker = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;Thread&lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.RemoveDuplicates);
+            &lt;span style="color: blue"&gt;this&lt;/span&gt;.worker.Start();
+        }
+
+        &lt;span style="color: blue"&gt;#endregion
+
+        #region &lt;/span&gt;Delegate Callbacks
+        &lt;span style="color: green"&gt;//delagates for thread-safe access to UI components
+        &lt;/span&gt;&lt;span style="color: blue"&gt;delegate void &lt;/span&gt;&lt;span style="color: #2b91af"&gt;SetupProgressCallback&lt;/span&gt;(&lt;span style="color: blue"&gt;int &lt;/span&gt;max);
+        &lt;span style="color: blue"&gt;delegate void &lt;/span&gt;&lt;span style="color: #2b91af"&gt;IncrementProgressCallback&lt;/span&gt;();
+        &lt;span style="color: blue"&gt;delegate void &lt;/span&gt;&lt;span style="color: #2b91af"&gt;UpdateLabelCallback&lt;/span&gt;(&lt;span style="color: blue"&gt;string &lt;/span&gt;text);
+        &lt;span style="color: blue"&gt;delegate void &lt;/span&gt;&lt;span style="color: #2b91af"&gt;CompleteOperationCallback&lt;/span&gt;(&lt;span style="color: blue"&gt;string &lt;/span&gt;message);
+        &lt;span style="color: blue"&gt;delegate void &lt;/span&gt;&lt;span style="color: #2b91af"&gt;AddTrackToListCallback&lt;/span&gt;(&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;fileTrack);
+        
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;IncrementProgress()
+        {
+            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.InvokeRequired)
+            {
+                &lt;span style="color: #2b91af"&gt;IncrementProgressCallback &lt;/span&gt;cb = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;IncrementProgressCallback&lt;/span&gt;(IncrementProgress);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span style="color: blue"&gt;new object&lt;/span&gt;[] { });
+            }
+            &lt;span style="color: blue"&gt;else
+            &lt;/span&gt;{
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.PerformStep();
+            }
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;UpdateLabel(&lt;span style="color: blue"&gt;string &lt;/span&gt;text)
+        {
+            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.label1.InvokeRequired)
+            {
+                &lt;span style="color: #2b91af"&gt;UpdateLabelCallback &lt;/span&gt;cb = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;UpdateLabelCallback&lt;/span&gt;(UpdateLabel);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span style="color: blue"&gt;new object&lt;/span&gt;[] { text });
+            }
+            &lt;span style="color: blue"&gt;else
+            &lt;/span&gt;{
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.label1.Text = text;
+            }
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;CompleteOperation(&lt;span style="color: blue"&gt;string &lt;/span&gt;message)
+        {
+            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.label1.InvokeRequired)
+            {
+                &lt;span style="color: #2b91af"&gt;CompleteOperationCallback &lt;/span&gt;cb = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;CompleteOperationCallback&lt;/span&gt;(CompleteOperation);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span style="color: blue"&gt;new object&lt;/span&gt;[] { message });
+            }
+            &lt;span style="color: blue"&gt;else
+            &lt;/span&gt;{
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.label1.Text = message;
+            }
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;AddTrackToList(&lt;span style="color: #2b91af"&gt;IITFileOrCDTrack &lt;/span&gt;fileTrack)
+        {
+            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.listView1.InvokeRequired)
+            {
+                &lt;span style="color: #2b91af"&gt;AddTrackToListCallback &lt;/span&gt;cb = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;AddTrackToListCallback&lt;/span&gt;(AddTrackToList);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span style="color: blue"&gt;new object&lt;/span&gt;[] { fileTrack });
+            }
+            &lt;span style="color: blue"&gt;else
+            &lt;/span&gt;{
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.listView1.Items.Add(&lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;ListViewItem&lt;/span&gt;(&lt;span style="color: blue"&gt;new string&lt;/span&gt;[] { fileTrack.Name, fileTrack.Artist, fileTrack.Location, fileTrack.BitRate.ToString() }));
+            }
+        }
+
+        &lt;span style="color: blue"&gt;private void &lt;/span&gt;SetupProgress(&lt;span style="color: blue"&gt;int &lt;/span&gt;max)
+        {
+            &lt;span style="color: blue"&gt;if &lt;/span&gt;(&lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.InvokeRequired)
+            {
+                &lt;span style="color: #2b91af"&gt;SetupProgressCallback &lt;/span&gt;cb = &lt;span style="color: blue"&gt;new &lt;/span&gt;&lt;span style="color: #2b91af"&gt;SetupProgressCallback&lt;/span&gt;(SetupProgress);
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.Invoke(cb, &lt;span style="color: blue"&gt;new object&lt;/span&gt;[] { max });
+            }
+            &lt;span style="color: blue"&gt;else
+            &lt;/span&gt;{
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.Maximum = max;
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.Minimum = 1;
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.Step = 1;
+                &lt;span style="color: blue"&gt;this&lt;/span&gt;.progressBar1.Value = 1;
+            }
+        }
+        &lt;span style="color: blue"&gt;#endregion
+
+    &lt;/span&gt;}
+}&lt;/pre&gt;</Content>
+      <Created>2011-12-21T21:42:35.113125-05:00</Created>
+      <Modified>2011-12-21T22:04:51.863125-05:00</Modified>
+      <EntryId>3128d7df-555b-4a58-93e2-f0404cc51ff6</EntryId>
+      <Description />
+      <Title>iTunes Removing Dead Tracks and Duplicates–Responsive WinForms</Title>
+      <Categories>iTunes;Open Source</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

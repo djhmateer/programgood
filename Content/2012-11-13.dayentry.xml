@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-12T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.devproconnections.com/article/silverlight/lessons-learned-building-real-world-silverlight-applications-part-2" href="http://www.devproconnections.com/article/silverlight/lessons-learned-building-real-world-silverlight-applications-part-2"&gt;http://www.devproconnections.com/article/silverlight/lessons-learned-building-real-world-silverlight-applications-part-2&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;like Stackoverflow messages&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/SL-Status_D232/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/SL-Status_D232/image_thumb.png" width="573" height="322" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-11-13T09:57:30.7069872-05:00</Created>
+      <Modified>2012-11-13T10:20:52.9464513-05:00</Modified>
+      <EntryId>04694f18-92bf-4118-8591-51b5d16568e4</EntryId>
+      <Description />
+      <Title>SL Status</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd" href="http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd"&gt;http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd&lt;/a&gt; for VS2012&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Map mode is good&lt;/li&gt;    &lt;li&gt;Coloured tabs&lt;/li&gt;    &lt;li&gt;Middle click scrolling&lt;/li&gt;    &lt;li&gt;Alt + up arrow&amp;#160; move line up or down&lt;/li&gt; &lt;/ul&gt;</Content>
+      <Created>2012-11-13T06:19:51.4676418-05:00</Created>
+      <Modified>2012-11-13T06:19:51.4676418-05:00</Modified>
+      <EntryId>45e42820-3b7d-44b9-a7e6-37de95ce63b0</EntryId>
+      <Description />
+      <Title>VS2012 Productivity Power Tools</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f" href="http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f"&gt;http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f&lt;/a&gt; – for VS2012&lt;/p&gt;  &lt;p&gt;Windows explorer add files to source control.&lt;/p&gt;</Content>
+      <Created>2012-11-13T06:11:38.9035558-05:00</Created>
+      <Modified>2012-11-13T06:11:38.9035558-05:00</Modified>
+      <EntryId>ff9f8d04-e265-4de1-9a94-83851a80b16c</EntryId>
+      <Description />
+      <Title>TFS Power Tools</Title>
+      <Categories>TFS</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

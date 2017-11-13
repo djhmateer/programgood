@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-08T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;After messing with display settings I couldn’t get VirtualBox to go fullscreen on my main monitor.&amp;#160; This is how to fix it:&lt;/p&gt;  &lt;p&gt;Ctrl Home&lt;/p&gt;  &lt;p&gt;View, Virtual Screen 1, Change screen to the other one&lt;/p&gt;  &lt;p&gt;&lt;a href="http://superuser.com/questions/109485/virtualbox-to-use-dual-monitors"&gt;http://superuser.com/questions/109485/virtualbox-to-use-dual-monitors&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-08T21:39:10.3876948-05:00</Created>
+      <Modified>2011-03-08T21:39:10.3876948-05:00</Modified>
+      <EntryId>24bfd681-db54-47b7-8c59-0d0cf779c359</EntryId>
+      <Description />
+      <Title>VirtualBox – Wrong Monitor</Title>
+      <Categories>VirtualBox</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

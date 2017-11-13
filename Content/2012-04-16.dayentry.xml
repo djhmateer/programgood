@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-04-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;As I’ve got an MSDE instance running on .\ which is listening on 1433 so maybe my setup was a bit more complex than usual.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Connecting-to-SQL-Server-on-EC2_9CEB/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Connecting-to-SQL-Server-on-EC2_9CEB/image_thumb.png" width="644" height="402" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;setup TCP/IP on the server for another port. (it had a blank port to begin with)&lt;/p&gt;  &lt;p&gt;Open up the firewall on EC2&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Connecting-to-SQL-Server-on-EC2_9CEB/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Connecting-to-SQL-Server-on-EC2_9CEB/image_thumb_1.png" width="420" height="309" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Connection string in SQL Management Studio: &lt;/p&gt;</Content>
+      <Created>2012-04-16T06:15:52.3325-04:00</Created>
+      <Modified>2012-04-16T06:15:52.3325-04:00</Modified>
+      <EntryId>29f49793-0b91-4f43-ae99-fcecc9dadbf0</EntryId>
+      <Description />
+      <Title>Connecting to SQL Server on EC2</Title>
+      <Categories>Amazon EC2;Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;I was getting nothing.&amp;#160; Turned out to be the connection string on the live server wasn’t right.&lt;/p&gt;  &lt;p&gt;To see the error look in App_Data\Logs&lt;/p&gt;  &lt;p&gt;To change connection string look in \App_Data\Sites\Default\Settings.txt&lt;/p&gt;</Content>
+      <Created>2012-04-16T04:53:52.910625-04:00</Created>
+      <Modified>2012-04-16T04:53:52.910625-04:00</Modified>
+      <EntryId>4e0e5d4a-b17d-4f38-8579-e75df3d23c60</EntryId>
+      <Description />
+      <Title>404 Error when Deploying Orchard from Visual Studio</Title>
+      <Categories>Orchard</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

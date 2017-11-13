@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-08-15T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>This is way more helpful than anything else I've lkooed at.</Content>
+      <Created>2011-08-23T22:20:40.30663-04:00</Created>
+      <Modified>2011-08-23T22:20:40.30663-04:00</Modified>
+      <EntryId>72f14320-3e5a-4de4-a9f4-e576532fc730</EntryId>
+      <TargetTitle>OSIM Integration Testing Ch8</TargetTitle>
+      <TargetEntryId>C57A945D-B544-4FFF-A439-1017416AE182</TargetEntryId>
+      <Author>Irene</Author>
+      <AuthorEmail>pujolgmbh@pujolmuntala.de</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/</AuthorHomepage>
+      <AuthorIPAddress>198.209.72.223</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

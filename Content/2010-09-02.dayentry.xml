@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-09-01T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.databasejournal.com/features/mssql/article.php/3654176/SQL-Server-2005-Command-Line-Tool-SQLCMD--Part-I.htm"&gt;http://www.databasejournal.com/features/mssql/article.php/3654176/SQL-Server-2005-Command-Line-Tool-SQLCMD--Part-I.htm&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;C:\Program Files\Microsoft SQL Server\90\Tools\Binn&lt;/p&gt;  &lt;p&gt;sqlcmd –S.\SQLEXPRESS –E&amp;#160;&amp;#160;&amp;#160; -- E is windows auth&lt;/p&gt;  &lt;p&gt;select @@version&lt;/p&gt;  &lt;p&gt;seelct @@servername&lt;/p&gt;  &lt;p&gt;sqlcmd –Smssql1.openhost.net.nz –Uuser –Psecret&amp;#160;&amp;#160;&amp;#160; -- carefuly copying this from here.. I had to retype&lt;/p&gt;  &lt;p&gt;sqlcmd –Smssql1.openhost.net.nz –Uuser –Psecret –i c:\dbtestbackup.sql –oc:\sqloutput.txt&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Had a huge 800MB .SQL file.&amp;#160; Notepad++ wouldn’t open after 10mins.&lt;/p&gt;  &lt;p&gt;even gvim tried, but opened as junk text&lt;/p&gt;  &lt;p&gt;Try SQL Server Import / Export now. This worked really well!&lt;/p&gt;</Content>
+      <Created>2010-09-01T22:28:12.864375-04:00</Created>
+      <Modified>2010-09-02T18:24:25.97375-04:00</Modified>
+      <EntryId>da295d8a-2ec4-45ed-89b4-2530c720ff6a</EntryId>
+      <Description />
+      <Title>SQLCMD – Command Line SQL Server</Title>
+      <Categories>SQLServer</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

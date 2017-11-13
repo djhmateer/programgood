@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-05-01T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;The debate on hourly vs fixed price contracting&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.1099.com/c/ar/ta/HowToCharge_t042.html" href="http://www.1099.com/c/ar/ta/HowToCharge_t042.html"&gt;http://www.1099.com/c/ar/ta/HowToCharge_t042.html&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.joelonsoftware.com/items/2007/10/26.html" href="http://www.joelonsoftware.com/items/2007/10/26.html"&gt;http://www.joelonsoftware.com/items/2007/10/26.html&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2010-05-01T21:05:10.140625-04:00</Created>
+      <Modified>2010-05-01T21:05:10.140625-04:00</Modified>
+      <EntryId>d0564f61-5ad2-4d28-a12c-8b09db8d754f</EntryId>
+      <Description />
+      <Title>How to Charge</Title>
+      <Categories>Business Of Software</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-03-12T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;A wrapper for other logging engines&lt;/p&gt;  &lt;p&gt;&lt;a title="http://geekswithblogs.net/robz/archive/2012/12/15/introducing-this.log.aspx" href="http://geekswithblogs.net/robz/archive/2012/12/15/introducing-this.log.aspx"&gt;http://geekswithblogs.net/robz/archive/2012/12/15/introducing-this.log.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;and source here:&amp;#160; &lt;a title="https://github.com/ferventcoder/this.log" href="https://github.com/ferventcoder/this.log"&gt;https://github.com/ferventcoder/this.log&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-03-13T08:02:24.3112279-04:00</Created>
+      <Modified>2013-03-13T08:02:24.3112279-04:00</Modified>
+      <EntryId>e96dcb17-e7b1-4f15-b799-ebe43de340c2</EntryId>
+      <Description />
+      <Title>this.Log</Title>
+      <Categories>Log4Net;NLog</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;A great presentation by Seb with 25 years of experience.&amp;#160; If I could remember one thing (paraphrased)&lt;/p&gt;  &lt;p&gt;“Testing code is every bit as important as production code, as it communicates how the system behaves”&lt;/p&gt;  &lt;p&gt;&lt;a title="http://scottishdevelopers.com/" href="http://scottishdevelopers.com/"&gt;http://scottishdevelopers.com/&lt;/a&gt; hosted Seb Rose talking about testing.&amp;#160; &lt;a title="http://claysnow.co.uk/" href="http://claysnow.co.uk/"&gt;http://claysnow.co.uk/&lt;/a&gt; and info &lt;a title="http://claysnow.co.uk/pillars-to-principles" href="http://claysnow.co.uk/pillars-to-principles"&gt;http://claysnow.co.uk/pillars-to-principles&lt;/a&gt; and &lt;a title="http://www.slideshare.net/sebrose/bad-test-good-test" href="http://www.slideshare.net/sebrose/bad-test-good-test"&gt;http://www.slideshare.net/sebrose/bad-test-good-test&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Unit tests should be:&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Understandable&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;Unit tests are the documentation of what the system does&lt;/li&gt;      &lt;li&gt;Every bit as important as production code&lt;/li&gt;   &lt;/ul&gt;    &lt;li&gt;Maintainable&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;DRY in tests&lt;/li&gt;      &lt;li&gt;Builder pattern to help eg StandardTestUser().Smoker().Age(35).Build()&lt;/li&gt;   &lt;/ul&gt;    &lt;li&gt;Repetable&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;Should be the same each time (ie no dates, random numbers)&lt;/li&gt;   &lt;/ul&gt;    &lt;li&gt;Necessary&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;ie not triangulation tests – so all the small tests we use in TDD to drive out code&lt;/li&gt;   &lt;/ul&gt;    &lt;li&gt;Granular&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;a single behaviour&lt;/li&gt;   &lt;/ul&gt;    &lt;li&gt;Fast&lt;/li&gt;    &lt;ul&gt;     &lt;li&gt;&amp;lt;1 minute for sure.. &amp;lt; 10 secs ideally.&amp;#160; Partition tests&lt;/li&gt;   &lt;/ul&gt; &lt;/ul&gt;  &lt;p&gt;Testing pyramid – see Steve Freemans book.&amp;#160; UI/System tests 5%, Integration 20%, Unit 75%&lt;/p&gt;  &lt;h3&gt;Books&lt;/h3&gt;  &lt;p&gt;&lt;a title="http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627/ref=la_B002O21DQW_1_1?ie=UTF8&amp;amp;qid=1363168437&amp;amp;sr=1-1" href="http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627/ref=la_B002O21DQW_1_1?ie=UTF8&amp;amp;qid=1363168437&amp;amp;sr=1-1"&gt;http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627/ref=la_B002O21DQW_1_1?ie=UTF8&amp;amp;qid=1363168437&amp;amp;sr=1-1&lt;/a&gt; – Steve Freeman&lt;/p&gt;  &lt;p&gt;Working Effectively with Legacy Code – Code that has no tests&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.amazon.co.uk/Things-Every-Programmer-Should-Know/dp/0596809484" href="http://www.amazon.co.uk/Things-Every-Programmer-Should-Know/dp/0596809484"&gt;http://www.amazon.co.uk/Things-Every-Programmer-Should-Know/dp/0596809484&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a title="https://leanpub.com/codingdojohandbook" href="https://leanpub.com/codingdojohandbook"&gt;https://leanpub.com/codingdojohandbook&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;Deliberate Learning&lt;/h3&gt;  &lt;p&gt;Doing small problems multiple times to practice:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Seb-RoseBad-Test-Good-Test_8616/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Seb-RoseBad-Test-Good-Test_8616/image_thumb.png" width="346" height="216" /&gt;&lt;/a&gt;    &lt;br /&gt;&lt;a title="http://www.cyber-dojo.com/" href="http://www.cyber-dojo.com/"&gt;http://www.cyber-dojo.com/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-03-13T06:03:35.6663839-04:00</Created>
+      <Modified>2013-03-13T06:06:42.9479306-04:00</Modified>
+      <EntryId>6b36cf76-f7c3-45e5-9323-9971596ff2a2</EntryId>
+      <Description />
+      <Title>Seb Rose–Bad Test Good Test</Title>
+      <Categories>BDD;TDD</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

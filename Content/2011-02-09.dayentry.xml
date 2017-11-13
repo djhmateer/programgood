@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-08T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Showing how to get custom formatting of dates on the x axis.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_2.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_thumb.png" width="644" height="274" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_thumb_1.png" width="534" height="334" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Custom gradient colours:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_thumb_2.png" width="644" height="289" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Percentages&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_thumb_3.png" width="244" height="187" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_10.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/Charting_9CAB/image_thumb_4.png" width="470" height="163" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-09T17:10:38.86-05:00</Created>
+      <Modified>2011-02-09T18:10:15.735-05:00</Modified>
+      <EntryId>f6ecce42-fee4-45c1-a84e-f3c978b83819</EntryId>
+      <Description />
+      <Title>Charting</Title>
+      <Categories>Report Viewer;Reporting Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;In VS2010, .NET4 Webforms project:&lt;/p&gt;  &lt;h5&gt;How to make a Stand Alone Report – gui&lt;/h5&gt;  &lt;p&gt;create new website project (see RDLCTest2)&lt;/p&gt;  &lt;p&gt;add ScriptManager and ReportViewer control to webpage&lt;/p&gt;  &lt;p&gt;add Report1.rdlc file using right click on project, choose report, not report wizard&lt;/p&gt;  &lt;p&gt;add DataSet1.xsd to project, and use query builder to make the correct sql and parameters&lt;/p&gt;  &lt;p&gt;in Report1.rdlc, View Report Data, Add a DataSet, and point it to DataSet1, add a table and put in values&lt;/p&gt;  &lt;p&gt;Wire up ReportViewer control to Report1.rdlc&lt;/p&gt;  &lt;p&gt;This does the ObjectDataSource trick.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_thumb.png" width="969" height="473" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h5&gt;How to make a Stand Alone Report – wire up in code&lt;/h5&gt;  &lt;p&gt;webpage.aspx&lt;/p&gt;  &lt;blockquote&gt;   &lt;p&gt;has a ReportViewer control in it&lt;/p&gt; &lt;/blockquote&gt;  &lt;blockquote&gt;   &lt;p&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; which points to an Report.rdlc file&lt;/p&gt;    &lt;p&gt;code behind news up a DataSet.xsd&lt;/p&gt;    &lt;p&gt;&amp;#160;&amp;#160;&amp;#160; called DataSetTableAdapter.TableAdapter&lt;/p&gt;    &lt;p&gt;&amp;#160;&amp;#160;&amp;#160; then news up a ReportDataSource, and passes this DataTable into it calling it DataSet1&lt;/p&gt;    &lt;p&gt;the Report.rdlc then knows about DataSet1&lt;/p&gt; &lt;/blockquote&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;h3&gt;Another Example&lt;/h3&gt;  &lt;div&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;// new up a table adapter which is part of SimpleReportDataSet&lt;/span&gt;&lt;br /&gt;SimpleReportDataSetTableAdapters.ClientTableAdapter clientTableAdapter = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SimpleReportDataSetTableAdapters.ClientTableAdapter();&lt;br /&gt;&lt;span style="color: #008000"&gt;// get the data into a DataTable using the table adapter method&lt;/span&gt;&lt;br /&gt;SimpleReportDataSet.ClientDataTable clientDataTable = clientTableAdapter.GetData();&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #008000"&gt;// wire up populated DataTable to report&lt;/span&gt;&lt;br /&gt;ReportDataSource reportDataSource = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ReportDataSource(&lt;span style="color: #006080"&gt;&amp;quot;Client&amp;quot;&lt;/span&gt;, (System.Data.DataTable)clientDataTable);&lt;br /&gt;&lt;br /&gt;ReportViewer1.LocalReport.DataSources.Clear();&lt;br /&gt;ReportViewer1.LocalReport.DataSources.Add(reportDataSource);&lt;br /&gt;ReportViewer1.LocalReport.Refresh();&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;SimpleReportDataSet.xsd&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_4.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_thumb_1.png" width="1028" height="176" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;When adding a new dataset in the Report I called it Client (same as the dataset in the xsd).&amp;#160; Put the dataset in the root of the directory for the designer to pick it up when doing new dataset.
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_6.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_thumb_2.png" width="705" height="299" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;Multiple Report Parameters and Passing Parameter to Dataset&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_8.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ReportViewerandDataSets_11A6D/image_thumb_3.png" width="1028" height="546" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Page_Load(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;{&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (!Page.IsPostBack)&lt;br /&gt;   {&lt;br /&gt;       GenerateClientDropDown();&lt;br /&gt;       btnRenderReport_Click(&lt;span style="color: #0000ff"&gt;null&lt;/span&gt;,&lt;span style="color: #0000ff"&gt;null&lt;/span&gt;);&lt;br /&gt;   }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; GenerateClientDropDown()&lt;br /&gt;{&lt;br /&gt;   LightSpeedContext&amp;lt;PocketVouchersUnitOfWork&amp;gt; _context = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; LightSpeedContext&amp;lt;PocketVouchersUnitOfWork&amp;gt;(&lt;span style="color: #006080"&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;);&lt;br /&gt;   _context.Logger = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; TraceLogger();&lt;br /&gt;   &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (var uow = _context.CreateUnitOfWork())&lt;br /&gt;   {&lt;br /&gt;       var listOfClients = (from client &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; uow.Clients&lt;br /&gt;                               select &lt;span style="color: #0000ff"&gt;new&lt;/span&gt;&lt;br /&gt;                               {&lt;br /&gt;                                   client.Name,&lt;br /&gt;                                   client.Id&lt;br /&gt;                               }).Distinct();&lt;br /&gt;       ddlClients.DataSource = listOfClients;&lt;br /&gt;       ddlClients.DataTextField = &lt;span style="color: #006080"&gt;&amp;quot;Name&amp;quot;&lt;/span&gt;;&lt;br /&gt;       ddlClients.DataValueField = &lt;span style="color: #006080"&gt;&amp;quot;Id&amp;quot;&lt;/span&gt;;&lt;br /&gt;       ddlClients.DataBind();&lt;br /&gt;   }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;protected&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; btnRenderReport_Click(&lt;span style="color: #0000ff"&gt;object&lt;/span&gt; sender, EventArgs e)&lt;br /&gt;{&lt;br /&gt;   &lt;span style="color: #008000"&gt;// new up a table adapter which is part of SimpleReportDataSet&lt;/span&gt;&lt;br /&gt;   SimpleReportDataSetTableAdapters.ClientTableAdapter clientTableAdapter = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SimpleReportDataSetTableAdapters.ClientTableAdapter();&lt;br /&gt;   &lt;span style="color: #008000"&gt;// get the data into a DataTable using the table adapter method&lt;/span&gt;&lt;br /&gt;   SimpleReportDataSet.ClientDataTable clientDataTable = clientTableAdapter.GetData(&lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Guid(ddlClients.SelectedValue));&lt;br /&gt;&lt;br /&gt;   &lt;span style="color: #008000"&gt;// wire up populated DataTable to report&lt;/span&gt;&lt;br /&gt;   ReportDataSource reportDataSource = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ReportDataSource(&lt;span style="color: #006080"&gt;&amp;quot;Client&amp;quot;&lt;/span&gt;, (System.Data.DataTable)clientDataTable);&lt;br /&gt;&lt;br /&gt;   &lt;span style="color: #008000"&gt;// pass parameters to the report - nothing to do with datasets&lt;/span&gt;&lt;br /&gt;   ReportParameter totalRedeemedParam = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ReportParameter(&lt;span style="color: #006080"&gt;&amp;quot;TotalRedeemed&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;7&amp;quot;&lt;/span&gt;);&lt;br /&gt;   ReportParameter merchantNameParam = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ReportParameter(&lt;span style="color: #006080"&gt;&amp;quot;MerchantName&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;testMerchantName&amp;quot;&lt;/span&gt;);&lt;br /&gt;   ReportViewer1.LocalReport.SetParameters(&lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ReportParameter[] { totalRedeemedParam, merchantNameParam });&lt;br /&gt;&lt;br /&gt;   ReportViewer1.LocalReport.DataSources.Clear();&lt;br /&gt;   ReportViewer1.LocalReport.DataSources.Add(reportDataSource);&lt;br /&gt;   ReportViewer1.LocalReport.Refresh();&lt;br /&gt;}&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h5&gt;References&lt;/h5&gt;
+
+&lt;p&gt;DataSet objects, a group of classes describing a simple in-memory &lt;a href="http://www.programgood.net/ct.ashx?id=6db26a46-618a-4823-8d49-ca018ab810ac&amp;amp;url=http%3a%2f%2fen.wikipedia.org%2fwiki%2fRelational_database"&gt;relational database&lt;/a&gt;,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;b&gt;DataSet&lt;/b&gt; object represents a &lt;a href="http://www.programgood.net/ct.ashx?id=6db26a46-618a-4823-8d49-ca018ab810ac&amp;amp;url=http%3a%2f%2fen.wikipedia.org%2fwiki%2fLogical_schema"&gt;schema&lt;/a&gt; (either an entire database or a subset of one). It can contain tables and relationships between those tables. 
+
+    &lt;ul&gt;
+      &lt;li&gt;A &lt;b&gt;DataTable&lt;/b&gt; object represents a single table in the database. It has a name, rows, and columns. 
+
+        &lt;ul&gt;
+          &lt;li&gt;A &lt;b&gt;DataView&lt;/b&gt; object overlays a DataTable and sorts the data (much like an &lt;a href="http://www.programgood.net/ct.ashx?id=6db26a46-618a-4823-8d49-ca018ab810ac&amp;amp;url=http%3a%2f%2fen.wikipedia.org%2fwiki%2fSQL"&gt;SQL&lt;/a&gt; &amp;quot;&lt;a href="http://www.programgood.net/ct.ashx?id=6db26a46-618a-4823-8d49-ca018ab810ac&amp;amp;url=http%3a%2f%2fen.wikipedia.org%2fwiki%2fOrder_by"&gt;order by&lt;/a&gt;&amp;quot; clause) and filters the records (much like an SQL &amp;quot;&lt;a href="http://www.programgood.net/ct.ashx?id=6db26a46-618a-4823-8d49-ca018ab810ac&amp;amp;url=http%3a%2f%2fen.wikipedia.org%2fwiki%2fWhere_%2528SQL%2529"&gt;where&lt;/a&gt;&amp;quot; clause) if a filter is set. An in-memory index is used to facilitate these operations. All DataTables have a default filter, while any number of additional DataViews can be defined, reducing interaction with the underlying database and thus improving performance. 
+
+            &lt;ul&gt;
+              &lt;li&gt;A &lt;b&gt;DataColumn&lt;/b&gt; represents a column of the table, including its name and type. &lt;/li&gt;
+
+              &lt;li&gt;A &lt;b&gt;DataRow&lt;/b&gt; object represents a single row in the table; it allows reading and updating of values in that row, likewise retrieving any rows that are related to it through a primary-key foreign-key relationship. &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</Content>
+      <Created>2011-02-09T02:20:23.125625-05:00</Created>
+      <Modified>2011-05-07T21:09:48.7185-04:00</Modified>
+      <EntryId>13712a04-43a8-4525-8dd4-2c7fbbb41b1e</EntryId>
+      <Description />
+      <Title>Report Viewer and DataSets</Title>
+      <Categories>Report Viewer;Reporting Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Using to avoid postbacks on calendar controls&lt;/p&gt;  &lt;p&gt;Issue with &amp;lt;head&amp;gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://nlakkakula.wordpress.com/2008/06/13/aspnet-ajax-control-toolkit-common-problems/"&gt;http://nlakkakula.wordpress.com/2008/06/13/aspnet-ajax-control-toolkit-common-problems/&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;issue with globalisation on Azure&lt;/p&gt;  &lt;p&gt;&lt;a href="http://floatleft.wordpress.com/2008/08/26/calendarextender-and-getting-the-correct-date-format/"&gt;http://floatleft.wordpress.com/2008/08/26/calendarextender-and-getting-the-correct-date-format/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-08T23:49:15.61-05:00</Created>
+      <Modified>2011-02-08T23:49:15.61-05:00</Modified>
+      <EntryId>836d870d-84b2-4555-a0f0-3c60429e563f</EntryId>
+      <Description />
+      <Title>Ajax Control Toolkit</Title>
+      <Categories>Ajax</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

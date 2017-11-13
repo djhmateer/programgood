@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-01-19T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.coderetreat.com"&gt;http://www.coderetreat.com&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.alexbolboaca.ro/wordpress/articles/how-to-organize-a-code-retreat"&gt;http://www.alexbolboaca.ro/wordpress/articles/how-to-organize-a-code-retreat&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-01-20T05:27:50.478875-05:00</Created>
+      <Modified>2011-01-20T05:27:50.478875-05:00</Modified>
+      <EntryId>3b5af7c6-8f9d-4d42-94ab-f807cae5047b</EntryId>
+      <Description />
+      <Title>CodeRetreat</Title>
+      <Categories>Code Retreat</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

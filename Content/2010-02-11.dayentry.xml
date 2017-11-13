@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;While pair programming with some great developers I asked the question:&amp;#160; How would you refactor this project (the running project website).&lt;/p&gt;  &lt;p&gt;When both of the guys I paired with suggested that it would be smart to move to MVC and to use an ORM, I listened.&lt;/p&gt;  &lt;p&gt;After downloading ASP.NET MVC version 1.&amp;#160; I’ve been working through the tutorial from Rob Conery:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://www.asp.net/learn/mvc-videos/video-8143.aspx" href="http://www.asp.net/learn/mvc-videos/video-8143.aspx"&gt;http://www.asp.net/learn/mvc-videos/video-8143.aspx&lt;/a&gt; (about 80mins)&lt;/p&gt;  &lt;h3&gt;Creating a New MVC Project&lt;/h3&gt;  &lt;p&gt;Ctrl Shift N&lt;/p&gt;  &lt;h3&gt;Linq to SQL&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb.png" width="109" height="244" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;going to use Membership for login / users.&lt;/p&gt;  &lt;p&gt;In models, add new item: LINQ to SQL&lt;/p&gt;  &lt;p&gt;drag on the two tables&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb_1.png" width="244" height="142" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Original table name was dinners.&amp;#160; The class is called dinner&lt;/p&gt;  &lt;p&gt;Renamed NerddinnerDataContect to DB, and context namespace to Nerddinner&lt;/p&gt;  &lt;p&gt;however Entity Namespace to Nerddinner.Model – which didn’t work!&amp;#160; I left it blank.&lt;/p&gt;  &lt;h3&gt;Adding a Controller&lt;/h3&gt;  &lt;p&gt;The default Index controller&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;br /&gt;var dinners = db.Dinners;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(dinners);&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;Adding a View&lt;/h3&gt;
+
+&lt;p&gt;right click inside method in controller&lt;/p&gt;
+
+&lt;p&gt;Create strongly-typed view&lt;/p&gt;
+
+&lt;p&gt;View content – code gen nice.&lt;/p&gt;
+
+&lt;p&gt;Tooling figured out which is the primary key (as linq to sql)&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;ModelBinders - Add&lt;/h3&gt;
+
+&lt;p&gt;When creating a new Dinner, we use ModelBinders.. mvc looks at the Object and sees if it can bind to the linqtosql.&lt;/p&gt;
+
+&lt;p&gt;Could have used the existing FormCollection, but this is easier!&lt;/p&gt;
+
+&lt;p&gt;If ModelState.IsValid&amp;#160;&amp;#160; .. nice.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb_2.png" width="325" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;And by changing the Html.ValidationMessage&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb_3.png" width="333" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;Editing Data&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;In the controller:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Edit(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;{&lt;br /&gt;    var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;br /&gt;    var dinner = db.Dinners.SingleOrDefault(x =&amp;gt; x.DinnerID == id); &lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(dinner);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;This is another way of expressing the above:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Edit(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;{&lt;br /&gt;    var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;br /&gt;    &lt;span style="color: #008000"&gt;//var dinner = db.Dinners.SingleOrDefault(x =&amp;gt; x.DinnerID == id);&lt;/span&gt;&lt;br /&gt;    var dinner = (from a &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.Dinners&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; a.DinnerID == id&lt;br /&gt;                    select a).SingleOrDefault();&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(dinner);&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;lt;% gator tags&lt;/p&gt;
+
+&lt;p&gt;Other view engines – Spark or nHaml&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb_4.png" width="218" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;So we’ve built scaffolding.&lt;/p&gt;
+
+&lt;h3&gt;Routing&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;We want /dinners to the be root of the site.&lt;/p&gt;
+
+&lt;p&gt;Routing is the thing that listens for URL’s and passes them to a controller. &lt;/p&gt;
+
+&lt;p&gt;eg Dinner / Edit /5 &lt;/p&gt;
+
+&lt;p&gt;eg { controller} / {action} / {id}&lt;/p&gt;
+
+&lt;p&gt;To change to be /dinners as the route in global.asax&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; RegisterRoutes(RouteCollection routes)&lt;br /&gt;{&lt;br /&gt;    routes.IgnoreRoute(&lt;span style="color: #006080"&gt;&amp;quot;{resource}.axd/{*pathInfo}&amp;quot;&lt;/span&gt;);&lt;br /&gt;&lt;br /&gt;    routes.MapRoute(&lt;br /&gt;        &lt;span style="color: #006080"&gt;&amp;quot;Default&amp;quot;&lt;/span&gt;, &lt;span style="color: #008000"&gt;// Route name&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #006080"&gt;&amp;quot;{controller}/{action}/{id}&amp;quot;&lt;/span&gt;, &lt;span style="color: #008000"&gt;// URL with parameters&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; {controller = &lt;span style="color: #006080"&gt;&amp;quot;Dinner&amp;quot;&lt;/span&gt;, action = &lt;span style="color: #006080"&gt;&amp;quot;Index&amp;quot;&lt;/span&gt;, id = &lt;span style="color: #006080"&gt;&amp;quot;&amp;quot;&lt;/span&gt;} &lt;span style="color: #008000"&gt;// Parameter defaults&lt;/span&gt;&lt;br /&gt;        );&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;We changed from Home to Dinner above.&lt;/p&gt;
+
+&lt;h3&gt;Deleting&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_12.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/image_thumb_5.png" width="201" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[AcceptVerbs(HttpVerbs.Post)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Delete(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;{&lt;br /&gt;    var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;br /&gt;    var dinner = (from a &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.Dinners&lt;br /&gt;                  &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; a.DinnerID == id&lt;br /&gt;                  select a).SingleOrDefault();&lt;br /&gt;    db.Dinners.DeleteOnSubmit(dinner);&lt;br /&gt;    db.SubmitChanges();&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; RedirectToAction(&lt;span style="color: #006080"&gt;&amp;quot;Index&amp;quot;&lt;/span&gt;);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;are wired up on the view:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&amp;lt;% &lt;span style="color: #0000ff"&gt;using&lt;/span&gt; (Html.BeginForm(&lt;span style="color: #006080"&gt;&amp;quot;delete&amp;quot;&lt;/span&gt;, &lt;span style="color: #006080"&gt;&amp;quot;dinner&amp;quot;&lt;/span&gt;)) {%&amp;gt;&lt;br /&gt;    &amp;lt;%=Html.Hidden(&lt;span style="color: #006080"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;,Model.DinnerID) %&amp;gt;&lt;br /&gt;    &amp;lt;input id=&lt;span style="color: #006080"&gt;&amp;quot;Submit1&amp;quot;&lt;/span&gt; type=&lt;span style="color: #006080"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;=&lt;span style="color: #006080"&gt;&amp;quot;delete&amp;quot;&lt;/span&gt; /&amp;gt;&lt;br /&gt;&amp;lt;% } %&amp;gt;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;We are not using any authentication to stop people doing this at the moment. For that we need:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[AcceptVerbs(HttpVerbs.Post)]&lt;br /&gt;[Authorize(Roles=&lt;span style="color: #006080"&gt;&amp;quot;Administrator&amp;quot;&lt;/span&gt;)]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Delete(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;{&lt;br /&gt;    var db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;Testing / Repository Pattern&lt;/h3&gt;
+
+&lt;p&gt;Because the controller has database connection inside of it, this isn’t good from a testing point of view, so we’re going to refactor this out.&lt;/p&gt;
+
+&lt;p&gt;Speed would be a problem with lots of tests, as would not knowing what is in the database.&lt;/p&gt;
+
+&lt;p&gt;Created an IDinnerRepository interface:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;interface&lt;/span&gt; IDinnerRepository&lt;br /&gt;{&lt;br /&gt;    IQueryable&amp;lt;Dinner&amp;gt; FindAllDinners();&lt;br /&gt;    Dinner GetDinner(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Add(Dinner dinner);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Update(Dinner dinner);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Delete(Dinner dinner);&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Save();&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Then a SqlDinnerRepository that implements this, where the constructors calls the DB:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; SqlDinnerRepository : IDinnerRepository&lt;br /&gt;{&lt;br /&gt;    DB db;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; SqlDinnerRepository()&lt;br /&gt;    {&lt;br /&gt;        db = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DB();&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; IQueryable&amp;lt;Dinner&amp;gt; FindAllDinners()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; db.Dinners;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; Dinner GetDinner(&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; id)&lt;br /&gt;    {&lt;br /&gt;        var dinner = (from a &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; db.Dinners&lt;br /&gt;                      &lt;span style="color: #0000ff"&gt;where&lt;/span&gt; a.DinnerID == id&lt;br /&gt;                      select a).SingleOrDefault();&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; dinner;&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Then in the Dinner Controller:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; DinnerController : Controller&lt;br /&gt;{&lt;br /&gt;    IDinnerRepository _repository;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DinnerController()&lt;br /&gt;    {&lt;br /&gt;        _repository = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; SqlDinnerRepository();&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// this will be the one that the test uses&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; DinnerController(IDinnerRepository repository)&lt;br /&gt;    {&lt;br /&gt;        _repository = repository;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// GET: /Dinner/&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; ActionResult Index()&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #008000"&gt;//var db = new DB();&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;//var dinners = db.Dinners;&lt;/span&gt;&lt;br /&gt;        var dinners = _repository.FindAllDinners();&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; View(dinners);&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The plan is that we will make up something that implements IDinnerRepository when testing to make our life easier.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/DSCN1379_dave_2.jpg"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="DSCN1379_dave" border="0" alt="DSCN1379_dave" src="http://www.programgood.net/content/binary/WindowsLiveWriter/ASP.NETMVC_A3E3/DSCN1379_dave_thumb.jpg" width="644" height="484" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Made: FadinnerkeDinnerRepository&lt;/p&gt;
+
+&lt;p&gt;Made: DinnerControllerTests&lt;/p&gt;
+
+&lt;p&gt;Ctrl R T – Run tests&lt;/p&gt;
+
+&lt;p&gt;Found error in test code:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt; &lt;span style="color: #008000"&gt;//var data = result.ViewData.Model as IList&amp;lt;Dinner&amp;gt;; // this didn't work.. hmmmmmmm.&lt;/span&gt;&lt;br /&gt; var data = result.ViewData.Model &lt;span style="color: #0000ff"&gt;as&lt;/span&gt; IEnumerable&amp;lt;Dinner&amp;gt;;&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;h3&gt;TDD&lt;/h3&gt;
+
+&lt;p&gt;Made a test that dinners should only return dates that are today or later:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod]&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Index_Should_Return_Dinners_For_Today_Or_Later() {&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Arrange&lt;/span&gt;&lt;br /&gt;    var controller = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; DinnerController(&lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Fakes.FakeDinnerRepository());&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Act&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;//ViewResult result = (ViewResult) controller.Index();&lt;/span&gt;&lt;br /&gt;    var result = controller.Index() &lt;span style="color: #0000ff"&gt;as&lt;/span&gt; ViewResult;&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;// Assert&lt;/span&gt;&lt;br /&gt;    var data = result.ViewData.Model &lt;span style="color: #0000ff"&gt;as&lt;/span&gt; IEnumerable&amp;lt;Dinner&amp;gt;;&lt;br /&gt;    Assert.IsFalse(data.Where(x=&amp;gt;x.EventDate&amp;lt;DateTime.Now).Count()&amp;gt;0);&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Failed the test, then wrote the code which was in the DinnerController:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;var dinners = _repository.FindAllDinners().Where(x=&amp;gt;x.EventDate &amp;gt;= DateTime.Now);&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;Lambda expressions&lt;/h3&gt;
+
+&lt;p&gt;var dinners = _repository.FindAllDinners().Where(x=&amp;gt;x.EventDate &amp;gt;= DateTime.Now);&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h3&gt;Presentation Model Pattern or View Model&lt;/h3&gt;
+
+&lt;p&gt;45min into Rob’s video.&lt;/p&gt;</Content>
+      <Created>2010-02-11T18:43:33.339875-05:00</Created>
+      <Modified>2010-02-12T17:25:51.9805-05:00</Modified>
+      <EntryId>d8273ebf-05f7-4019-9653-972975947ca4</EntryId>
+      <Description />
+      <Title>ASP.NET MVC</Title>
+      <Categories>Project Run</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;No error.&amp;#160; Just closes when using ASP.NET MVC&lt;/p&gt;  &lt;p&gt;&lt;a title="http://stackoverflow.com/questions/1361291/resharper-r-4-5-and-mvc-1-0-solutions-cause-visual-studio-2008-sp1-to-crash" href="http://stackoverflow.com/questions/1361291/resharper-r-4-5-and-mvc-1-0-solutions-cause-visual-studio-2008-sp1-to-crash"&gt;http://stackoverflow.com/questions/1361291/resharper-r-4-5-and-mvc-1-0-solutions-cause-visual-studio-2008-sp1-to-crash&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;then onto:&lt;/p&gt;  &lt;p&gt;&lt;a title="http://stackoverflow.com/questions/500696/why-does-visual-studio-crash-opening-aspx-with-mvc-rc1" href="http://stackoverflow.com/questions/500696/why-does-visual-studio-crash-opening-aspx-with-mvc-rc1"&gt;http://stackoverflow.com/questions/500696/why-does-visual-studio-crash-opening-aspx-with-mvc-rc1&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Have tried the one above, which seems to work so far.&lt;/p&gt;  &lt;p&gt;[Edit] it didn’t.. so now I’m trying this:&lt;/p&gt;  &lt;p&gt;&lt;a href="https://connect.microsoft.com/VisualStudio/Downloads/DownloadDetails.aspx?DownloadID=16827&amp;amp;wa=wsignin1.0"&gt;https://connect.microsoft.com/VisualStudio/Downloads/DownloadDetails.aspx?DownloadID=16827&amp;amp;wa=wsignin1.0&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Something still weird as locking up when loading assemblies (looks like resharper)&amp;#160; am trying resharper5 beta2 to see if that helps (haven’t got correct license).&amp;#160; I can get around lockup by deleting dlls from bin and obj.&lt;/p&gt;</Content>
+      <Created>2010-02-11T18:22:14.839875-05:00</Created>
+      <Modified>2010-02-21T20:28:15.4607572-05:00</Modified>
+      <EntryId>7027d99f-7fcb-4f79-adf0-6e8cebe23b6f</EntryId>
+      <Description />
+      <Title>Visual Studio 2008 SP1 with Resharper 4.5 Crashing</Title>
+      <Categories>ASP.NET MVC;Project Run</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Static classes are usually used as ‘utility’ classes&lt;/p&gt;  &lt;p&gt;You don’t need an instance&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main()&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;double&lt;/span&gt; result = thing.daveSubtract(10);&lt;br /&gt;            Console.WriteLine(result);&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; thing&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;double&lt;/span&gt; daveSubtract(&lt;span style="color: #0000ff"&gt;double&lt;/span&gt; number)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; (number - 2);&lt;br /&gt;        }&lt;br /&gt;    }&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Extension Methods&lt;/h3&gt;
+
+&lt;p&gt;From: http://msdn.microsoft.com/en-us/library/bb383977.aspx&lt;/p&gt;
+
+&lt;p&gt;Extension methods enable you to &amp;quot;add&amp;quot; methods to existing types without creating a new derived type,&lt;/p&gt;
+
+&lt;p&gt;Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type. &lt;/p&gt;
+
+&lt;p&gt;For client code, there is no apparent difference between calling an extension method and the methods that are actually defined in a type.&lt;/p&gt;
+
+&lt;p&gt;&amp;#160;&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;namespace&lt;/span&gt; ConsoleApplication1&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; s = &lt;span style="color: #006080"&gt;&amp;quot;hello extension methods are good&amp;quot;&lt;/span&gt;;&lt;br /&gt;            Console.WriteLine(s);&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = s.WordCount();&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;number of words is {0}&amp;quot;&lt;/span&gt;, i.ToString());&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; MyExtensions&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; WordCount(&lt;span style="color: #0000ff"&gt;this&lt;/span&gt; String str)&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; str.Split(&lt;span style="color: #0000ff"&gt;new&lt;/span&gt; &lt;span style="color: #0000ff"&gt;char&lt;/span&gt;[] { &lt;span style="color: #006080"&gt;' '&lt;/span&gt;, &lt;span style="color: #006080"&gt;'.'&lt;/span&gt;, &lt;span style="color: #006080"&gt;'?'&lt;/span&gt; }, StringSplitOptions.RemoveEmptyEntries).Length;&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2010-02-10T19:54:17.902375-05:00</Created>
+      <Modified>2010-02-10T19:54:17.902375-05:00</Modified>
+      <EntryId>f60ce9ab-2c3f-4afe-b2b7-d4ac6d2199c8</EntryId>
+      <Description />
+      <Title>Static Classes / Extension Methods</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

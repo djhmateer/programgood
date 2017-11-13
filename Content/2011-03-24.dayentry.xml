@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-23T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;This uses MVC Contrib&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.4guysfromrolla.com/articles/031611-1.aspx"&gt;http://www.4guysfromrolla.com/articles/031611-1.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://supremeware.blogspot.com/2011/03/genericviewmodel-based-grid.html"&gt;http://supremeware.blogspot.com/2011/03/genericviewmodel-based-grid.html&lt;/a&gt; – great article using paging, filtering too&lt;/p&gt;  &lt;p&gt;&lt;a href="http://weblogs.asp.net/rajbk/archive/2010/05/08/asp-net-mvc-paging-sorting-filtering-using-the-mvccontrib-grid-and-pager.aspx"&gt;http://weblogs.asp.net/rajbk/archive/2010/05/08/asp-net-mvc-paging-sorting-filtering-using-the-mvccontrib-grid-and-pager.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-24T05:44:14.094625-04:00</Created>
+      <Modified>2011-03-24T13:38:26.42275-04:00</Modified>
+      <EntryId>131aa78f-8f4f-400f-babd-1b746ae1b485</EntryId>
+      <Description />
+      <Title>Grids in MVC</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;In VS2010 SP1 &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.iwantmymvc.com/2011-03-23-bin-deploy-aspnet-mvc-3-visual-studio"&gt;http://www.iwantmymvc.com/2011-03-23-bin-deploy-aspnet-mvc-3-visual-studio&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-24T05:13:48.67275-04:00</Created>
+      <Modified>2011-03-24T05:13:48.67275-04:00</Modified>
+      <EntryId>2efdcf2e-27ee-40dc-bdd1-b0176bc19485</EntryId>
+      <Description />
+      <Title>MVC3 Dependencies Easy Way</Title>
+      <Categories>MVC;VS2010</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://geekswithblogs.net/Cmiller/archive/2011/03/16/asp_net_mvc_3_errorhandling_and_customerrors.aspx"&gt;http://geekswithblogs.net/Cmiller/archive/2011/03/16/asp_net_mvc_3_errorhandling_and_customerrors.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-03-24T16:26:27.79775-04:00</Created>
+      <Modified>2011-03-24T16:26:27.79775-04:00</Modified>
+      <EntryId>5faf1054-7d89-443b-b5ee-5aced0f7a13e</EntryId>
+      <Description />
+      <Title>Handling Errors in MVC3</Title>
+      <Categories>MVC</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

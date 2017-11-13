@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-07-20T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;WebMatix.Data&lt;/p&gt;  &lt;p&gt;&lt;a href="http://studiostyl.es/"&gt;http://studiostyl.es/&lt;/a&gt; – Obsidian&lt;/p&gt;  &lt;p&gt;{ is not on a new line.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Rob-ConeryWebMatrix_113FB/image_2.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Rob-ConeryWebMatrix_113FB/image_thumb.png" width="644" height="395" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;SELECT SCOPE_IDENTITY – brings back id of recently inserted record&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Testing all done in razor&lt;/p&gt;  &lt;p&gt;Get source code to see flashy nice stuff (messages on top)&lt;/p&gt;  &lt;p&gt;Kind of like RSpec (BDD Tool for Ruby)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Rob-ConeryWebMatrix_113FB/image_4.png"&gt;&lt;img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Rob-ConeryWebMatrix_113FB/image_thumb_1.png" width="543" height="484" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;BDD stuff here:&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.wekeroad.com/microsoft/the-super-dynamic-massive-freakshow"&gt;http://blog.wekeroad.com/microsoft/the-super-dynamic-massive-freakshow&lt;/a&gt;&lt;/p&gt;      &lt;p&gt;&lt;a href="https://github.com/robconery/massive"&gt;https://github.com/robconery/massive&lt;/a&gt; – ansyc (Task Parallel Lib) too..&lt;/p&gt;  &lt;p&gt;&lt;a href="http://blog.wekeroad.com/helpy-stuff/and-i-shall-call-it-massive"&gt;http://blog.wekeroad.com/helpy-stuff/and-i-shall-call-it-massive&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-07-20T21:01:55.258375-04:00</Created>
+      <Modified>2011-07-20T21:05:05.0865-04:00</Modified>
+      <EntryId>e67d4e6f-bfea-4090-b6d6-903c0ab71029</EntryId>
+      <Description />
+      <Title>Rob Conery–WebMatrix and Testing</Title>
+      <Categories>BDD;Dynamic;WebMatrix</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

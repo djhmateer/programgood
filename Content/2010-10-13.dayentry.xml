@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-10-12T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/spectrum_800_2.jpg"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="spectrum_800" border="0" alt="spectrum_800" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/spectrum_800_thumb.jpg" width="644" height="474" /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;Look at the G key :-)&lt;/p&gt;  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #008000"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// A rolling brute force attack on a secret password&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// The program knows the password is only lowercase letters, but doesn't know the length&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// &lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// Starting at:    a&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            b&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            c&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// ...&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            z&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            aa&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            ab&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// ...&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            ba&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            bb&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// ...&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            ca&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// then            cb&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// ...&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;///&lt;/span&gt;&lt;br /&gt;    &lt;span style="color: #008000"&gt;/// try to find secret password of: davedave&lt;/span&gt;&lt;br /&gt;    /// &amp;lt;/summary&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is some of the code I used.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PasswordGuesser&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; SecretPassword { get; set; }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CrackPassword()&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterationsCrackingPassword = 0;&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// 1 column&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                numberOfIterationsCrackingPassword++;&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; letterToTest = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString();&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (letterToTest == SecretPassword)&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;            }&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// 2 columns&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 97; j &amp;lt; 123; j++)&lt;br /&gt;                {&lt;br /&gt;                    numberOfIterationsCrackingPassword++;&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; testingLetters = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString();&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (testingLetters == SecretPassword)&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;&lt;br /&gt;                }&lt;br /&gt;            }&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;yikes, left out the Foo bit.. here is a more recent example of the code:&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_12.png"&gt;&lt;img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb_5.png" width="700" height="314" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;pro&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;works &lt;/li&gt;
+
+  &lt;li&gt;testable &lt;/li&gt;
+
+  &lt;li&gt;easy to read &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;con&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;slow &lt;/li&gt;
+
+  &lt;li&gt;inelegant &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Version 4 – As Shown in ScreenCast&lt;/h4&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:ec253afd-94f0-4008-b547-df0527a36213" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/CodeGuesser_v4_1.zip" target="_blank"&gt;CodeGuesser_4v_1.zip&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&amp;#160;&amp;#160;&amp;#160; Source (VS2010) 
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="http://stackoverflow.com/questions/324831/breaking-out-of-a-nested-loop	" href="http://stackoverflow.com/questions/324831/breaking-out-of-a-nested-loop&amp;nbsp;&amp;nbsp;&amp;nbsp; "&gt;http://stackoverflow.com/questions/324831/breaking-out-of-a-nested-loop&amp;#160;&amp;#160;&amp;#160; &lt;/a&gt;- use an anonymous method would be another way&lt;/p&gt;
+
+&lt;p&gt;This came from a&amp;#160; fun project which a bunch of use tried a few years ago &lt;a href="http://www.programgood.net/2010/10/12/CodeGuessingProgram.aspx"&gt;http://www.programgood.net/2010/10/12/CodeGuessingProgram.aspx&lt;/a&gt;&amp;#160;&lt;/p&gt;
+
+&lt;h4&gt;Version 5 – Speedy (thanks to DaveMul)&lt;/h4&gt;
+
+&lt;p&gt;I had to remember to run in release mode!&amp;#160; Intel Core2 Dual 2.4GHz.&amp;#160; Compiling in .NET4&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;davedav - 1,257,688,584...27.5 secs in debug.&amp;#160; 45/6m iterations/sec 
+    &lt;br /&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160; 9.5 secs in release. 132m iterations.sec 
+
+    &lt;br /&gt;zzzzzzz - 8,353,082,582...184secs in debug.&amp;#160; 45m iterations/sec &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;davedave - 32,699,903,189iterations 245secs.. 4min 5secs. 133m iterations/sec 
+    &lt;br /&gt;zzzzzzzz - 217,180,147,158iterations 1636secs.&amp;#160; 133m iterations/sec&amp;#160;&amp;#160;&amp;#160; &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is significantly faster than 3 years ago. for davedav – took 23secs, and now takes 9.5 secs.&lt;/p&gt;
+
+&lt;p&gt;Source is here:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:ddc90191-4fae-41bb-8a7f-10c2620d6557" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/CodeGuesser_v5.zip" target="_blank"&gt;CodeGuesser_v5&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;pro:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fast &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;con:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feels like there should be a better way &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;future:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use parallel library in .NET4 to use multiple cores &lt;/li&gt;
+
+  &lt;li&gt;refactor so am not repeating code (DRY – Don’t Repeat Yourself, Don’t Rep…….) &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&amp;#160;&lt;/h4&gt;
+
+&lt;h4&gt;Historial: Version 1&lt;/h4&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:16e26411-d043-4d9d-9406-30c2b36330d0" class="wlWriterEditableSmartContent"&gt;&lt;p&gt; &lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/CodeGuesser_v1.zip" target="_blank"&gt;Version1 Download&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some of the tests:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; CodeGuesserApplication;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; Microsoft.VisualStudio.TestTools.UnitTesting;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;using&lt;/span&gt; System.Collections.Generic;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;namespace&lt;/span&gt; Tests&lt;br /&gt;{&lt;br /&gt;    [TestClass]&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; UnitTest1&lt;br /&gt;    {&lt;br /&gt;        [TestMethod]&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Get_One_Column_List_Of_Strings_Check_First_Letter_Is_a()&lt;br /&gt;        {&lt;br /&gt;            PasswordGuesser codeGuesser = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PasswordGuesser();&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; listOfStrings = codeGuesser.Get_List_Of_Strings_a_to_z();&lt;br /&gt;            Assert.AreEqual(listOfStrings[0], &lt;span style="color: #006080"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        [TestMethod]&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Get_one_column_list_of_strings_check_last_letter_is_z()&lt;br /&gt;        {&lt;br /&gt;            PasswordGuesser codeGuesser = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PasswordGuesser();&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; listOfStrings = codeGuesser.Get_List_Of_Strings_a_to_z();&lt;br /&gt;            Assert.AreEqual(listOfStrings[25], &lt;span style="color: #006080"&gt;&amp;quot;z&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        [TestMethod]&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Get_two_column_list_of_strings_check_first_is_aa()&lt;br /&gt;        {&lt;br /&gt;            PasswordGuesser codeGuesser = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PasswordGuesser();&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; listOfStrings = codeGuesser.Get_List_Of_Strings_aa_to_zz();&lt;br /&gt;            Assert.AreEqual(listOfStrings[0], &lt;span style="color: #006080"&gt;&amp;quot;aa&amp;quot;&lt;/span&gt;);&lt;br /&gt;        }&lt;br /&gt;}&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;and some of the code so far:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PasswordGuesser&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; SecretPassword { get; set; }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; Get_List_Of_Strings_a_to_z()&lt;br /&gt;        {&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; listOfStrings = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt;();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++)&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; thingToAdd = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString();&lt;br /&gt;                listOfStrings.Add(thingToAdd);&lt;br /&gt;            }&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; listOfStrings;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; Get_List_Of_Strings_aa_to_zz()&lt;br /&gt;        {&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; listOfStrings = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt;();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++)&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 97; j &amp;lt; 123; j++)&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; thingToAdd = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString();&lt;br /&gt;                    listOfStrings.Add(thingToAdd);&lt;br /&gt;                }&lt;br /&gt;            }&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; listOfStrings;&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CrackPassword()&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; iterationCounter = 1;&lt;br /&gt;&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; firstColumnListOfStrings = Get_List_Of_Strings_a_to_z();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; characterToTest &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; firstColumnListOfStrings)&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; ((characterToTest == SecretPassword))&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; iterationCounter;&lt;br /&gt;                }&lt;br /&gt;                iterationCounter++;&lt;br /&gt;            }&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;            List&amp;lt;&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;&amp;gt; secondColumnListOfStrings = Get_List_Of_Strings_aa_to_zz();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;foreach&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;string&lt;/span&gt; stringOfLength2ToTest &lt;span style="color: #0000ff"&gt;in&lt;/span&gt; secondColumnListOfStrings)&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; ((stringOfLength2ToTest == SecretPassword))&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; iterationCounter;&lt;br /&gt;                }&lt;br /&gt;                iterationCounter++;&lt;br /&gt;            }&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; 0;&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Program&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Main(&lt;span style="color: #0000ff"&gt;string&lt;/span&gt;[] args)&lt;br /&gt;        {&lt;br /&gt;            PasswordGuesser codeGuesser = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PasswordGuesser();&lt;br /&gt;            codeGuesser.SecretPassword = &lt;span style="color: #006080"&gt;&amp;quot;zz&amp;quot;&lt;/span&gt;;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterations = codeGuesser.CrackPassword();&lt;br /&gt;            Console.WriteLine(&lt;span style="color: #006080"&gt;&amp;quot;Total iterations: &amp;quot;&lt;/span&gt; + numberOfIterations.ToString());&lt;br /&gt;        }&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;&amp;#160;&lt;/div&gt;
+
+&lt;div&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_2.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb.png" width="644" height="353" /&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;div&gt;
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h5&gt;Pros&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It works &lt;/li&gt;
+
+  &lt;li&gt;I’m confident it is working well as the tests prove it &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;Cons:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is slow &lt;/li&gt;
+
+  &lt;li&gt;Lots of code &lt;/li&gt;
+
+  &lt;li&gt;Not built out to handle 8 letters (many billions of iterations) &lt;/li&gt;
+
+  &lt;li&gt;Wont scale well &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Version 2&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_4.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb_1.png" width="1028" height="642" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h5&gt;Pros&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Becoming a bit more compact with the ‘blank’ character of 96 &lt;/li&gt;
+
+  &lt;li&gt;Testable &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;Cons&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Has to generate a list before it can crack the password against it &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Version 3&lt;/h4&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PasswordGuesser&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; SecretPassword { get; set; }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CrackPassword()&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterationsCrackingPassword = 1;&lt;br /&gt;            StreamWriter file = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; StreamWriter(&lt;span style="color: #006080"&gt;&amp;quot;c:\\passwordOutput.txt&amp;quot;&lt;/span&gt;);&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 96; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// treating 96 as a blank&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 96; j &amp;lt; 123; j++)&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; k = 97; k &amp;lt; 123; k++)&lt;br /&gt;                    {&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; lines = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + &lt;span style="color: #006080"&gt;&amp;quot; &amp;quot;&lt;/span&gt; + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString() + &lt;span style="color: #006080"&gt;&amp;quot; &amp;quot;&lt;/span&gt; + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)k).ToString();&lt;br /&gt;                        file.WriteLine(lines);&lt;br /&gt;                        &lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; ((i == 96) &amp;amp;&amp;amp; (j == 96)) &lt;span style="color: #008000"&gt;// 1 column&lt;/span&gt;&lt;br /&gt;                        {&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; letterToTest = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)k).ToString();&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (letterToTest == SecretPassword)&lt;br /&gt;                                &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                        }&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt; &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; ((i == 96) &amp;amp;&amp;amp; (j != 96)) &lt;span style="color: #008000"&gt;// 2 column&lt;/span&gt;&lt;br /&gt;                        {&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; testingLetters = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)k).ToString();&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (testingLetters == SecretPassword)&lt;br /&gt;                                &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                        }&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;else&lt;/span&gt; &lt;span style="color: #008000"&gt;// 3 column&lt;/span&gt;&lt;br /&gt;                        {&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; testingLetters = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)k).ToString();&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (testingLetters == SecretPassword)&lt;br /&gt;                                &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                        }&lt;br /&gt;                        numberOfIterationsCrackingPassword++;&lt;br /&gt;                    }&lt;br /&gt;                }&lt;br /&gt;            }&lt;br /&gt;            file.Close();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;throw&lt;/span&gt; &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; Exception(&lt;span style="color: #006080"&gt;&amp;quot;Password not found&amp;quot;&lt;/span&gt;);&lt;br /&gt;        Foo:&lt;br /&gt;            file.Close();&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; numberOfIterationsCrackingPassword;&lt;br /&gt;        }&lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Unit test caught a bug in my logic.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_10.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb_4.png" width="683" height="187" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Expected was 703, actual was 729.&amp;#160; What is going on?&amp;#160; &lt;/p&gt;
+
+&lt;p&gt;After dumping to a text file:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_8.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb_3.png" width="273" height="291" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_6.png"&gt;&lt;img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.programgood.net/content/binary/WindowsLiveWriter/PasswordGuesser_6D63/image_thumb_2.png" width="316" height="341" /&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Ahh, so with 3 columns it is putting in a blank in the middle.&amp;#160; Interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can’t think of elegant way around this logic as I don’t want extra iterations eg a blank a is never valid &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Go on to version 4 – make it simpler with multiple loops for each number of columns&lt;/p&gt;
+
+&lt;h4&gt;Version 4&lt;/h4&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; PasswordGuesser&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; SecretPassword { get; set; }&lt;br /&gt;        StreamWriter file = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; StreamWriter(&lt;span style="color: #006080"&gt;&amp;quot;c:\\passwordOutput.txt&amp;quot;&lt;/span&gt;);&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; CrackPassword()&lt;br /&gt;        {&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterationsCrackingPassword = 1;&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// 1 column&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; letterToTest = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString();&lt;br /&gt;                DoLoggingToTextFile(letterToTest);&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (letterToTest == SecretPassword)&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                numberOfIterationsCrackingPassword++;&lt;br /&gt;            }&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// 2 columns&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 97; j &amp;lt; 123; j++)&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; testingLetters = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString();&lt;br /&gt;                    DoLoggingToTextFile(testingLetters);&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (testingLetters == SecretPassword)&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                    numberOfIterationsCrackingPassword++;&lt;br /&gt;                }&lt;br /&gt;            }&lt;br /&gt;&lt;br /&gt;            &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; i = 97; i &amp;lt; 123; i++) &lt;span style="color: #008000"&gt;// 3 columns&lt;/span&gt;&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; j = 97; j &amp;lt; 123; j++)&lt;br /&gt;                {&lt;br /&gt;                    &lt;span style="color: #0000ff"&gt;for&lt;/span&gt; (&lt;span style="color: #0000ff"&gt;int&lt;/span&gt; k = 97; k &amp;lt; 123; k++)&lt;br /&gt;                    {&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; testingLetters = ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)i).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)j).ToString() + ((&lt;span style="color: #0000ff"&gt;char&lt;/span&gt;)k).ToString();&lt;br /&gt;                        DoLoggingToTextFile(testingLetters);&lt;br /&gt;                        &lt;span style="color: #0000ff"&gt;if&lt;/span&gt; (testingLetters == SecretPassword)&lt;br /&gt;                            &lt;span style="color: #0000ff"&gt;goto&lt;/span&gt; Foo;&lt;br /&gt;                        numberOfIterationsCrackingPassword++;&lt;br /&gt;                    }&lt;br /&gt;                }&lt;br /&gt;            }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;test code:&lt;/p&gt;
+
+&lt;div id="codeSnippetWrapper"&gt;
+  &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;[TestMethod] &lt;span style="color: #008000"&gt;// 132 seconds&lt;/span&gt;&lt;br /&gt;       &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;void&lt;/span&gt; Set_password_to_zzzzzz_and_check_it_takes_321million_iterations()&lt;br /&gt;       {&lt;br /&gt;           DateTime startTime = DateTime.Now;&lt;br /&gt;           Debug.Print(&lt;span style="color: #006080"&gt;&amp;quot;starting at: &amp;quot;&lt;/span&gt; + startTime);&lt;br /&gt;           PasswordGuesser passwordGuesser = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; PasswordGuesser();&lt;br /&gt;           passwordGuesser.SecretPassword = &lt;span style="color: #006080"&gt;&amp;quot;zzzzzz&amp;quot;&lt;/span&gt;;&lt;br /&gt;           &lt;span style="color: #0000ff"&gt;int&lt;/span&gt; numberOfIterations = passwordGuesser.CrackPassword();&lt;br /&gt;           Assert.AreEqual(321272406, numberOfIterations);&lt;br /&gt;           TimeSpan totalTime = DateTime.Now - startTime;&lt;br /&gt;           Debug.Print(&lt;span style="color: #006080"&gt;&amp;quot;total time in seconds for 6 cols zzzzzz: &amp;quot;&lt;/span&gt; + totalTime.TotalSeconds);&lt;br /&gt;       }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;Slow - 132secs for zzzzzz 6 cols / 321million iterations.&amp;#160; Old code ran 23secs for 936million iterations&lt;/p&gt;</Content>
+      <Created>2010-10-13T14:55:24.419625-04:00</Created>
+      <Modified>2010-10-18T18:14:47.779-04:00</Modified>
+      <EntryId>7841c73a-7a3a-4ed9-874d-16bd421b34b4</EntryId>
+      <Description />
+      <Title>Password Guesser and Goto</Title>
+      <Categories>Coding Challenge;Password Cracker</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-11-20T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;Chapter 3 – Databinding&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;good observablecollection, and setting up manual OnPropertyChanged events&lt;/li&gt;    &lt;li&gt;Validation and DataAnnotations&lt;/li&gt;    &lt;li&gt;Converters&lt;/li&gt;    &lt;li&gt;Good use of Views to separate code&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Chapter 4 – Architecture&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;MVVM&lt;/li&gt;    &lt;li&gt;MVVM Lite&lt;/li&gt;    &lt;li&gt;MEF&lt;/li&gt;    &lt;li&gt;Structure and naming of App&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Chapter 5 – RIA Services Data Access&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Using with MVVM..view models&lt;/li&gt;    &lt;li&gt;Validation&lt;/li&gt;    &lt;li&gt;Factory / UOW patterns&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Very good example application in here.. testable!p&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Build script&lt;/li&gt;    &lt;li&gt;Tests&lt;/li&gt;    &lt;li&gt;Modular&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Ch 6 – OOB&lt;/p&gt;  &lt;p&gt;Ch7 – Testing&lt;/p&gt;  &lt;p&gt;Ch8 –Error Control&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Logging&lt;/li&gt;    &lt;li&gt;EntLib&lt;/li&gt;    &lt;li&gt;Exception Handling&lt;/li&gt;    &lt;li&gt;PostSharp AOP&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Ch11 – Security&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Signing assemblies&lt;/li&gt;    &lt;li&gt;Certs&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Mastering-LOB-Development-for-SL5-Book_92A7/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Mastering-LOB-Development-for-SL5-Book_92A7/image_thumb.png" width="464" height="391" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Got final version working changing the connection string in Server.Web&lt;/p&gt;</Content>
+      <Created>2012-11-21T06:15:31.4789784-05:00</Created>
+      <Modified>2012-11-21T06:54:26.2420469-05:00</Modified>
+      <EntryId>c1717490-87d0-4eb2-b11b-ef0db005466c</EntryId>
+      <Description />
+      <Title>Mastering LOB Development for SL5 Book</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.microsoft.com/en-gb/download/details.aspx?id=28357"&gt;http://www.microsoft.com/en-gb/download/details.aspx?id=28357&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;latest version is:&lt;/p&gt;  &lt;p&gt;1.0 SP2&lt;/p&gt;  &lt;p&gt;16/08/2012&lt;/p&gt;</Content>
+      <Created>2012-11-21T05:18:42.7786823-05:00</Created>
+      <Modified>2012-11-21T05:18:42.7786823-05:00</Modified>
+      <EntryId>48f205b2-9a31-4fd2-80cb-7ec1a0297910</EntryId>
+      <Description />
+      <Title>WCF RIA Services version</Title>
+      <Categories>WCF RIA Services</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

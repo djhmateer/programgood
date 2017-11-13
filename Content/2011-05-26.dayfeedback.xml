@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-05-25T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>There's a terrific amount of knowledge in this artclie!</Content>
+      <Created>2012-01-14T07:08:11.3625-05:00</Created>
+      <Modified>2012-01-14T07:08:11.3625-05:00</Modified>
+      <EntryId>9c602a8a-bbb4-4eb1-817c-c0d01aae9e82</EntryId>
+      <TargetTitle>Code Reviews, TDD, Kata</TargetTitle>
+      <TargetEntryId>55E388FA-ABFB-4959-B125-04A09D16E89F</TargetEntryId>
+      <Author>Jetsin</Author>
+      <AuthorEmail>t.cecrolac@apache.ru</AuthorEmail>
+      <AuthorHomepage>http://www.google.com/</AuthorHomepage>
+      <AuthorIPAddress>125.88.75.139</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content />
+      <Created>2012-01-14T07:08:16.659375-05:00</Created>
+      <Modified>2012-01-14T07:08:16.659375-05:00</Modified>
+      <EntryId>d3531eb2-f8f9-4cf7-82bb-25f23e3e4683</EntryId>
+      <TargetTitle>Code Reviews, TDD, Kata</TargetTitle>
+      <TargetEntryId>55E388FA-ABFB-4959-B125-04A09D16E89F</TargetEntryId>
+      <Author>Jetsin</Author>
+      <AuthorEmail>t.cecrolac@apache.ru</AuthorEmail>
+      <AuthorHomepage>http://www.google.com/</AuthorHomepage>
+      <AuthorIPAddress>125.88.75.139</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

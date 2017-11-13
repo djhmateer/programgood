@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-03-02T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;“..enums a great way to declare a variable of a type that can be one of a fixed set of values.”&lt;/p&gt;  &lt;p&gt;&lt;a href="http://geekswithblogs.net/BlackRabbitCoder/archive/2010/07/08/c-fundamentals-the-joys-and-pitfalls-of-enums.aspx"&gt;http://geekswithblogs.net/BlackRabbitCoder/archive/2010/07/08/c-fundamentals-the-joys-and-pitfalls-of-enums.aspx&lt;/a&gt;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;enum&lt;/span&gt; ProductionStudio { MGM, Paramount, Universal, Pixar, Disney, Dreamworks};&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; ProductionStudio&lt;br /&gt;{&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio MGM = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio Paramount = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio Universal = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio Pixar = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio Disney = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;    &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;static&lt;/span&gt; &lt;span style="color: #0000ff"&gt;readonly&lt;/span&gt; ProductionStudio Dreamworks = &lt;span style="color: #0000ff"&gt;new&lt;/span&gt; ProductionStudio();&lt;br /&gt;}&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;
+
+&lt;p&gt;In some situations you may want to use public static readonly… a constant really.&amp;#160; Gives intellisense.&lt;/p&gt;</Content>
+      <Created>2011-03-03T16:13:20.05625-05:00</Created>
+      <Modified>2011-03-03T16:13:20.05625-05:00</Modified>
+      <EntryId>b02ca926-0007-4342-a2ce-09155f5fddbf</EntryId>
+      <Description />
+      <Title>Enums and Public Static Readonly</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/295104/what-is-the-difference-between-a-field-and-a-property-in-c"&gt;http://stackoverflow.com/questions/295104/what-is-the-difference-between-a-field-and-a-property-in-c&lt;/a&gt;&lt;/p&gt;  &lt;div id="codeSnippetWrapper"&gt;   &lt;pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &amp;#39;Courier New&amp;#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet"&gt;&lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;class&lt;/span&gt; Movie&lt;br /&gt;    {&lt;br /&gt;        &lt;span style="color: #008000"&gt;// this is a field.  It is private to your class and stores the actual data.&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;private&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; _title;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;// this is a public field.  Almost never used, as its exposing the internals of the class to the outside world&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; _title;&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;// this is a property.  When you access it uses the underlying field, but only exposes&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;// the contract that will not be affected by the underlying field&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Title&lt;br /&gt;        {&lt;br /&gt;            get&lt;br /&gt;            {&lt;br /&gt;                &lt;span style="color: #0000ff"&gt;return&lt;/span&gt; _title;&lt;br /&gt;            }&lt;br /&gt;            set&lt;br /&gt;            {&lt;br /&gt;                _title = &lt;span style="color: #0000ff"&gt;value&lt;/span&gt;;&lt;br /&gt;            }&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        &lt;span style="color: #008000"&gt;// Auto implemented property in C#3&lt;/span&gt;&lt;br /&gt;        &lt;span style="color: #0000ff"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff"&gt;string&lt;/span&gt; Title1 { get; set; }  &lt;br /&gt;    }&lt;/pre&gt;
+
+  &lt;br /&gt;&lt;/div&gt;</Content>
+      <Created>2011-03-03T15:44:31.946875-05:00</Created>
+      <Modified>2011-03-03T18:01:13.353125-05:00</Modified>
+      <EntryId>65a2c440-6b5b-415e-aca1-3f5428c5ae5c</EntryId>
+      <Description />
+      <Title>Fields and Properties and AutoProperties</Title>
+      <Categories>c# language</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

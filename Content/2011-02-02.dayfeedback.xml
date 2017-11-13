@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-01T19:00:00-05:00</Date>
+  <Comments>
+    <Comment>
+      <Content>That's 2 cvleer by half and 2x2 clever 4 me. Thanks!</Content>
+      <Created>2011-04-17T22:48:20.143875-04:00</Created>
+      <Modified>2011-04-17T22:48:20.143875-04:00</Modified>
+      <EntryId>0e707e1c-1b38-4e58-8f22-694dc731d914</EntryId>
+      <TargetTitle>Report Viewer Control in Azure</TargetTitle>
+      <TargetEntryId>43C36427-57A8-4C80-BC14-385F60C68F21</TargetEntryId>
+      <Author>Jaclyn</Author>
+      <AuthorEmail>otrebska@adm.uj.edu.pl</AuthorEmail>
+      <AuthorHomepage>http://www.yahoo.com/</AuthorHomepage>
+      <AuthorIPAddress>173.2.83.123</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content>xKEAA0 Got it! Thanks a lot again for heplnig me out!</Content>
+      <Created>2011-04-18T02:21:46.847-04:00</Created>
+      <Modified>2011-04-18T02:21:46.847-04:00</Modified>
+      <EntryId>350ae390-4105-4f97-b6b7-bdf1c1b8bf94</EntryId>
+      <TargetTitle>SVN Ignore Pattern</TargetTitle>
+      <TargetEntryId>273FF416-880D-4EEA-B6CD-ACCB0BB828F4</TargetEntryId>
+      <Author>Disney</Author>
+      <AuthorEmail>info-ou@ua.ac.be</AuthorEmail>
+      <AuthorHomepage>http://www.yahoo.com/</AuthorHomepage>
+      <AuthorIPAddress>109.157.163.47</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+    <Comment>
+      <Content />
+      <Created>2011-04-18T02:21:49.347-04:00</Created>
+      <Modified>2011-04-18T02:21:49.347-04:00</Modified>
+      <EntryId>6c1c1a13-d4fa-4eb3-a8e3-a490176e3764</EntryId>
+      <TargetTitle>SVN Ignore Pattern</TargetTitle>
+      <TargetEntryId>273FF416-880D-4EEA-B6CD-ACCB0BB828F4</TargetEntryId>
+      <Author>Disney</Author>
+      <AuthorEmail>info-ou@ua.ac.be</AuthorEmail>
+      <AuthorHomepage>http://www.yahoo.com/</AuthorHomepage>
+      <AuthorIPAddress>109.157.163.47</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

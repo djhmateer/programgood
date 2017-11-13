@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-02-03T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.devtopics.com/101-great-computer-programming-quotes/"&gt;http://www.devtopics.com/101-great-computer-programming-quotes/&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2011-02-04T18:41:17.64125-05:00</Created>
+      <Modified>2011-02-04T18:41:17.64125-05:00</Modified>
+      <EntryId>3c58cdf4-f08e-4183-bdab-96d349782e9b</EntryId>
+      <Description />
+      <Title>101 Great Computer Programmer Quotes</Title>
+      <Categories>Funny</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

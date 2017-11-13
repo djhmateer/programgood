@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-09-06T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>I tried out that example, it coludn\'t have been more to the point.     Dug it.Will hopefully be posting some examples of various Open ID integration samples along with other things myself soon.</Content>
+      <Created>2012-07-29T05:16:00.0532318-04:00</Created>
+      <Modified>2012-07-29T05:16:00.0532318-04:00</Modified>
+      <EntryId>d289c691-247c-41cc-9ed3-25a7226c4f11</EntryId>
+      <TargetTitle>Compiling Async CTP Library</TargetTitle>
+      <TargetEntryId>C2083290-9A92-4F68-8F02-AB87775B1B3D</TargetEntryId>
+      <Author>Platinomodel</Author>
+      <AuthorEmail>jjimenez@globalheritagefund.org</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003406364065</AuthorHomepage>
+      <AuthorIPAddress>168.143.18.109</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayExtra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2011-09-28T20:00:00-04:00</Date>
+  <Comments>
+    <Comment>
+      <Content>Install the Developer edition of the datsabae your web host first, then install the best copy of Visual Studio available to you. Default installs of both are all you really need.If you install Visual Studio first it will install SQL Server Express, and possibly the wrong version. Installing SQL Server first ensures its the main and default datsabae server.Visual Studio 2010 ships with its own debug web site host, so you don't need to configure IIS on your development machine any more.</Content>
+      <Created>2012-05-13T11:37:17.84375-04:00</Created>
+      <Modified>2012-05-13T11:37:17.84375-04:00</Modified>
+      <EntryId>987614b9-703c-4c35-aa1f-312f75d29089</EntryId>
+      <TargetTitle>VIdPub6.2–BackboneJS</TargetTitle>
+      <TargetEntryId>1425F8BE-3B1C-48BB-883D-8C69D77BEB5F</TargetEntryId>
+      <Author>Agung</Author>
+      <AuthorEmail>sheki@users.sourceforge.net</AuthorEmail>
+      <AuthorHomepage>http://www.facebook.com/profile.php?id=100003405963541</AuthorHomepage>
+      <AuthorIPAddress>198.171.237.94</AuthorIPAddress>
+      <IsPublic>false</IsPublic>
+      <OpenId>false</OpenId>
+      <SpamState>NotChecked</SpamState>
+      <AuthorUserAgent>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</AuthorUserAgent>
+    </Comment>
+  </Comments>
+  <Trackings />
+</DayExtra>

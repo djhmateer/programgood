@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2009-11-23T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;A very annoying error in VS2008, when trying to open VS2005/VS2005 Express web projects…&lt;/p&gt;  &lt;p&gt;From: &lt;a title="http://forum.strataframe.net/Topic20774-14-1.aspx" href="http://forum.strataframe.net/Topic20774-14-1.aspx"&gt;http://forum.strataframe.net/Topic20774-14-1.aspx&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;The solution was to right click on the solution file and click open with.&amp;#160; Navigate to &amp;quot;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe&amp;quot; and click to open.&amp;#160; The conversion wizard runs and the project will then open.&lt;/p&gt;</Content>
+      <Created>2009-11-24T18:36:46.285625-05:00</Created>
+      <Modified>2009-11-24T18:37:29.066875-05:00</Modified>
+      <EntryId>22566ef7-bc14-4d57-970b-caf42217a8bd</EntryId>
+      <Description />
+      <Title>The Application for Project… not found</Title>
+      <Categories>Tools</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

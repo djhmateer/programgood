@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2010-02-17T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;I use vimperator, however sometimes I like to have the normal menus back.&amp;#160; The command I have to type is:&amp;#160; set guioption+=mT&lt;/p&gt;  &lt;p&gt;Trick is to download autohotkey:&lt;/p&gt;  &lt;p&gt;Run Autoscriptwriter (recorder)&lt;/p&gt;  &lt;p&gt;save the file, and assign a hotkey.&amp;#160; In this case Windows Key, s&lt;/p&gt;  &lt;p&gt;#s::&amp;#160; - set guioptions   &lt;br /&gt;Send, {SHIFTDOWN};{SHIFTUP}set{SPACE}guioptions{SHIFTDOWN}={SHIFTUP}=m{SHIFTDOWN}t{SHIFTUP}{ENTER}&lt;/p&gt;  &lt;p&gt;#t:: – tv on&lt;/p&gt;  &lt;p&gt;#8:: - 85hz&lt;/p&gt;  &lt;p&gt;Then put the files in the startup script directory: C:\Documents and Settings\dave\Start Menu\Programs\Startup&lt;/p&gt;</Content>
+      <Created>2010-02-18T17:55:27.6482572-05:00</Created>
+      <Modified>2010-02-18T17:55:27.6482572-05:00</Modified>
+      <EntryId>a5085586-5696-485c-ae8a-d00ca7eec011</EntryId>
+      <Description />
+      <Title>Autohotkey</Title>
+      <Categories>Keyboard Shortcuts</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

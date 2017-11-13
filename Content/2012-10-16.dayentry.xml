@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2012-10-15T20:00:00-04:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;ul&gt;   &lt;li&gt;Canvas&lt;/li&gt;    &lt;li&gt;StackPanel&lt;/li&gt;    &lt;li&gt;WrapPanel – eg Windows explorer which wraps images&lt;/li&gt;    &lt;li&gt;Grid (most commonly used)..like HTML table.. also default for UserControl.. need to know number of rows and cols in advance.&amp;#160; Can easily resize (not rescale) content&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;TextBox – a control&lt;/p&gt;  &lt;p&gt;RichTextBox – contains bold, drop downs etc..&amp;#160; a control&lt;/p&gt;  &lt;p&gt;TextBlock – not a control…it is a UIElement&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;Button – a control?&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;ListBox&lt;/p&gt;  &lt;p&gt;ComboBox&lt;/p&gt;  &lt;p&gt;&amp;#160;&lt;/p&gt;  &lt;p&gt;XAML Resources&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;Styles&lt;/li&gt;    &lt;li&gt;Control Templates&lt;/li&gt; &lt;/ul&gt;  &lt;p&gt;Ch15. Customer Markup Extensions (SL5)&lt;/p&gt;  &lt;p&gt;Type Converters&lt;/p&gt;</Content>
+      <Created>2012-10-16T12:03:46.4708193-04:00</Created>
+      <Modified>2012-10-16T12:03:46.4708193-04:00</Modified>
+      <EntryId>81338469-7956-44f3-ba0e-b9eec64b8a3d</EntryId>
+      <Description />
+      <Title>Silverlight UI</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;XAML is a declarative language that enables you to create and initialise .NET objects in XML&lt;/p&gt;  &lt;p&gt;Routed Events and event bubbling – allow events to be handled be each level above&lt;/p&gt;  &lt;p&gt;Commands – allows us to remove the event handler from the code behind.&amp;#160; It is wired up from the XAML as Command=”{Binding SaveCommand}”   &lt;br /&gt;commands also support auto disabling of the controls if the command can’t run.. via implicit binding to ICommand.CanExecute&lt;/p&gt;</Content>
+      <Created>2012-10-16T11:25:47.3178697-04:00</Created>
+      <Modified>2012-10-16T11:25:47.3178697-04:00</Modified>
+      <EntryId>c60c5e2b-bddd-406d-98fa-b4695558d0c1</EntryId>
+      <Description />
+      <Title>XAML–Manning Ch2</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;XAML is a representation of CLR objects.&amp;#160; Each tag has an equivalent CLR object behind it.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_2.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_thumb.png" width="152" height="244" /&gt;&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;DataTemplates – chunck of XAML used to format each item in the list.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_4.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_thumb_1.png" width="599" height="346" /&gt;&lt;/a&gt;     &lt;br /&gt;ListBox with content taking up full width of ListBox without horizontal scrolling.     &lt;br /&gt;Then an ItemTemplate with a DataTemplate and a Grid.     &lt;br /&gt;autosized first column and full width second column&lt;/p&gt;  &lt;p&gt;Bind an image element to the Image Property of Tweet&lt;/p&gt;  &lt;p&gt;Bind a TextBlock to the Message Property of Tweet &lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_6.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_thumb_2.png" width="584" height="516" /&gt;&lt;/a&gt;     &lt;br /&gt;Observable collection.&amp;#160; Bindings.&amp;#160; Async network call.&amp;#160; Callback event, lambda and linq.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_10.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_thumb_4.png" width="594" height="272" /&gt;&lt;/a&gt;     &lt;br /&gt;Binding our IObservable collection of Tweets to the ListBox TweetList.ItemsSource&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_8.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/Manning_C73C/image_thumb_3.png" width="435" height="329" /&gt;&lt;/a&gt;     &lt;br /&gt;Publish to live to check it works.&amp;#160; In fact had to go down to .NET4.&amp;#160; Could have put .NET4.5 on the Win2008R2 server:&amp;#160; &lt;a href="http://msdn.microsoft.com/en-us/library/5a4x27ek.aspx"&gt;http://msdn.microsoft.com/en-us/library/5a4x27ek.aspx&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2012-10-16T10:22:13.8322488-04:00</Created>
+      <Modified>2012-10-17T04:49:34.2896694-04:00</Modified>
+      <EntryId>036c8526-d414-42e9-9be0-d5d6124ef497</EntryId>
+      <Description />
+      <Title>Manning Silverlight 5 in Action–Ch1 Tweet Viewer</Title>
+      <Categories>Silverlight</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;WinRT only supports a subset of .NET&lt;/p&gt;  &lt;h3&gt;Ping App&lt;/h3&gt;  &lt;p&gt;&lt;a href="https://github.com/christophwille/winrt-vasily"&gt;https://github.com/christophwille/winrt-vasily&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;System.Net.NetworkInformation – not supported.&lt;/p&gt;  &lt;p&gt;Windows.Networking.Sockets doesn’t support ICMP (Ping).&lt;/p&gt;  &lt;p&gt;so use a direct StreamSocket connection.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/windows/apps/br230232.aspx"&gt;http://msdn.microsoft.com/en-us/library/windows/apps/br230232.aspx&lt;/a&gt;&amp;#160; - supported API’s (some may be subsets)&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/WinRT-Development_DF51/image_4.png"&gt;&lt;img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/WinRT-Development_DF51/image_thumb_1.png" width="654" height="342" /&gt;&lt;/a&gt;     &lt;br /&gt;An interesting interface - &lt;a href="http://apps.microsoft.com/webpdp/en-US/app/ping/b7e08c6b-7f41-4644-9b0e-787e3152b17d"&gt;http://apps.microsoft.com/webpdp/en-US/app/ping/b7e08c6b-7f41-4644-9b0e-787e3152b17d&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Can’t find it on the app store.&amp;#160; And it doesn’t support ICMP.&lt;/p&gt;  &lt;p&gt;&lt;a href="http://www.pcreview.co.uk/forums/icmp-using-raw-socket-not-working-vista-t3235397.html"&gt;http://www.pcreview.co.uk/forums/icmp-using-raw-socket-not-working-vista-t3235397.html&lt;/a&gt; – we don’t have System.Net.Sockets&lt;/p&gt;  &lt;p&gt;However do have Windows.Networking.Sockets.. but doesn’t support ICMP&lt;/p&gt;  &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/12909755/icmp-ping-in-winrt-is-it-possible"&gt;http://stackoverflow.com/questions/12909755/icmp-ping-in-winrt-is-it-possible&lt;/a&gt;&lt;/p&gt;  &lt;h3&gt;MSDN Overview&lt;/h3&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/windows/apps/br230302.aspx"&gt;http://msdn.microsoft.com/en-us/library/windows/apps/br230302.aspx&lt;/a&gt; – .NET for Windows Store Apps overview&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/windows/apps/br230232.aspx"&gt;http://msdn.microsoft.com/en-us/library/windows/apps/br230232.aspx&lt;/a&gt; – Supported APIs&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx"&gt;http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx&lt;/a&gt; – API reference&lt;/p&gt;  &lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/windows/desktop/windows.networking.sockets.aspx"&gt;http://msdn.microsoft.com/en-us/library/windows/desktop/windows.networking.sockets.aspx&lt;/a&gt; – Windows.Networking.Sockets&lt;/p&gt;  &lt;p&gt;&lt;a href="http://code.msdn.microsoft.com/windowsapps/DatagramSocket-sample-76a7d82b#content"&gt;http://code.msdn.microsoft.com/windowsapps/DatagramSocket-sample-76a7d82b#content&lt;/a&gt; – ICMP mentioned in this sample on sockets.&lt;/p&gt;  &lt;p&gt;Use raw sockets to do an ICMP ping?&lt;/p&gt;</Content>
+      <Created>2012-10-16T05:44:37.3901955-04:00</Created>
+      <Modified>2012-10-16T05:44:50.9790735-04:00</Modified>
+      <EntryId>c45bf151-8c69-443f-9308-3df89371aa4b</EntryId>
+      <Description />
+      <Title>WinRT Development</Title>
+      <Categories>Windows 8</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>

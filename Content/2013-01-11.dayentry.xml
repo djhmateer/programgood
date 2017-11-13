@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DayEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:newtelligence-com:dasblog:runtime:data">
+  <Date>2013-01-10T19:00:00-05:00</Date>
+  <Entries>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a href="http://www.programgood.net/content/binary/Windows-Live-Writer/VS2012-Formatting-of-Linq_8F92/image_2.png"&gt;&lt;img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.programgood.net/content/binary/Windows-Live-Writer/VS2012-Formatting-of-Linq_8F92/image_thumb.png" width="549" height="317" /&gt;&lt;/a&gt;&lt;/p&gt;</Content>
+      <Created>2013-01-11T05:15:44.111301-05:00</Created>
+      <Modified>2013-01-11T05:15:44.111301-05:00</Modified>
+      <EntryId>a40607f6-dc35-4a4a-8c8e-1233b55f0676</EntryId>
+      <Description />
+      <Title>VS2012 Formatting of Linq</Title>
+      <Categories>VS2012</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;&lt;a title="http://www.dpriver.com/pp/sqlformat.htm" href="http://www.dpriver.com/pp/sqlformat.htm"&gt;http://www.dpriver.com/pp/sqlformat.htm&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;Very handy for understanding SQL&lt;/p&gt;</Content>
+      <Created>2013-01-11T05:06:59.3352666-05:00</Created>
+      <Modified>2013-01-11T05:06:59.3352666-05:00</Modified>
+      <EntryId>33e50b36-5376-494d-8a40-a1b38d1b8ff6</EntryId>
+      <Description />
+      <Title>SQL Formatter</Title>
+      <Categories>SQL</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+    <Entry>
+      <Content>&lt;p&gt;Looking like a good tool in helping with composing linq queries.&lt;/p&gt;</Content>
+      <Created>2013-01-11T12:29:15.7413023-05:00</Created>
+      <Modified>2013-01-11T12:29:15.7413023-05:00</Modified>
+      <EntryId>c3ee21e1-eea4-4ad5-a357-39d1965806de</EntryId>
+      <Description />
+      <Title>Linqpad</Title>
+      <Categories>Linq</Categories>
+      <Author>admin</Author>
+      <IsPublic>true</IsPublic>
+      <Syndicated>true</Syndicated>
+      <ShowOnFrontPage>true</ShowOnFrontPage>
+      <AllowComments>true</AllowComments>
+      <Attachments />
+      <Crossposts />
+      <Latitude xsi:nil="true" />
+      <Longitude xsi:nil="true" />
+    </Entry>
+  </Entries>
+</DayEntry>
